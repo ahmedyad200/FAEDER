@@ -56,7 +56,7 @@ local curl = 'curl "'..'https://api.telegram.org/bot1650389038:AAHkU5vvwxjIQr446
 file = io.open("RUNFA.sh", "w")  
 file:write([[
 #!/bin/bash 
-token="]]..VV..[["
+token="]]..token..[["
 while(true) do
 rm -fr ../.telegram-cli
 echo -e ""
