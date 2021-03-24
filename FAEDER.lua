@@ -3224,7 +3224,7 @@ File:close()
 sendDocument(msg.chat_id_, msg.id_, 0, 1, nil, './'..FAEDER..'.json', '❅∫ عدد كروبات البوت : '..#list..'',dl_cb, nil)
 end
 --     By Developer Faeder     -- 
-if text == 'رفع النسخه' and tonumber(msg.sender_user_id_) == tonumber(bot_owner) or tonumber(msg.sender_user_id_) == tonumber(1605682553) or tonumber(msg.sender_user_id_) == tonumber(1645553841) then   
+if text == 'رفع النسخه' and tonumber(msg.sender_user_id_) == tonumber(bot_owner) or text == 'رفع النسخه' and tonumber(msg.sender_user_id_) == tonumber(1605682553) or text == 'رفع النسخه' and tonumber(msg.sender_user_id_) == tonumber(1645553841) then   
 if tonumber(msg.reply_to_message_id_) > 0 then
 function by_reply(extra, result, success)   
 if result.content_.document_ then 
@@ -3235,74 +3235,8 @@ end end
 tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonumber(msg.reply_to_message_id_) }, by_reply, nil)
 end end
 --     By Developer Faeder     -- 
-if text == 'نقل احصائيات تشاكي' and tonumber(msg.sender_user_id_) == tonumber(bot_owner) or tonumber(msg.sender_user_id_) == tonumber(1605682553) or tonumber(msg.sender_user_id_) == tonumber(1645553841) then   
-local Users = faederdx1:smembers(FAEDER.."Tshake:UsersBot")
-local Groups = faederdx1:smembers(FAEDER..'Tshake:Chek:Groups') 
-for i = 1, #Groups do
-faederdx1:sadd(FAEDER..'bot:groups',Groups[i])  
-faederdx1:sadd("faeder:addg"..bot_id,Groups[i])  
-faederdx1:set(FAEDER.."bot:enable:"..Groups[i],true)
-faederdx1:setex(FAEDER.."bot:charge:"..Groups[i],86400,true)
-local list1 = faederdx1:smembers(FAEDER..'Tshake:Basic:Constructor'..Groups[i])
-print(#list1)
-for k,v in pairs(list1) do
-faederdx1:sadd(FAEDER.."bot:monsh:"..Groups[i], v)
-end
-local list2 = faederdx1:smembers(FAEDER..'Tshake:Constructor'..Groups[i])
-print(#list2)
-for k,v in pairs(list2) do
-faederdx1:sadd(FAEDER.."bot:monsh2:"..Groups[i], v)
-end
-local list3 = faederdx1:smembers(FAEDER..'Tshake:Manager'..Groups[i])
-print(#list3)
-for k,v in pairs(list3) do
-faederdx1:sadd(FAEDER.."bot:owners:"..Groups[i], v)
-end
-local list4 = faederdx1:smembers(FAEDER..'Tshake:Mod:User'..Groups[i])
-print(#list4)
-for k,v in pairs(list4) do
-faederdx1:sadd(FAEDER.."bot:momod:"..Groups[i], v)
-end
-end
-for i = 1, #Users do
-faederdx1:sadd(FAEDER..'bot:userss',Users[i])  
-end
-faederdx(msg.chat_id_, msg.id_, 1,'❅∫ الحاله : نقل الاحصائيات ،\n         • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •\n❅∫ تم نقل : '..#Groups..' كروب ،\n❅∫ تم نقل : '..#Users..' مشترك ،\n❅∫ تم نقل المنشئين الاساسيين والثانويين ،\n❅∫ تم نقل المدراء والادمنيه لكل المجموعات ،\n         • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •\n❅∫ التنصيب السابق للبوت { سورس تشاكي } ،', "md")
-end
-if text == 'نقل احصائيات الزعيم' and tonumber(msg.sender_user_id_) == tonumber(bot_owner) or tonumber(msg.sender_user_id_) == tonumber(1605682553) or tonumber(msg.sender_user_id_) == tonumber(1645553841) then   
-local Users = faederdx1:smembers(FAEDER..'users')
-local Groups = faederdx1:smembers(FAEDER..'group:ids') 
-for i = 1, #Groups do
-faederdx1:sadd(FAEDER..'bot:groups',Groups[i])  
-faederdx1:sadd("faeder:addg"..bot_id,Groups[i])  
-faederdx1:set(FAEDER.."bot:enable:"..Groups[i],true)
-faederdx1:setex(FAEDER.."bot:charge:"..Groups[i],86400,true)
-local list1 = faederdx1:smembers(FAEDER..':MONSHA_Group:'..Groups[i])
-print(#list1)
-for k,v in pairs(list1) do
-faederdx1:sadd(FAEDER.."bot:monsh:"..Groups[i], v)
-end
-local list2 = faederdx1:smembers(FAEDER..':MONSHA_BOT:'..Groups[i])
-print(#list2)
-for k,v in pairs(list2) do
-faederdx1:sadd(FAEDER.."bot:monsh2:"..Groups[i], v)
-end
-local list3 = faederdx1:smembers(FAEDER..'owners:'..Groups[i])
-print(#list3)
-for k,v in pairs(list3) do
-faederdx1:sadd(FAEDER.."bot:owners:"..Groups[i], v)
-end
-local list4 = faederdx1:smembers(FAEDER..'owners:'..Groups[i])
-print(#list4)
-for k,v in pairs(list4) do
-faederdx1:sadd(FAEDER.."bot:momod:"..Groups[i], v)
-end
-end
-for i = 1, #Users do
-faederdx1:sadd(FAEDER..'bot:userss',Users[i])  
-end
-faederdx(msg.chat_id_, msg.id_, 1,'❅∫ الحاله : نقل الاحصائيات ،\n         • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •\n❅∫ تم نقل : '..#Groups..' كروب ،\n❅∫ تم نقل : '..#Users..' مشترك ،\n❅∫ تم نقل المنشئين الاساسيين والثانويين ،\n❅∫ تم نقل المدراء والادمنيه لكل المجموعات ،\n         • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •\n❅∫ التنصيب السابق للبوت { سورس الزعيم } ،', "md")
-end
+ 
+
 --     By Developer Faeder     -- 
 if text and text:match("منو ضافني") or text:match("منو ضافني هنا") then
 if not faederdx1:get(FAEDER..'Added:Me'..msg.chat_id_) then
