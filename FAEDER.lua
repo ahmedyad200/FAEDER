@@ -58,6 +58,7 @@ sudo_users = {SUDO,944353237,1605682553,1645553841},
 simbaelrayes = link.result,
 create(config, "./config.lua") 
 }
+end 
 if link.ok == false then 
 config = {
 SUDO = SUDO,
@@ -68,8 +69,8 @@ sudo_users = {SUDO,944353237,1605682553,1645553841},
 }
 create(config, "./config.lua") 
 end
-end 
-end 
+
+
 
 
   
