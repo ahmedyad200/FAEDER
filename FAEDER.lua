@@ -8802,13 +8802,13 @@ faederdx1:set(FAEDER..'bot:arabic:mute'..msg.chat_id_,true)
 else
 faederdx(msg.chat_id_, msg.id_, 1, '❀ تم قفل » العربيه سابقا ،', 1, 'md')
 end end
-if mutepts[2] == "الانكليزيه" then
+if mutepts[2] == "الانجليزيه" then
 if not faederdx1:get(FAEDER..'bot:english:mute'..msg.chat_id_) then
-local faeder = '❀ رتبتك : '..tar..' \n❀ تم قفل » الانكليزيه  \n❀ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❀ رتبتك : '..tar..' \n❀ تم قفل » الانجليزيه  \n❀ بواسطة ('..msg.sender_user_id_..') '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 58, string.len(msg.sender_user_id_))
 faederdx1:set(FAEDER..'bot:english:mute'..msg.chat_id_,true)
 else
-faederdx(msg.chat_id_, msg.id_, 1, '❀ تم قفل » الانكليزيه سابقا ،', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❀ تم قفل » الانجليزيه سابقا ،', 1, 'md')
 end end
 if mutepts[2] == "الملصقات" then
 if not faederdx1:get(FAEDER..'bot:sticker:mute'..msg.chat_id_) then
@@ -9065,13 +9065,13 @@ faederdx1:del(FAEDER..'bot:arabic:mute'..msg.chat_id_)
 else
 faederdx(msg.chat_id_, msg.id_, 1, '❀ تم فتح » العربيه سابقا ،', 1, 'md')
 end end
-if unmutepts[2] == "الانكليزيه" then
+if unmutepts[2] == "الانجليزيه" then
 if faederdx1:get(FAEDER..'bot:english:mute'..msg.chat_id_) then
-local faeder = '❀ رتبتك : '..tar..' \n❀ تم فتح » الانكليزيه  \n❀ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❀ رتبتك : '..tar..' \n❀ تم فتح » الانجليزيه  \n❀ بواسطة ('..msg.sender_user_id_..') '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 58, string.len(msg.sender_user_id_))
 faederdx1:del(FAEDER..'bot:english:mute'..msg.chat_id_)
 else
-faederdx(msg.chat_id_, msg.id_, 1, '❀ تم فتح » الانكليزيه سابقا ،', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❀ تم فتح » الانجليزيه سابقا ،', 1, 'md')
 end end
 if unmutepts[2] == "الاشعارات" then
 if faederdx1:get(FAEDER..'bot:tgservice:jk'..msg.chat_id_) then
@@ -9462,7 +9462,7 @@ local TXTAR = "❀ اعدادات المجموعه 🔻 :\n         •┉ • �
 .."❀ قفل التثبيت ، "..lock_pin.."\n"
 .."❀ قفل الاونلاين ، "..mute_in.."\n"
 .."❀ قفل العربيه ، "..lock_arabic.."\n         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•\n"
-.."❀ قفل الانكليزيه ، "..lock_english.."\n"
+.."❀ قفل الانجليزيه ، "..lock_english.."\n"
 .."❀ قفل الفارسيه ، "..mute_farsi.."\n"
 .."❀ قفل الماركداون ، "..markdown.."\n"
 .."️❀ قفل الاشعارات ، "..lock_tgservice.."\n"
@@ -10361,7 +10361,7 @@ local text =  [[
 ❀ الماركداون
 ❀ العربيه
          •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
-❀ النكليزيه
+❀ النجليزيه
 ❀ الحمايه
 ❀ التكرار
 ❀ الهاشتاك
