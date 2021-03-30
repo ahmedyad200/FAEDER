@@ -4663,11 +4663,11 @@ local inline = {
 send_inline(msg.chat_id_,'❀ العاب متطوره سورس تارا ،\n❀ لي اختيار لعبه اضغط على الزر ⬇️ .',nil,inline) 
 return false 
 end 
---     By Developer Faeder     -- 
+--     كليشه السورس     -- 
 if text:match("^source$") or text:match("^سورس البوت$") or text:match("^سورس تارا$") or  text:match("^السورس$") or text:match("^سورس$") and faeder11(msg) then 
 local inline = {
-{{text="+ ملك التلجرام +",url="t.me/DV_AL1"},{text="+ مبرمج السورس+",url="t.me/DV_AD1"}},
-{{text="+ جروب المطورين +",url="t.me/DV_AL2"},{text="+ قناه السورس +",url="t.me/DV_POWER1"}},
+{{text="+ مطورين السورس+",url="t.me/US_PO"}},
+{{text="+ قناه السورس +",url="t.me/DV_POWER1"}},
 {{text="+ اضف بوت تارا الي مجموعتك +",url="http://t.me/US_POBOT?startgroup=start"}}
 }
 send_inline(msg.chat_id_,'❀ مرحبا بك في سورس تارا┋TARA ،\n❀ اضغط على الازرار بالاسفل ⬇️ ،',nil,inline) 
