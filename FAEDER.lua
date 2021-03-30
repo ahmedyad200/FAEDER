@@ -1,5 +1,5 @@
 -- Welcom To File The Best Source In The Telegram
--- All The File By Developer Faeder : @KKKKF
+-- All The File By Developer Faeder : @DV_AD1
 -- Join In Chennel Source : @DV_POWER1 
 -- Join In Explanation Channel : @DV_POWER1
 ----------------------------------------------------------------------------
@@ -4045,7 +4045,7 @@ resolve_username(faed_dx[2],hamss)
 end end
 --     By Developer Faeder     -- 
 if text and text == "اهمس" or text and text == "همسه" or text and text == "اريد بوت الهمسه" or text and text == "دزلي بوت الهمسه" or  text and text == "دزولي بوت الهمسه" and faeder11(msg) then  
-faederdx(msg.chat_id_, msg.id_, 1, '❅∫ يمكنك من خلال هذا البوت\n❅∫ ارسال همسه سريه للاعضاء \n❅∫ الامر كالاتي مثال : اهمس هلو [@KKKKF]', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❅∫ يمكنك من خلال هذا البوت\n❅∫ ارسال همسه سريه للاعضاء \n❅∫ الامر كالاتي مثال : اهمس هلو [@DV_AD1]', 1, 'md')
 end
 if text and text:match("/start hms(.*)_(%d+)") then 
 faed_dx = {string.match(text, "^/start hms(.*)_(%d+)")}
@@ -4380,7 +4380,7 @@ lastname = result.last_name_
 else
 lastname = ''
 end
-faederdx(msg.chat_id_, msg.id_, 1, '❅∫ اهلا بك 👋 ، { '..result.first_name_..' }\n\n❅∫ معرفك ، { '..username..' }\n❅∫ ايديك ، { '..result.id_..' }\n❅∫ نقاطك ، { '..user_nkt..' }\n\n❅∫ { احصائيات الرسائل } ⬇️،\n❅∫ الرسائل ، { '..(user_msgs + faedery)..' / '..(faeder)..'} \n❅∫  الملصقات ، { '..sticker..' }\n❅∫ الصور ، { '..Photo..' }\n❅∫ الصوت ، { '..Voice..' }\n❅∫ المتحركه ، { '..Gif..' }\n❅∫  الفيديو ، { '..Video..' }\n❅∫ الجهات ، { '..cont..' }\n❅∫ التفاعل ، { '..formsgg(msguser)..' } \n\n❅∫ موقعك ، '..faeder_renk(msg.sender_user_id_, msg.chat_id_), 1, 'html')
+faederdx(msg.chat_id_, msg.id_, 1, '❅∫ اهلا بك 👋 ، { '..result.first_name_..' }\n\n❅∫ معرفك ، { '..username..' }\n❅∫ ايديك ، { '..result.id_..' }\n\n❅∫ موقعك ، '..faeder_renk(msg.sender_user_id_, msg.chat_id_), 1, 'html')
 end
 getUser(msg.sender_user_id_,get_me)
 end
@@ -11014,6 +11014,6 @@ addgroup(v)
 end end) end end end
 -------------------------******* The Best Source *******-------------------------
 -- END VERSION (24) FAEDER DX 
--- All The File By Developer Faeder : @KKKKF
+-- All The File By Developer Faeder : @DV_AD1
 -- Join In Chennel Source : @DV_POWER1 
 -- Join In Explanation Channel : @DV_POWER1
