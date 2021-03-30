@@ -10249,8 +10249,8 @@ end end
 if is_momod(msg.sender_user_id_, msg.chat_id_) then
 if text and text:match('^تنظيف (%d+)$') and faeder11(msg) then    
 local Number = tonumber(text:match('^تنظيف (%d+)$')) 
-if Number > 5000 then 
-faederdx(msg.chat_id_, msg.id_, 1, '❀ لا تستطيع تنظيف اكثر من 5000 رساله ', 1, 'md')
+if Number > 2000 then 
+faederdx(msg.chat_id_, msg.id_, 1, '❀ لا تستطيع تنظيف اكثر من 2000 رساله ', 1, 'md')
 return false  
 end  
 local Message = msg.id_
@@ -10262,8 +10262,8 @@ faederdx(msg.chat_id_, msg.id_, 1, '❀ تم مسح * '..Number..'* رساله '
 end 
 if text and text:match('^مسح (%d+)$') and faeder11(msg) then    
 local Number = tonumber(text:match('^مسح (%d+)$')) 
-if Number > 5000 then 
-faederdx(msg.chat_id_, msg.id_, 1, '❀ لا تستطيع تنظيف اكثر من 5000 رساله ', 1, 'md')
+if Number > 2000 then 
+faederdx(msg.chat_id_, msg.id_, 1, '❀ لا تستطيع تنظيف اكثر من 2000 رساله ', 1, 'md')
 return false  
 end  
 local Message = msg.id_
