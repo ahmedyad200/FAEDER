@@ -4668,9 +4668,9 @@ if text:match("^source$") or text:match("^سورس البوت$") or text:match("
 local inline = {
 {{text="+ مطورين السورس+",url="t.me/US_PO"}},
 {{text="+ قناه السورس +",url="t.me/DV_POWER1"}},
-{{text="+ اضف بوت تارا الي مجموعتك +",url="http://t.me/"..bot_username.."?startgroup=start"}}
+{{text="+ اضف بوت تارا الي مجموعتك +",url="http://t.me/US_POBOT?startgroup=start"}}
 }
-send_inline(msg.chat_id_,'❀ مرحبا بك في سورس تارا┋TARA ،\n❀ اضغط علي الازرار بالاسفل ⬇️ ،',nil,inline) 
+send_inline(msg.chat_id_,'❀ مرحبا بك في سورس تارا┋TARA ،\n❀ اضغط علي الازرار بالاسفل ⬇️\n|[اضف اليوت الي مجموعتك](https://t.me/'..bot_username..'?startgroup=start)| ',nil,inline) 
 return false 
 end
 --     By Developer Faeder     -- 
@@ -10255,8 +10255,8 @@ end end
 if is_momod(msg.sender_user_id_, msg.chat_id_) then
 if text and text:match('^تنظيف (%d+)$') and faeder11(msg) then    
 local Number = tonumber(text:match('^تنظيف (%d+)$')) 
-if Number > 3000 then 
-faederdx(msg.chat_id_, msg.id_, 1, '❀ لا تستطيع تنظيف اكثر من 3000 رساله ', 1, 'md')
+if Number > 2000 then 
+faederdx(msg.chat_id_, msg.id_, 1, '❀ لا تستطيع تنظيف اكثر من 2000 رساله ', 1, 'md')
 return false  
 end  
 local Message = msg.id_
@@ -10268,8 +10268,8 @@ faederdx(msg.chat_id_, msg.id_, 1, '❀ تم مسح * '..Number..'* رساله '
 end 
 if text and text:match('^مسح (%d+)$') and faeder11(msg) then    
 local Number = tonumber(text:match('^مسح (%d+)$')) 
-if Number > 3000 then 
-faederdx(msg.chat_id_, msg.id_, 1, '❀ لا تستطيع تنظيف اكثر من 3000 رساله ', 1, 'md')
+if Number > 2000 then 
+faederdx(msg.chat_id_, msg.id_, 1, '❀ لا تستطيع تنظيف اكثر من 2000 رساله ', 1, 'md')
 return false  
 end  
 local Message = msg.id_
