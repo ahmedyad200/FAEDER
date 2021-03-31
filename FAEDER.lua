@@ -4951,8 +4951,8 @@ if tonumber(tonumber(msg.reply_to_message_id_)) == 0 then
 else
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),prom_reply)
 end end
-if text and text:match('^تنزيل مطور رتبه ثالثه @(.*)') and faeder11(msg) then
-local username = text:match('^تنزيل مطور رتبه ثالثه @(.*)')
+if text and text:match('^تنزيل مطور @(.*)') and faeder11(msg) then
+local username = text:match('^تنزيل مطور @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 faederdx1:srem(FAEDER..'bot:admins:',result.id_)
