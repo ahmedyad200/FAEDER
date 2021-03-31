@@ -4670,7 +4670,7 @@ local inline = {
 {{text="+ قناه السورس +",url="t.me/DV_POWER1"}},
 {{text="+ اضف بوت تارا الي مجموعتك +",url="http://t.me/US_POBOT?startgroup=start"}}
 }
-send_inline(msg.chat_id_,'❀ مرحبا بك في سورس تارا┋TARA ،\n❀ اضغط علي الازرار بالاسفل ⬇️\n|[اضف اليوت الي مجموعتك](https://t.me/'..bot_username..'?startgroup=start)| ',nil,inline) 
+send_inline(msg.chat_id_,'❀ مرحبا بك في سورس تارا┋TARA ،\n❀ اضغط علي الازرار بالاسفل ⬇️ ,',nil,inline) 
 return false 
 end
 --     By Developer Faeder     -- 
