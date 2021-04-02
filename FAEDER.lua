@@ -4929,8 +4929,8 @@ if tonumber(tonumber(msg.reply_to_message_id_)) == 0 then
 else
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),sudo_reply)
 end end 
-if text and text:match('^رفع مطور رتبه ثالثه @(.*)') and faeder11(msg) then
-local username = text:match('^رفع مطور رتبه ثالثه @(.*)')
+if text and text:match('^رفع مطور @(.*)') and faeder11(msg) then
+local username = text:match('^رفع مطور @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 faederdx1:sadd(FAEDER..'bot:admins:',result.id_)
@@ -10255,8 +10255,8 @@ end end
 if is_momod(msg.sender_user_id_, msg.chat_id_) then
 if text and text:match('^تنظيف (%d+)$') and faeder11(msg) then    
 local Number = tonumber(text:match('^تنظيف (%d+)$')) 
-if Number > 2000 then 
-faederdx(msg.chat_id_, msg.id_, 1, '❀ لا تستطيع تنظيف اكثر من 2000 رساله ', 1, 'md')
+if Number > 1500 then 
+faederdx(msg.chat_id_, msg.id_, 1, '❀ لا تستطيع تنظيف اكثر من 1500 رساله ', 1, 'md')
 return false  
 end  
 local Message = msg.id_
@@ -10268,8 +10268,8 @@ faederdx(msg.chat_id_, msg.id_, 1, '❀ تم مسح * '..Number..'* رساله '
 end 
 if text and text:match('^مسح (%d+)$') and faeder11(msg) then    
 local Number = tonumber(text:match('^مسح (%d+)$')) 
-if Number > 2000 then 
-faederdx(msg.chat_id_, msg.id_, 1, '❀ لا تستطيع تنظيف اكثر من 2000 رساله ', 1, 'md')
+if Number > 1500 then 
+faederdx(msg.chat_id_, msg.id_, 1, '❀ لا تستطيع تنظيف اكثر من 1500 رساله ', 1, 'md')
 return false  
 end  
 local Message = msg.id_
