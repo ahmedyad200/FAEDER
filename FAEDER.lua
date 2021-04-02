@@ -1846,7 +1846,7 @@ if link.ok == true then
 t2.invite_link_ = link.result
 end end 
 faederdx1:set(FAEDER.."bot:group:link"..msg.chat_id_,(t2.invite_link_ or "Error")) 
-faederdx(tostring((faederdx1:get(FAEDER.."bot:leader:gr") or bot_owner)), 0, 1, "❀ تم تفعيل مجموعه جديده  \n❀ معرف الضافني ⌯» @"..(result.username_ or "لا يوجد").."\n❀ ايدي الضافني ⌯» `"..msg.sender_user_id_.."`\n❀ معلومات المجموعه ،  \n\n❀ اسم المجموعه ⌯»  *"..f2.title_.."*\n❀ ايدي المجموعه ⌯» `"..msg.chat_id_.."`\n❀ رابط المجموعه ، \n❀ "..(t2.invite_link_ or "Error").."\n" , 1, 'md')
+faederdx(tostring((faederdx1:get(FAEDER.."bot:leader:gr") or bot_owner)), 0, 1, "❀ تم تفعيل مجموعه جديده  \n❀ معرف الضافني ⌯» @"..(result.username_ or "لا يوجد").."\n❀ ايدي الضافني ⌯» `"..msg.sender_user_id_.."`\n❀ معلومات المجموعه ،  \n\n❀ اسم المجموعه ⌯»  "..f2.title_.."\n❀ ايدي المجموعه ⌯» `"..msg.chat_id_.."`\n❀ رابط المجموعه ، \n❀ "..(t2.invite_link_ or "Error").."\n" , 1, 'md')
 end
 tdcli_function ({
 ID = "GetChannelFull",
