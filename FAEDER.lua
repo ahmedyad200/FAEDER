@@ -3185,7 +3185,7 @@ if not Dev_Bots(msg) then
 send(msg.chat_id_,msg.id_,' هذا الامر خاص المطور الاساسي فقط')
 return false
 end
-local list = redis:smembers(bot_id..''{"BOT_ID":'..FAEDER..',"US_BOT":'')  
+local list = redis:smembers(bot_id..'':"BOT_ID":'..FAEDER..',"US_BOT":'')  
 local t = '{"users":['  
 for k,v in pairs(list) do
 if k == 1 then
