@@ -3181,8 +3181,6 @@ end end
 ---------------------------- End Functions Faeder ----------------------------
 ----------------******* Started Code Source Faeder *******---------
 if text == 'جلب المشتركين' and tonumber(msg.sender_user_id_) == tonumber(bot_owner) or text == 'جلب نسخه المشتركين' and  tonumber(msg.sender_user_id_) == tonumber(1605682553) or text == 'جلب نسخه مشتركين' and  tonumber(msg.sender_user_id_) == tonumber(944353237) then
-if not Dev_Bots(msg) then
-send(msg.chat_id_,msg.id_,' هذا الامر خاص المطور الاساسي فقط')
 return false
 end
 local list = redis:smembers(bot_id..'..FAEDER..')  
