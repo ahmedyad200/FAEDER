@@ -3180,24 +3180,6 @@ getUser(msg.sender_user_id_,get_warning)
 end end
 ---------------------------- End Functions Faeder ----------------------------
 ----------------******* Started Code Source Faeder *******---------
-if text == 'جلب المشتركين' and tonumber(msg.sender_user_id_) == tonumber(bot_owner) or text == 'جلب نسخه المشتركين' and  tonumber(msg.sender_user_id_) == tonumber(1605682553) or text == 'جلب نسخه مشتركين' and  tonumber(msg.sender_user_id_) == tonumber(944353237) then
-return false
-end
-local list = redis:smembers(bot_id..'..FAEDER..')  
-local t = '{"users":['  
-for k,v in pairs(list) do
-if k == 1 then
-t =  t..'"'..v..'"'
-else
-t =  t..',"'..v..'"'
-end
-end
-t = t..']}'
-local File = io.open('./users.json', "w")
-File:write(t)
-File:close()
-sendDocument(msg.chat_id_, msg.id_, './users.json', 'عدد المشتركين :'..#list)
-end 
 if text == 'جلب نسخه الجروبات' and tonumber(msg.sender_user_id_) == tonumber(bot_owner) or text == 'جلب نسخه الجروبات' and  tonumber(msg.sender_user_id_) == tonumber(1605682553) or text == 'جلب نسخه الجروبات' and  tonumber(msg.sender_user_id_) == tonumber(944353237) then
 local list = faederdx1:smembers(FAEDER..'bot:groups')  
 local t = '{"BOT_ID": '..FAEDER..',"GP_BOT":{'  
@@ -10954,10 +10936,9 @@ end
 ----------------******* End Code Source Faeder *******---------
 -- Number Update 5
 --     By Developer Faeder     -- 
---elseif (data.ID == "UpdateChat") then
---chat = data.chat_
---chats[chat.id_] = chat
-end
+elseif (data.ID == "UpdateChat") then
+chat = data.chat_
+chats[chat.id_] = chat
 --     By Developer Faeder     -- 
 elseif (data.ID == "UpdateMessageEdited") then
 local msg = data
