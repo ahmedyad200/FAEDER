@@ -10957,7 +10957,7 @@ end
 --elseif (data.ID == "UpdateChat") then
 --chat = data.chat_
 --chats[chat.id_] = chat
---end
+end
 --     By Developer Faeder     -- 
 elseif (data.ID == "UpdateMessageEdited") then
 local msg = data
