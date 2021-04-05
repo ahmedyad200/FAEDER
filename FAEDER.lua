@@ -10954,10 +10954,10 @@ end
 ----------------******* End Code Source Faeder *******---------
 -- Number Update 5
 --     By Developer Faeder     -- 
-elseif (data.ID == "UpdateChat") then
-chat = data.chat_
-chats[chat.id_] = chat
-end
+--elseif (data.ID == "UpdateChat") then
+--chat = data.chat_
+--chats[chat.id_] = chat
+--end
 --     By Developer Faeder     -- 
 elseif (data.ID == "UpdateMessageEdited") then
 local msg = data
