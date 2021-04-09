@@ -4920,7 +4920,7 @@ end end
 --     By Developer Faeder     -- 
 -------- Set Sudo3
 if is_sudo(msg) then
-if text ==('رفع مطور رتبه ثالثه') or text ==('رفع مطور') or text ==('اضف مطور') and faeder11(msg) then
+if text ==('رفع مطور رتبه تارا') or text ==('رفع مطور تارا') or text ==('اضف مطور') and faeder11(msg) then
 function sudo_reply(extra, result, success)
 faederdx1:sadd(FAEDER..'bot:admins:',result.sender_user_id_)
 Send_Options(msg,result.sender_user_id_,"reply","❀ تم رفعه مطور رتبه ثالثه𓍢\n❀ بواسطه ، "..renk_faeder(msg).."\n")
@@ -4929,8 +4929,8 @@ if tonumber(tonumber(msg.reply_to_message_id_)) == 0 then
 else
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),sudo_reply)
 end end 
-if text and text:match('^رفع مطور @(.*)') and faeder11(msg) then
-local username = text:match('^رفع مطور @(.*)')
+if text and text:match('^رفع مطور تارا @(.*)') and faeder11(msg) then
+local username = text:match('^رفع مطور تارا @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 faederdx1:sadd(FAEDER..'bot:admins:',result.id_)
@@ -4942,7 +4942,7 @@ resolve_username(username,promreply)
 end
 --     By Developer Faeder     -- 
 -------- Rem Sudo3
-if text ==('تنزيل مطور رتبه ثالثه') or text ==('تنزيل مطور') or text ==('حذف مطور') and faeder11(msg) then
+if text ==('تنزيل مطور رتبه تارا') or text ==('تنزيل مطور تارا') or text ==('حذف مطور') and faeder11(msg) then
 function prom_reply(extra, result, success)
 faederdx1:srem(FAEDER..'bot:admins:',result.sender_user_id_)
 Send_Options(msg,result.sender_user_id_,"reply","❀ تم تنزيله من المطورين??\n❀ بواسطه ، "..renk_faeder(msg).."\n")
@@ -4951,8 +4951,8 @@ if tonumber(tonumber(msg.reply_to_message_id_)) == 0 then
 else
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),prom_reply)
 end end
-if text and text:match('^تنزيل مطور @(.*)') and faeder11(msg) then
-local username = text:match('^تنزيل مطور @(.*)')
+if text and text:match('^تنزيل مطور تارا @(.*)') and faeder11(msg) then
+local username = text:match('^تنزيل مطور تارا @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 faederdx1:srem(FAEDER..'bot:admins:',result.id_)
