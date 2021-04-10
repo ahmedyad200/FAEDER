@@ -10309,7 +10309,7 @@ end
 --     By Developer Faeder     -- 
 if text:match("^الاوامر$") and faeder11(msg) then
 local help = faederdx1:get(FAEDER..'bot:help')
-local inline = {{{text="قناه السورس",url="t.me/DV_POWER1")}}}
+local inline = {{{text="قناه السورس",url="t.me/DV_POWER1"}}}
 local text =  [[
          •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
 ❀ اليك اوامر البوت ↓↓
