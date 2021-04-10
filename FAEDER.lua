@@ -1378,7 +1378,7 @@ if Chat_Type == 'pv' then
 if text == '/start' then   
 function adding(extra,result,success)
 local users = faederdx1:scard(FAEDER.."bot:userss")
-faederdx(tostring((faederdx1:get(FAEDER.."bot:leader:gr") or bot_owner)), 0, 1, "❀  هذا دز ستارت للبوت \n❀ معرفه ⌯» @"..(result.username_ or "لا يوجد").."\n❀ ايديه ⌯» {"..msg.sender_user_id_.."}\n❀ اصبح عدد المشتركين { "..users.." }" , 1, 'html')
+faederdx(tostring((faederdx1:get(FAEDER.."bot:leader:gr") or bot_owner)), 0, 1, "❀  دا عمل ستارت للبوت \n❀ معرفه ⌯» @"..(result.username_ or "لا يوجد").."\n❀ ايديه ⌯» {"..msg.sender_user_id_.."}\n❀ اصبح عدد المشتركين { "..users.." }" , 1, 'html')
 end 
 getUser(msg.sender_user_id_,adding) 
 end end
@@ -1386,7 +1386,7 @@ end end
 if Chat_Type == 'pv' then 
 if text and text:match("/start hms(.*)_(%d+)") then 
 function adding(extra,result,success)
-faederdx(tostring((faederdx1:get(FAEDER.."bot:leader:gr") or bot_owner)), 0, 1, "❀ هذا دزوله همسه وديشوفها \n❀ معرفه ⌯» @"..(result.username_ or "لا يوجد").."\n❀ ايديه ⌯» {"..msg.sender_user_id_.."}" , 1, 'html') 
+faederdx(tostring((faederdx1:get(FAEDER.."bot:leader:gr") or bot_owner)), 0, 1, "❀ دا اتعملو همسه \n❀ معرفه ⌯» @"..(result.username_ or "لا يوجد").."\n❀ ايديه ⌯» {"..msg.sender_user_id_.."}" , 1, 'html') 
 end 
 getUser(msg.sender_user_id_,adding) 
 end end 
@@ -10309,6 +10309,7 @@ end
 --     By Developer Faeder     -- 
 if text:match("^الاوامر$") and faeder11(msg) then
 local help = faederdx1:get(FAEDER..'bot:help')
+local inline = {{{text="قناه السورس",url="t.me/DV_POWER1)}}}
 local text =  [[
          •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
 ❀ اليك اوامر البوت ↓↓
