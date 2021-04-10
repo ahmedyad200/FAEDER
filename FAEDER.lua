@@ -10309,7 +10309,7 @@ end
 --     By Developer Faeder     -- 
 if text:match("^الاوامر$") and faeder11(msg) then
 local help = faederdx1:get(FAEDER..'bot:help')
-local inline = {{{text="قناه السورس",url="t.me/DV_POWER1"}}}
+local inline = {{text="قناه السورس",url="t.me/DV_POWER1"}},
 local text =  [[
          •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
 ❀ اليك اوامر البوت ↓↓
@@ -10867,7 +10867,7 @@ end
 if text == "تحديث السورس" and is_leader(msg) then 
 faederdx(msg.chat_id_, msg.id_, 1, '❀ جاري تحديث السورس الي الاصدار الجديد ', 1, 'md') 
 os.execute('rm -rf FAEDER.lua') 
-os.execute('wget https://raw.githubusercontent.com/ahmedyad200/fedr/master/FAEDER.lua') 
+os.execute('wget https://raw.githubusercontent.com/ahmedyad200/FAEDER/master/FAEDER.lua') 
 faederdx(msg.chat_id_, msg.id_, 1, '❀ تم تحديث السورس اكتشف المميزات الجديده الان ', 1, 'md') 
 dofile('FAEDER.lua')
 io.popen("rm -rf ~/.telegram-cli/data/audio/*")
