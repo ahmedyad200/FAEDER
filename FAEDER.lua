@@ -1,7 +1,7 @@
 -- Welcom To File The Best Source In The Telegram
 -- All The File By Developer Faeder : @DV_AD1
--- Join In Chennel Source : @DV_POWER1 
--- Join In Explanation Channel : @DV_POWER1
+-- Join In Chennel Source : @SOPOWERB0T 
+-- Join In Explanation Channel : @SOPOWERB0T
 ----------------------------------------------------------------------------
 serpent = require("serpent") 
 lgi = require('lgi')
@@ -54,7 +54,7 @@ SUDO = SUDO,
 token = token,
 bot_id = botid,
 username = username, 
-sudo_users = {SUDO,944353237,1605682553,944353237},
+sudo_users = {SUDO,944353237,0101010100,944353237},
 simbaelrayes = link.result,
 create(config, "./config.lua") 
 }
@@ -65,7 +65,7 @@ SUDO = SUDO,
 token = token,
 bot_id = botid,
 username = username, 
-sudo_users = {SUDO,944353237,1605682553,944353237},
+sudo_users = {SUDO,944353237,0101010100,944353237},
 }
 create(config, "./config.lua") 
 end
@@ -142,31 +142,31 @@ SudoFaeder = SudoFaeder:gsub([[\_]],'_')
 -- Start Functions Source Faeder --
 --     By Developer Faeder     -- 
 -------- Bot Owner
-function is_leader(msg) local var = false for k,v in pairs(sudo_users) do if msg.sender_user_id_ == v then var = true end end if msg.sender_user_id_ == tonumber(bot_owner) then var = true end if msg.sender_user_id_ == tonumber(944353237) or tonumber(msg.sender_user_id_) == tonumber(1605682553) or tonumber(msg.sender_user_id_) == tonumber(944353237) then var = true end return var end
-function is_leaderid(user_id) local var = false if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(1605682553) or user_id == tonumber(944353237) or user_id == tonumber(944353237) then var = true end return var end
+function is_leader(msg) local var = false for k,v in pairs(sudo_users) do if msg.sender_user_id_ == v then var = true end end if msg.sender_user_id_ == tonumber(bot_owner) then var = true end if msg.sender_user_id_ == tonumber(944353237) or tonumber(msg.sender_user_id_) == tonumber(0101010100) or tonumber(msg.sender_user_id_) == tonumber(944353237) then var = true end return var end
+function is_leaderid(user_id) local var = false if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(0101010100) or user_id == tonumber(944353237) or user_id == tonumber(944353237) then var = true end return var end
 -------- Sudo
-function is_sudo(msg) local var = false for k,v in pairs(sudo_users) do if msg.sender_user_id_ == v then var = true end end if msg.sender_user_id_ == tonumber(bot_owner) then var = true end if msg.sender_user_id_ == tonumber(944353237) or tonumber(msg.sender_user_id_) == tonumber(1605682553) or tonumber(msg.sender_user_id_) == tonumber(944353237) then var = true end return var end
-function is_sudoid(user_id) local var = false for k,v in pairs(sudo_users) do if user_id == v then var = true end end if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) or user_id == tonumber(1605682553) or user_id == tonumber(944353237) then var = true end return var end
+function is_sudo(msg) local var = false for k,v in pairs(sudo_users) do if msg.sender_user_id_ == v then var = true end end if msg.sender_user_id_ == tonumber(bot_owner) then var = true end if msg.sender_user_id_ == tonumber(944353237) or tonumber(msg.sender_user_id_) == tonumber(0101010100) or tonumber(msg.sender_user_id_) == tonumber(944353237) then var = true end return var end
+function is_sudoid(user_id) local var = false for k,v in pairs(sudo_users) do if user_id == v then var = true end end if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) or user_id == tonumber(0101010100) or user_id == tonumber(944353237) then var = true end return var end
 -------- Sudo3
-function is_admin(user_id) local var = false local hashsb =  'bot:admins:' local admin = faederdx1:sismember(FAEDER..hashsb, user_id) if admin then var = true end for k,v in pairs(sudo_users) do if user_id == v then var = true end end if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) or user_id == tonumber(1605682553) or user_id == tonumber(944353237) then var = true end return var end
+function is_admin(user_id) local var = false local hashsb =  'bot:admins:' local admin = faederdx1:sismember(FAEDER..hashsb, user_id) if admin then var = true end for k,v in pairs(sudo_users) do if user_id == v then var = true end end if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) or user_id == tonumber(0101010100) or user_id == tonumber(944353237) then var = true end return var end
 -------- Owner all
-function is_onall(user_id) local var = false local hash =  'bot:onall:' local onall = faederdx1:sismember(FAEDER..hash, user_id) local hashs =  'bot:admins:' local admin = faederdx1:sismember(FAEDER..hashs, user_id) if onall then var = true end if admin then var = true end for k,v in pairs(sudo_users) do if user_id == v then var = true end end if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) or user_id == tonumber(1605682553) or user_id == tonumber(944353237) then var = true end return var end
+function is_onall(user_id) local var = false local hash =  'bot:onall:' local onall = faederdx1:sismember(FAEDER..hash, user_id) local hashs =  'bot:admins:' local admin = faederdx1:sismember(FAEDER..hashs, user_id) if onall then var = true end if admin then var = true end for k,v in pairs(sudo_users) do if user_id == v then var = true end end if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) or user_id == tonumber(0101010100) or user_id == tonumber(944353237) then var = true end return var end
 --------Modod all
-function is_moall(user_id) local var = false local hash =  'bot:moall:' local moall = faederdx1:sismember(FAEDER..hash, user_id) local hashs =  'bot:admins:' local admin = faederdx1:sismember(FAEDER..hashs, user_id) local hashss =  'bot:onall:' local onall = faederdx1:sismember(FAEDER..hashss, user_id) if moall then var = true end if admin then var = true end if onall then var = true end for k,v in pairs(sudo_users) do if user_id == v then var = true end end if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) or user_id == tonumber(1605682553) or user_id == tonumber(944353237) then var = true end return var end
+function is_moall(user_id) local var = false local hash =  'bot:moall:' local moall = faederdx1:sismember(FAEDER..hash, user_id) local hashs =  'bot:admins:' local admin = faederdx1:sismember(FAEDER..hashs, user_id) local hashss =  'bot:onall:' local onall = faederdx1:sismember(FAEDER..hashss, user_id) if moall then var = true end if admin then var = true end if onall then var = true end for k,v in pairs(sudo_users) do if user_id == v then var = true end end if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) or user_id == tonumber(0101010100) or user_id == tonumber(944353237) then var = true end return var end
 -------- Vip Member All
-function is_vpall(user_id) local var = false local hashs =  'bot:vpall:' local vpall = faederdx1:sismember(FAEDER..hashs, user_id) local hashss =  'bot:onall:' local onall = faederdx1:sismember(FAEDER..hashss, user_id) local hashsss = 'bot:admins:' local admin = faederdx1:sismember(FAEDER..hashsss, user_id) local hashssss =  'bot:moall:'local moall = faederdx1:sismember(FAEDER..hashssss, user_id) if vpall then var = true end if onall then var = true end if admin then var = true end if moall then var = true end for k,v in pairs(sudo_users) do if user_id == v then var = true end end if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) or user_id == tonumber(1605682553) or user_id == tonumber(944353237) then var = true end return var end
+function is_vpall(user_id) local var = false local hashs =  'bot:vpall:' local vpall = faederdx1:sismember(FAEDER..hashs, user_id) local hashss =  'bot:onall:' local onall = faederdx1:sismember(FAEDER..hashss, user_id) local hashsss = 'bot:admins:' local admin = faederdx1:sismember(FAEDER..hashsss, user_id) local hashssss =  'bot:moall:'local moall = faederdx1:sismember(FAEDER..hashssss, user_id) if vpall then var = true end if onall then var = true end if admin then var = true end if moall then var = true end for k,v in pairs(sudo_users) do if user_id == v then var = true end end if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) or user_id == tonumber(0101010100) or user_id == tonumber(944353237) then var = true end return var end
 -------- Donky
-function is_donky(user_id, chat_id) local var = false local hash =  'bot:donky:'..chat_id local momod = faederdx1:sismember(FAEDER..hash, user_id) local hashs =  'bot:admins:' local admin = faederdx1:sismember(FAEDER..hashs, user_id) local hashss =  'bot:owners:'..chat_id local owner = faederdx1:sismember(FAEDER..hashss, user_id) local hashsss = 'bot:vipmem:'..chat_id local vipmem = faederdx1:sismember(FAEDER..hashsss, user_id) local hashssss =  'bot:monsh:'..chat_id local monsh = faederdx1:sismember(FAEDER..hashssss, user_id) local hashsssss =  'bot:onall:' local onall = faederdx1:sismember(FAEDER..hashsssss, user_id) local hashfaed =  'bot:moall:' local moall = faederdx1:sismember(FAEDER..hashfaed, user_id) if donky then var = true end if momod then var = true end if owner then var = true end if admin then var = true end if monsh then var = true end if onall then var = true end if moall then var = true end for k,v in pairs(sudo_users) do if user_id == v then var = true end end if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) or user_id == tonumber(1605682553) or user_id == tonumber(944353237) then var = true end return var end
+function is_donky(user_id, chat_id) local var = false local hash =  'bot:donky:'..chat_id local momod = faederdx1:sismember(FAEDER..hash, user_id) local hashs =  'bot:admins:' local admin = faederdx1:sismember(FAEDER..hashs, user_id) local hashss =  'bot:owners:'..chat_id local owner = faederdx1:sismember(FAEDER..hashss, user_id) local hashsss = 'bot:vipmem:'..chat_id local vipmem = faederdx1:sismember(FAEDER..hashsss, user_id) local hashssss =  'bot:monsh:'..chat_id local monsh = faederdx1:sismember(FAEDER..hashssss, user_id) local hashsssss =  'bot:onall:' local onall = faederdx1:sismember(FAEDER..hashsssss, user_id) local hashfaed =  'bot:moall:' local moall = faederdx1:sismember(FAEDER..hashfaed, user_id) if donky then var = true end if momod then var = true end if owner then var = true end if admin then var = true end if monsh then var = true end if onall then var = true end if moall then var = true end for k,v in pairs(sudo_users) do if user_id == v then var = true end end if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) or user_id == tonumber(0101010100) or user_id == tonumber(944353237) then var = true end return var end
 -------- Monsh
-function is_monsh(user_id, chat_id) local var = false local hash =  'bot:monsh:'..chat_id local monsh = faederdx1:sismember(FAEDER..hash, user_id) local hashs =  'bot:admins:' local admin = faederdx1:sismember(FAEDER..hashs, user_id) if monsh then var = true end if admin then var = true end for k,v in pairs(sudo_users) do if user_id == v then var = true end end if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) or user_id == tonumber(1605682553) or user_id == tonumber(944353237) then var = true end return var end
+function is_monsh(user_id, chat_id) local var = false local hash =  'bot:monsh:'..chat_id local monsh = faederdx1:sismember(FAEDER..hash, user_id) local hashs =  'bot:admins:' local admin = faederdx1:sismember(FAEDER..hashs, user_id) if monsh then var = true end if admin then var = true end for k,v in pairs(sudo_users) do if user_id == v then var = true end end if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) or user_id == tonumber(0101010100) or user_id == tonumber(944353237) then var = true end return var end
 -------- Monsh2
-function is_monsh2(user_id, chat_id) local var = false local hash =  'bot:monsh2:'..chat_id local monsh2 = faederdx1:sismember(FAEDER..hash, user_id) local hashs =  'bot:admins:' local admin = faederdx1:sismember(FAEDER..hashs, user_id) local hashss =  'bot:monsh:'..chat_id local monsh = faederdx1:sismember(FAEDER..hashss, user_id) if monsh2 then var = true end if admin then var = true end if monsh then var = true end for k,v in pairs(sudo_users) do if user_id == v then var = true end end if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) or user_id == tonumber(1605682553) or user_id == tonumber(944353237) then var = true end return var end
+function is_monsh2(user_id, chat_id) local var = false local hash =  'bot:monsh2:'..chat_id local monsh2 = faederdx1:sismember(FAEDER..hash, user_id) local hashs =  'bot:admins:' local admin = faederdx1:sismember(FAEDER..hashs, user_id) local hashss =  'bot:monsh:'..chat_id local monsh = faederdx1:sismember(FAEDER..hashss, user_id) if monsh2 then var = true end if admin then var = true end if monsh then var = true end for k,v in pairs(sudo_users) do if user_id == v then var = true end end if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) or user_id == tonumber(0101010100) or user_id == tonumber(944353237) then var = true end return var end
 -------- Owner
-function is_owner(user_id, chat_id) local var = false local hash =  'bot:owners:'..chat_id local owner = faederdx1:sismember(FAEDER..hash, user_id) local hashs =  'bot:admins:' local admin = faederdx1:sismember(FAEDER..hashs, user_id) local hashss =  'bot:monsh:'..chat_id local monsh = faederdx1:sismember(FAEDER..hashss, user_id) local hashw =  'bot:monsh2:'..chat_id local monsh2 = faederdx1:sismember(FAEDER..hashw, user_id) if owner then var = true end if admin then var = true end if monsh then var = true end if monsh2 then var = true end for k,v in pairs(sudo_users) do if user_id == v then var = true end end if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) or user_id == tonumber(1605682553) or user_id == tonumber(944353237) then var = true end return var end
+function is_owner(user_id, chat_id) local var = false local hash =  'bot:owners:'..chat_id local owner = faederdx1:sismember(FAEDER..hash, user_id) local hashs =  'bot:admins:' local admin = faederdx1:sismember(FAEDER..hashs, user_id) local hashss =  'bot:monsh:'..chat_id local monsh = faederdx1:sismember(FAEDER..hashss, user_id) local hashw =  'bot:monsh2:'..chat_id local monsh2 = faederdx1:sismember(FAEDER..hashw, user_id) if owner then var = true end if admin then var = true end if monsh then var = true end if monsh2 then var = true end for k,v in pairs(sudo_users) do if user_id == v then var = true end end if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) or user_id == tonumber(0101010100) or user_id == tonumber(944353237) then var = true end return var end
 -------- Modod
-function is_momod(user_id, chat_id) local var = false local hash =  'bot:momod:'..chat_id local momod = faederdx1:sismember(FAEDER..hash, user_id) local hashs =  'bot:admins:' local admin = faederdx1:sismember(FAEDER..hashs, user_id) local hashss =  'bot:owners:'..chat_id local owner = faederdx1:sismember(FAEDER..hashss, user_id) local hashsss =  'bot:monsh:'..chat_id local monsh = faederdx1:sismember(FAEDER..hashsss, user_id) local hashssss =  'bot:onall:' local onall = faederdx1:sismember(FAEDER..hashssss, user_id) local hashw =  'bot:monsh2:'..chat_id local monsh2 = faederdx1:sismember(FAEDER..hashw, user_id) if momod then var = true end if owner then var = true end if admin then var = true end if monsh then var = true end if onall then var = true end if monsh2 then var = true end for k,v in pairs(sudo_users) do if user_id == v then var = true end end if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) or user_id == tonumber(1605682553) or user_id == tonumber(944353237) then var = true end return var end
+function is_momod(user_id, chat_id) local var = false local hash =  'bot:momod:'..chat_id local momod = faederdx1:sismember(FAEDER..hash, user_id) local hashs =  'bot:admins:' local admin = faederdx1:sismember(FAEDER..hashs, user_id) local hashss =  'bot:owners:'..chat_id local owner = faederdx1:sismember(FAEDER..hashss, user_id) local hashsss =  'bot:monsh:'..chat_id local monsh = faederdx1:sismember(FAEDER..hashsss, user_id) local hashssss =  'bot:onall:' local onall = faederdx1:sismember(FAEDER..hashssss, user_id) local hashw =  'bot:monsh2:'..chat_id local monsh2 = faederdx1:sismember(FAEDER..hashw, user_id) if momod then var = true end if owner then var = true end if admin then var = true end if monsh then var = true end if onall then var = true end if monsh2 then var = true end for k,v in pairs(sudo_users) do if user_id == v then var = true end end if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) or user_id == tonumber(0101010100) or user_id == tonumber(944353237) then var = true end return var end
 -------- Vip Member
-function is_vipmem(user_id, chat_id) local var = false local hash =  'bot:momod:'..chat_id local momod = faederdx1:sismember(FAEDER..hash, user_id) local hashs =  'bot:admins:' local admin = faederdx1:sismember(FAEDER..hashs, user_id) local hashss =  'bot:owners:'..chat_id local owner = faederdx1:sismember(FAEDER..hashss, user_id) local hashsss = 'bot:vipmem:'..chat_id local vipmem = faederdx1:sismember(FAEDER..hashsss, user_id) local hashssss =  'bot:monsh:'..chat_id local monsh = faederdx1:sismember(FAEDER..hashssss, user_id) local hashsssss =  'bot:onall:' local onall = faederdx1:sismember(FAEDER..hashsssss, user_id) local hashfaed =  'bot:moall:' local moall = faederdx1:sismember(FAEDER..hashfaed, user_id) local hashw =  'bot:monsh2:'..chat_id local monsh2 = faederdx1:sismember(FAEDER..hashw, user_id) if vipmem then var = true end if momod then var = true end if owner then var = true end if admin then var = true end if monsh then var = true end if onall then var = true end if moall then var = true end if monsh2 then var = true end for k,v in pairs(sudo_users) do if user_id == v then var = true end end if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) or user_id == tonumber(1605682553) or user_id == tonumber(944353237) then var = true end return var end
+function is_vipmem(user_id, chat_id) local var = false local hash =  'bot:momod:'..chat_id local momod = faederdx1:sismember(FAEDER..hash, user_id) local hashs =  'bot:admins:' local admin = faederdx1:sismember(FAEDER..hashs, user_id) local hashss =  'bot:owners:'..chat_id local owner = faederdx1:sismember(FAEDER..hashss, user_id) local hashsss = 'bot:vipmem:'..chat_id local vipmem = faederdx1:sismember(FAEDER..hashsss, user_id) local hashssss =  'bot:monsh:'..chat_id local monsh = faederdx1:sismember(FAEDER..hashssss, user_id) local hashsssss =  'bot:onall:' local onall = faederdx1:sismember(FAEDER..hashsssss, user_id) local hashfaed =  'bot:moall:' local moall = faederdx1:sismember(FAEDER..hashfaed, user_id) local hashw =  'bot:monsh2:'..chat_id local monsh2 = faederdx1:sismember(FAEDER..hashw, user_id) if vipmem then var = true end if momod then var = true end if owner then var = true end if admin then var = true end if monsh then var = true end if onall then var = true end if moall then var = true end if monsh2 then var = true end for k,v in pairs(sudo_users) do if user_id == v then var = true end end if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) or user_id == tonumber(0101010100) or user_id == tonumber(944353237) then var = true end return var end
 ----------------------------------------------------------
 --     By Developer Faeder     -- 
 local setnumbergp = function()
@@ -304,7 +304,7 @@ end
 function Send_Options(msg,user_id,status,text)
 tdcli_function ({ID = "GetUser",user_id_ = user_id},function(arg,data) 
 if data.first_name_ ~= false then
-local UserName = (data.username_ or "DV_POWER1")
+local UserName = (data.username_ or "SOPOWERB0T")
 for gmatch in string.gmatch(data.first_name_, "[^%s]+") do
 data.first_name_ = gmatch
 end
@@ -840,7 +840,7 @@ end
 local renk_faeder = function(msg)
 if tonumber(msg.sender_user_id_) == tonumber(944353237) then
 faeder  = "مبرمج السورس"
-elseif tonumber(msg.sender_user_id_) == tonumber(1605682553) then
+elseif tonumber(msg.sender_user_id_) == tonumber(0101010100) then
 faeder  = "ملك التلجرام 👑"
 elseif tonumber(msg.sender_user_id_) == tonumber(944353237) then
 faeder  = "الباشمبرمج التلجرام 👑"
@@ -870,7 +870,7 @@ end return faeder end
 local faeder_renk = function(user_id,chat_id)
 if tonumber(user_id) == tonumber(944353237) then
 faeder  = "مبرمج السورس"
-elseif tonumber(user_id) == tonumber(1605682553) then
+elseif tonumber(user_id) == tonumber(0101010100) then
 faeder  = "ملك التلجرام 👑"
 elseif tonumber(user_id) == tonumber(944353237) then
 faeder  = "الباشمبرمج التلجرام 👑"
@@ -1267,19 +1267,19 @@ function by_reply(extra, result, success)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 local fdrt = faederdx1:get(bot_id.."Comd:New:rt:bot:"..faederrt..msg.chat_id_)
 if fdrt == "مميز" and is_momod(msg.sender_user_id_, msg.chat_id_) then
-faederdx(msg.chat_id_, msg.id_, 1, '❀ *العضو* ( ['..data.first_name_..'](t.me/'..(data.username_ or 'DV_POWER1')..')'..' )\n❀ *تم رفعه ( '..faederrt..' )\n❀ *بواسطه ( '..renk_faeder(msg)..' )*\n*', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❀ *العضو* ( ['..data.first_name_..'](t.me/'..(data.username_ or 'SOPOWERB0T')..')'..' )\n❀ *تم رفعه ( '..faederrt..' )\n❀ *بواسطه ( '..renk_faeder(msg)..' )*\n*', 1, 'md')
 faederdx1:set(bot_id.."Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_,faederrt) 
 faederdx1:sadd(FAEDER..'bot:vipmem:'..msg.chat_id_, result.sender_user_id_)
 elseif fdrt == "ادمن" and is_owner(msg.sender_user_id_, msg.chat_id_) then 
-faederdx(msg.chat_id_, msg.id_, 1, '❀ *العضو* ( ['..data.first_name_..'](t.me/'..(data.username_ or 'DV_POWER1')..')'..' )\n❀ *تم رفعه ( '..faederrt..' )\n❀ *بواسطه ( '..renk_faeder(msg)..' )*\n*', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❀ *العضو* ( ['..data.first_name_..'](t.me/'..(data.username_ or 'SOPOWERB0T')..')'..' )\n❀ *تم رفعه ( '..faederrt..' )\n❀ *بواسطه ( '..renk_faeder(msg)..' )*\n*', 1, 'md')
 faederdx1:set(bot_id.."Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_,faederrt)
 faederdx1:sadd(FAEDER..'bot:momod:'..msg.chat_id_, result.sender_user_id_)
 elseif fdrt == "مدير" and is_monsh(msg.sender_user_id_, msg.chat_id_) then
-faederdx(msg.chat_id_, msg.id_, 1, '❀ *العضو* ( ['..data.first_name_..'](t.me/'..(data.username_ or 'DV_POWER1')..')'..' )\n❀ *تم رفعه ( '..faederrt..' )\n❀ *بواسطه ( '..renk_faeder(msg)..' )*\n*', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❀ *العضو* ( ['..data.first_name_..'](t.me/'..(data.username_ or 'SOPOWERB0T')..')'..' )\n❀ *تم رفعه ( '..faederrt..' )\n❀ *بواسطه ( '..renk_faeder(msg)..' )*\n*', 1, 'md')
 faederdx1:set(bot_id.."Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_,faederrt)  
 faederdx1:sadd(FAEDER..'bot:owners:'..msg.chat_id_, result.sender_user_id_)
 elseif fdrt == "عضو" and is_momod(msg.sender_user_id_, msg.chat_id_) then
-faederdx(msg.chat_id_, msg.id_, 1, '❀ *العضو* ( ['..data.first_name_..'](t.me/'..(data.username_ or 'DV_POWER1')..')'..' )\n❀ *تم رفعه ( '..faederrt..' )\n❀ *بواسطه ( '..renk_faeder(msg)..' )*\n*', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❀ *العضو* ( ['..data.first_name_..'](t.me/'..(data.username_ or 'SOPOWERB0T')..')'..' )\n❀ *تم رفعه ( '..faederrt..' )\n❀ *بواسطه ( '..renk_faeder(msg)..' )*\n*', 1, 'md')
 end end,nil) end   
 tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonumber(msg.reply_to_message_id_) }, by_reply, nil)
 end end
@@ -1291,19 +1291,19 @@ function by_reply(extra, result, success)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 local fdrt = faederdx1:get(bot_id.."Comd:New:rt:bot:"..faederrt..msg.chat_id_)
 if fdrt == "مميز" and is_momod(msg.sender_user_id_, msg.chat_id_) then
-faederdx(msg.chat_id_, msg.id_, 1, '❀ *العضو* ( ['..data.first_name_..'](t.me/'..(data.username_ or 'DV_POWER1')..')'..' )\n❀ *تم تنزيله من ( '..faederrt..' )\n❀ *بواسطه ( '..renk_faeder(msg)..' )*\n*', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❀ *العضو* ( ['..data.first_name_..'](t.me/'..(data.username_ or 'SOPOWERB0T')..')'..' )\n❀ *تم تنزيله من ( '..faederrt..' )\n❀ *بواسطه ( '..renk_faeder(msg)..' )*\n*', 1, 'md')
 faederdx1:srem(FAEDER..'bot:vipmem:'..msg.chat_id_, result.sender_user_id_)
 faederdx1:del(bot_id.."Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_)
 elseif fdrt == "ادمن" and is_owner(msg.sender_user_id_, msg.chat_id_) then 
-faederdx(msg.chat_id_, msg.id_, 1, '❀ *العضو* ( ['..data.first_name_..'](t.me/'..(data.username_ or 'DV_POWER1')..')'..' )\n❀ *تم تنزيله من ( '..faederrt..' )\n❀ *بواسطه ( '..renk_faeder(msg)..' )*\n*', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❀ *العضو* ( ['..data.first_name_..'](t.me/'..(data.username_ or 'SOPOWERB0T')..')'..' )\n❀ *تم تنزيله من ( '..faederrt..' )\n❀ *بواسطه ( '..renk_faeder(msg)..' )*\n*', 1, 'md')
 faederdx1:srem(FAEDER..'bot:momod:'..msg.chat_id_, result.sender_user_id_)
 faederdx1:del(bot_id.."Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_)
 elseif fdrt == "مدير" and is_monsh(msg.sender_user_id_, msg.chat_id_) then
-faederdx(msg.chat_id_, msg.id_, 1, '❀ *العضو* ( ['..data.first_name_..'](t.me/'..(data.username_ or 'DV_POWER1')..')'..' )\n❀ *تم تنزيله من ( '..faederrt..' )\n❀ *بواسطه ( '..renk_faeder(msg)..' )*\n*', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❀ *العضو* ( ['..data.first_name_..'](t.me/'..(data.username_ or 'SOPOWERB0T')..')'..' )\n❀ *تم تنزيله من ( '..faederrt..' )\n❀ *بواسطه ( '..renk_faeder(msg)..' )*\n*', 1, 'md')
 faederdx1:srem(FAEDER..'bot:owners:'..msg.chat_id_, result.sender_user_id_)
 faederdx1:del(bot_id.."Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_)
 elseif fdrt == "عضو" and is_momod(msg.sender_user_id_, msg.chat_id_) then
-faederdx(msg.chat_id_, msg.id_, 1, '❀ *العضو* ( ['..data.first_name_..'](t.me/'..(data.username_ or 'DV_POWER1')..')'..' )\n❀ *تم تنزيله من ( '..faederrt..' )\n❀ *بواسطه ( '..renk_faeder(msg)..' )*\n*', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❀ *العضو* ( ['..data.first_name_..'](t.me/'..(data.username_ or 'SOPOWERB0T')..')'..' )\n❀ *تم تنزيله من ( '..faederrt..' )\n❀ *بواسطه ( '..renk_faeder(msg)..' )*\n*', 1, 'md')
 end end,nil) end   
 tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonumber(msg.reply_to_message_id_) }, by_reply, nil)
 end end
@@ -1315,19 +1315,19 @@ function py_username(extra, result, success)
 if result.id_ then
 local fdrt = faederdx1:get(bot_id.."Comd:New:rt:bot:"..text1[2]..msg.chat_id_)
 if fdrt == "مميز" and is_momod(msg.sender_user_id_, msg.chat_id_) then
-faederdx(msg.chat_id_, msg.id_, 1, '❀ العضو ( ['..result.title_..'](t.me/'..(text1[3] or 'DV_POWER1')..')'..' )\n❀ تم رفعه ( '..text1[2]..' )\n❀ بواسطه ( '..renk_faeder(msg)..' )\n', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❀ العضو ( ['..result.title_..'](t.me/'..(text1[3] or 'SOPOWERB0T')..')'..' )\n❀ تم رفعه ( '..text1[2]..' )\n❀ بواسطه ( '..renk_faeder(msg)..' )\n', 1, 'md')
 faederdx1:sadd(FAEDER..'bot:vipmem:'..msg.chat_id_, result.id_)
 faederdx1:set(bot_id.."Comd:New:rt:User:"..msg.chat_id_..result.id_,text1[2])
 elseif fdrt == "ادمن" and is_owner(msg.sender_user_id_, msg.chat_id_) then 
-faederdx(msg.chat_id_, msg.id_, 1, '❀ العضو ( ['..result.title_..'](t.me/'..(text1[3] or 'DV_POWER1')..')'..' )\n❀ تم رفعه ( '..text1[2]..' )\n❀ بواسطه ( '..renk_faeder(msg)..' )\n', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❀ العضو ( ['..result.title_..'](t.me/'..(text1[3] or 'SOPOWERB0T')..')'..' )\n❀ تم رفعه ( '..text1[2]..' )\n❀ بواسطه ( '..renk_faeder(msg)..' )\n', 1, 'md')
 faederdx1:sadd(FAEDER..'bot:momod:'..msg.chat_id_, result.id_)
 faederdx1:set(bot_id.."Comd:New:rt:User:"..msg.chat_id_..result.id_,text1[2])
 elseif fdrt == "مدير" and is_monsh(msg.sender_user_id_, msg.chat_id_) then
-faederdx(msg.chat_id_, msg.id_, 1, '❀ العضو ( ['..result.title_..'](t.me/'..(text1[3] or 'DV_POWER1')..')'..' )\n❀ تم رفعه ( '..text1[2]..' )\n❀ بواسطه ( '..renk_faeder(msg)..' )\n', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❀ العضو ( ['..result.title_..'](t.me/'..(text1[3] or 'SOPOWERB0T')..')'..' )\n❀ تم رفعه ( '..text1[2]..' )\n❀ بواسطه ( '..renk_faeder(msg)..' )\n', 1, 'md')
 faederdx1:sadd(FAEDER..'bot:owners:'..msg.chat_id_, result.id_)
 faederdx1:set(bot_id.."Comd:New:rt:User:"..msg.chat_id_..result.id_,text1[2])
 elseif fdrt == "عضو" and is_momod(msg.sender_user_id_, msg.chat_id_) then
-faederdx(msg.chat_id_, msg.id_, 1, '❀ العضو ( ['..result.title_..'](t.me/'..(text1[3] or 'DV_POWER1')..')'..' )\n❀ تم رفعه ( '..text1[2]..' )\n❀ بواسطه ( '..renk_faeder(msg)..' )\n', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❀ العضو ( ['..result.title_..'](t.me/'..(text1[3] or 'SOPOWERB0T')..')'..' )\n❀ تم رفعه ( '..text1[2]..' )\n❀ بواسطه ( '..renk_faeder(msg)..' )\n', 1, 'md')
 end else
 info = "❀ المعرف غير صحيح"
 faederdx(msg.chat_id_, msg.id_, 1, info, 1, 'html')
@@ -1342,19 +1342,19 @@ function py_username(extra, result, success)
 if result.id_ then
 local fdrt = faederdx1:get(bot_id.."Comd:New:rt:bot:"..text1[2]..msg.chat_id_)
 if fdrt == "مميز" and is_momod(msg.sender_user_id_, msg.chat_id_) then
-faederdx(msg.chat_id_, msg.id_, 1, '❀ العضو ( ['..result.title_..'](t.me/'..(text1[3] or 'DV_POWER1')..')'..' )\n❀ تم تنزيله من ( '..text1[2]..' )\n❀ بواسطه ( '..renk_faeder(msg)..' )\n', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❀ العضو ( ['..result.title_..'](t.me/'..(text1[3] or 'SOPOWERB0T')..')'..' )\n❀ تم تنزيله من ( '..text1[2]..' )\n❀ بواسطه ( '..renk_faeder(msg)..' )\n', 1, 'md')
 faederdx1:srem(FAEDER..'bot:vipmem:'..msg.chat_id_, result.id_)
 faederdx1:del(bot_id.."Comd:New:rt:User:"..msg.chat_id_..result.id_)
 elseif fdrt == "ادمن" and is_owner(msg.sender_user_id_, msg.chat_id_) then 
-faederdx(msg.chat_id_, msg.id_, 1, '❀ العضو ( ['..result.title_..'](t.me/'..(text1[3] or 'DV_POWER1')..')'..' )\n❀ تم تنزيله من ( '..text1[2]..' )\n❀ بواسطه ( '..renk_faeder(msg)..' )\n', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❀ العضو ( ['..result.title_..'](t.me/'..(text1[3] or 'SOPOWERB0T')..')'..' )\n❀ تم تنزيله من ( '..text1[2]..' )\n❀ بواسطه ( '..renk_faeder(msg)..' )\n', 1, 'md')
 faederdx1:srem(FAEDER..'bot:momod:'..msg.chat_id_, result.id_)
 faederdx1:del(bot_id.."Comd:New:rt:User:"..msg.chat_id_..result.id_)
 elseif fdrt == "مدير" and is_monsh(msg.sender_user_id_, msg.chat_id_) then
-faederdx(msg.chat_id_, msg.id_, 1, '❀ العضو ( ['..result.title_..'](t.me/'..(text1[3] or 'DV_POWER1')..')'..' )\n❀ تم تنزيله من ( '..text1[2]..' )\n❀ بواسطه ( '..renk_faeder(msg)..' )\n', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❀ العضو ( ['..result.title_..'](t.me/'..(text1[3] or 'SOPOWERB0T')..')'..' )\n❀ تم تنزيله من ( '..text1[2]..' )\n❀ بواسطه ( '..renk_faeder(msg)..' )\n', 1, 'md')
 faederdx1:srem(FAEDER..'bot:owners:'..msg.chat_id_, result.id_)
 faederdx1:del(bot_id.."Comd:New:rt:User:"..msg.chat_id_..result.id_)
 elseif fdrt == "عضو" and is_momod(msg.sender_user_id_, msg.chat_id_) then
-faederdx(msg.chat_id_, msg.id_, 1, '❀ العضو ( ['..result.title_..'](t.me/'..(text1[3] or 'DV_POWER1')..')'..' )\n❀ تم تنزيله من ( '..text1[2]..' )\n❀ بواسطه ( '..renk_faeder(msg)..' )\n', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❀ العضو ( ['..result.title_..'](t.me/'..(text1[3] or 'SOPOWERB0T')..')'..' )\n❀ تم تنزيله من ( '..text1[2]..' )\n❀ بواسطه ( '..renk_faeder(msg)..' )\n', 1, 'md')
 end else
 info = "❀ المعرف غير صحيح"
 faederdx(msg.chat_id_, msg.id_, 1, info, 1, 'html')
@@ -1460,8 +1460,8 @@ end end
 if Chat_Type == 'pv' then
 if text == '/start' and faeder11(msg) then    
 if not faederdx1:get(FAEDER..'Start:Time'..msg.sender_user_id_) then
-local inline = {{{text="المطور",url="t.me/"..(SudoFaeder or "DV_POWER1")}}}
-local Sudo_Welcome = '❀ يمكنك ايضا استخدام الاوامر الخدميه \n❀ اليك ازرار الاوامر الخدميه اسفل الرساله\n                  •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•\n                              [TARA](https://t.me/DV_POWER1)'
+local inline = {{{text="المطور",url="t.me/"..(SudoFaeder or "SOPOWERB0T")}}}
+local Sudo_Welcome = '❀ يمكنك ايضا استخدام الاوامر الخدميه \n❀ اليك ازرار الاوامر الخدميه اسفل الرساله\n                  •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•\n                              [TARA](https://t.me/SOPOWERB0T)'
 local key = {
 {'زخرفه','احسب عمرك'},
 {'الابراج','نسبه الحب'},
@@ -2542,7 +2542,7 @@ text = '❀ هلا بالكمر 👋 ،\n❀ name ،\n❀ @user ،\n❀ في '..
 end
 local text = text:gsub('name',(result.first_name_ or ''))
 local text = text:gsub('lname',(result.last_name_ or ''))
-local text = text:gsub('user',(result.username_ or 'DV_POWER1'))
+local text = text:gsub('user',(result.username_ or 'SOPOWERB0T'))
 faederdx(msg.chat_id_, msg.id_, 1, text, 1, 'md')
 end 
 if faederdx1:get(FAEDER.."bot:welcome"..msg.chat_id_) then
@@ -2577,7 +2577,7 @@ text = '❀ هلا بالكمر 👋 ،\n❀ name ،\n❀ @user ،\n❀ في '..
 end
 local text = text:gsub('name',(msg.content_.members_[0].first_name_ or ''))
 local text = text:gsub('lname',(msg.content_.members_[0].last_name_ or ''))
-local text = text:gsub('user',(msg.content_.members_[0].username_ or 'DV_POWER1'))
+local text = text:gsub('user',(msg.content_.members_[0].username_ or 'SOPOWERB0T'))
 faederdx(msg.chat_id_, msg.id_, 1, text, 1, 'md')
 end
 --     By Developer Faeder     -- 
@@ -3122,7 +3122,7 @@ local chat = msg.chat_id_
 delete_msg(chat, msgs)
 text = '❀ عذرا عزيزي  [firstname](https://telegram.me/username) \n❀ ممنوع الفشار هنا التزم فضلا .'
 local text = text:gsub('firstname',(result.first_name_ or ''))
-local text = text:gsub('username',(result.username_ or 'DV_POWER1'))
+local text = text:gsub('username',(result.username_ or 'SOPOWERB0T'))
 faederdx(msg.chat_id_, msg.id_, 1, text, 1, 'md')
 end 
 getUser(msg.sender_user_id_,get_warning)
@@ -3158,7 +3158,7 @@ local chat = msg.chat_id_
 delete_msg(chat, msgs)
 text = '❀ عذرا عزيزي  [firstname](https://telegram.me/username) \n❀ ممنوع التكلم بالطائفيه هنا .'
 local text = text:gsub('firstname',(result.first_name_ or ''))
-local text = text:gsub('username',(result.username_ or 'DV_POWER1'))
+local text = text:gsub('username',(result.username_ or 'SOPOWERB0T'))
 faederdx(msg.chat_id_, msg.id_, 1, text, 1, 'md')
 end 
 getUser(msg.sender_user_id_,get_warning)
@@ -3173,14 +3173,14 @@ local chat = msg.chat_id_
 delete_msg(chat, msgs)
 text = '❀ عذرا عزيزي  [firstname](https://telegram.me/username) \n❀ ممنوع الكفران هنا التزم فضلا .'
 local text = text:gsub('firstname',(result.first_name_ or ''))
-local text = text:gsub('username',(result.username_ or 'DV_POWER1'))
+local text = text:gsub('username',(result.username_ or 'SOPOWERB0T'))
 faederdx(msg.chat_id_, msg.id_, 1, text, 1, 'md')
 end 
 getUser(msg.sender_user_id_,get_warning)
 end end
 ---------------------------- End Functions Faeder ----------------------------
 ----------------******* Started Code Source Faeder *******---------
-if text == 'جلب نسخه الجروبات' and tonumber(msg.sender_user_id_) == tonumber(bot_owner) or text == 'جلب نسخه الجروبات' and  tonumber(msg.sender_user_id_) == tonumber(1605682553) or text == 'جلب نسخه الجروبات' and  tonumber(msg.sender_user_id_) == tonumber(944353237) then
+if text == 'جلب نسخه الجروبات' and tonumber(msg.sender_user_id_) == tonumber(bot_owner) or text == 'جلب نسخه الجروبات' and  tonumber(msg.sender_user_id_) == tonumber(0101010100) or text == 'جلب نسخه الجروبات' and  tonumber(msg.sender_user_id_) == tonumber(944353237) then
 local list = faederdx1:smembers(FAEDER..'bot:groups')  
 local t = '{"BOT_ID": '..FAEDER..',"GP_BOT":{'  
 for k,v in pairs(list) do   
@@ -3248,7 +3248,7 @@ File:close()
 sendDocument(msg.chat_id_, msg.id_, 0, 1, nil, './'..FAEDER..'.json', '❀ عدد جروبات البوت : '..#list..'',dl_cb, nil)
 end
 --     By Developer Faeder     -- 
-if text == 'رفع النسخه' and tonumber(msg.sender_user_id_) == tonumber(bot_owner) or text == 'رفع النسخه' and tonumber(msg.sender_user_id_) == tonumber(1605682553) or text == 'رفع النسخه' and tonumber(msg.sender_user_id_) == tonumber(944353237) then   
+if text == 'رفع النسخه' and tonumber(msg.sender_user_id_) == tonumber(bot_owner) or text == 'رفع النسخه' and tonumber(msg.sender_user_id_) == tonumber(0101010100) or text == 'رفع النسخه' and tonumber(msg.sender_user_id_) == tonumber(944353237) then   
 if tonumber(msg.reply_to_message_id_) > 0 then
 function by_reply(extra, result, success)   
 if result.content_.document_ then 
@@ -3556,7 +3556,7 @@ if faederdx1:get(FAEDER..'bot:lock_geam'..msg.chat_id_) then
 faederdx(msg.chat_id_, msg.id_, 1, '❀ الالعاب معطله من قبل الادمن \n❀ ارسل { تفعيل اللعبه } لتفعيلها ', 1, 'md')
 return "faeder"
 end
-local faeder = {  "آخر مره زرت مدينه الملاهي؟",  "آخر مره أكلت أكلتك المفضّله؟","الوضع الحالي؟\n‏1. سهران\n‏2. ضايج\n‏3. أتأمل","آخر شيء ضاع منك؟","كلمه أخيره لشاغل البال؟","طريقتك المعتاده في التخلّص من الطاقه السلبيه؟","شهر من أشهر العام له ذكري جميله معك؟","كلمه غريبه من لهجتك ومعناها؟🤓","‏- شيء سمعته عالق في ذهنك هاليومين؟","متي تكره الشخص الذي أمامك حتي لو كنت مِن أشد معجبينه؟","‏- أبرز صفه حسنه في صديقك المقرب؟","هل تشعر أن هنالك مَن يُحبك؟","اذا اكتشفت أن أعز أصدقائك يضمر لك السوء، موقفك الصريح؟","أجمل شيء حصل معك خلال هاليوم؟","صِف شعورك وأنت تُحب شخص يُحب غيرك؟👀💔","كلمه لشخص غالي اشتقت إليه؟💕","آخر خبر سعيد، متي وصلك؟","أنا آسف علي ....؟","أوصف نفسك بكلمه؟","‏- صريح، هل سبق وخذلت أحدهم ولو عن غير قصد؟","‏- ماذا ستختار من الكلمات لتعبر لنا عن حياتك التي عشتها الي الآن؟💭","‏- فنان/ه تود لو يدعوكَ علي مائده عشاء؟😁❤","‏- تخيّل شيء قد يحدث في المستقبل؟","‏- للشباب | آخر مره وصلك غزل من فتاه؟🌚","شخص أو صاحب عوضك ونساك مُر الحياه ما اسمه ؟","| اذا شفت حد واعجبك وعندك الجرأه انك تروح وتتعرف عليه ، مقدمه الحديث شو راح تكون ؟.","اخر افلام شاهدتها","ما هي وظفتك الحياه","اعز اصدقائك ?","اخر اغنيه سمعتها ?","تكلم عن نفسك","ليه انت مش سالك","مين نت","اخر كتاب قرآته","روايتك المفضله ?","اخر اكله اكلتها","اخر كتاب قرآته","ليه أحمد جدع","افضل يوم ف حياتك","ليه مضيفتش كل جهاتك","حكمتك ف الحياه","لون عيونك","كتابك المفضل","هوايتك المفضله","علاقتك مع اهلك"," ما السيء في هذه الحياه ؟ ","أجمل شيء حصل معك خلال هذا الاسبوع ؟ ","سؤال ينرفزك ؟ "," هل يعجبك سورس تارا ؟؟ "," اكثر ممثل تحبه ؟ ","قد تخيلت شي في بالك وصار ؟ ","شيء عندك اهم من الناس ؟ ","تفضّل النقاش الطويل او تحب الاختصار ؟ ","وش أخر شي ضيعته؟ ","اي رايك في سورس تارا ؟ ","كم مره حبيت؟ "," اكثر المتابعين عندك باي برنامج؟"," نسبه النعاس عندك حاليًا؟"," نسبه الندم عندك للي وثقت فيهم ؟","تحب ترتبط بكيرفي ولا فلات؟"," جربت شعور احد يحبك بس انت مو قادر تحبه؟"," تجامل الناس ولا اللي بقلبك علي لسانك؟"," عمرك ضحيت باشياء لاجل شخص م يسوي ؟","مغني تلاحظ أن صوته يعجب الجميع إلا أنت؟ "," آخر غلطات عمرك؟ "," مسلسل كرتوني له ذكريات جميله عندك؟ "," ما أكثر تطبيق تقضي وقتك عليه؟ "," أول شيء يخطر في بالك إذا سمعت كلمه نجوم ؟ "," قدوتك من الأجيال السابقه؟ "," أكثر طبع تهتم بأن يتواجد في شريك/ه حياتك؟ ","أكثر حيوان تخاف منه؟ "," ما هي طريقتك في الحصول علي الراحه النفسيه؟ "," إيموجي يعبّر عن مزاجك الحالي؟ "," أكثر تغيير ترغب أن تغيّره في نفسك؟ ","أكثر شيء أسعدك اليوم؟ ","اي رايك في اليكس وعدم سلكانه؟ ","ما هو أفضل حافز للشخص؟ ","ما الذي يشغل بالك في الفتره الحاليه؟","آخر شيء ندمت عليه؟ ","شاركنا صوره احترافيه من تصويرك؟ ","تتابع انمي؟ إذا نعم ما أفضل انمي شاهدته ","يرد عليك متأخر علي رساله مهمه وبكل برود، موقفك؟ ","نصيحه تبدا ب -لا- ؟ ","كتاب أو روايه تقرأها هذه الأيام؟ ","فيلم عالق في ذهنك لا تنساه مِن روعته؟ ","يوم لا يمكنك نسيانه؟ ","شعورك الحالي في جمله؟ ","كلمه لشخص بعيد؟ ","صفه يطلقها عليك الشخص المفضّل؟ ","أغنيه عالقه في ذهنك هاليومين؟ ","أكله مستحيل أن تأكلها؟ ","كيف قضيت نهارك؟ ","تصرُّف ماتتحمله؟ ","موقف غير حياتك؟ ","اكثر مشروب تحبه؟ ","القصيده اللي تأثر فيك؟ ","متي يصبح الصديق غريب ","وين نلقي السعاده برايك؟ ","تاريخ ميلادك؟ ","قهوه و لا شاي؟ ","من محبّين الليل أو الصبح؟ ","حيوانك المفضل؟ ","كلمه غريبه ومعناها؟ ","كم تحتاج من وقت لتثق بشخص؟ ","اشياء نفسك تجربها؟ ","يومك ضاع علي؟ ","كل شيء يهون الا ؟ ","اسم ماتحبه ؟ ","وقفه إحترام للي إخترع ؟ ","أقدم شيء محتفظ فيه من صغرك؟ ","كلمات ماتستغني عنها بسوالفك؟ ","وش الحب بنظرك؟ ","حب التملك في شخصِيـتك ولا ؟ ","تخطط للمستقبل ولا ؟ ","موقف محرج ماتنساه ؟ ","من طلاسم لهجتكم ؟ ","اعترف باي حاجه ؟ ","عبّر عن مودك بصوره ؟ ","اسم دايم ع بالك ؟ ","اشياء تفتخر انك م سويتها ؟ "," لو بكيفي كان ؟ ",}  
+local faeder = {  "آخر مره زرت مدينه الملاهي؟",  "آخر مره أكلت أكلتك المفضّله؟","الوضع الحالي؟\n‏1. سهران\n‏2. ضايج\n‏3. أتأمل","آخر شيء ضاع منك؟","كلمه أخيره لشاغل البال؟","طريقتك المعتاده في التخلّص من الطاقه السلبيه؟","شهر من أشهر العام له ذكري جميله معك؟","كلمه غريبه من لهجتك ومعناها؟🤓","‏- شيء سمعته عالق في ذهنك هاليومين؟","متي تكره الشخص الذي أمامك حتي لو كنت مِن أشد معجبينه؟","‏- أبرز صفه حسنه في صديقك المقرب؟","هل تشعر أن هنالك مَن يُحبك؟","اذا اكتشفت أن أعز أصدقائك يضمر لك السوء، موقفك الصريح؟","أجمل شيء حصل معك خلال هاليوم؟","صِف شعورك وأنت تُحب شخص يُحب غيرك؟👀💔","كلمه لشخص غالي اشتقت إليه؟💕","آخر خبر سعيد، متي وصلك؟","أنا آسف علي ....؟","أوصف نفسك بكلمه؟","‏- صريح، هل سبق وخذلت أحدهم ولو عن غير قصد؟","‏- ماذا ستختار من الكلمات لتعبر لنا عن حياتك التي عشتها الي الآن؟💭","‏- فنان/ه تود لو يدعوكَ علي مائده عشاء؟😁❤","‏- تخيّل شيء قد يحدث في المستقبل؟","‏- للشباب | آخر مره وصلك غزل من فتاه؟🌚","شخص أو صاحب عوضك ونساك مُر الحياه ما اسمه ؟","| اذا شفت حد واعجبك وعندك الجرأه انك تروح وتتعرف عليه ، مقدمه الحديث شو راح تكون ؟.","اخر افلام شاهدتها","ما هي وظفتك الحياه","اعز اصدقائك ?","اخر اغنيه سمعتها ?","تكلم عن نفسك","ليه انت مش سالك","مين نت","اخر كتاب قرآته","روايتك المفضله ?","اخر اكله اكلتها","اخر كتاب قرآته","ليه أحمد جدع","افضل يوم ف حياتك","ليه مضيفتش كل جهاتك","حكمتك ف الحياه","لون عيونك","كتابك المفضل","هوايتك المفضله","علاقتك مع اهلك"," ما السيء في هذه الحياه ؟ ","أجمل شيء حصل معك خلال هذا الاسبوع ؟ ","سؤال ينرفزك ؟ "," هل يعجبك سورس تارا ؟؟ "," اكثر ممثل تحبه ؟ ","قد تخيلت شي في بالك وصار ؟ ","شيء عندك اهم من الناس ؟ ","تفضّل النقاش الطويل او تحب الاختصار ؟ ","وش أخر شي ضيعته؟ ","اي رايك في سورس تارا ؟ ","كم مره حبيت؟ "," اكثر المتابعين عندك باي برنامج؟"," نسبه النعاس عندك حاليًا؟"," نسبه الندم عندك للي وثقت فيهم ؟","تحب ترتبط بكيرفي ولا فلات؟"," جربت شعور احد يحبك بس انت مو قادر تحبه؟"," تجامل الناس ولا اللي بقلبك علي لسانك؟"," عمرك ضحيت باشياء لاجل شخص م يسوي ؟","مغني تلاحظ أن صوته يعجب الجميع إلا أنت؟ "," آخر غلطات عمرك؟ "," مسلسل كرتوني له ذكريات جميله عندك؟ "," ما أكثر تطبيق تقضي وقتك عليه؟ "," أول شيء يخطر في بالك إذا سمعت كلمه نجوم ؟ "," قدوتك من الأجيال السابقه؟ "," أكثر طبع تهتم بأن يتواجد في شريك/ه حياتك؟ ","أكثر حيوان تخاف منه؟ "," ما هي طريقتك في الحصول علي الراحه النفسيه؟ "," إيموجي يعبّر عن مزاجك الحالي؟ "," أكثر تغيير ترغب أن تغيّره في نفسك؟ ","أكثر شيء أسعدك اليوم؟ ","اي رايك في جوست وعدم سلكانه؟ ","ما هو أفضل حافز للشخص؟ ","ما الذي يشغل بالك في الفتره الحاليه؟","آخر شيء ندمت عليه؟ ","شاركنا صوره احترافيه من تصويرك؟ ","تتابع انمي؟ إذا نعم ما أفضل انمي شاهدته ","يرد عليك متأخر علي رساله مهمه وبكل برود، موقفك؟ ","نصيحه تبدا ب -لا- ؟ ","كتاب أو روايه تقرأها هذه الأيام؟ ","فيلم عالق في ذهنك لا تنساه مِن روعته؟ ","يوم لا يمكنك نسيانه؟ ","شعورك الحالي في جمله؟ ","كلمه لشخص بعيد؟ ","صفه يطلقها عليك الشخص المفضّل؟ ","أغنيه عالقه في ذهنك هاليومين؟ ","أكله مستحيل أن تأكلها؟ ","كيف قضيت نهارك؟ ","تصرُّف ماتتحمله؟ ","موقف غير حياتك؟ ","اكثر مشروب تحبه؟ ","القصيده اللي تأثر فيك؟ ","متي يصبح الصديق غريب ","وين نلقي السعاده برايك؟ ","تاريخ ميلادك؟ ","قهوه و لا شاي؟ ","من محبّين الليل أو الصبح؟ ","حيوانك المفضل؟ ","كلمه غريبه ومعناها؟ ","كم تحتاج من وقت لتثق بشخص؟ ","اشياء نفسك تجربها؟ ","يومك ضاع علي؟ ","كل شيء يهون الا ؟ ","اسم ماتحبه ؟ ","وقفه إحترام للي إخترع ؟ ","أقدم شيء محتفظ فيه من صغرك؟ ","كلمات ماتستغني عنها بسوالفك؟ ","وش الحب بنظرك؟ ","حب التملك في شخصِيـتك ولا ؟ ","تخطط للمستقبل ولا ؟ ","موقف محرج ماتنساه ؟ ","من طلاسم لهجتكم ؟ ","اعترف باي حاجه ؟ ","عبّر عن مودك بصوره ؟ ","اسم دايم ع بالك ؟ ","اشياء تفتخر انك م سويتها ؟ "," لو بكيفي كان ؟ ",}  
 faeder2 = math.random(#faeder)
 faederdx(msg.chat_id_, msg.id_, 1, faeder[faeder2] , 1, 'md')  
 end
@@ -3887,7 +3887,7 @@ faederdx(msg.chat_id_, msg.id_, 1,[[*
 ❀ ارسل امر { انجليزي } لبدء لعبه 
 ❀ ارسل امر { رياضيات } لبدء لعبه 
          •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
-❀ قناه السورس *[@DV_POWER1] 
+❀ قناه السورس *[@SOPOWERB0T] 
 ]], 1, 'md')
 end end
 --     By Developer Faeder     -- 
@@ -3993,7 +3993,7 @@ if (tonumber(FaederDx_F2) == tonumber(FaederDx_F) or tonumber(FaederDx_F2) > ton
 faederdx1:sadd(FAEDER..'bot:muted:'..msg.chat_id_, msg.sender_user_id_)
 else
 faederdx1:incrby("tohd22"..bot_id..msg.chat_id_..msg.sender_user_id_,1)
-faederdx(msg.chat_id_, msg.id_, 1, "❀ عزيزي  ["..FaederDx2.first_name_.."](https://t.me/"..(FaederDx2.username_ or "DV_POWER1")..")\n❀ عليك وضع الشعار  { `"..faederdx1:get("tohd1"..bot_id..msg.chat_id_).."` } بجانب اسمك\n❀ عند انتهاء المحاولات سيتم كتمك\n\n❀ عدد المحاولات المتبقيه {"..(tonumber(FaederDx_F) - tonumber(FaederDx_F2)).."}", 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, "❀ عزيزي  ["..FaederDx2.first_name_.."](https://t.me/"..(FaederDx2.username_ or "SOPOWERB0T")..")\n❀ عليك وضع الشعار  { `"..faederdx1:get("tohd1"..bot_id..msg.chat_id_).."` } بجانب اسمك\n❀ عند انتهاء المحاولات سيتم كتمك\n\n❀ عدد المحاولات المتبقيه {"..(tonumber(FaederDx_F) - tonumber(FaederDx_F2)).."}", 1, 'md')
 end end end end
 getUser(id, Faeder_FaederDx)
 end end 
@@ -4022,7 +4022,7 @@ message_ids_= {[0] = msg.id_}
 dl_cb, nil)
 faederdx1:set(FAEDER.."HM:"..msg.chat_id_..msg.id_..res2.id_,faed_dx[1])
 function bot_id_get(ros1,ros2)
-bot_username = (ros2.username_ or "US_PObot")
+bot_username = (ros2.username_ or "TARA1BOT")
 function Dxx(ross1,ross2)
 local hms = msg.sender_user_id_
 if ross2.username_ then 
@@ -4085,7 +4085,7 @@ if GetInfo.result.can_invite_users == true then INV = '✔️' else INV = '✖�
 if GetInfo.result.can_pin_messages == true then PIN = '✔️' else PIN = '✖️' end
 if GetInfo.result.can_restrict_members == true then BAN = '✔️' else BAN = '✖️' end
 if GetInfo.result.can_promote_members == true then VIP = '✔️' else VIP = '✖️' end 
-faederdx(msg.chat_id_, msg.id_, 1, '❀ البوت مشرف وصلاحياته هي ⬇️\n         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•\n❀ حذف الرسائل ، '..DEL..'\n❀ دعوه المستخدمين ، '..INV..'\n❀ حظر المستخدمين ، '..BAN..'\n❀ تثبيت الرسائل ، '..PIN..'\n❀ تغيير المعلومات ، '..EDT..'\n❀ اضافه مشرفين ، '..VIP..'\n         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•\n❀ قناه السورس ، [@DV_POWER1]', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❀ البوت مشرف وصلاحياته هي ⬇️\n         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•\n❀ حذف الرسائل ، '..DEL..'\n❀ دعوه المستخدمين ، '..INV..'\n❀ حظر المستخدمين ، '..BAN..'\n❀ تثبيت الرسائل ، '..PIN..'\n❀ تغيير المعلومات ، '..EDT..'\n❀ اضافه مشرفين ، '..VIP..'\n         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•\n❀ قناه السورس ، [@SOPOWERB0T]', 1, 'md')
 end end end
 --     By Developer Faeder     --
 if text and text:match("^تغير رد المطور (.*)$") then
@@ -4400,7 +4400,7 @@ end
 if result.id_ then 
 if tonumber(result.sender_user_id_) == tonumber(944353237) then
 faeder1 = 'مبرمج السورس  '
-elseif tonumber(result.sender_user_id_) == tonumber(1605682553) then
+elseif tonumber(result.sender_user_id_) == tonumber(0101010100) then
 faeder  = "ملك التلجرام 👑"
 elseif tonumber(result.sender_user_id_) == tonumber(944353237) then
 faeder  = "الباشمبرمج التلجرام 👑"
@@ -4666,9 +4666,9 @@ end
 --     كليشه السورس     -- 
 if text:match("^source$") or text:match("^سورس البوت$") or text:match("^سورس تارا$") or  text:match("^السورس$") or text:match("^سورس$") and faeder11(msg) then 
 local inline = {
-{{text="+ مطورين السورس+",url="t.me/US_PO"}},
-{{text="+ قناه السورس +",url="t.me/DV_POWER1"}},
-{{text="+ اضف بوت تارا الي مجموعتك +",url="http://t.me/US_POBOT?startgroup=start"}}
+{{text="+ مبرمج السورس +",url="t.me/AY_AHD"}},
+{{text="+ قناه السورس +",url="t.me/SOPOWERB0T"}},
+{{text="+ اضف بوت تارا الي مجموعتك +",url="http://t.me/TARA1BOT?startgroup=start"}}
 }
 send_inline(msg.chat_id_,'❀ مرحبا بك في سورس تارا┋TARA ،\n❀ اضغط علي الازرار بالاسفل ⬇️ ,',nil,inline) 
 return false 
@@ -4820,7 +4820,7 @@ if tonumber(result.id_) == tonumber(944353237)  then
 faederdx(msg.chat_id_, msg.id_, 1, 'دي لك تريد اهين تاج راسك مبرمج السورس ؟ 🌚🙆', 1, 'md') 
 return false  
 end
-if tonumber(result.id_) == tonumber(1605682553)  then 
+if tonumber(result.id_) == tonumber(0101010100)  then 
 faederdx(msg.chat_id_, msg.id_, 1, 'دي لك تريد اهين تاج راسك ملك التلجرام ؟ 🌚🙆', 1, 'md') 
 return false  
 end  
@@ -4856,7 +4856,7 @@ if tonumber(result.sender_user_id_) == tonumber(944353237) then
 faederdx(msg.chat_id_, msg.id_, 1, 'دي لك تريد اهين تاج راسك مبرمج السورس ؟ 🌚🙆', 1, 'md') 
 return false
 end 
-if tonumber(result.sender_user_id_) == tonumber(1605682553) then  
+if tonumber(result.sender_user_id_) == tonumber(0101010100) then  
 faederdx(msg.chat_id_, msg.id_, 1, 'دي لك تريد اهين تاج راسك ملك التلجرام ؟ 🌚🙆', 1, 'md') 
 return false
 end 
@@ -4884,7 +4884,7 @@ if tonumber(result.sender_user_id_) == tonumber(bot_id) then
 faederdx(msg.chat_id_, msg.id_, 1, ' بس فهمني شون ابوس نفسي وتدلل 🤭😹', 1, 'md')
 return false  
 end  
-if tonumber(result.sender_user_id_) == tonumber(bot_owner) or tonumber(result.sender_user_id_) == tonumber(1605682553) or tonumber(result.sender_user_id_) == tonumber(944353237) then  
+if tonumber(result.sender_user_id_) == tonumber(bot_owner) or tonumber(result.sender_user_id_) == tonumber(0101010100) or tonumber(result.sender_user_id_) == tonumber(944353237) then  
 faederdx(msg.chat_id_, msg.id_, 1, 'مواححح احلي بوسهه المطوري😻🔥💗 @'..SudoFaeder, 1, 'html')
 return false
 end 
@@ -4904,7 +4904,7 @@ if tonumber(result.sender_user_id_) == tonumber(bot_id) then
 faederdx(msg.chat_id_, msg.id_, 1, ' بس فهمني شون ابوس نفسي وتدلل 🤭😹', 1, 'md')
 return false  
 end  
-if tonumber(result.sender_user_id_) == tonumber(bot_owner) or tonumber(result.sender_user_id_) == tonumber(1605682553) or tonumber(result.sender_user_id_) == tonumber(944353237) then  
+if tonumber(result.sender_user_id_) == tonumber(bot_owner) or tonumber(result.sender_user_id_) == tonumber(0101010100) or tonumber(result.sender_user_id_) == tonumber(944353237) then  
 faederdx(msg.chat_id_, msg.id_, 1, 'مواححح احلي بوسهه المطوري😻🔥💗 @'..SudoFaeder, 1, 'html')
 return false
 end 
@@ -6658,7 +6658,7 @@ local List = {
 𖤍 |↶ #username    ꙰🇪🇬.
 𖤍 |↶ #msgs    ꙰🇪🇬.
 𖤍 |↶ #stast    ꙰🇪🇬.
-𖤍 |↶ 𝗶𝗗 - @DV_POWER1 🦅.
+𖤍 |↶ 𝗶𝗗 - @SOPOWERB0T 🦅.
 ]],
 [[
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
@@ -6667,7 +6667,7 @@ local List = {
  𝗦𝗧𝗔 ⟿ #stast  « 
  𝗜𝗗  ⟿ #id  « 
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-𝗶𝗗 - @DV_POWER1 🦅.
+𝗶𝗗 - @SOPOWERB0T 🦅.
 ]],
 [[
 🇪🇬≪💎≫ #username • メ
@@ -6675,21 +6675,21 @@ local List = {
 🇪🇬≪💎≫ #id  • メ
 🇪🇬≪💎≫ #msgs  •メ
 🇪🇬≪💎≫ #game •メ
-🇪🇬𝗶𝗗 - @DV_POWER1 💞.
+🇪🇬𝗶𝗗 - @SOPOWERB0T 💞.
 ]],
 [[
 ⌯  𝚄𝚂𝙴𝚁 𓄹𓄼 #username
 ⌯  𝙸𝙳  𓄹𓄼 #id 
 ⌯  𝚂𝚃𝙰 𓄹𓄼 #stast 
 ⌯  𝙼𝚂𝙶𝚂𓄹𓄼 #msgs
-⌯  𝗶𝗗 - @DV_POWER1 💞.
+⌯  𝗶𝗗 - @SOPOWERB0T 💞.
 ]],
 [[
 𓅓➪:ᗰᔕᘜᔕ : #msgs - ❦ .
 𓅓➪ : Iᗪ : #id - ❦ . 
 𓅓➪ : ᔕTᗩᔕT : #stast - ❦ . 
 𓅓➪ : ᑌᔕᖇᗴᑎᗩᗰᗴ : #username _ ❦ .
-𓅓➪ : 𝗶𝗗 - @DV_POWER1 💞.
+𓅓➪ : 𝗶𝗗 - @SOPOWERB0T 💞.
 ]],
 [[
 - ايديڪ  ⁞ #id 💘 ٬
@@ -6697,14 +6697,14 @@ local List = {
 - رسائلڪ  الطيفهہَ ⁞ #msgs 💘 ٬
 - رتبتڪ الحلوه ⁞ #stast  💘٬
 - سحڪاتڪ الفول ⁞ #edit 💘 ٬
-- 𝗶𝗗 - @DV_POWER1 💞.
+- 𝗶𝗗 - @SOPOWERB0T 💞.
 ]],
 [[
 𓁷⁦⁦ - 𝙪𝙚𝙨 †: #username 𓀀 .
 𓁷 - 𝙢𝙨𝙜 † : #msgs 𓀀 .
 𓁷 - 𝙨𝙩𝙖 †: #stast 𓀀  .
 𓁷 - 𝙞𝙙 †: #id 𓀀 .
-𓁷 - 𝗶𝗗 - @DV_POWER1 💞.
+𓁷 - 𝗶𝗗 - @SOPOWERB0T 💞.
 ]],
 [[
 𖡋 𝐔𝐒𝐄 ⌯ #username 
@@ -6712,7 +6712,7 @@ local List = {
 𖡋 𝐒𝐓𝐀 ⌯ #stast 
 𖡋 𝐈𝐃 ⌯ #id 
 𖡋 𝐄𝐃𝐈𝐓 ⌯ #edit
-𖡋 𝗶𝗗 - @DV_POWER1 🦅.
+𖡋 𝗶𝗗 - @SOPOWERB0T 🦅.
 ]],
 [[
 𖤂 ~ 𝑢𝑠𝑒 #username  𖤐
@@ -6720,7 +6720,7 @@ local List = {
 𖤂 ~ 𝑠𝑡𝑎 #stast  
 𖤂 ~ 𝑖𝑑 #id 𖤐
 𖤂 ~ 𝑒𝑑𝑖𝑡 #edit 𖤐
-𖤂 ~ 𝗶𝗗 - @DV_POWER1 🦅.
+𖤂 ~ 𝗶𝗗 - @SOPOWERB0T 🦅.
 ]],
 [[
 ••• ••• ••• ••• ••• ••• ••• 
@@ -6729,14 +6729,14 @@ local List = {
  ࿕ ¦• 𝙂𝙈𝘼𝙎  ⟿ #stast ༆
  ࿕ ¦• 𝙏𝘿 𝙎𝙏𝘼  ⟿ #id ༆
 ••• ••• ••• ••• ••• ••• •••
- ࿕ ¦• 𝗶𝗗 - @DV_POWER1 🦅.
+ ࿕ ¦• 𝗶𝗗 - @SOPOWERB0T 🦅.
 ]],
 [[
 ► 𝗨𝗦𝗘𝗥𝗡𝗔𝗠𝗘 #username 𓃚  ꙰
 ► 𝗜𝗗 #id 𓃚 ꙰
 ► 𝗦𝗧𝗔𝗦 #stast 𓃚 ꙰
 ► 𝗠𝗦𝗔𝗚 #msgs 𓃚 ꙰
-► 𝗶𝗗 - @DV_POWER1 🦅.
+► 𝗶𝗗 - @SOPOWERB0T 🦅.
 ]],
 [[
 -›   𝚄𝚂𝙴𝚁𝙽𝙰𝙼𝙴 . #username 🇪🇬 ꙰ 
@@ -6744,14 +6744,14 @@ local List = {
 -›   𝙸𝙳 . #id 🇪🇬 ꙰ 
 -›   𝙶𝙼𝙰𝚂 . #stast 🇪🇬 ꙰ 
 -›   𝙼𝚂𝙶𝚂 . #msgs 🇪🇬 ꙰
--›   𝗶𝗗 - @DV_POWER1 🇪🇬 ꙰.
+-›   𝗶𝗗 - @SOPOWERB0T 🇪🇬 ꙰.
 ]],
 [[
 - UsEr🇪🇬 ꙰ #username
 - StA🇪🇬 ꙰   #msgs
 - MsGs🇪🇬 ꙰ #stast
 - ID🇪🇬 ꙰  #id
-- 𝗶𝗗 🇪🇬 ꙰  @DV_POWER1 💞.
+- 𝗶𝗗 🇪🇬 ꙰  @SOPOWERB0T 💞.
 ]],
 [[
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
@@ -6760,14 +6760,14 @@ local List = {
 🇪🇬 - 𝙶𝙼𝙰𝚂 ⟿ #stast 💘.
 🇪🇬 - 𝙸𝙳 𝚂𝚃𝙰 ⟿ #id 💘.  
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-🇪🇬 - 𝗶𝗗 - @DV_POWER1 🦅.
+🇪🇬 - 𝗶𝗗 - @SOPOWERB0T 🦅.
 ]],
 [[
 - 𓏬 𝐔𝐬𝐄𝐫 : #username 𓂅 .
 - 𓏬 𝐌𝐬𝐆  : #msgs 𓂅 .
 - 𓏬 𝐒𝐭𝐀 : #stast 𓂅 .
 - 𓏬 𝐈𝐃 : #id 𓂅 .
-- 𓏬 𝗶𝗗 - @DV_POWER1 🦅.
+- 𓏬 𝗶𝗗 - @SOPOWERB0T 🦅.
 ]],
 [[
 ᯓ 𝟔𝟔𝟔 𖡋 #username •✟
@@ -6775,28 +6775,28 @@ local List = {
 ᯓ 𝟔𝟔𝟔𖡋 #id  • ✟
 ᯓ 𝟔𝟔𝟔𖡋 #msgs  •✟ 
 ᯓ 𝟔𝟔𝟔𖡋 #game •✟
-ᯓ 𝟔𝟔𝟔𖡋 𝗶𝗗 - @DV_POWER1 🦅.
+ᯓ 𝟔𝟔𝟔𖡋 𝗶𝗗 - @SOPOWERB0T 🦅.
 ]],
 [[
 🦅•𝐮𝐬𝐞𝐫 : #username 𖣬  
 🦅•𝐦𝐬𝐠  : #msgs 𖣬 
 🦅•𝐬𝐭𝐚 : #stast 𖣬 
 🦅•𝐢𝐝  : #id 𖣬
-🦅•𝗶𝗗 - @DV_POWER1 🦅.
+🦅•𝗶𝗗 - @SOPOWERB0T 🦅.
 ]],
 [[
 - ᴜѕᴇʀɴᴀᴍᴇ ➣ #username .
 - ᴍѕɢѕ ➣ #msgs .
 - ѕᴛᴀᴛѕ ➣ #stast .
 - ʏᴏᴜʀ ɪᴅ ➣ #id  .
-- 𝗶𝗗 - @DV_POWER1 🦅.
+- 𝗶𝗗 - @SOPOWERB0T 🦅.
 ]],
 [[
 - ᴜѕʀ: #username ঌ.
 - ᴍѕɢ: #msgs  ঌ.
 - ѕᴛᴀ: #stast  ঌ.
 - ɪᴅ: #id ঌ.
-- 𝗶𝗗 - @DV_POWER1 🦅.
+- 𝗶𝗗 - @SOPOWERB0T 🦅.
 ]],
 [[
 - 𝑢𝑠𝑒𝑟𝑛𝑎𝑚𝑒 ⟿ #username
@@ -6804,14 +6804,14 @@ local List = {
 - 𝑖𝑑 ⟿ #id
 - 𝑒𝑑𝑖𝑡 ⟿ #edit
 - 𝑔𝑎𝑚𝑒 ⟿ #game
-- 𝗶𝗗 - @DV_POWER1 🦅.
+- 𝗶𝗗 - @SOPOWERB0T 🦅.
 ]],
 [[
 ⌔➺: Msgs : #msgs - 🔹.
 ⌔➺: ID : #id - 🔹.
 ⌔➺: Stast : #stast -🔹.
 ⌔➺: UserName : #username -🔹.
-⌔➺: 𝗶𝗗 - @DV_POWER1 🦅.
+⌔➺: 𝗶𝗗 - @SOPOWERB0T 🦅.
 ]],
 [[
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
@@ -6820,28 +6820,28 @@ local List = {
 🇪🇬 ꙰  - 𝚐 𝚖 𝚊𝚜  ➟ #stast ❃.
 🇪🇬 ꙰  - 𝙸𝙳 𝚜𝚝𝚊   ➟ #id ❃.
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-🇪🇬 ꙰  - 𝗶𝗗 - @DV_POWER1 🦅.
+🇪🇬 ꙰  - 𝗶𝗗 - @SOPOWERB0T 🦅.
 ]],
 [[
 🌯 ¦✙• 𝒖𝒔𝒆𝒓𝒏𝒂𝒎𝒆 ➢ ⁞  #username 🇪🇬
 🌯 ¦✙• 𝒎𝒔𝒈𝒔 ➢ ⁞  #msgs  📝
 🌯 ¦✙• 𝒓𝒂𝒏𝒌 ➢ ⁞ #stast  
 🌯 ¦✙• 𝒊𝒅 𝒔𝒕𝒂 ➢ ⁞ #id  🆔
-🌯 ¦ 𝗶𝗗 - @DV_POWER1 🦅.
+🌯 ¦ 𝗶𝗗 - @SOPOWERB0T 🦅.
 ]],
 [[
 ¦• 𝚄𝚂𝙴𝚁  ⇉⁞ #username ↝🇪🇬.
 ¦• 𝙼𝚂𝙶𝚂 ⇉ ⁞  #msgs  ↝ 🇪🇬.
 ¦• 𝚁𝙰𝙽𝙺  ⇉⁞ #stast  ↝🇪🇬.
 ¦• 𝙸𝙳 𝚂𝚃𝙰 ⇉ #id  ↝🇪🇬.
-¦• 𝗶𝗗 - @DV_POWER1 🦅.
+¦• 𝗶𝗗 - @SOPOWERB0T 🦅.
 ]],
 [[
 ➞: 𝒔𝒕𝒂𓂅 #stast 𓍯➸💞.
 ➞: 𝒖𝒔𝒆𝒓𓂅 #username 𓍯➸💞.
 ➞: 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯➸💞.
 ➞: 𝒊𝒅 𓂅 #id 𓍯➸💞.
-➞: 𝗶𝗗 - @DV_POWER1 💞.
+➞: 𝗶𝗗 - @SOPOWERB0T 💞.
 ]],
 [[
 ➼ : 𝐼𝐷 𖠀 #id . ♡
@@ -6849,14 +6849,14 @@ local List = {
 ➼ : 𝑀𝑆𝐺𝑆 𖠀 #msgs .♡
 ➼ : 𝑆𝑇𝐴S𝑇 𖠀 #stast .♡ 
 ➼ : 𝐸𝐷𝐼𝑇  𖠀 #edit .♡
-➼ : 𝗶𝗗 - @DV_POWER1 🦅.
+➼ : 𝗶𝗗 - @SOPOWERB0T 🦅.
 ]],
 [[
 ▽ ¦❀• USER ➭ ⁞ #username .
 ▽ ¦❀• 𝙼𝚂𝙶𝚂 ➬ ⁞  #msgs  .
 ▽ ¦❀• STAT ➬ ⁞ #stast  .
 ▽ ¦❀• 𝙸𝙳  ➬ ⁞ #id  .
-▽ ¦❀• 𝗶𝗗 - @DV_POWER1 🦅.
+▽ ¦❀• 𝗶𝗗 - @SOPOWERB0T 🦅.
 ]],
 [[
 • ❉ 𝑼𝑬𝑺 : #username ‌‌‏.
@@ -6864,14 +6864,14 @@ local List = {
 • ❉ 𝑰𝑫 : #id  ‌‌‏.
 • ❉  𝑴𝑺𝑮 : #msgs 𓆊.
 • ❉ 𝑾𝒆𝒍𝒄𝒐𝒎𝒆  ⁞ .
-• ❉ 𝗶𝗗 - @DV_POWER1 🦅.
+• ❉ 𝗶𝗗 - @SOPOWERB0T 🦅.
 ]],
 [[
 ⌯ |USERNAME #username 𓃚
 ⌯ | YOUR -ID - #id 𓃚
 ⌯ | STAS-#stast 𓃚
  ⌯| MSAG - #msgs 𓃚
- ⌯| 𝗶𝗗 - @DV_POWER1 🦅.
+ ⌯| 𝗶𝗗 - @SOPOWERB0T 🦅.
 ]],
 [[
 𝟔𝟔𝟔 𖡋 #username • 𖣰💞
@@ -6879,14 +6879,14 @@ local List = {
 𝟔𝟔𝟔 𖡋 #id • 𖣰💞
 𝟔𝟔𝟔 𖡋 #game • 𖣰💞
 𝟔𝟔𝟔 𖡋 #msgs • 𖣰💞
-𝟔𝟔𝟔 𖡋 𝗶𝗗 - @DV_POWER1 🦅.
+𝟔𝟔𝟔 𖡋 𝗶𝗗 - @SOPOWERB0T 🦅.
 ]],
 [[
 ⌔➺: Msgs : #msgs - 🔹.
 ⌔➺: ID : #id - 🔹.
 ⌔➺: Stast : #stast -🔹.
 ⌔➺: UserName : #username -🔹.
-⌔➺: 𝗶𝗗 - @DV_POWER1 🦅.
+⌔➺: 𝗶𝗗 - @SOPOWERB0T 🦅.
 ]],
 [[
 🦅 - 𝓾𝓼𝓮𝓻 ➪ #username 🦅.
@@ -6894,42 +6894,42 @@ local List = {
 🦅 - 𝓲𝓭 ➪ #id ⸙🦅.
 🦅 - 𝓰𝓶𝓪𝓼 ➪ #gmas ⸙🦅.
 🦅 - 𝓶𝓼𝓰𝓼 ➪ #msgs 🦅.
-🦅 - 𝗶𝗗 - @DV_POWER1 🦅.
+🦅 - 𝗶𝗗 - @SOPOWERB0T 🦅.
 ]],
 [[
 - 𝄬 username . #username ➪🇪🇬
  - 𝄬 stast . #stast ➪🇪🇬
  - 𝄬 id . #id ➪🇪🇬
  - 𝄬 msgs . #msgs ➪🇪🇬
- - 𝄬 𝗶𝗗 - @DV_POWER1 🦅.
+ - 𝄬 𝗶𝗗 - @SOPOWERB0T 🦅.
 ]],
 [[
 ◣: 𝒔𝒕𝒂𓂅 #stast 𓍯➥♡.
 ◣: 𝒖𝒔𝒆𝒓𓂅 #username 𓍯➥♡.
 ◣: 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯➥♡.
 ◣: 𝒊𝒅 𓂅 #id 𓍯➥♡.
-◣: 𝗶𝗗 - @DV_POWER1 🦅.
+◣: 𝗶𝗗 - @SOPOWERB0T 🦅.
 ]],
 [[
 ↣• USE ➤ #username  ↝🍬.
 ↣• MSG ➤  #msgs  ↝🍬.
 ↣• STA ➤  #stast  ↝🍬.
 ↣• iD ➤ #id  ↝🍬.
-↣• 𝗶𝗗 - @DV_POWER1 🦅.
+↣• 𝗶𝗗 - @SOPOWERB0T 🦅.
 ]],
 [[
 ➫✿: S #stast 𓍯➟♡.
 ➫✿: U𓂅 #username 𓍯➟♡.
 ➫✿: M𓂅 #msgs 𓍯➟♡.
 ➫✿:  I  #id ➟♡.
-➫✿: 𝗶𝗗 - @DV_POWER1 🦅.
+➫✿: 𝗶𝗗 - @SOPOWERB0T 🦅.
 ]],
 [[
 ✶- 𝒔𝒕𝒂𓂅 #stast 𓍯↝❃ .
 ✶- 𝒖𝒔𝒆𝒓𓂅 #username 𓍯↝❃.
 ✶- 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯↝❃.
 ✶- 𝒊𝒅 𓂅 #id 𓍯↝❃.
-✶- 𝗶𝗗 - @DV_POWER1 🦅.
+✶- 𝗶𝗗 - @SOPOWERB0T 🦅.
 ]],
 [[
 • 🖤 | 𝑼𝑬𝑺 :  #username
@@ -6940,14 +6940,14 @@ local List = {
 
 • 🖤 | 𝑴𝑺𝑮 : #msgs
 
-• 🖤 | 𝗶𝗗 - @DV_POWER1 🦅.
+• 🖤 | 𝗶𝗗 - @SOPOWERB0T 🦅.
 ]],
 [[
 • USE 𖦹 #username 
 • MSG 𖥳 #msgs  
 • STA 𖦹 #stast 
 • iD 𖥳 #id
-• 𝗖𝗛 - @DV_POWER1 💞.
+• 𝗖𝗛 - @SOPOWERB0T 💞.
 ]],
 [[
 - ᴜѕᴇʀɴᴀᴍᴇ ➣ #username .
@@ -6957,7 +6957,7 @@ local List = {
 - ᴇᴅɪᴛ ᴍsɢ ➣ #edit .
 - ᴅᴇᴛᴀɪʟs ➣ #auto . 
 -  ɢᴀᴍᴇ ➣ #game .
-- 𝗖𝗛 - @DV_POWER1 💞.
+- 𝗖𝗛 - @SOPOWERB0T 💞.
 ]],
 [[
 ⚕𝙐𝙎𝙀𝙍𝙉𝘼𝙈𝙀 : #username
@@ -6966,7 +6966,7 @@ local List = {
 ⚕𝙄𝘿 : #id
 ⚕𝙅𝙀𝙒𝙀𝙇𝙎 : #game
 ⚕𝘿𝙀𝙑 : #ridha
-⚕𝗖𝗛 - @DV_POWER1 💞.
+⚕𝗖𝗛 - @SOPOWERB0T 💞.
 ]],
 [[
 • 🦄 | 𝑼𝑬𝑺 : #username ‌‌‏⚚
@@ -6974,7 +6974,7 @@ local List = {
 • 🦄 | 𝑰𝑫 : #id ‌‌‏♕
 • 🦄 | 𝑴𝑺𝑮 : #msgs 𓆊
 • 🦄 | 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 : ⁞
-• 🦄 | 𝗖𝗛 - @DV_POWER1 💞.
+• 🦄 | 𝗖𝗛 - @SOPOWERB0T 💞.
 ]],
 [[
 • △ | 𝑼𝑬𝑺 : #username ‌‌‏⚚
@@ -6982,7 +6982,7 @@ local List = {
 • ⊠ | 𝑰𝑫 : #id ‌‌‏♕
 • ❏ | 𝑴𝑺𝑮 : #msgs 𓆊
 • ❏ | 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 :
-• ❏ | 𝗖𝗛 - @DV_POWER1 💞.
+• ❏ | 𝗖𝗛 - @SOPOWERB0T 💞.
 ]],
 [[
 ︙iD ➺ #id 💘
@@ -6990,7 +6990,7 @@ local List = {
 ︙MsG ➺ #msgs 🧸 
 ︙StAtE ➺ #stast 🎀
 ︙EdIT ➺ #edit  💒
-︙𝗖𝗛 - @DV_POWER1 🦅.
+︙𝗖𝗛 - @SOPOWERB0T 🦅.
 ]],
 [[
 ⚕ 𓆰 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝑻𝒐 ★
@@ -6998,7 +6998,7 @@ local List = {
 • 🖤 | 𝑺𝑻𝑨 : #stast 🧙🏻‍♂ ☥
 • 🖤 | 𝑰𝑫 : #id ‌‌‏♕
 • 🖤 | 𝑴𝑺𝑮 : #msgs 𓆊
-• 🖤 | 𝗖𝗛 - @DV_POWER1 🦅.
+• 🖤 | 𝗖𝗛 - @SOPOWERB0T 🦅.
 ]],
 [[
 ┄─━━◉━━─┄
@@ -7009,14 +7009,14 @@ local List = {
 𖥣 ᴇᴅɪᴛ 𓄹𓄼 #game🙇🏿‍♀💕
 ✰ ᴄʜ ᴇʟɪɴ ➣ #edit
 ┄─━━◉━━─┄
-✰ 𝗖𝗛 - @DV_POWER1 🦅.
+✰ 𝗖𝗛 - @SOPOWERB0T 🦅.
 ]],
 [[
 𓄼 ᴜѕᴇ : #username ♕
 𓄼 ѕᴛᴀ : #stast ☥
 𓄼 ɪᴅ : #id ‌‌‏⚚
 𓄼 ᴍѕɢ : #msgs 𓆊
-𓄼 𝗖𝗛 - @DV_POWER1 💞.
+𓄼 𝗖𝗛 - @SOPOWERB0T 💞.
 ]],
 [[
 • ﮼ايديك  #id 🌻 ٬
@@ -7024,7 +7024,7 @@ local List = {
 • ﮼مسجاتك ➺ #msgs 🌻 ٬
 •  ﮼رتبتك➺ #stast 🌻 ٬
 • ﮼تعديلك ➺ #edit 🌻 ٬
-• ﮼ تعين ➺ @DV_POWER1 💞.
+• ﮼ تعين ➺ @SOPOWERB0T 💞.
 ]],
 [[
 ‎⿻┊Yor iD 𖠄 #id ٫
@@ -7032,7 +7032,7 @@ local List = {
 ‌‎⿻┊MsGs 𖠄 #msgs ٫
 ‌‎⿻┊StAtS 𖠄 #stast ٫
 ‌‎⿻┊‌‎EdiT 𖠄 #edit ٫
-‌‎⿻┊‌‎𝗖𝗛 - @DV_POWER1 💞.
+‌‎⿻┊‌‎𝗖𝗛 - @SOPOWERB0T 💞.
 ]],
 [[
 ⌾ | 𝒊𝒅  𓃠 #id .
@@ -7040,7 +7040,7 @@ local List = {
 ⌾ | 𝒎𝒔𝒈𝒔 𓃠 #msgs .
 ⌾ | 𝒔𝒕𝒂𝒕𝒔 𓃠 #stast .
 ⌾ | 𝒆𝒅𝒊𝒕 𓃠 #edit .
-⌾ | 𝗖𝗛 - @DV_POWER1 💞.
+⌾ | 𝗖𝗛 - @SOPOWERB0T 💞.
 ]],
 [[
 ♡ : 𝐼𝐷 𖠀 #id .
@@ -7048,49 +7048,49 @@ local List = {
 ♡ : 𝑀𝑆𝐺𝑆 𖠀 #msgs .
 ♡ : 𝑆𝑇𝐴𝑇𝑆 𖠀 #stast .
 ♡ : 𝐸𝐷𝐼𝑇  𖠀 #edit .
-♡ : 𝗖𝗛 - @DV_POWER1 💞.
+♡ : 𝗖𝗛 - @SOPOWERB0T 💞.
 ]],
 [[
 •ᑌᔕᗴᖇ- #username 
 •ᔕTᗩ- #stast 
 •ᗰᔕ- #msgs 
 •Iᗪ- #id
-•𝗖𝗛 - @DV_POWER1 💞.
+•𝗖𝗛 - @SOPOWERB0T 💞.
 ]],
 [[
 • USE ➤ #username  .
 • MSG ➤  #msgs  .
 • STA ➤  #stast  .
 • iD ➤ #id  .
-• 𝗖𝗛 - @DV_POWER1 💞.
+• 𝗖𝗛 - @SOPOWERB0T 💞.
 ]],
 [[
 𝐘𝐨𝐮𝐫 𝐈𝐃 ☤🇪🇬- #id 
 𝐔𝐬𝐞𝐫𝐍𝐚☤🇪🇬- #username 
 𝐒𝐭𝐚𝐬𝐓 ☤🇪🇬- #stast 
 𝐌𝐬𝐠𝐒☤🇪🇬 - #msgs
-𝗖𝗛☤🇪🇬 - @DV_POWER1 🦅.
+𝗖𝗛☤🇪🇬 - @SOPOWERB0T 🦅.
 ]],
 [[
 ⭐️𝖘𝖙𝖆 : #stast ـ🍭
 ⭐️𝖚𝖘𝖊𝖗𝖓𝖆𝖒𝖊 : #username ـ🍭
 ⭐️𝖒𝖘𝖌𝖘 : #msgs ـ🍭
 ⭐️𝖎𝖉 : #id ـ 🍭
-⭐️𝗖𝗛 - @DV_POWER1 💞.
+⭐️𝗖𝗛 - @SOPOWERB0T 💞.
 ]],
 [[
 • 🇪🇬 - 𝚄𝚂𝙴𝚁 « #username  🍭
 • 🇪🇬 - 𝙸𝙳 « #id  🍭
 • 🇪🇬 - 𝙼𝚂𝙶𝚂 « #msgs  🍭
 • 🇪🇬 - 𝚂𝚃𝙰𝚂𝚃 « #stast  🍭
-• 🇪🇬 - 𝗖𝗛 - @DV_POWER1 🦅.
+• 🇪🇬 - 𝗖𝗛 - @SOPOWERB0T 🦅.
 ]],
 [[
 • USE ➤  #username .
 • MSG ➤  #msgs .
 • STA ➤  #stast .
 • iD ➤ #id .
-• 𝗶𝗗 - @DV_POWER1 💞.
+• 𝗶𝗗 - @SOPOWERB0T 💞.
 ]],
 [[
 🇪🇬 - 𝄬 𝐔ˢᴱᴿᴺᴬᴹᴱ . #username  𓃠
@@ -7098,7 +7098,7 @@ local List = {
 🇪🇬 - 𝄬 ᴵᴰ . #id 𓃠
 🇪🇬 - 𝄬 ᴳᴹᴬˢ . #gmas 𓃠
 🇪🇬 - 𝄬 ᴹˢᴳˢ . #msgs  𓃠
-🇪🇬 - 𝄬 𝗶𝗗 - @DV_POWER1 🦅.
+🇪🇬 - 𝄬 𝗶𝗗 - @SOPOWERB0T 🦅.
 ]],
 [[
 𓄼🇪🇬 𝑼𝒔𝒆𝒓𝑵𝒂𝒎𝒆 : #username ♕
@@ -7106,14 +7106,14 @@ local List = {
 𓄼🇪🇬 𝒊𝒅 : #id ‌‌‏⚚
 𓄼🇪🇬 𝑮𝒂𝒎𝒆𝑺 : #edit ⚚
 𓄼🇪🇬 𝑴𝒔𝒈𝒔 : #msgs 𓆊
-𓄼🇪🇬 𝗖𝗛 - @DV_POWER1 🦅.
+𓄼🇪🇬 𝗖𝗛 - @SOPOWERB0T 🦅.
 ]],
 [[
 Usᴇʀ Nᴀᴍᴇ ~ #username 
 Yᴏᴜʀ ɪᴅ ~ #id 
 Sᴛᴀsᴛ ~ #stast 
 Msᴀɢ ~ #msgs
-𝗖𝗛 - @DV_POWER1 💞.
+𝗖𝗛 - @SOPOWERB0T 💞.
 ]],
 [[
 - 🇪🇬 UsErNaMe . #username 𖠲
@@ -7121,7 +7121,7 @@ Msᴀɢ ~ #msgs
 - 🇪🇬 Id . #id 𖠲
 - 🇪🇬 GaMeS . #game 𖠲
 - 🇪🇬 MsGs . #msgs 𖠲
-- 🇪🇬 𝗖𝗛 - @DV_POWER1 🦅.
+- 🇪🇬 𝗖𝗛 - @SOPOWERB0T 🦅.
 ]],
 [[
 🇪🇬 - 𝄬 username . #username  𓃠
@@ -7129,7 +7129,7 @@ Msᴀɢ ~ #msgs
 🇪🇬 - 𝄬 id . #id 𓃠
 🇪🇬 - 𝄬 gmas . #gmas 𓃠
 🇪🇬 - 𝄬 msgs . #msgs  𓃠
-🇪🇬 - 𝄬 𝗶𝗗 - @DV_POWER1 💞.
+🇪🇬 - 𝄬 𝗶𝗗 - @SOPOWERB0T 💞.
 ]],
 [[
 金 - 𝓾𝓼𝓮𝓻𝓷𝓪𝓶𝓮 . #username ⸙ 
@@ -7137,28 +7137,28 @@ Msᴀɢ ~ #msgs
 金 - 𝓲𝓭 . #id ⸙ 
 金 - 𝓰𝓶𝓪𝓼 . #gmas ⸙ 
 金 - 𝓶𝓼𝓰𝓼 . #msgs ⸙
-金 - 𝗶𝗗 - @DV_POWER1 💞.
+金 - 𝗶𝗗 - @SOPOWERB0T 💞.
 ]],
 [[
 ➜𝗨𝗦𝗘𝗥𝗡𝗔𝗠𝗘 : #username
 ➜𝗠𝗘𝗦𝗦𝗔𝗚𝗘𝗦 : #msgs
 ➜𝗦𝗧𝗔𝗧𝗦 : #stast
 ➜𝗜𝗗 : #id
-➜𝗶𝗗 - @DV_POWER1 💞.
+➜𝗶𝗗 - @SOPOWERB0T 💞.
 ]],
 [[
 ⌔︙Msgs : #msgs.
 ⌔︙ID : #id.
 ⌔︙Stast : #stast.
 ⌔︙UserName : #username.
-⌔︙𝗶𝗗 - @DV_POWER1 💞.
+⌔︙𝗶𝗗 - @SOPOWERB0T 💞.
 ]],
 [[
 𝒔𝒕𝒂𓂅 #stast 𓍯
 𝒖𝒔𝒆𝒓𓂅 #username 𓍯
 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯
 𝒊𝒅 𓂅 #id 𓍯
-𓂅 𝗶𝗗 - @DV_POWER1 💞.
+𓂅 𝗶𝗗 - @SOPOWERB0T 💞.
 ]],
 [[
 - 🇪🇬 𝒖𝒔𝒆𝒓𝒏𝒂𝒎𝒆 . #username 𖣂.
@@ -7166,7 +7166,7 @@ Msᴀɢ ~ #msgs
 - 🇪🇬 𝒊𝒅 . #id 𖣂.
 - 🇪🇬 𝒈𝒂𝒎𝒆𝒔 . #game 𖣂.
 - 🇪🇬 𝒎𝒔𝒈𝒔 . #msgs 𖣂.
-- 🇪🇬 𝗖𝗛 - @DV_POWER1 🦅.
+- 🇪🇬 𝗖𝗛 - @SOPOWERB0T 🦅.
 ]],
 [[
 ᯓ 𝗨𝗦𝗘𝗥𝗡𝗮𝗺𝗘 . #username 🇪🇬 ꙰
@@ -7174,7 +7174,7 @@ Msᴀɢ ~ #msgs
 ᯓ 𝗜𝗗 . #id 🇪🇬 ꙰
 ᯓ 𝗚𝗮𝗺𝗘𝗦 . #game 🇪🇬 ꙰
 ᯓ 𝗺𝗦𝗚𝗦 . #msgs 🇪🇬 ꙰
-ᯓ 𝗶𝗗 - @DV_POWER1 🦅.
+ᯓ 𝗶𝗗 - @SOPOWERB0T 🦅.
 ]],
 [[
 .𖣂 𝙪𝙨𝙚𝙧𝙣𝙖𝙢𝙚 , #username  🖤 ↴
@@ -7182,14 +7182,14 @@ Msᴀɢ ~ #msgs
 .𖣂 𝙡𝘿 , #id  🖤 ↴
 .𖣂 𝘼𝙪𝙩𝙤 , #auto  🖤 ↴
 .𖣂 𝙢𝙨𝙂𝙨 , #msgs  🖤 ↴
-.𖣂 𝗶𝗗 - @DV_POWER1 💞.
+.𖣂 𝗶𝗗 - @SOPOWERB0T 💞.
 ]],
 [[
 ➥• USE 𖦹 #username - 🇪🇬.
 ➥• MSG 𖥳 #msgs  - 🇪🇬.
 ➥• STA 𖦹 #stast - 🇪🇬.
 ➥• iD 𖥳 #id - 🇪🇬.
-➥• 𝗶𝗗 - @DV_POWER1 🦅.
+➥• 𝗶𝗗 - @SOPOWERB0T 🦅.
 ]],
 [[
 👳🏼‍♂ - 𝄬 username . #username . 🇪🇬
@@ -7197,14 +7197,14 @@ Msᴀɢ ~ #msgs
 👳🏼‍♂ - 𝄬 id . #id . 🇪🇬
 👳🏼‍♂ - 𝄬 auto . #auto . 🇪🇬
 👳🏼‍♂ - 𝄬 msgs . #msgs . 🇪🇬
-👳🏼‍♂ - 𝄬 𝗶𝗗 - @DV_POWER1 🦅.
+👳🏼‍♂ - 𝄬 𝗶𝗗 - @SOPOWERB0T 🦅.
 ]],
 [[
 ➭- 𝒔𝒕𝒂𓂅 #stast 𓍯. 💕
 ➮- 𝒖𝒔𝒆𝒓𓂅 #username 𓍯. 💕
 ➭- 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯. 💕
 ➭- 𝒊𝒅 𓂅 #id 𓍯. 💕
-➭- 𝗶𝗗 - @DV_POWER1 💞.
+➭- 𝗶𝗗 - @SOPOWERB0T 💞.
 ]],
 [[
 𓄼 ᴜѕᴇ : #username ♕
@@ -7212,7 +7212,7 @@ Msᴀɢ ~ #msgs
 𓄼 ɪᴅ : #id ‌‌‏⚚
 𓄼 ᴍѕɢ : #msgs 𓆊 
 𓐀 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𓀃.
-𓄼 𝗶𝗗 - @DV_POWER1 🦅.
+𓄼 𝗶𝗗 - @SOPOWERB0T 🦅.
 ]],
 [[
 𝐓𝐓• 𝐘𝐎𝐔𝐑 𝐈𝐃 𖠰 #id .
@@ -7221,7 +7221,7 @@ Msᴀɢ ~ #msgs
 𝐓𝐓• 𝐒𝐓𝐀𝐒𝐓 𖠰 #stast .
 𝐓𝐓• 𝐀𝐔𝐓𝐎 𖠰 #auto .
 𝐓𝐓• 𝗘𝗗𝗜𝗧 𖠰 #edit .
-𝐓𝐓• 𝗶𝗗 - @DV_POWER1 🦅.
+𝐓𝐓• 𝗶𝗗 - @SOPOWERB0T 🦅.
 ]],
 [[
 𝟓 𝟔 𖡻 #username  ࿇🦄
@@ -7229,7 +7229,7 @@ Msᴀɢ ~ #msgs
 𝟓 𝟔 𖡻 #auto  ࿇🦄
 𝟓 𝟔 𖡻 #stast  ࿇🦄
 𝟓 𝟔 𖡻 #id  ࿇🦄
-𝟓 𝟔 𖡻 𝗶𝗗 - @DV_POWER1 💞.
+𝟓 𝟔 𖡻 𝗶𝗗 - @SOPOWERB0T 💞.
 ]],
 [[
 ༻┉𖦹┉┉𖦹┉┉𖦹┉┉𖦹┉༺
@@ -7239,7 +7239,7 @@ Msᴀɢ ~ #msgs
 • |𝗠𝗦𝗚  ⁞ #edit
 • |𝗔𝗨𝗧𝗢 ⁞ #auto
 —————————————
-𝗖𝗛 - @DV_POWER1 🦅.
+𝗖𝗛 - @SOPOWERB0T 🦅.
 ]],
 [[
 ┄─━━◉━━─┄
@@ -7250,14 +7250,14 @@ Msᴀɢ ~ #msgs
 𖣰𖡻 𖡋𝗔𝗨𝗧𝗢• #auto •𓀎
 𖣰𖡻 𖡋𝗘𝗗𝗜𝗧• #edit • 𓀎
 ┄─━━◉━━─┄
-𝗶𝗗 - @DV_POWER1 🦅.
+𝗶𝗗 - @SOPOWERB0T 🦅.
 ]],
 [[
 𖤍 |↶ #id    ꙰🇪🇬.
 𖤍 |↶ #username    ꙰🇪🇬.
 𖤍 |↶ #msgs    ꙰🇪🇬.
 𖤍 |↶ #stast    ꙰🇪🇬.
-𖤍 |↶ 𝗶𝗗 - @DV_POWER1 🦅
+𖤍 |↶ 𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
@@ -7266,7 +7266,7 @@ Msᴀɢ ~ #msgs
  𝗦𝗧𝗔 ⟿ #stast  « 
  𝗜𝗗  ⟿ #id  « 
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-𝗶𝗗 - @DV_POWER1 🦅
+𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 🇪🇬≪💎≫ #username • メ
@@ -7274,21 +7274,21 @@ Msᴀɢ ~ #msgs
 🇪🇬≪💎≫ #id  • メ
 🇪🇬≪💎≫ #msgs  •メ
 🇪🇬≪💎≫ #game •メ
-🇪🇬𝗶𝗗 - @DV_POWER1 🦅
+🇪🇬𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 ⌯  𝚄𝚂𝙴𝚁 𓄹𓄼 #username
 ⌯  𝙸𝙳  𓄹𓄼 #id 
 ⌯  𝚂𝚃𝙰 𓄹𓄼 #stast 
 ⌯  𝙼𝚂𝙶𝚂𓄹𓄼 #msgs
-⌯  𝗶𝗗 - @DV_POWER1 🦅
+⌯  𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 𓅓➪:ᗰᔕᘜᔕ : #msgs - ❦ .
 𓅓➪ : Iᗪ : #id - ❦ . 
 𓅓➪ : ᔕTᗩᔕT : #stast - ❦ . 
 𓅓➪ : ᑌᔕᖇᗴᑎᗩᗰᗴ : #username _ ❦ .
-𓅓➪ : 𝗶𝗗 - @DV_POWER1 🦅
+𓅓➪ : 𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 - ايديڪ  ⁞ #id 💘 ٬
@@ -7296,14 +7296,14 @@ Msᴀɢ ~ #msgs
 - رسائلڪ  الطيفهہَ ⁞ #msgs 💘 ٬
 - رتبتڪ الحلوه ⁞ #stast  💘٬
 - سحڪاتڪ الفول ⁞ #edit 💘 ٬
-- 𝗶𝗗 - @DV_POWER1 🦅
+- 𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 𓁷⁦⁦ - 𝙪𝙚𝙨 †: #username 𓀀 .
 𓁷 - 𝙢𝙨𝙜 † : #msgs 𓀀 .
 𓁷 - 𝙨𝙩𝙖 †: #stast 𓀀  .
 𓁷 - 𝙞𝙙 †: #id 𓀀 .
-𓁷 - 𝗶𝗗 - @DV_POWER1 🦅
+𓁷 - 𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 𖡋 𝐔𝐒𝐄 ⌯ #username 
@@ -7311,7 +7311,7 @@ Msᴀɢ ~ #msgs
 𖡋 𝐒𝐓𝐀 ⌯ #stast 
 𖡋 𝐈𝐃 ⌯ #id 
 𖡋 𝐄𝐃𝐈𝐓 ⌯ #edit
-𖡋 𝗶𝗗 - @DV_POWER1 🦅
+𖡋 𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 𖤂 ~ 𝑢𝑠𝑒 #username  𖤐
@@ -7319,7 +7319,7 @@ Msᴀɢ ~ #msgs
 𖤂 ~ 𝑠𝑡𝑎 #stast  
 𖤂 ~ 𝑖𝑑 #id 𖤐
 𖤂 ~ 𝑒𝑑𝑖𝑡 #edit 𖤐
-𖤂 ~ 𝗶𝗗 - @DV_POWER1 🦅
+𖤂 ~ 𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 -›   𝚄𝚂𝙴𝚁𝙽𝙰𝙼𝙴 . #username 🇪🇬 ꙰ 
@@ -7327,7 +7327,7 @@ Msᴀɢ ~ #msgs
 -›   𝙸𝙳 . #id 🇪🇬 ꙰ 
 -›   𝙶𝙼𝙰𝚂 . #stast 🇪🇬 ꙰ 
 -›   𝙼𝚂𝙶𝚂 . #msgs 🇪🇬 ꙰
--›   𝗶𝗗 - @DV_POWER1 🇪🇬 ꙰.
+-›   𝗶𝗗 - @SOPOWERB0T 🇪🇬 ꙰.
 ]],
 [[
 ••• ••• ••• ••• ••• ••• ••• 
@@ -7336,21 +7336,21 @@ Msᴀɢ ~ #msgs
  ࿕ ¦• 𝙂𝙈𝘼𝙎  ⟿ #stast ༆
  ࿕ ¦• 𝙏𝘿 𝙎𝙏𝘼  ⟿ #id ༆
 ••• ••• ••• ••• ••• ••• •••
- ࿕ ¦• 𝗶𝗗 - @DV_POWER1 🦅
+ ࿕ ¦• 𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 ► 𝗨𝗦𝗘𝗥𝗡𝗔𝗠𝗘 #username 𓃚  ꙰
 ► 𝗜𝗗 #id 𓃚 ꙰
 ► 𝗦𝗧𝗔𝗦 #stast 𓃚 ꙰
 ► 𝗠𝗦𝗔𝗚 #msgs 𓃚 ꙰
-► 𝗶𝗗 - @DV_POWER1 🦅
+► 𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 - UsEr🇪🇬 ꙰ #username
 - StA🇪🇬 ꙰   #msgs
 - MsGs🇪🇬 ꙰ #stast
 - ID🇪🇬 ꙰  #id
-- 𝗶𝗗 🇪🇬 ꙰  @DV_POWER1 🦅
+- 𝗶𝗗 🇪🇬 ꙰  @SOPOWERB0T 🦅
 ]],
 [[
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
@@ -7359,14 +7359,14 @@ Msᴀɢ ~ #msgs
 🇪🇬 - 𝙶𝙼𝙰𝚂 ⟿ #stast 💘.
 🇪🇬 - 𝙸𝙳 𝚂𝚃𝙰 ⟿ #id 💘.  
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-🇪🇬 - 𝗶𝗗 - @DV_POWER1 🦅
+🇪🇬 - 𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 - 𓏬 𝐔𝐬𝐄𝐫 : #username 𓂅 .
 - 𓏬 𝐌𝐬𝐆  : #msgs 𓂅 .
 - 𓏬 𝐒𝐭𝐀 : #stast 𓂅 .
 - 𓏬 𝐈𝐃 : #id 𓂅 .
-- 𓏬 𝗶𝗗 - @DV_POWER1 🦅
+- 𓏬 𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 ᯓ 𝟔𝟔𝟔 𖡋 #username •✟
@@ -7374,28 +7374,28 @@ Msᴀɢ ~ #msgs
 ᯓ 𝟔𝟔𝟔𖡋 #id  • ✟
 ᯓ 𝟔𝟔𝟔𖡋 #msgs  •✟ 
 ᯓ 𝟔𝟔𝟔𖡋 #game •✟
-ᯓ 𝟔𝟔𝟔𖡋 𝗶𝗗 - @DV_POWER1 🦅
+ᯓ 𝟔𝟔𝟔𖡋 𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 🦅•𝐮𝐬𝐞𝐫 : #username 𖣬  
 🦅•𝐦𝐬𝐠  : #msgs 𖣬 
 🦅•𝐬𝐭𝐚 : #stast 𖣬 
 🦅•𝐢𝐝  : #id 𖣬
-🦅•𝗶𝗗 - @DV_POWER1 🦅
+🦅•𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 - ᴜѕᴇʀɴᴀᴍᴇ ➣ #username .
 - ᴍѕɢѕ ➣ #msgs .
 - ѕᴛᴀᴛѕ ➣ #stast .
 - ʏᴏᴜʀ ɪᴅ ➣ #id  .
-- 𝗶𝗗 - @DV_POWER1 🦅
+- 𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 - ᴜѕʀ: #username ঌ.
 - ᴍѕɢ: #msgs  ঌ.
 - ѕᴛᴀ: #stast  ঌ.
 - ɪᴅ: #id ঌ.
-- 𝗶𝗗 - @DV_POWER1 🦅
+- 𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 - 𝑢𝑠𝑒𝑟𝑛𝑎𝑚𝑒 ⟿ #username
@@ -7403,14 +7403,14 @@ Msᴀɢ ~ #msgs
 - 𝑖𝑑 ⟿ #id
 - 𝑒𝑑𝑖𝑡 ⟿ #edit
 - 𝑔𝑎𝑚𝑒 ⟿ #game
-- 𝗶𝗗 - @DV_POWER1 🦅
+- 𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 🌯 ¦✙• 𝒖𝒔𝒆𝒓𝒏𝒂𝒎𝒆 ➢ ⁞  #username 🇪🇬
 🌯 ¦✙• 𝒎𝒔𝒈𝒔 ➢ ⁞  #msgs  📝
 🌯 ¦✙• 𝒓𝒂𝒏𝒌 ➢ ⁞ #stast  
 🌯 ¦✙• 𝒊𝒅 𝒔𝒕𝒂 ➢ ⁞ #id  🆔
-🌯 ¦ 𝗶𝗗 - @DV_POWER1 🦅
+🌯 ¦ 𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
@@ -7419,28 +7419,28 @@ Msᴀɢ ~ #msgs
 🇪🇬 ꙰  - 𝚐 𝚖 𝚊𝚜  ➟ #stast ❃.
 🇪🇬 ꙰  - 𝙸𝙳 𝚜𝚝𝚊   ➟ #id ❃.
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
-🇪🇬 ꙰  - 𝗶𝗗 - @DV_POWER1 🦅
+🇪🇬 ꙰  - 𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 ⌔➺: Msgs : #msgs - 🔹.
 ⌔➺: ID : #id - 🔹.
 ⌔➺: Stast : #stast -🔹.
 ⌔➺: UserName : #username -🔹.
-⌔➺: 𝗶𝗗 - @DV_POWER1 🦅
+⌔➺: 𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 ¦• 𝚄𝚂𝙴𝚁  ⇉⁞ #username ↝🇪🇬.
 ¦• 𝙼𝚂𝙶𝚂 ⇉ ⁞  #msgs  ↝ 🇪🇬.
 ¦• 𝚁𝙰𝙽𝙺  ⇉⁞ #stast  ↝🇪🇬.
 ¦• 𝙸𝙳 𝚂𝚃𝙰 ⇉ #id  ↝🇪🇬.
-¦• 𝗶𝗗 - @DV_POWER1 🦅
+¦• 𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 ➞: 𝒔𝒕𝒂𓂅 #stast 𓍯➸💞.
 ➞: 𝒖𝒔𝒆𝒓𓂅 #username 𓍯➸💞.
 ➞: 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯➸💞.
 ➞: 𝒊𝒅 𓂅 #id 𓍯➸💞.
-➞: 𝗶𝗗 - @DV_POWER1 🦅
+➞: 𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 ➼ : 𝐼𝐷 𖠀 #id . ♡
@@ -7448,14 +7448,14 @@ Msᴀɢ ~ #msgs
 ➼ : 𝑀𝑆𝐺𝑆 𖠀 #msgs .♡
 ➼ : 𝑆𝑇𝐴S𝑇 𖠀 #stast .♡ 
 ➼ : 𝐸𝐷𝐼𝑇  𖠀 #edit .♡
-➼ : 𝗶𝗗 - @DV_POWER1 🦅
+➼ : 𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 ▽ ¦❀• USER ➭ ⁞ #username .
 ▽ ¦❀• 𝙼𝚂𝙶𝚂 ➬ ⁞  #msgs  .
 ▽ ¦❀• STAT ➬ ⁞ #stast  .
 ▽ ¦❀• 𝙸𝙳  ➬ ⁞ #id  .
-▽ ¦❀• 𝗶𝗗 - @DV_POWER1 🦅
+▽ ¦❀• 𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 • ❉ 𝑼𝑬𝑺 : #username ‌‌‏.
@@ -7463,14 +7463,14 @@ Msᴀɢ ~ #msgs
 • ❉ 𝑰𝑫 : #id  ‌‌‏.
 • ❉  𝑴𝑺𝑮 : #msgs 𓆊.
 • ❉ 𝑾𝒆𝒍𝒄𝒐𝒎𝒆  ⁞ .
-• ❉ 𝗶𝗗 - @DV_POWER1 🦅
+• ❉ 𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 ⌯ |USERNAME #username 𓃚
 ⌯ | YOUR -ID - #id 𓃚
 ⌯ | STAS-#stast 𓃚
  ⌯| MSAG - #msgs 𓃚
- ⌯| 𝗶𝗗 - @DV_POWER1 🦅
+ ⌯| 𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 𝟔𝟔𝟔 𖡋 #username • 𖣰💞
@@ -7478,14 +7478,14 @@ Msᴀɢ ~ #msgs
 𝟔𝟔𝟔 𖡋 #id • 𖣰💞
 𝟔𝟔𝟔 𖡋 #game • 𖣰💞
 𝟔𝟔𝟔 𖡋 #msgs • 𖣰💞
-𝟔𝟔𝟔 𖡋 𝗶𝗗 - @DV_POWER1 🦅
+𝟔𝟔𝟔 𖡋 𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 ⌔➺: Msgs : #msgs - 🔹.
 ⌔➺: ID : #id - 🔹.
 ⌔➺: Stast : #stast -🔹.
 ⌔➺: UserName : #username -🔹.
-⌔➺: 𝗶𝗗 - @DV_POWER1 🦅
+⌔➺: 𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 🦅 - 𝓾𝓼𝓮𝓻 ➪ #username 🦅.
@@ -7493,42 +7493,42 @@ Msᴀɢ ~ #msgs
 🦅 - 𝓲𝓭 ➪ #id ⸙🦅.
 🦅 - 𝓰𝓶𝓪𝓼 ➪ #gmas ⸙🦅.
 🦅 - 𝓶𝓼𝓰𝓼 ➪ #msgs 🦅.
-🦅 - 𝗶𝗗 - @DV_POWER1 🦅
+🦅 - 𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 ◣: 𝒔𝒕𝒂𓂅 #stast 𓍯➥♡.
 ◣: 𝒖𝒔𝒆𝒓𓂅 #username 𓍯➥♡.
 ◣: 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯➥♡.
 ◣: 𝒊𝒅 𓂅 #id 𓍯➥♡.
-◣: 𝗶𝗗 - @DV_POWER1 🦅
+◣: 𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 - 𝄬 username . #username ➪🇪🇬
  - 𝄬 stast . #stast ➪🇪🇬
  - 𝄬 id . #id ➪🇪🇬
  - 𝄬 msgs . #msgs ➪🇪🇬
- - 𝄬 𝗶𝗗 - @DV_POWER1 🦅
+ - 𝄬 𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 ↣• USE ➤ #username  ↝🍬.
 ↣• MSG ➤  #msgs  ↝🍬.
 ↣• STA ➤  #stast  ↝🍬.
 ↣• iD ➤ #id  ↝🍬.
-↣• 𝗶𝗗 - @DV_POWER1 🦅
+↣• 𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 ➫✿: S #stast 𓍯➟♡.
 ➫✿: U𓂅 #username 𓍯➟♡.
 ➫✿: M𓂅 #msgs 𓍯➟♡.
 ➫✿:  I  #id ➟♡.
-➫✿: 𝗶𝗗 - @DV_POWER1 🦅
+➫✿: 𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 ✶- 𝒔𝒕𝒂𓂅 #stast 𓍯↝❃ .
 ✶- 𝒖𝒔𝒆𝒓𓂅 #username 𓍯↝❃.
 ✶- 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯↝❃.
 ✶- 𝒊𝒅 𓂅 #id 𓍯↝❃.
-✶- 𝗶𝗗 - @DV_POWER1 🦅
+✶- 𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 • 🖤 | 𝑼𝑬𝑺 :  #username
@@ -7539,14 +7539,14 @@ Msᴀɢ ~ #msgs
 
 • 🖤 | 𝑴𝑺𝑮 : #msgs
 
-• 🖤 | 𝗶𝗗 - @DV_POWER1 🦅
+• 🖤 | 𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 • USE 𖦹 #username 
 • MSG 𖥳 #msgs  
 • STA 𖦹 #stast 
 • iD 𖥳 #id
-• 𝗖𝗛 - @DV_POWER1 🦅
+• 𝗖𝗛 - @SOPOWERB0T 🦅
 ]],
 [[
 - ᴜѕᴇʀɴᴀᴍᴇ ➣ #username .
@@ -7556,7 +7556,7 @@ Msᴀɢ ~ #msgs
 - ᴇᴅɪᴛ ᴍsɢ ➣ #edit .
 - ᴅᴇᴛᴀɪʟs ➣ #auto . 
 -  ɢᴀᴍᴇ ➣ #game .
-- 𝗖𝗛 - @DV_POWER1 🦅
+- 𝗖𝗛 - @SOPOWERB0T 🦅
 ]],
 [[
 ⚕𝙐𝙎𝙀𝙍𝙉𝘼𝙈𝙀 : #username
@@ -7565,7 +7565,7 @@ Msᴀɢ ~ #msgs
 ⚕𝙄𝘿 : #id
 ⚕𝙅𝙀𝙒𝙀𝙇𝙎 : #game
 ⚕𝘿𝙀𝙑 : #ridha
-⚕𝗖𝗛 - @DV_POWER1 🦅
+⚕𝗖𝗛 - @SOPOWERB0T 🦅
 ]],
 [[
 • 🦄 | 𝑼𝑬𝑺 : #username ‌‌‏⚚
@@ -7573,7 +7573,7 @@ Msᴀɢ ~ #msgs
 • 🦄 | 𝑰𝑫 : #id ‌‌‏♕
 • 🦄 | 𝑴𝑺𝑮 : #msgs 𓆊
 • 🦄 | 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 : ⁞
-• 🦄 | 𝗖𝗛 - @DV_POWER1 🦅
+• 🦄 | 𝗖𝗛 - @SOPOWERB0T 🦅
 ]],
 [[
 • △ | 𝑼𝑬𝑺 : #username ‌‌‏⚚
@@ -7581,7 +7581,7 @@ Msᴀɢ ~ #msgs
 • ⊠ | 𝑰𝑫 : #id ‌‌‏♕
 • ❏ | 𝑴𝑺𝑮 : #msgs 𓆊
 • ❏ | 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 :
-• ❏ | 𝗖𝗛 - @DV_POWER1 🦅
+• ❏ | 𝗖𝗛 - @SOPOWERB0T 🦅
 ]],
 [[
 ︙iD ➺ #id 💘
@@ -7589,21 +7589,21 @@ Msᴀɢ ~ #msgs
 ︙MsG ➺ #msgs 🧸 
 ︙StAtE ➺ #stast 🎀
 ︙EdIT ➺ #edit  💒
-︙𝗖𝗛 - @DV_POWER1 🦅
+︙𝗖𝗛 - @SOPOWERB0T 🦅
 ]],
 [[
 • 🖤 | 𝑼𝑬𝑺 : #username ‌‌‏⚚
 • 🖤 | 𝑺𝑻𝑨 : #stast 🧙🏻‍♂ ☥
 • 🖤 | 𝑰𝑫 : #id ‌‌‏♕
 • 🖤 | 𝑴𝑺𝑮 : #msgs 𓆊
-• 🖤 | 𝗖𝗛 - @DV_POWER1 🦅
+• 🖤 | 𝗖𝗛 - @SOPOWERB0T 🦅
 ]],
 [[
 𓄼 ᴜѕᴇ : #username ♕
 𓄼 ѕᴛᴀ : #stast ☥
 𓄼 ɪᴅ : #id ‌‌‏⚚
 𓄼 ᴍѕɢ : #msgs 𓆊
-𓄼 𝗖𝗛 - @DV_POWER1 🦅
+𓄼 𝗖𝗛 - @SOPOWERB0T 🦅
 ]],
 [[
 ‎⿻┊Yor iD 𖠄 #id ٫
@@ -7611,7 +7611,7 @@ Msᴀɢ ~ #msgs
 ‌‎⿻┊MsGs 𖠄 #msgs ٫
 ‌‎⿻┊StAtS 𖠄 #stast ٫
 ‌‎⿻┊‌‎EdiT 𖠄 #edit ٫
-‌‎⿻┊‌‎𝗖𝗛 - @DV_POWER1 🦅
+‌‎⿻┊‌‎𝗖𝗛 - @SOPOWERB0T 🦅
 ]],
 [[
 • ﮼ايديك  #id 🌻 ٬
@@ -7619,7 +7619,7 @@ Msᴀɢ ~ #msgs
 • ﮼مسجاتك ➺ #msgs 🌻 ٬
 •  ﮼رتبتك➺ #stast 🌻 ٬
 • ﮼تعديلك ➺ #edit 🌻 ٬
-•  تعين ➺ @DV_POWER1 🦅
+•  تعين ➺ @SOPOWERB0T 🦅
 ]],
 [[
 ┄─━━◉━━─┄
@@ -7630,7 +7630,7 @@ Msᴀɢ ~ #msgs
 𖥣 ᴇᴅɪᴛ 𓄹𓄼 #game🙇🏿‍♀💕
 ✰ ᴄʜ ᴇʟɪɴ ➣ #edit
 ┄─━━◉━━─┄
-✰ 𝗖𝗛 - @DV_POWER1 🦅
+✰ 𝗖𝗛 - @SOPOWERB0T 🦅
 ]],
 [[
 ⌾ | 𝒊𝒅  𓃠 #id .
@@ -7638,7 +7638,7 @@ Msᴀɢ ~ #msgs
 ⌾ | 𝒎𝒔𝒈𝒔 𓃠 #msgs .
 ⌾ | 𝒔𝒕𝒂𝒕𝒔 𓃠 #stast .
 ⌾ | 𝒆𝒅𝒊𝒕 𓃠 #edit .
-⌾ | 𝗖𝗛 - @DV_POWER1 🦅
+⌾ | 𝗖𝗛 - @SOPOWERB0T 🦅
 ]],
 [[
 ♡ : 𝐼𝐷 𖠀 #id .
@@ -7646,49 +7646,49 @@ Msᴀɢ ~ #msgs
 ♡ : 𝑀𝑆𝐺𝑆 𖠀 #msgs .
 ♡ : 𝑆𝑇𝐴𝑇𝑆 𖠀 #stast .
 ♡ : 𝐸𝐷𝐼𝑇  𖠀 #edit .
-♡ : 𝗖𝗛 - @DV_POWER1 🦅
+♡ : 𝗖𝗛 - @SOPOWERB0T 🦅
 ]],
 [[
 •ᑌᔕᗴᖇ- #username 
 •ᔕTᗩ- #stast 
 •ᗰᔕ- #msgs 
 •Iᗪ- #id
-•𝗖𝗛 - @DV_POWER1 🦅
+•𝗖𝗛 - @SOPOWERB0T 🦅
 ]],
 [[
 • USE ➤ #username  .
 • MSG ➤  #msgs  .
 • STA ➤  #stast  .
 • iD ➤ #id  .
-• 𝗖𝗛 - @DV_POWER1 🦅
+• 𝗖𝗛 - @SOPOWERB0T 🦅
 ]],
 [[
 𝐘𝐨𝐮𝐫 𝐈𝐃 ☤🇪🇬- #id 
 𝐔𝐬𝐞𝐫𝐍𝐚☤🇪🇬- #username 
 𝐒𝐭𝐚𝐬𝐓 ☤🇪🇬- #stast 
 𝐌𝐬𝐠𝐒☤🇪🇬 - #msgs
-𝗖𝗛☤🇪🇬 - @DV_POWER1 🦅
+𝗖𝗛☤🇪🇬 - @SOPOWERB0T 🦅
 ]],
 [[
 ⭐️𝖘𝖙𝖆 : #stast ـ🍭
 ⭐️𝖚𝖘𝖊𝖗𝖓𝖆𝖒𝖊 : #username ـ🍭
 ⭐️𝖒𝖘𝖌𝖘 : #msgs ـ🍭
 ⭐️𝖎𝖉 : #id ـ 🍭
-⭐️𝗖𝗛 - @DV_POWER1 🦅
+⭐️𝗖𝗛 - @SOPOWERB0T 🦅
 ]],
 [[
 • 🇪🇬 - 𝚄𝚂𝙴𝚁 « #username  🍭
 • 🇪🇬 - 𝙸𝙳 « #id  🍭
 • 🇪🇬 - 𝙼𝚂𝙶𝚂 « #msgs  🍭
 • 🇪🇬 - 𝚂𝚃𝙰𝚂𝚃 « #stast  🍭
-• 🇪🇬 - 𝗖𝗛 - @DV_POWER1 🦅
+• 🇪🇬 - 𝗖𝗛 - @SOPOWERB0T 🦅
 ]],
 [[
 • USE ➤  #username .
 • MSG ➤  #msgs .
 • STA ➤  #stast .
 • iD ➤ #id .
-• 𝗶𝗗 - @DV_POWER1 🦅
+• 𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 🇪🇬 - 𝄬 𝐔ˢᴱᴿᴺᴬᴹᴱ . #username  𓃠
@@ -7696,14 +7696,14 @@ Msᴀɢ ~ #msgs
 🇪🇬 - 𝄬 ᴵᴰ . #id 𓃠
 🇪🇬 - 𝄬 ᴳᴹᴬˢ . #gmas 𓃠
 🇪🇬 - 𝄬 ᴹˢᴳˢ . #msgs  𓃠
-🇪🇬 - 𝄬 𝗶𝗗 - @DV_POWER1 🦅
+🇪🇬 - 𝄬 𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 ➜𝗨𝗦𝗘𝗥𝗡𝗔𝗠𝗘 : #username
 ➜𝗠𝗘𝗦𝗦𝗔𝗚𝗘𝗦 : #msgs
 ➜𝗦𝗧𝗔𝗧𝗦 : #stast
 ➜𝗜𝗗 : #id
-➜𝗶𝗗 - @DV_POWER1 🦅
+➜𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 - 🇪🇬 UsErNaMe . #username 𖠲
@@ -7711,21 +7711,21 @@ Msᴀɢ ~ #msgs
 - 🇪🇬 Id . #id 𖠲
 - 🇪🇬 GaMeS . #game 𖠲
 - 🇪🇬 MsGs . #msgs 𖠲
-- 🇪🇬 𝗖𝗛 - @DV_POWER1 🦅
+- 🇪🇬 𝗖𝗛 - @SOPOWERB0T 🦅
 ]],
 [[
 ⌔︙Msgs : #msgs.
 ⌔︙ID : #id.
 ⌔︙Stast : #stast.
 ⌔︙UserName : #username.
-⌔︙𝗶𝗗 - @DV_POWER1 🦅
+⌔︙𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 𝒔𝒕𝒂𓂅 #stast 𓍯
 𝒖𝒔𝒆𝒓𓂅 #username 𓍯
 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯
 𝒊𝒅 𓂅 #id 𓍯
-𓂅 𝗶𝗗 - @DV_POWER1 🦅
+𓂅 𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 𓄼🇪🇬 𝑼𝒔𝒆𝒓𝑵𝒂𝒎𝒆 : #username ♕
@@ -7733,21 +7733,21 @@ Msᴀɢ ~ #msgs
 𓄼🇪🇬 𝒊𝒅 : #id ‌‌‏⚚
 𓄼🇪🇬 𝑮𝒂𝒎𝒆𝑺 : #edit ⚚
 𓄼🇪🇬 𝑴𝒔𝒈𝒔 : #msgs 𓆊
-𓄼🇪🇬 𝗖𝗛 - @DV_POWER1 🦅
+𓄼🇪🇬 𝗖𝗛 - @SOPOWERB0T 🦅
 ]],
 [[
 Usᴇʀ Nᴀᴍᴇ ~ #username 
 Yᴏᴜʀ ɪᴅ ~ #id 
 Sᴛᴀsᴛ ~ #stast 
 Msᴀɢ ~ #msgs
-𝗖𝗛 - @DV_POWER1 🦅
+𝗖𝗛 - @SOPOWERB0T 🦅
 ]],
 [[
 ➥• USE 𖦹 #username - 🇪🇬.
 ➥• MSG 𖥳 #msgs  - 🇪🇬.
 ➥• STA 𖦹 #stast - 🇪🇬.
 ➥• iD 𖥳 #id - 🇪🇬.
-➥• 𝗶𝗗 - @DV_POWER1 🦅
+➥• 𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 🇪🇬 - 𝄬 username . #username  𓃠
@@ -7755,7 +7755,7 @@ Msᴀɢ ~ #msgs
 🇪🇬 - 𝄬 id . #id 𓃠
 🇪🇬 - 𝄬 gmas . #gmas 𓃠
 🇪🇬 - 𝄬 msgs . #msgs  𓃠
-🇪🇬 - 𝄬 𝗶𝗗 - @DV_POWER1 🦅
+🇪🇬 - 𝄬 𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 .𖣂 𝙪𝙨𝙚𝙧𝙣𝙖𝙢𝙚 , #username  🖤 ↴
@@ -7763,7 +7763,7 @@ Msᴀɢ ~ #msgs
 .𖣂 𝙡𝘿 , #id  🖤 ↴
 .𖣂 𝘼𝙪𝙩𝙤 , #auto  🖤 ↴
 .𖣂 𝙢𝙨𝙂𝙨 , #msgs  🖤 ↴
-.𖣂 𝗶𝗗 - @DV_POWER1 🦅
+.𖣂 𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 金 - 𝓾𝓼𝓮𝓻𝓷𝓪𝓶𝓮 . #username ⸙ 
@@ -7771,7 +7771,7 @@ Msᴀɢ ~ #msgs
 金 - 𝓲𝓭 . #id ⸙ 
 金 - 𝓰𝓶𝓪𝓼 . #gmas ⸙ 
 金 - 𝓶𝓼𝓰𝓼 . #msgs ⸙
-金 - 𝗶𝗗 - @DV_POWER1 🦅
+金 - 𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 - 🇪🇬 𝒖𝒔𝒆𝒓𝒏𝒂𝒎𝒆 . #username 𖣂.
@@ -7779,7 +7779,7 @@ Msᴀɢ ~ #msgs
 - 🇪🇬 𝒊𝒅 . #id 𖣂.
 - 🇪🇬 𝒈𝒂𝒎𝒆𝒔 . #game 𖣂.
 - 🇪🇬 𝒎𝒔𝒈𝒔 . #msgs 𖣂.
-- 🇪🇬 𝗖𝗛 - @DV_POWER1 🦅
+- 🇪🇬 𝗖𝗛 - @SOPOWERB0T 🦅
 ]],
 [[
 ᯓ 𝗨𝗦𝗘𝗥𝗡𝗮𝗺𝗘 . #username 🇪🇬 ꙰
@@ -7787,7 +7787,7 @@ Msᴀɢ ~ #msgs
 ᯓ 𝗜𝗗 . #id 🇪🇬 ꙰
 ᯓ 𝗚𝗮𝗺𝗘𝗦 . #game 🇪🇬 ꙰
 ᯓ 𝗺𝗦𝗚𝗦 . #msgs 🇪🇬 ꙰
-ᯓ 𝗶𝗗 - @DV_POWER1 🦅
+ᯓ 𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 👳🏼‍♂ - 𝄬 username . #username . 🇪🇬
@@ -7795,14 +7795,14 @@ Msᴀɢ ~ #msgs
 👳🏼‍♂ - 𝄬 id . #id . 🇪🇬
 👳🏼‍♂ - 𝄬 auto . #auto . 🇪🇬
 👳🏼‍♂ - 𝄬 msgs . #msgs . 🇪🇬
-👳🏼‍♂ - 𝄬 𝗶𝗗 - @DV_POWER1 🦅
+👳🏼‍♂ - 𝄬 𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 ➭- 𝒔𝒕𝒂𓂅 #stast 𓍯. 💕
 ➮- 𝒖𝒔𝒆𝒓𓂅 #username 𓍯. 💕
 ➭- 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯. 💕
 ➭- 𝒊𝒅 𓂅 #id 𓍯. 💕
-➭- 𝗶𝗗 - @DV_POWER1 🦅
+➭- 𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
  #id "‎ ﮼ايدي
@@ -7816,7 +7816,7 @@ Msᴀɢ ~ #msgs
 𓄼 ɪᴅ : #id ‌‌‏⚚
 𓄼 ᴍѕɢ : #msgs 𓆊 
 𓐀 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𓀃.
-𓄼 𝗶𝗗 - @DV_POWER1 🦅
+𓄼 𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 𝐓𝐓• 𝐘𝐎𝐔𝐑 𝐈𝐃 𖠰 #id .
@@ -7825,7 +7825,7 @@ Msᴀɢ ~ #msgs
 𝐓𝐓• 𝐒𝐓𝐀𝐒𝐓 𖠰 #stast .
 𝐓𝐓• 𝐀𝐔𝐓𝐎 𖠰 #auto .
 𝐓𝐓• 𝗘𝗗𝗜𝗧 𖠰 #edit .
-𝐓𝐓• 𝗶𝗗 - @DV_POWER1 🦅
+𝐓𝐓• 𝗶𝗗 - @SOPOWERB0T 🦅
 ]],
 [[
 𝟓 𝟔 𖡻 #username  ࿇🦄
@@ -7833,7 +7833,7 @@ Msᴀɢ ~ #msgs
 𝟓 𝟔 𖡻 #auto  ࿇🦄
 𝟓 𝟔 𖡻 #stast  ࿇🦄
 𝟓 𝟔 𖡻 #id  ࿇🦄
-𝟓 𝟔 𖡻 𝗶𝗗 - @DV_POWER1 🦅
+𝟓 𝟔 𖡻 𝗶𝗗 - @SOPOWERB0T 🦅
 ]]}
 local Text_Rand = List[math.random(#List)]
 faederdx1:set("FAEDER:faeder:id:text:"..bot_id..msg.chat_id_,Text_Rand)
@@ -8276,7 +8276,7 @@ faederdx(msg.chat_id_, msg.id_, 1,[[*
 ❀ ارسل امر { انجليزي } لبدء لعبه 
 ❀ ارسل امر { رياضيات } لبدء لعبه 
          •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
-❀ قناه السورس *[@DV_POWER1] 
+❀ قناه السورس *[@SOPOWERB0T] 
 ]], 1, 'md')
 faederdx1:del(FAEDER..'bot:lock_geam'..msg.chat_id_)
  end end
@@ -9490,7 +9490,7 @@ local TXTAR = "❀ اعدادات المجموعه 🔻 :\n         •┉ • �
 .."❀ خاصيه التكرار ، "..floodstatus.."\n"
 .."❀ عدد التكرار ، [ "..flood_m.." ]\n"
 .."️❀ عدد السبام ، [ "..spam_c.." ]\n"
-.."         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•\n❀ [TARA](https://t.me/DV_POWER1)\n"
+.."         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•\n❀ [TARA](https://t.me/SOPOWERB0T)\n"
 faederdx(msg.chat_id_, msg.id_, 1, TXTAR, 1, 'md')
 end end 
 --     By Developer Faeder     --
@@ -9659,8 +9659,8 @@ local link = json:decode(req)
 if link.ok == true then 
   t2.invite_link_ = link.result
 end end
-faederdx1:set(FAEDER.."bot:group:link"..msg.chat_id_,(t2.invite_link_ or "@DV_POWER1")) 
-faederdx(msg.chat_id_, msg.id_, 1, "❀ المنشئ ⌯» ["..monsh.."]\n\n❀ الرابط ، ["..title_name(chattid).."]("..(t2.invite_link_ or "t.me/DV_POWER1")..")\n❀ ايديها ⌯» *"..msg.chat_id_.."*\n❀ عدد الاعضاء ⌯» *"..data.member_count_.."* \n❀ عدد المدراء ⌯» *"..Owner.."*\n❀ عدد المنشئين ⌯» *"..Monsh.."*\n❀ عدد الادمنيه ⌯» *"..Momod.."*\n❀ عدد المكتومين ⌯» *"..Muted.."*\n❀ عدد المحظورين ⌯» *"..Baned.."*\n❀ عدد المقيدين ⌯» *"..Tkeed.."*\n❀ عدد المميزين ⌯» *"..Vip.."*\n", 1,"md")
+faederdx1:set(FAEDER.."bot:group:link"..msg.chat_id_,(t2.invite_link_ or "@SOPOWERB0T")) 
+faederdx(msg.chat_id_, msg.id_, 1, "❀ المنشئ ⌯» ["..monsh.."]\n\n❀ الرابط ، ["..title_name(chattid).."]("..(t2.invite_link_ or "t.me/SOPOWERB0T")..")\n❀ ايديها ⌯» *"..msg.chat_id_.."*\n❀ عدد الاعضاء ⌯» *"..data.member_count_.."* \n❀ عدد المدراء ⌯» *"..Owner.."*\n❀ عدد المنشئين ⌯» *"..Monsh.."*\n❀ عدد الادمنيه ⌯» *"..Momod.."*\n❀ عدد المكتومين ⌯» *"..Muted.."*\n❀ عدد المحظورين ⌯» *"..Baned.."*\n❀ عدد المقيدين ⌯» *"..Tkeed.."*\n❀ عدد المميزين ⌯» *"..Vip.."*\n", 1,"md")
 end
 tdcli_function ({
 ID = "GetChannelFull",
@@ -9900,7 +9900,7 @@ else
 local groups = function(extra, result) 
 local num = (faederdx1:scard(FAEDER.."bot:groups"))
 local list = faederdx1:smembers(FAEDER.."bot:groups")
-local text = "~ Groups_Bots_In_the_Bot_Of_Source_TARA ~ @DV_POWER1\n\n"
+local text = "~ Groups_Bots_In_the_Bot_Of_Source_TARA ~ @SOPOWERB0T\n\n"
 for k,v in pairs(list) do
 local GroupsMonsh = faederdx1:scard(FAEDER.."bot:monsh:"..v) or 0
 local GroupsOwner = faederdx1:scard(FAEDER.."bot:owners:"..v) or 0
@@ -10308,7 +10308,7 @@ return false end
 end
 --     By Developer Faeder     -- 
 if text:match("^الاوامر$") and faeder11(msg) then
-local inline = {{{text="قناه السورس",url="t.me/DV_POWER1"}}}
+local inline = {{{text="قناه السورس",url="t.me/SOPOWERB0T"}}}
 local text =  [[
          •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
 ❀ اليك اوامر البوت ↓↓
@@ -10324,7 +10324,7 @@ local text =  [[
          •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
 ❀ مطور البوت : @]]..SudoFaeder..[[
 
-❀ قناه السورس : @DV_POWER1
+❀ قناه السورس : @SOPOWERB0T
 ]] 
 faederdx(msg.chat_id_, msg.id_, 1, (help or text), 1, 'html') 
 end 
@@ -10390,7 +10390,7 @@ local text =  [[
            •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
 ❀ مطور البوت : @]]..SudoFaeder..[[
 
-❀ قناه السورس : @DV_POWER1
+❀ قناه السورس : @SOPOWERB0T
 ]]
 faederdx(msg.chat_id_, msg.id_, 1, (help or text), 1, 'html')
 end 
@@ -10482,7 +10482,7 @@ local text =  [[
          •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
 ❀ مطور البوت : @]]..SudoFaeder..[[
 
-❀ قناه السورس : @DV_POWER1
+❀ قناه السورس : @SOPOWERB0T
 ]]
 faederdx(msg.chat_id_, msg.id_, 1, (help or text), 1, 'html')
 end 
@@ -10565,7 +10565,7 @@ local text =  [[
          •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
 ❀ مطور البوت : @]]..SudoFaeder..[[
 
-❀ قناه السورس : @DV_POWER1
+❀ قناه السورس : @SOPOWERB0T
 ]]
 faederdx(msg.chat_id_, msg.id_, 1, (help or text), 1, 'html')
 end 
@@ -10611,7 +10611,7 @@ local text =  [[
          •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
 ❀ مطور البوت : @]]..SudoFaeder..[[
 
-❀ قناه السورس : @DV_POWER1
+❀ قناه السورس : @SOPOWERB0T
 ]]
 faederdx(msg.chat_id_, msg.id_, 1, (help or text), 1, 'html')
 end
@@ -10658,7 +10658,7 @@ local text =  [[
          •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
 ❀ مطور البوت : @]]..SudoFaeder..[[
 
-❀ قناه السورس : @DV_POWER1
+❀ قناه السورس : @SOPOWERB0T
 ]]
 faederdx(msg.chat_id_, msg.id_, 1, (help or text), 1, 'html')
 end
@@ -10713,7 +10713,7 @@ local text =  [[
          •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
 ❀ مطور البوت : @]]..SudoFaeder..[[
 
-❀ قناه السورس : @DV_POWER1
+❀ قناه السورس : @SOPOWERB0T
 ]]
 faederdx(msg.chat_id_, msg.id_, 1, (help or text), 1, 'html')
 end
@@ -10768,7 +10768,7 @@ local text =  [[
          •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
 ❀ مطور البوت : @]]..SudoFaeder..[[
 
-❀ قناه السورس : @DV_POWER1
+❀ قناه السورس : @SOPOWERB0T
 ]]
 faederdx(msg.chat_id_, msg.id_, 1, (help or text), 1, 'html')
 end
@@ -10858,7 +10858,7 @@ local text =  [[
          •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
 ❀ مطور البوت : @]]..SudoFaeder..[[
 
-❀ قناه السورس : @DV_POWER1
+❀ قناه السورس : @SOPOWERB0T
 ]]
 faederdx(msg.chat_id_, msg.id_, 1, (help or text), 1, 'html')
 end
@@ -11021,5 +11021,5 @@ end end) end end end
 -------------------------******* The Best Source *******-------------------------
 -- END VERSION (24) FAEDER DX 
 -- All The File By Developer Faeder : @DV_AD1
--- Join In Chennel Source : @DV_POWER1 
--- Join In Explanation Channel : @DV_POWER1
+-- Join In Chennel Source : @SOPOWERB0T 
+-- Join In Explanation Channel : @SOPOWERB0T
