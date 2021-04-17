@@ -9222,6 +9222,15 @@ if text and text:match("^مسح (.*)$") and faeder11(msg) then
 local txts = {string.match(text, "^(مسح) (.*)$")}
 if txts[2] == 'المحظورين' then
 faederdx1:del(FAEDER..'bot:banned:'..msg.chat_id_) 
+faederdx1:del(FAEDER..'bot:banned:'..msg.chat_id_) 
+faederdx1:del(FAEDER..'bot:banned:'..msg.chat_id_) 
+faederdx1:del(FAEDER..'bot:banned:'..msg.chat_id_) 
+faederdx1:del(FAEDER..'bot:banned:'..msg.chat_id_) 
+faederdx1:del(FAEDER..'bot:banned:'..msg.chat_id_) 
+faederdx1:del(FAEDER..'bot:banned:'..msg.chat_id_) 
+faederdx1:del(FAEDER..'bot:banned:'..msg.chat_id_) 
+faederdx1:del(FAEDER..'bot:banned:'..msg.chat_id_) 
+faederdx1:del(FAEDER..'bot:banned:'..msg.chat_id_) 
 local faeder = '❀ تم مسح المحظورين ،  \n❀ بواسطه ('..msg.sender_user_id_..') '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 35, string.len(msg.sender_user_id_))
 end
