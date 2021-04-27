@@ -9252,16 +9252,6 @@ faederdx1:del(FAEDER..'bot:admins:')
 local faeder = '❀ تم مسح مطورين الرتبه الثالثه ، \n❀ بواسطه ('..msg.sender_user_id_..') '
 faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 46, string.len(msg.sender_user_id_))
 end end
-if txts[2] == 'البوتات' then
-local botslist = function(extra, result)
-local list = result.members_
-for i = 0, #list do
-if tonumber(list[i].user_id_) ~= tonumber(bot_id) then chat_kick(msg.chat_id_,list[i].user_id_)
-end end end
-local faeder = '❀ تم مسح البوتات ،  \n❀ بواسطه ('..msg.sender_user_id_..') '
-faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 33, string.len(msg.sender_user_id_))
-getChannelMembers(msg.chat_id_, 0, "Bots", 100, botslist)
-end
 if is_monsh(msg.sender_user_id_, msg.chat_id_) then
 if txts[2] == 'المنشئين' then
 local faeder = '❀ تم مسح المنشئين ، \n❀ بواسطه ('..msg.sender_user_id_..') '
@@ -9597,6 +9587,16 @@ end
 faederdx(msg.chat_id_, msg.id_, 0,'❀ تم طرد الحسابات المحذوفه ', 1, 'md')
 end 
 tdcli_function ({ID = "GetChannelMembers",channel_id_ = getChatId(msg.chat_id_).ID,offset_ = 0,limit_ = 1096500}, deleteaccounts, nil)
+end
+if text and text:match('^طرد البوتات$') and faeder11(msg) or text and text:match("^مسح البوتات$") and faeder11(msg) then
+local botslist = function(extra, result)
+local list = result.members_
+for i = 0, #list do
+if tonumber(list[i].user_id_) ~= tonumber(bot_id) then chat_kick(msg.chat_id_,list[i].user_id_)
+end end end
+local faeder = '❀ تم طرد البوتات ،  \n❀ بواسطه ('..msg.sender_user_id_..') '
+faedrmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, faeder, 33, string.len(msg.sender_user_id_))
+getChannelMembers(msg.chat_id_, 0, "Bots", 100, botslist)
 end
 --     By Developer Faeder     -- 
 if text and text:match("^تنظيف قائمه الحظر$") and faeder11(msg) then
