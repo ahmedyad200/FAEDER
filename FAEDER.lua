@@ -1,5 +1,5 @@
 -- Welcom To File The Best Source In The Telegram
--- All The File By Developer Faeder : @DV_AD1
+-- All The File By Developer Faeder : @ahmedyad200
 -- Join In Chennel Source : @SOPOWERB0T 
 -- Join In Explanation Channel : @SOPOWERB0T
 ----------------------------------------------------------------------------
@@ -3450,7 +3450,7 @@ end
 --if text == 'هلوباي' or text == 'هلو باي' then  if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then faeder =  "رايحح لو جايي ، 😻😹" else  faeder = '' end  faederdx(msg.chat_id_, msg.id_, 1, faeder, 1, 'md') end
 --if text == 'اكلك' or text == 'اكلج' or text == 'اكلكم' then if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then faeder =  "ڪوولُِ مآڪوولُِ لُِآحٍدِ  😉♥️" else faeder = '' end faederdx(msg.chat_id_, msg.id_, 1, faeder, 1, 'md') end
 --if text == 'فرخ' then  if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then faeder =  "ٰوينۨہهۂَ خۡل احۡصرهۂَ ، 😹♥️" else  faeder = '' end  faederdx(msg.chat_id_, msg.id_, 1, faeder, 1, 'md') end
-if text == 'مبرمج السورس' or text == 'سورس ديف أحمد' or text == 'سورس أحمد'  then if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then faeder =  "[مـبـرمـج سـورس تـارا](t.me/DV_AD1)" else faeder = '' end faederdx(msg.chat_id_, msg.id_, 1, faeder, 1, 'md') end 
+if text == 'مبرمج السورس' or text == 'سورس ديف أحمد' or text == 'سورس أحمد'  then if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then faeder =  "[مـبـرمـج سـورس تـارا](t.me/ahmedyad200)" else faeder = '' end faederdx(msg.chat_id_, msg.id_, 1, faeder, 1, 'md') end 
 --if text == 'احبك' then  if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then local faeder = { "ٰجذابهه تريدد تقطكك  ، 😹💘","ءني هم احبكك يعمري ، ☹️💘" } faederdx12 = math.random(#faeder) faederdx(msg.chat_id_, msg.id_, 1, faeder[faederdx12] , 1, 'md') end end
 --if text == 'احبج' then  if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then local faeder =  { "ٰجذابب يريد يطككج ، 😹💘","ااخ بسس اموتت بيكك ، 🥺💘" } faederdx12 = math.random(#faeder) faederdx(msg.chat_id_, msg.id_, 1, faeder[faederdx12] , 1, 'md') end end
 if text == 'بوت' and faeder11(msg) then  name_bot = (faederdx1:get('faeder:'..bot_id..'name_bot') or 'تارا')  local faeder = {  "أسمي "..name_bot.." يعمري ",  "أسمي "..name_bot.." يقميل ",  "تره أسمي "..name_bot.." كافي بوت ",  "انت البوت لك اسمي "..name_bot.." ", }  faeder2 = math.random(#faeder) faederdx(msg.chat_id_, msg.id_, 1, faeder[faeder2] , 1, 'md')  end
@@ -4044,7 +4044,7 @@ resolve_username(faed_dx[2],hamss)
 end end
 --     By Developer Faeder     -- 
 if text and text == "اهمس" or text and text == "همسه" or text and text == "اريد بوت الهمسه" or text and text == "دزلي بوت الهمسه" or  text and text == "دزولي بوت الهمسه" and faeder11(msg) then  
-faederdx(msg.chat_id_, msg.id_, 1, '❀ يمكنك من خلال هذا البوت\n❀ ارسال همسه سريه للاعضاء \n❀ الامر كالاتي مثال : اهمس هلو [@DV_AD1]', 1, 'md')
+faederdx(msg.chat_id_, msg.id_, 1, '❀ يمكنك من خلال هذا البوت\n❀ ارسال همسه سريه للاعضاء \n❀ الامر كالاتي مثال : اهمس هلو [@ahmedyad200]', 1, 'md')
 end
 if text and text:match("/start hms(.*)_(%d+)") then 
 faed_dx = {string.match(text, "^/start hms(.*)_(%d+)")}
@@ -4666,8 +4666,9 @@ end
 --     كليشه السورس     -- 
 if text:match("^source$") or text:match("^سورس البوت$") or text:match("^سورس تارا$") or  text:match("^السورس$") or text:match("^سورس$") and faeder11(msg) then 
 local inline = {
-{{text="+ مبرمج السورس +",url="t.me/AY_AHD"}},
+{{text="+ مبرمج السورس +",url="t.me/ahmedyad200"}},
 {{text="+ قناه السورس +",url="t.me/SOPOWERB0T"}},
+{{text="+ الـمـطـور +",url="t.me/"..(SudoFaeder or "SOPOWERB0T")}},
 {{text="+ اضف بوت تارا الي مجموعتك +",url="http://t.me/TARA1BOT?startgroup=start"}}
 }
 send_inline(msg.chat_id_,'❀ مرحبا بك في سورس تارا┋TARA ،\n❀ اضغط علي الازرار بالاسفل ⬇️ ,',nil,inline) 
@@ -10934,6 +10935,7 @@ uptime=`uptime | awk -F'( |,|:)+' '{if ($7=="min") m=$6; else {if ($7~/^day/) {d
 echo '❀ نظام التشغيل ، \n`'"$linux_version"'`' 
 echo '• ┉ • ┉ • ┉ • ┉ • ┉ •\n❀ الذاكره العشوائيه ،\n`'"$memUsedPrc"'`'
 echo '• ┉ • ┉ • ┉ • ┉ • ┉ •\n❀ وحده التخزين ،\n`'"$HardDisk"'`'
+echo '• ┉ • ┉ • ┉ • ┉ • ┉ •\n❀ موقـع الـسـيـرفـر ،\n* '`curl http://th3boss.com/ip/location`'*'
 echo '• ┉ • ┉ • ┉ • ┉ • ┉ •\n❀ المعالج ،\n`'"`grep -c processor /proc/cpuinfo`""Core ~ {$CPUPer%} "'`'
 echo '• ┉ • ┉ • ┉ • ┉ • ┉ •\n❀ الدخول ،\n`'`whoami`'`'
 echo '• ┉ • ┉ • ┉ • ┉ • ┉ •\n❀ مده تشغيل السيرفر ،\n`'"$uptime"'`'
@@ -11029,6 +11031,6 @@ addgroup(v)
 end end) end end end
 -------------------------******* The Best Source *******-------------------------
 -- END VERSION (24) FAEDER DX 
--- All The File By Developer Faeder : @DV_AD1
+-- All The File By Developer Faeder : @ahmedyad200
 -- Join In Chennel Source : @SOPOWERB0T 
 -- Join In Explanation Channel : @SOPOWERB0T
