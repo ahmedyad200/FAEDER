@@ -1379,7 +1379,7 @@ end end
 if Chat_Type == 'pv' then 
 if text and text:match("/start hms(.*)_(%d+)") then 
 function adding(extra,result,success)
-faederdx(tostring((faederdx1:get(FAEDER.."bot:leader:gr") or bot_owner)), 0, 1, "❀ دا اتعملو همسه \n❀ معرفه ⌯» @"..(result.username_ or "لا يوجد").."\n❀ ايديه ⌯» {"..msg.sender_user_id_.."}\n❀ الهمسه { ["..Faeder.."] }\n❀ اصبح عدد المشتركين { "..users.." }" , 1, 'html') 
+faederdx(tostring((faederdx1:get(FAEDER.."bot:leader:gr") or bot_owner)), 0, 1, "❀ دا اتعملو همسه \n❀ معرفه ⌯» @"..(result.username_ or "لا يوجد").."\n❀ ايديه ⌯» {"..msg.sender_user_id_.."}\n❀ الهمسه هي { ["..Faeder.."] }\n❀ اصبح عدد المشتركين { "..users.." }" , 1, 'html') 
 end 
 getUser(msg.sender_user_id_,adding) 
 end end 
@@ -4670,10 +4670,11 @@ return false
 end 
 --     كليشه السورس     -- 
 if text:match("^source$") or text:match("^سورس البوت$") or text:match("^سورس تارا$") or  text:match("^السورس$") or text:match("^سورس$") and faeder11(msg) then 
+bot_username = (ros2.username_ or "TARA1BOT")
 local inline = {
 {{text="+ قناه السورس +",url="t.me/SOPOWERB0T"}},
 {{text="+ الـمـطـور +",url="t.me/"..SudoFaeder..""}},
-{{text="+ اضف البوت الي مجموعتك +",url="http://t.me/"..bot_username.."?startgroup=AHMEDYAD"}}}
+{{text="+ اضف البوت الي مجموعتك +",url="http://t.me/"..bot_username.."?startgroup=start"}}}
 send_inline(msg.chat_id_,'❀ مرحبا بك في سورس تارا┋TARA ،\n❀ اضغط علي الازرار بالاسفل ⬇️ ,',nil,inline) 
 return false 
 end
@@ -10939,7 +10940,7 @@ echo '❀ نظام التشغيل ، \n`'"$linux_version"'`'
 echo '• ┉ • ┉ • ┉ • ┉ • ┉ •\n❀ الذاكره العشوائيه ،\n`'"$memUsedPrc"'`'
 echo '• ┉ • ┉ • ┉ • ┉ • ┉ •\n❀ وحده التخزين ،\n`'"$HardDisk"'`'
 echo '• ┉ • ┉ • ┉ • ┉ • ┉ •\n❀ المعالج ،\n`'"`grep -c processor /proc/cpuinfo`""Core ~ {$CPUPer%} "'`'
-echo '• ┉ • ┉ • ┉ • ┉ • ┉ •\n❀ موقـع الـسـيـرفـر \n* '`curl http://th3boss.com/ip/location`'*'
+echo '• ┉ • ┉ • ┉ • ┉ • ┉ •\n❀ موقـع الـسـيـرفـر \n`*'`curl http://th3boss.com/ip/location`'*`'
 echo '• ┉ • ┉ • ┉ • ┉ • ┉ •\n❀ الدخول ،\n`'`whoami`'`'
 echo '• ┉ • ┉ • ┉ • ┉ • ┉ •\n❀ مده تشغيل السيرفر ،\n`'"$uptime"'`'
 ]]):read('*a'), 1, 'md')
