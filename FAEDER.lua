@@ -4664,17 +4664,20 @@ local inline = {
 {{text = 'GroovySki', url="https://t.me/gamee?game=GroovySki"},{text = 'KungFuInc', url="https://t.me/gamee?game=KungFuInc"}},  
 {{text = 'SpaceTraveler', url="https://t.me/gamee?game=SpaceTraveler"},{text = 'RedAndBlue', url="https://t.me/gamee?game=RedAndBlue"}},  
 {{text = 'SkodaHockey1 ', url="https://t.me/gamee?game=SkodaHockey1"},{text = 'SummerLove', url="https://t.me/gamee?game=SummerLove"}},  
-{{text = 'SmartUpShark', url="https://t.me/gamee?game=SmartUpShark"},{text = 'SpikyFish3', url="https://t.me/gamee?game=SpikyFish3"}}}
+{{text = 'SmartUpShark', url="https://t.me/gamee?game=SmartUpShark"},{text = 'SpikyFish3', url="https://t.me/gamee?game=SpikyFish3"}}
+}
 send_inline(msg.chat_id_,'❀ العاب متطوره سورس تارا ،\n❀ لي اختيار لعبه اضغط علي الزر ⬇️ .',nil,inline) 
 return false 
 end 
 --     كليشه السورس     -- 
 if text:match("^source$") or text:match("^سورس البوت$") or text:match("^سورس تارا$") or  text:match("^السورس$") or text:match("^سورس$") and faeder11(msg) then 
+function bot_id_get(ros1,ros2)
 bot_username = (ros2.username_ or "TARA1BOT")
 local inline = {
 {{text="+ قناه السورس +",url="t.me/SOPOWERB0T"}},
 {{text="+ الـمـطـور +",url="t.me/"..SudoFaeder..""}},
-{{text="+ اضف البوت الي مجموعتك +",url="http://t.me/"..bot_username.."?startgroup=start"}}}
+{{text="+ اضف البوت الي مجموعتك +",url="http://t.me/"..bot_username.."?startgroup=start"}}
+}
 send_inline(msg.chat_id_,'❀ مرحبا بك في سورس تارا┋TARA ،\n❀ اضغط علي الازرار بالاسفل ⬇️ ,',nil,inline) 
 return false 
 end
@@ -10940,7 +10943,7 @@ echo '❀ نظام التشغيل ، \n`'"$linux_version"'`'
 echo '• ┉ • ┉ • ┉ • ┉ • ┉ •\n❀ الذاكره العشوائيه ،\n`'"$memUsedPrc"'`'
 echo '• ┉ • ┉ • ┉ • ┉ • ┉ •\n❀ وحده التخزين ،\n`'"$HardDisk"'`'
 echo '• ┉ • ┉ • ┉ • ┉ • ┉ •\n❀ المعالج ،\n`'"`grep -c processor /proc/cpuinfo`""Core ~ {$CPUPer%} "'`'
-echo '• ┉ • ┉ • ┉ • ┉ • ┉ •\n❀ موقـع الـسـيـرفـر \n`*'`curl http://th3boss.com/ip/location`'*`'
+echo '• ┉ • ┉ • ┉ • ┉ • ┉ •\n❀ موقـع الـسـيـرفـر \n`'`curl http://th3boss.com/ip/location`'`'
 echo '• ┉ • ┉ • ┉ • ┉ • ┉ •\n❀ الدخول ،\n`'`whoami`'`'
 echo '• ┉ • ┉ • ┉ • ┉ • ┉ •\n❀ مده تشغيل السيرفر ،\n`'"$uptime"'`'
 ]]):read('*a'), 1, 'md')
