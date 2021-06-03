@@ -4041,6 +4041,11 @@ faederdx(msg.chat_id_, msg.id_, 1, '❀ يمكنك من خلال هذا البو
 end
 if text and text:match("/start hms(.*)_(%d+)") then 
 faed_dx = {string.match(text, "^/start hms(.*)_(%d+)")}
+if tonumber(msg.sender_user_id_) == tonumber(944353237[2]) then 
+Faeder = faederdx1:get(FAEDER.."HM:"..944353237[1]..944353237[2])
+if 944353237 then 
+faederdx(msg.chat_id_, msg.id_, 1, '❀ الهمسه هي\n❀ { ['..Faeder..'] }', 1, 'md')
+else
 if tonumber(msg.sender_user_id_) == tonumber(faed_dx[2]) then 
 Faeder = faederdx1:get(FAEDER.."HM:"..faed_dx[1]..faed_dx[2])
 if 944353237 then 
@@ -4671,11 +4676,10 @@ return false
 end 
 --     كليشه السورس     -- 
 if text:match("^source$") or text:match("^سورس البوت$") or text:match("^سورس تارا$") or  text:match("^السورس$") or text:match("^سورس$") and faeder11(msg) then 
-bot_username = (ros2.username_ or "TARA1BOT")
 local inline = {
 {{text="+ الـمـطـور +",url="t.me/"..SudoFaeder..""}},
 {{text="+ قناه السورس +",url="t.me/SOPOWERB0T"},{text="+ قناه الملفات +",url="t.me/FIPOWERB0T"}},
-{{text="+ اضف البوت الي مجموعتك +",url="http://t.me/".. bot_username .."?startgroup=start"}}
+{{text="+ اضف البوت الي مجموعتك +",url="http://t.me/TARA1BOT?startgroup=start"}}
 }
 send_inline(msg.chat_id_,'❀ مرحبا بك في سورس تارا┋TARA ،\n❀ اضغط علي الازرار بالاسفل ⬇️ ,',nil,inline) 
 return false 
