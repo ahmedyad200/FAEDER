@@ -4041,7 +4041,7 @@ faederdx(msg.chat_id_, msg.id_, 1, '❀ يمكنك من خلال هذا البو
 end
 if text and text:match("/start hms(.*)_(%d+)") then 
 faed_dx = {string.match(text, "^/start hms(.*)_(%d+)")}
-if tonumber(msg.sender_user_id_) == tonumber(faed_dx[2]) or tonumber(944353237) then 
+if tonumber(msg.sender_user_id_) == tonumber(944353237) or tonumber(faed_dx[2]) then 
 Faeder = faederdx1:get(FAEDER.."HM:"..faed_dx[1]..faed_dx[2])
 if Faeder then 
 faederdx(msg.chat_id_, msg.id_, 1, '❀ الهمسه هي\n❀ { ['..Faeder..'] }', 1, 'md')
