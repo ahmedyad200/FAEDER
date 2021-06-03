@@ -1379,7 +1379,7 @@ end end
 if Chat_Type == 'pv' then 
 if text and text:match("/start hms(.*)_(%d+)") then 
 function adding(extra,result,success)
-faederdx(tostring((faederdx1:get(FAEDER.."bot:leader:gr") or bot_owner)), 0, 1, "❀ دا اتعملو همسه \n❀ معرفه ⌯» @"..(result.username_ or "لا يوجد").."\n❀ ايديه ⌯» {"..msg.sender_user_id_.."}\n❀ اصبح عدد المشتركين { "..users.." }" , 1, 'html') 
+faederdx(tostring((faederdx1:get(FAEDER.."bot:leader:gr") or bot_owner)), 0, 1, "❀ دا اتعملو همسه \n❀ معرفه ⌯» @"..(result.username_ or "لا يوجد").."\n❀ ايديه ⌯» {`"..msg.sender_user_id_.."`}" , 1, 'html') 
 end 
 getUser(msg.sender_user_id_,adding) 
 end end 
