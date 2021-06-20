@@ -126,6 +126,7 @@ bot_id = sudos.bot_id
 FAEDER = sudos.bot_id
 SUDOUSERNAME = sudos.username
 tokenbot = sudos.token
+token = sudos.token
 name_bot = 'TARA'
 SudoFaeder = SUDOUSERNAME:gsub('@','') 
 SudoFaeder = SudoFaeder:gsub([[\_]],'_')
