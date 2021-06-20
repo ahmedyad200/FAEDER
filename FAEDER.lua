@@ -10381,6 +10381,13 @@ faederdx(msg.chat_id_, msg.id_, 1, text , 1, 'md')
 return false end
 end
 --     By Developer Faeder     -- 
+function tdcli_update_callback(data)  -- clback
+if data.ID == "UpdateChannel" then 
+if data.channel_.status_.ID == "ChatMemberStatusKicked" then 
+database:srem(bot_id..'Chek:Groups','-100'..data.channel_.id_)  
+end
+end
+if data.ID == "UpdateNewCallbackQuery" then
 local Chat_id = data.chat_id_
 local Msg_id = data.message_id_
 local msg_idd = Msg_id/2097152/0.5
@@ -10447,72 +10454,6 @@ keyboard.inline_keyboard = {
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
-if text:match("^م1$") or  text:match("^م١$") and faeder11(msg) then 
-local help = faederdx1:get(FAEDER..'bot:help1')
-local text =  [[
-❀ اوامر الحمايه
-         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
-❀ قفل « » فتح
-         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
-❀ الروابط
-❀ المـعـرف
-❀ البوتات
-❀ الدخول
-❀ الشارحه
-❀ المتحركه
-❀ الملفات
-❀ الفيديو
-❀ الاونلاين
-❀ الدردشه
-❀ التوجيه
-❀ الاغاني
-❀ الصوت
-❀ الجهات
-❀ الماركداون
-❀ العربيه
-         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
-❀ النجليزيه
-❀ الحمايه
-❀ التكرار
-❀ الهاشتاك
-❀ التعديل
-❀ التثبيت
-❀ الاشعارات
-❀ الكل
-❀ الكلايش
-❀ الشبكات
-❀ المواقع
-❀ الفشار
-❀ الكفران
-❀ الطائفيه
-❀ الفارسيه 
-❀ الفارسيه بالطرد
-❀ البوتات بالطرد
-❀ البوتات بالتقييد
-          •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
-❀ الكل بالساعات + عدد الساعات
-           •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
-❀ مطور البوت : @]]..SudoFaeder..[[
-
-❀ قناه السورس : @SOPOWERB0T
-]]
-faederdx(msg.chat_id_, msg.id_, 1, (help or text), 1, 'html')
-end 
---     By Developer Faeder     -- 
-if is_leader(msg) and text:match("^تعيين امر م2$") and faeder11(msg) then
-faederdx(msg.chat_id_, msg.id_, 1, "❀ ارسل لي الكليشه الان " ,  1, "md")
-faederdx1:set(FAEDER..'bot:help21'..msg.sender_user_id_..'', 'msg')
-return false end
-if text:match("^(.*)$") then
-local faeder =  faederdx1:get(FAEDER..'bot:help21'..msg.sender_user_id_..'')
-if faeder == 'msg' then
-faederdx(msg.chat_id_, msg.id_, 1, "❀ تم حفظ الكليشه الجديده " ,  1, "md")
-faederdx1:set(FAEDER..'bot:help21'..msg.sender_user_id_..'', 'no')
-faederdx1:set(FAEDER..'bot:help2', text)
-faederdx(msg.chat_id_, msg.id_, 1, text , 1, 'md')
-return false end
-end
---     By Developer Faeder     -- 
 if Text == '/help2' then
 local Teext =[[
 ❀ اوامر المشرفين
@@ -10601,6 +10542,426 @@ keyboard.inline_keyboard = {
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
+if Text == '/help3' then
+local Teext =[[
+❀ اوامر الخدمه 
+         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
+❀ الابراج
+❀ اهمس
+❀ الوقت 
+❀ زخرفه  
+❀ الرابط 
+❀ موقعي 
+❀ جهاتي 
+❀ نقاطي 
+❀ اطردني
+❀ صورتي
+❀ رسائلي 
+❀ ايديي 
+❀ معرفي 
+❀ اسمي 
+❀ ايدي 
+❀ الالعاب 
+❀ سمايلات 
+❀ ترتيب 
+❀ حزوره 
+❀ العكس 
+❀ المحيبس 
+❀ امثله
+❀ كت تويت
+         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉• 
+❀ المختلف
+❀ رياضيات
+❀ انجليزي
+❀ خمن
+❀ معلوماتي 
+❀ القوانين 
+❀ السورس 
+❀ المطور 
+❀ تاك للكل 
+❀ بيع نقاطي
+❀ نسبه الحب 
+❀ احسب عمرك
+❀ مسح رسائلي 
+❀ تحويل بالرد
+❀ ايدي بالرد 
+❀ الرتبه بالرد 
+❀ هينه بالرد   
+❀ بوسه بالرد 
+❀ بوسها بالرد 
+❀ رابط الحذف 
+❀ رسائلي اليوم 
+❀ مشاهده المنشور 
+❀ ايدي المجموعه 
+❀ اسم المجموعه 
+❀ رفع « » تنزيل مطي 
+         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
+❀ رتبته + المعرف 
+❀ قول + الكلمه 
+❀ هينه + المعرف 
+❀ صورتي  + الرقم 
+❀ الحساب + الايدي 
+❀ طقس + اسم المدينه 
+         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
+❀ مطور البوت : @]]..SudoFaeder..[[
+
+❀ قناه السورس : @SOPOWERB0T
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = 'م1', callback_data="/help1"},{text = 'م2', callback_data="/help2"},{text = 'م3', callback_data="/help3"},
+},
+{
+{text = 'م4', callback_data="/help4"},{text = 'م5', callback_data="/help5"},{text = 'م6', callback_data="/help6"},
+},
+{
+{text = 'م7', callback_data="/help7"},{text = 'م8', callback_data="/help8"},
+},
+}
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+end
+if Text == '/help4' then
+local Teext =[[
+❀ اوامر الوضع
+         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
+❀ تعيين الايدي ) لتغير الايدي الافتراضي
+❀ مسح الايدي ) لسترجاع الايدي الافتراضي
+❀ تغيير الايدي ) لتعيين كلايش تلقائيه للايدي
+❀ تعيين عدد الكتم ) لتعيين عدد تحذير الشعار
+          •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
+❀ ضع + احد الاوامر ادناه 
+         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
+❀ رابط  
+❀ صوره
+❀ شعار
+❀ تكرار + العدد 
+❀ عدد الاحرف + العدد 
+❀ اسم + الاسم 
+❀ التكرار + بالطرد 
+❀ التكرار + بالمسح 
+❀ الايدي + بالصوره 
+❀ الايدي + بدون صوره 
+❀ الفارسيه + بالتحذير 
+❀ الفارسيه + بدون تحذير 
+         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
+❀ مطور البوت : @]]..SudoFaeder..[[
+
+❀ قناه السورس : @SOPOWERB0T
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = 'م1', callback_data="/help1"},{text = 'م2', callback_data="/help2"},{text = 'م3', callback_data="/help3"},
+},
+{
+{text = 'م4', callback_data="/help4"},{text = 'م5', callback_data="/help5"},{text = 'م6', callback_data="/help6"},
+},
+{
+{text = 'م7', callback_data="/help7"},{text = 'م8', callback_data="/help8"},
+},
+}
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+end
+if Text == '/help5' then
+local Teext =[[
+❀ اوامر رفع المطورين والمشرفين
+         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
+❀ اوامر رفع المشرفين
+         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
+❀ رفع المشرفين
+❀ تنزيل الكل 
+❀ رفع « » تنزيل منشئ
+❀ رفع « » تنزيل مدير
+❀ رفع « » تنزيل ادمن 
+❀ رفع « » تنزيل مميز 
+❀ رفع « » تنزيل مشرف
+❀ رفع بكل الصلاحيات { بالجروب }
+❀ الغاء خاصيه التثبيت { بالجروب }
+❀ الغاء خاصيه تغيير الاسم { بالجروب } 
+         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
+❀ اوامر رفع المطورين 
+         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
+❀ رفع « » تنزيل منشئ اساسي
+❀ رفع « » تنزيل مدير عام 
+❀ رفع « » تنزيل ادمن عام  
+❀ رفع « » تنزيل مميز عام 
+❀ رفع « » تنزيل مطور رتبه ثالثه
+         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
+❀ مطور البوت : @]]..SudoFaeder..[[
+
+❀ قناه السورس : @SOPOWERB0T
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = 'م1', callback_data="/help1"},{text = 'م2', callback_data="/help2"},{text = 'م3', callback_data="/help3"},
+},
+{
+{text = 'م4', callback_data="/help4"},{text = 'م5', callback_data="/help5"},{text = 'م6', callback_data="/help6"},
+},
+{
+{text = 'م7', callback_data="/help7"},{text = 'م8', callback_data="/help8"},
+},
+}
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+end
+if Text == '/help6' then
+local Teext =[[
+❀ اوامر التفعيل والتعطيل 
+         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
+❀ اوامر تفعيلات المشرفين
+         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
+❀ تفعيل الحمايه
+❀ تفعيل « » تعطيل اللعبه
+❀ تفعيل « » تعطيل الايدي
+❀ تفعيل « » تعطيل الحظر
+❀ تفعيل « » تعطيل الطرد
+❀ تفعيل « » تعطيل الكتم
+❀ تفعيل « » تعطيل الرابط
+❀ تفعيل « » تعطيل الشعار
+❀ تفعيل « » تعطيل اطردني
+❀ تفعيل « » تعطيل نزلني
+❀ تفعيل « » تعطيل تاك الكل
+❀ تفعيل « » تعطيل منو ضافني
+❀ تفعيل « » تعطيل الايدي بالصوره
+❀ تفعيل « » تعطيل جلب الصوره 
+❀ تفعيل « » تعطيل تحويل الصيغ
+❀ تفعيل « » تعطيل ردود البوت 
+❀ تفعيل « » تعطيل تنبيه التغيرات
+         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
+❀ اوامر تفعيلات المطورين
+         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
+❀ تفعيل « » تعطيل
+❀ تفعيل « » تعطيل التواصل
+❀ تفعيل « » تعطيل التنبيه
+❀ تفعيل « » تعطيل كل الجروبات 
+❀ تفعيل « » تعطيل البوت الخدمي 
+❀ تفعيل « » تعطيل الاشتراك الاجباري  
+         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
+❀ مطور البوت : @]]..SudoFaeder..[[
+
+❀ قناه السورس : @SOPOWERB0T
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = 'م1', callback_data="/help1"},{text = 'م2', callback_data="/help2"},{text = 'م3', callback_data="/help3"},
+},
+{
+{text = 'م4', callback_data="/help4"},{text = 'م5', callback_data="/help5"},{text = 'م6', callback_data="/help6"},
+},
+{
+{text = 'م7', callback_data="/help7"},{text = 'م8', callback_data="/help8"},
+},
+}
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+end
+if Text == '/help7' then
+local Teext =[[
+❀ اوامر مسح القوائم  
+         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
+❀ اوامر مسح المشرفين
+         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
+❀ مسح القوائم
+❀ مسح الرابط
+❀ مسح البوتات
+❀  مسح المدراء
+❀ مسح الادمنيه
+❀ مسح المقيدين
+❀ مسح المكتومين
+❀ مسح المحظورين
+❀ مسح قائمه المنع
+❀ مسح الاعضاء المميزين 
+         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
+❀ اوامر مسح المطورين
+         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
+❀ مسح المنشئين 
+❀ مسح قائمه العام 
+❀ مسح الايدي العام
+❀ مسح اسم البوت
+❀ مسح كليشه المطور
+❀ مسح ردود المطور 
+❀ مسح كليشه ستارت
+❀ مسح المميزين عام
+❀ مسح المكتومين عام 
+❀ مسح المدراء العامين 
+❀ مسح الادمنيه العامين
+❀ مسح المنشئين الاساسيين
+❀ مسح مطورين الرتبه الثالثه
+         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
+❀ مطور البوت : @]]..SudoFaeder..[[
+
+❀ قناه السورس : @SOPOWERB0T
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = 'م1', callback_data="/help1"},{text = 'م2', callback_data="/help2"},{text = 'م3', callback_data="/help3"},
+},
+{
+{text = 'م4', callback_data="/help4"},{text = 'م5', callback_data="/help5"},{text = 'م6', callback_data="/help6"},
+},
+{
+{text = 'م7', callback_data="/help7"},{text = 'م8', callback_data="/help8"},
+},
+}
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+end
+if Text == '/help8' then
+local Teext =[[
+❀ اوامر المطورين
+         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
+❀ السيرفر 
+❀ الجروبات 
+❀ المجموعات 
+❀ الاحصائيات 
+❀ تحديث 
+❀ اذاعه
+❀ اسم البوت + غادر 
+❀ تحديث السورس 
+❀ توجيه للكل ( بالرد )
+❀ اذاعه بالتوجيه
+❀ نشر بالخاص 
+❀ اذاعه خاص بالتوجيه
+❀ روابط الجروبات
+❀ جلب نسخه الملف
+❀ حظر ( بالرد داخل التواصل )
+❀ الغاء حظر 
+         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
+❀ استعاده الاوامر 
+❀ تعيين الاوامر 
+❀ تعيين امر م1 
+❀ تعيين امر م2 
+❀ تعيين امر م3 
+❀ تعيين امر م4 
+❀ تعيين امر م5 
+❀ تعيين امر م6
+❀ تعيين امر م7
+❀ تعيين امر م8
+❀ اضف رد للكل 
+❀ مسح رد للكل   
+❀ حظر عام 
+❀ كتم عام
+❀ الغاء العام 
+❀ ضع دعم 
+❀ حذف الدعم 
+         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
+❀ جلب الملاحظه 
+❀ تنظيف الرسائل 
+❀ تنظيف الجروبات 
+❀ تعيين كليشه ستارت
+❀ جلب كليشه ستارت 
+❀ تعيين ايدي عام
+❀ ردود المطور 
+❀ قائمه العام 
+❀ قائمه المنع العام 
+❀ المميزين عام
+❀ المكتومين عام
+❀ الادمنيه العامين
+❀ المدراء العامين
+❀ مطورين الرتبه الثالثه 
+❀ ضع كليشه المطور
+❀ رفع النسخه ( بالرد للملف ) 
+❀ جلب نسخه الجروبات 
+❀ (وضع او تغيير) اسم البوت    
+❀ نقل احصائيات تشاكي
+❀ نقل احصائيات الزعيم
+         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
+❀ قناه الاشتراك 
+❀ تعيين « » تغيير قناه الاشتراك 
+❀ كشف  + ايدي الجروب
+❀ غادر  + ايدي الجروب 
+❀ فلتر عام  + الكلمه 
+❀ الغاء فلتر عام   + الكلمه 
+❀ ضع ملاحظه  + الملاحظه   
+         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
+❀ مطور البوت : @]]..SudoFaeder..[[
+
+❀ قناه السورس : @SOPOWERB0T
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = 'م1', callback_data="/help1"},{text = 'م2', callback_data="/help2"},{text = 'م3', callback_data="/help3"},
+},
+{
+{text = 'م4', callback_data="/help4"},{text = 'م5', callback_data="/help5"},{text = 'م6', callback_data="/help6"},
+},
+{
+{text = 'م7', callback_data="/help7"},{text = 'م8', callback_data="/help8"},
+},
+}
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+end
+
+end
+if text:match("^م1$") or  text:match("^م١$") and faeder11(msg) then 
+local help = faederdx1:get(FAEDER..'bot:help1')
+local text =  [[
+❀ اوامر الحمايه
+         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
+❀ قفل « » فتح
+         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
+❀ الروابط
+❀ المـعـرف
+❀ البوتات
+❀ الدخول
+❀ الشارحه
+❀ المتحركه
+❀ الملفات
+❀ الفيديو
+❀ الاونلاين
+❀ الدردشه
+❀ التوجيه
+❀ الاغاني
+❀ الصوت
+❀ الجهات
+❀ الماركداون
+❀ العربيه
+         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
+❀ النجليزيه
+❀ الحمايه
+❀ التكرار
+❀ الهاشتاك
+❀ التعديل
+❀ التثبيت
+❀ الاشعارات
+❀ الكل
+❀ الكلايش
+❀ الشبكات
+❀ المواقع
+❀ الفشار
+❀ الكفران
+❀ الطائفيه
+❀ الفارسيه 
+❀ الفارسيه بالطرد
+❀ البوتات بالطرد
+❀ البوتات بالتقييد
+          •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
+❀ الكل بالساعات + عدد الساعات
+           •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
+❀ مطور البوت : @]]..SudoFaeder..[[
+
+❀ قناه السورس : @SOPOWERB0T
+]]
+faederdx(msg.chat_id_, msg.id_, 1, (help or text), 1, 'html')
+end 
+--     By Developer Faeder     -- 
+if is_leader(msg) and text:match("^تعيين امر م2$") and faeder11(msg) then
+faederdx(msg.chat_id_, msg.id_, 1, "❀ ارسل لي الكليشه الان " ,  1, "md")
+faederdx1:set(FAEDER..'bot:help21'..msg.sender_user_id_..'', 'msg')
+return false end
+if text:match("^(.*)$") then
+local faeder =  faederdx1:get(FAEDER..'bot:help21'..msg.sender_user_id_..'')
+if faeder == 'msg' then
+faederdx(msg.chat_id_, msg.id_, 1, "❀ تم حفظ الكليشه الجديده " ,  1, "md")
+faederdx1:set(FAEDER..'bot:help21'..msg.sender_user_id_..'', 'no')
+faederdx1:set(FAEDER..'bot:help2', text)
+faederdx(msg.chat_id_, msg.id_, 1, text , 1, 'md')
+return false end
+end
+--     By Developer Faeder     -- 
 if text:match("^م2$") or text:match("^م٢$") and faeder11(msg) then
 local help = faederdx1:get(FAEDER..'bot:help2')
 local text =  [[
@@ -10693,85 +11054,6 @@ faederdx(msg.chat_id_, msg.id_, 1, text , 1, 'md')
 return false end
 end 
 --     By Developer Faeder     -- 
-if Text == '/help3' then
-local Teext =[[
-❀ اوامر الخدمه 
-         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
-❀ الابراج
-❀ اهمس
-❀ الوقت 
-❀ زخرفه  
-❀ الرابط 
-❀ موقعي 
-❀ جهاتي 
-❀ نقاطي 
-❀ اطردني
-❀ صورتي
-❀ رسائلي 
-❀ ايديي 
-❀ معرفي 
-❀ اسمي 
-❀ ايدي 
-❀ الالعاب 
-❀ سمايلات 
-❀ ترتيب 
-❀ حزوره 
-❀ العكس 
-❀ المحيبس 
-❀ امثله
-❀ كت تويت
-         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉• 
-❀ المختلف
-❀ رياضيات
-❀ انجليزي
-❀ خمن
-❀ معلوماتي 
-❀ القوانين 
-❀ السورس 
-❀ المطور 
-❀ تاك للكل 
-❀ بيع نقاطي
-❀ نسبه الحب 
-❀ احسب عمرك
-❀ مسح رسائلي 
-❀ تحويل بالرد
-❀ ايدي بالرد 
-❀ الرتبه بالرد 
-❀ هينه بالرد   
-❀ بوسه بالرد 
-❀ بوسها بالرد 
-❀ رابط الحذف 
-❀ رسائلي اليوم 
-❀ مشاهده المنشور 
-❀ ايدي المجموعه 
-❀ اسم المجموعه 
-❀ رفع « » تنزيل مطي 
-         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
-❀ رتبته + المعرف 
-❀ قول + الكلمه 
-❀ هينه + المعرف 
-❀ صورتي  + الرقم 
-❀ الحساب + الايدي 
-❀ طقس + اسم المدينه 
-         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
-❀ مطور البوت : @]]..SudoFaeder..[[
-
-❀ قناه السورس : @SOPOWERB0T
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = 'م1', callback_data="/help1"},{text = 'م2', callback_data="/help2"},{text = 'م3', callback_data="/help3"},
-},
-{
-{text = 'م4', callback_data="/help4"},{text = 'م5', callback_data="/help5"},{text = 'م6', callback_data="/help6"},
-},
-{
-{text = 'م7', callback_data="/help7"},{text = 'م8', callback_data="/help8"},
-},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
-end
 if text:match("^م3$") or text:match("^م٣$") and faeder11(msg) then
 local help = faederdx1:get(FAEDER..'bot:help3')
 local text =  [[
@@ -10855,48 +11137,6 @@ faederdx(msg.chat_id_, msg.id_, 1, text , 1, 'md')
 return false end
 end
 --     By Developer Faeder     -- 
-if Text == '/help4' then
-local Teext =[[
-❀ اوامر الوضع
-         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
-❀ تعيين الايدي ) لتغير الايدي الافتراضي
-❀ مسح الايدي ) لسترجاع الايدي الافتراضي
-❀ تغيير الايدي ) لتعيين كلايش تلقائيه للايدي
-❀ تعيين عدد الكتم ) لتعيين عدد تحذير الشعار
-          •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
-❀ ضع + احد الاوامر ادناه 
-         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
-❀ رابط  
-❀ صوره
-❀ شعار
-❀ تكرار + العدد 
-❀ عدد الاحرف + العدد 
-❀ اسم + الاسم 
-❀ التكرار + بالطرد 
-❀ التكرار + بالمسح 
-❀ الايدي + بالصوره 
-❀ الايدي + بدون صوره 
-❀ الفارسيه + بالتحذير 
-❀ الفارسيه + بدون تحذير 
-         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
-❀ مطور البوت : @]]..SudoFaeder..[[
-
-❀ قناه السورس : @SOPOWERB0T
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = 'م1', callback_data="/help1"},{text = 'م2', callback_data="/help2"},{text = 'م3', callback_data="/help3"},
-},
-{
-{text = 'م4', callback_data="/help4"},{text = 'م5', callback_data="/help5"},{text = 'م6', callback_data="/help6"},
-},
-{
-{text = 'م7', callback_data="/help7"},{text = 'م8', callback_data="/help8"},
-},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
-end
 if text:match("^م٤$") or text:match("^م4$") and faeder11(msg) then
 local help = faederdx1:get(FAEDER..'bot:help4')
 local text =  [[
@@ -10943,49 +11183,6 @@ faederdx(msg.chat_id_, msg.id_, 1, text , 1, 'md')
 return false end
 end
 --     By Developer Faeder     -- 
-if Text == '/help5' then
-local Teext =[[
-❀ اوامر رفع المطورين والمشرفين
-         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
-❀ اوامر رفع المشرفين
-         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
-❀ رفع المشرفين
-❀ تنزيل الكل 
-❀ رفع « » تنزيل منشئ
-❀ رفع « » تنزيل مدير
-❀ رفع « » تنزيل ادمن 
-❀ رفع « » تنزيل مميز 
-❀ رفع « » تنزيل مشرف
-❀ رفع بكل الصلاحيات { بالجروب }
-❀ الغاء خاصيه التثبيت { بالجروب }
-❀ الغاء خاصيه تغيير الاسم { بالجروب } 
-         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
-❀ اوامر رفع المطورين 
-         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
-❀ رفع « » تنزيل منشئ اساسي
-❀ رفع « » تنزيل مدير عام 
-❀ رفع « » تنزيل ادمن عام  
-❀ رفع « » تنزيل مميز عام 
-❀ رفع « » تنزيل مطور رتبه ثالثه
-         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
-❀ مطور البوت : @]]..SudoFaeder..[[
-
-❀ قناه السورس : @SOPOWERB0T
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = 'م1', callback_data="/help1"},{text = 'م2', callback_data="/help2"},{text = 'م3', callback_data="/help3"},
-},
-{
-{text = 'م4', callback_data="/help4"},{text = 'م5', callback_data="/help5"},{text = 'م6', callback_data="/help6"},
-},
-{
-{text = 'م7', callback_data="/help7"},{text = 'م8', callback_data="/help8"},
-},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
-end
 if text:match("^م٥$") or text:match("^م5$") and faeder11(msg) then
 local help = faederdx1:get(FAEDER..'bot:help5')
 local text =  [[
@@ -11033,57 +11230,6 @@ faederdx(msg.chat_id_, msg.id_, 1, text , 1, 'md')
 return false end
 end
 --     By Developer Faeder     -- 
-if Text == '/help6' then
-local Teext =[[
-❀ اوامر التفعيل والتعطيل 
-         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
-❀ اوامر تفعيلات المشرفين
-         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
-❀ تفعيل الحمايه
-❀ تفعيل « » تعطيل اللعبه
-❀ تفعيل « » تعطيل الايدي
-❀ تفعيل « » تعطيل الحظر
-❀ تفعيل « » تعطيل الطرد
-❀ تفعيل « » تعطيل الكتم
-❀ تفعيل « » تعطيل الرابط
-❀ تفعيل « » تعطيل الشعار
-❀ تفعيل « » تعطيل اطردني
-❀ تفعيل « » تعطيل نزلني
-❀ تفعيل « » تعطيل تاك الكل
-❀ تفعيل « » تعطيل منو ضافني
-❀ تفعيل « » تعطيل الايدي بالصوره
-❀ تفعيل « » تعطيل جلب الصوره 
-❀ تفعيل « » تعطيل تحويل الصيغ
-❀ تفعيل « » تعطيل ردود البوت 
-❀ تفعيل « » تعطيل تنبيه التغيرات
-         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
-❀ اوامر تفعيلات المطورين
-         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
-❀ تفعيل « » تعطيل
-❀ تفعيل « » تعطيل التواصل
-❀ تفعيل « » تعطيل التنبيه
-❀ تفعيل « » تعطيل كل الجروبات 
-❀ تفعيل « » تعطيل البوت الخدمي 
-❀ تفعيل « » تعطيل الاشتراك الاجباري  
-         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
-❀ مطور البوت : @]]..SudoFaeder..[[
-
-❀ قناه السورس : @SOPOWERB0T
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = 'م1', callback_data="/help1"},{text = 'م2', callback_data="/help2"},{text = 'م3', callback_data="/help3"},
-},
-{
-{text = 'م4', callback_data="/help4"},{text = 'م5', callback_data="/help5"},{text = 'م6', callback_data="/help6"},
-},
-{
-{text = 'م7', callback_data="/help7"},{text = 'م8', callback_data="/help8"},
-},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
-end
 if text:match("^م٦$") or text:match("^م6$") and faeder11(msg) then
 local help = faederdx1:get(FAEDER..'bot:help6')
 local text =  [[
@@ -11139,57 +11285,6 @@ faederdx(msg.chat_id_, msg.id_, 1, text , 1, 'md')
 return false end
 end
 --     By Developer Faeder     -- 
-if Text == '/help1' then
-local Teext =[[
-❀ اوامر مسح القوائم  
-         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
-❀ اوامر مسح المشرفين
-         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
-❀ مسح القوائم
-❀ مسح الرابط
-❀ مسح البوتات
-❀  مسح المدراء
-❀ مسح الادمنيه
-❀ مسح المقيدين
-❀ مسح المكتومين
-❀ مسح المحظورين
-❀ مسح قائمه المنع
-❀ مسح الاعضاء المميزين 
-         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
-❀ اوامر مسح المطورين
-         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
-❀ مسح المنشئين 
-❀ مسح قائمه العام 
-❀ مسح الايدي العام
-❀ مسح اسم البوت
-❀ مسح كليشه المطور
-❀ مسح ردود المطور 
-❀ مسح كليشه ستارت
-❀ مسح المميزين عام
-❀ مسح المكتومين عام 
-❀ مسح المدراء العامين 
-❀ مسح الادمنيه العامين
-❀ مسح المنشئين الاساسيين
-❀ مسح مطورين الرتبه الثالثه
-         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
-❀ مطور البوت : @]]..SudoFaeder..[[
-
-❀ قناه السورس : @SOPOWERB0T
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = 'م1', callback_data="/help1"},{text = 'م2', callback_data="/help2"},{text = 'م3', callback_data="/help3"},
-},
-{
-{text = 'م4', callback_data="/help4"},{text = 'م5', callback_data="/help5"},{text = 'م6', callback_data="/help6"},
-},
-{
-{text = 'م7', callback_data="/help7"},{text = 'م8', callback_data="/help8"},
-},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
-end
 if text:match("^م٧$") or text:match("^م7$") and faeder11(msg) then
 local help = faederdx1:get(FAEDER..'bot:help7') 
 local text =  [[
@@ -11245,92 +11340,6 @@ faederdx(msg.chat_id_, msg.id_, 1, text , 1, 'md')
 return false end
 end
 --     By Developer Faeder     -- 
-if Text == '/help8' then
-local Teext =[[
-❀ اوامر المطورين
-         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
-❀ السيرفر 
-❀ الجروبات 
-❀ المجموعات 
-❀ الاحصائيات 
-❀ تحديث 
-❀ اذاعه
-❀ اسم البوت + غادر 
-❀ تحديث السورس 
-❀ توجيه للكل ( بالرد )
-❀ اذاعه بالتوجيه
-❀ نشر بالخاص 
-❀ اذاعه خاص بالتوجيه
-❀ روابط الجروبات
-❀ جلب نسخه الملف
-❀ حظر ( بالرد داخل التواصل )
-❀ الغاء حظر 
-         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
-❀ استعاده الاوامر 
-❀ تعيين الاوامر 
-❀ تعيين امر م1 
-❀ تعيين امر م2 
-❀ تعيين امر م3 
-❀ تعيين امر م4 
-❀ تعيين امر م5 
-❀ تعيين امر م6
-❀ تعيين امر م7
-❀ تعيين امر م8
-❀ اضف رد للكل 
-❀ مسح رد للكل   
-❀ حظر عام 
-❀ كتم عام
-❀ الغاء العام 
-❀ ضع دعم 
-❀ حذف الدعم 
-         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
-❀ جلب الملاحظه 
-❀ تنظيف الرسائل 
-❀ تنظيف الجروبات 
-❀ تعيين كليشه ستارت
-❀ جلب كليشه ستارت 
-❀ تعيين ايدي عام
-❀ ردود المطور 
-❀ قائمه العام 
-❀ قائمه المنع العام 
-❀ المميزين عام
-❀ المكتومين عام
-❀ الادمنيه العامين
-❀ المدراء العامين
-❀ مطورين الرتبه الثالثه 
-❀ ضع كليشه المطور
-❀ رفع النسخه ( بالرد للملف ) 
-❀ جلب نسخه الجروبات 
-❀ (وضع او تغيير) اسم البوت    
-❀ نقل احصائيات تشاكي
-❀ نقل احصائيات الزعيم
-         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
-❀ قناه الاشتراك 
-❀ تعيين « » تغيير قناه الاشتراك 
-❀ كشف  + ايدي الجروب
-❀ غادر  + ايدي الجروب 
-❀ فلتر عام  + الكلمه 
-❀ الغاء فلتر عام   + الكلمه 
-❀ ضع ملاحظه  + الملاحظه   
-         •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
-❀ مطور البوت : @]]..SudoFaeder..[[
-
-❀ قناه السورس : @SOPOWERB0T
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = 'م1', callback_data="/help1"},{text = 'م2', callback_data="/help2"},{text = 'م3', callback_data="/help3"},
-},
-{
-{text = 'م4', callback_data="/help4"},{text = 'م5', callback_data="/help5"},{text = 'م6', callback_data="/help6"},
-},
-{
-{text = 'م7', callback_data="/help7"},{text = 'م8', callback_data="/help8"},
-},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
-end
 if text:match("^م٨$") or text:match("^م8$") and faeder11(msg) then
 local help = faederdx1:get(FAEDER..'bot:help8')
 local text =  [[
